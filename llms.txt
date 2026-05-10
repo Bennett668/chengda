@@ -65,7 +65,6 @@ Custom options: shapes, dimensions, colors, glazing, branding, packaging.
 - **OEM / ODM:** https://www.gdchengda.hk/oem/
 - **Contact:** https://www.gdchengda.hk/contact/
 - **Blog:** https://www.gdchengda.hk/blog/
-- **News:** https://www.gdchengda.hk/news/
 
 ## Contact & Inquiry
 

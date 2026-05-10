@@ -9,7 +9,7 @@
       <a href="/about/"${active==='about'?' class="active"':''}>About</a>
       <a href="/products/"${active==='products'?' class="active"':''}>Products</a>
       <a href="/oem/"${active==='oem'?' class="active"':''}>OEM</a>
-      <a href="/news/"${active==='news'?' class="active"':''}>News</a>
+      <a href="/blog/"${active==='blog'?' class="active"':''}>Blog</a>
       <a href="/contact/"${active==='contact'?' class="active"':''}>Contact</a>
     </nav>
     <a href="/contact/" class="nav-cta">Get a quote →</a>
@@ -21,7 +21,7 @@
   <a href="/about/">About</a>
   <a href="/products/">Products</a>
   <a href="/oem/">OEM</a>
-  <a href="/news/">News</a>
+  <a href="/blog/">Blog</a>
   <a href="/contact/">Contact</a>
   <a href="/contact/">Get a quote →</a>
 </div>`;
@@ -42,7 +42,7 @@
       <div class="footer-col"><h4>Company</h4>
         <a href="/about/">About</a>
         <a href="/oem/">OEM &amp; ODM</a>
-        <a href="/news/">News</a>
+        <a href="/blog/">Blog</a>
         <a href="/contact/">Contact</a>
       </div>
       <div class="footer-col"><h4>Contact</h4>
