@@ -1,22 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.gdchengda.hk/</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://www.gdchengda.hk/?lang=zh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/"/>
   </url>
   <url>
-    <loc>https://www.gdchengda.hk/?lang=zh</loc>
-    <lastmod>2026-04-03</lastmod>
+    <loc>https://www.gdchengda.hk/products/</loc>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://www.gdchengda.hk/?lang=zh"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/"/>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/about/</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/oem/</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/contact/</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/blog/</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/news/</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
