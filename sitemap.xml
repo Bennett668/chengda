@@ -224,4 +224,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
   </url>
+  <url>
+    <loc>https://www.gdchengda.hk/zh/blog/raw-material/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/zh/blog/sink-types/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://www.gdchengda.hk/assets/blog/台上盆.webp</image:loc>
+      <image:title>台上盆——盆体放在台面上方</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.gdchengda.hk/assets/blog/台下盆.webp</image:loc>
+      <image:title>台下盆——盆体嵌入台面下方</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.gdchengda.hk/assets/blog/台中盆.webp</image:loc>
+      <image:title>台中盆——盆边与台面齐平</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/zh/blog/art-basin/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/zh/blog/art-basin-buying/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

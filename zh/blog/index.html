@@ -1,19 +1,40 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hans">
 <head>
 <meta charset="utf-8" />
-<title>文章 · 程達</title>
+<title>博客 · 工艺笔记 · 程达</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="陶瓷卫浴的生产工艺、面盆选购、艺术盆趋势——来自广东程达 25 年一线工厂的笔记。" />
 <link rel="canonical" href="https://www.gdchengda.hk/zh/blog/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://www.gdchengda.hk/zh/blog/" />
 <link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/blog/" />
-<link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/blog/" />
-<link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/blog/" />
+<link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/zh/blog/" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/porcelain.css?v=2" />
 <style>
-  body { font-family: 'Inter', 'Noto Sans TC', -apple-system, system-ui, sans-serif; }
+  body { font-family: 'Inter', 'Noto Sans SC', -apple-system, system-ui, sans-serif; }
+  .blog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  @media (max-width: 760px) { .blog-grid { grid-template-columns: 1fr; } }
+  .b-card {
+    background: var(--bg-2); border-radius: 32px; padding: 32px 32px 36px;
+    text-decoration: none; transition: transform 0.4s var(--t), box-shadow 0.4s var(--t);
+    display: flex; flex-direction: column; min-height: 280px;
+  }
+  .b-card:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -24px rgba(20,23,27,0.18); }
+  .b-card .num {
+    font-family: var(--font-heading, 'Newsreader'), serif;
+    font-style: italic; font-size: 80px; font-weight: 400;
+    color: var(--ink-2); opacity: 0.18; line-height: 1; margin-bottom: 24px;
+  }
+  .b-card .tag {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em;
+    color: var(--muted); margin-bottom: 12px;
+  }
+  .b-card h2 { font-size: 24px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.25; color: var(--ink); margin-bottom: 10px; }
+  .b-card p { font-size: 15px; line-height: 1.65; color: var(--ink-2); }
+  .b-card .read { margin-top: auto; padding-top: 24px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; color: var(--ink); display: flex; gap: 6px; align-items: center; }
 </style>
 </head>
 <body>
@@ -22,15 +43,47 @@
 
 <section class="subpage-hero">
   <div class="wrap">
-    <div class="crumbs"><a href="/zh/">首頁</a><span class="sep">/</span><span>文章</span></div>
-    <h1>文章 <span class="soft">即將推出。</span></h1>
-    <div class="sub"><span>OEM 知識</span><span>產品工藝</span><span>市場動態</span></div>
+    <div class="crumbs"><a href="/zh/">首页</a><span class="sep">/</span><span>博客</span></div>
+    <h1>陶瓷衞浴 <span class="soft">从泥到瓷。</span></h1>
+    <div class="sub"><span>工艺</span><span>选购</span><span>设计趋势</span></div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <p style="font-size:18px;line-height:1.7;color:var(--ink-2);max-width:50ch">繁體中文文章正在編輯中。如需了解最新行業洞察,可先參閱 <a href="/blog/" style="color:var(--accent);border-bottom:1px solid var(--accent)">英文版文章</a>,或 <a href="/zh/contact/" style="color:var(--accent);border-bottom:1px solid var(--accent)">直接聯絡我們</a>。</p>
+    <div class="blog-grid">
+      <a href="/zh/blog/raw-material/" class="b-card">
+        <div class="num">01</div>
+        <div class="tag">工艺 · 系列一</div>
+        <h2>原料与泥浆——一个陶瓷品的「出生起点」</h2>
+        <p>洗脸盆、马桶、小便斗最初是一堆灰白色的泥巴。带你走进潮州工厂的原料车间和制浆车间。</p>
+        <div class="read">5 分钟阅读 →</div>
+      </a>
+
+      <a href="/zh/blog/sink-types/" class="b-card">
+        <div class="num">02</div>
+        <div class="tag">选购指南</div>
+        <h2>台上盆 vs 台下盆 vs 台中盆：到底有什么区别？</h2>
+        <p>三种面盆的核心差别一文看懂——盆口与台面的相对位置决定了安装方式、清洁难度和承重结构。</p>
+        <div class="read">4 分钟阅读 →</div>
+      </a>
+
+      <a href="/zh/blog/art-basin/" class="b-card">
+        <div class="num">03</div>
+        <div class="tag">设计趋势</div>
+        <h2>艺术盆是什么？为什么越来越多人选？</h2>
+        <p>审美升级、社交媒体种草、个性化需求、工艺进步——艺术盆走红的四个原因。</p>
+        <div class="read">6 分钟阅读 →</div>
+      </a>
+
+      <a href="/zh/blog/art-basin-buying/" class="b-card">
+        <div class="num">04</div>
+        <div class="tag">选购指南</div>
+        <h2>艺术盆有什么缺点？适配对象？选购建议</h2>
+        <p>三大缺点 + 适合 / 不适合的人群 + 三条选购建议——一篇讲清楚要不要买艺术盆。</p>
+        <div class="read">7 分钟阅读 →</div>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -38,5 +91,23 @@
 
 <script src="/assets/site-shell.js?v=2"></script>
 <script>renderShell('blog');</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Chengda 工艺笔记",
+  "description": "陶瓷卫浴的生产工艺、面盆选购、艺术盆趋势——来自广东程达 25 年一线工厂的笔记。",
+  "publisher": {"@type": "Organization", "name": "广东程达智能科技有限公司", "url": "https://www.gdchengda.hk/"},
+  "inLanguage": "zh-Hans",
+  "url": "https://www.gdchengda.hk/zh/blog/",
+  "blogPost": [
+    {"@type": "BlogPosting", "headline": "原料与泥浆——一个陶瓷品的「出生起点」", "url": "https://www.gdchengda.hk/zh/blog/raw-material/", "datePublished": "2026-05-11"},
+    {"@type": "BlogPosting", "headline": "台上盆 vs 台下盆 vs 台中盆：到底有什么区别？", "url": "https://www.gdchengda.hk/zh/blog/sink-types/", "datePublished": "2026-05-11"},
+    {"@type": "BlogPosting", "headline": "艺术盆是什么？为什么越来越多人选？", "url": "https://www.gdchengda.hk/zh/blog/art-basin/", "datePublished": "2026-05-11"},
+    {"@type": "BlogPosting", "headline": "艺术盆有什么缺点？适配对象？选购建议", "url": "https://www.gdchengda.hk/zh/blog/art-basin-buying/", "datePublished": "2026-05-11"}
+  ]
+}
+</script>
 </body>
 </html>
