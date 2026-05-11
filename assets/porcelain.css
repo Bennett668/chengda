@@ -420,7 +420,7 @@ img, svg { display: block; max-width: 100%; }
   color: var(--ink);
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: var(--r-sm);
   padding: 14px 16px;
   outline: none;
   transition: border-color .2s var(--t), box-shadow .2s var(--t);

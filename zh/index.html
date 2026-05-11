@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,wght@1,300;1,400;1,500&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="/assets/hero/t201.webp" fetchpriority="high" />
-<link rel="stylesheet" href="/assets/porcelain.css?v=10" />
+<link rel="stylesheet" href="/assets/porcelain.css?v=11" />
 <style>
   .hero { padding: 128px 0 72px; position: relative; overflow: hidden; }
   .hero::before {
@@ -233,7 +233,7 @@
 </section>
 
 <style>
-  .home-faq .hf-grid { border-radius: 32px; overflow: hidden; background: var(--line, #E8E9EB); display: flex; flex-direction: column; gap: 1px; }
+  .home-faq .hf-grid { border-radius: var(--r-lg); overflow: hidden; background: var(--line, #E8E9EB); display: flex; flex-direction: column; gap: 1px; }
   .hf-row { background: #ffffff; display: grid; grid-template-columns: 320px 1fr; gap: 48px; padding: 28px 32px; }
   @media (max-width: 760px) { .hf-row { grid-template-columns: 1fr; gap: 12px; padding: 24px 24px 28px; } }
   .hf-q { display: flex; flex-direction: column; gap: 4px; }
@@ -245,7 +245,7 @@
   @media (max-width: 1024px) { .blog-teaser .bt-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 560px)  { .blog-teaser .bt-grid { grid-template-columns: 1fr; } }
   .bt-card {
-    background: var(--bg-2); border-radius: 32px; padding: 26px 26px 30px;
+    background: var(--bg-2); border-radius: var(--r-lg); padding: 26px 26px 30px;
     text-decoration: none; display: flex; flex-direction: column;
     min-height: 200px; transition: transform 0.4s var(--t), box-shadow 0.4s var(--t);
   }

@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,wght@1,300;1,400;1,500&family=Noto+Sans+TC:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="/assets/hero/t201.webp" fetchpriority="high" />
-<link rel="stylesheet" href="/assets/porcelain.css?v=10" />
+<link rel="stylesheet" href="/assets/porcelain.css?v=11" />
 <style>
   /* Hero — homepage only */
   .hero {
@@ -120,7 +120,7 @@
 
   /* Buyer FAQ — sits between products and blog teaser */
   .home-faq .hf-grid {
-    border-radius: 32px; overflow: hidden; background: var(--line, #E8E9EB);
+    border-radius: var(--r-lg); overflow: hidden; background: var(--line, #E8E9EB);
     display: flex; flex-direction: column; gap: 1px;
   }
   .hf-row {
@@ -143,7 +143,7 @@
   @media (max-width: 1024px) { .blog-teaser .bt-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 560px)  { .blog-teaser .bt-grid { grid-template-columns: 1fr; } }
   .bt-card {
-    background: var(--bg-2); border-radius: 32px; padding: 26px 26px 30px;
+    background: var(--bg-2); border-radius: var(--r-lg); padding: 26px 26px 30px;
     text-decoration: none; display: flex; flex-direction: column;
     min-height: 200px; transition: transform 0.4s var(--t), box-shadow 0.4s var(--t);
   }
