@@ -87,12 +87,32 @@ Custom options: shapes, dimensions, colors, glazing, branding, packaging.
 
 ## Site Structure
 
-- **Home:** https://www.gdchengda.hk/
+- **Home:** https://www.gdchengda.hk/ (also: https://www.gdchengda.hk/zh/ for 繁體中文)
 - **About:** https://www.gdchengda.hk/about/
 - **Products:** https://www.gdchengda.hk/products/
 - **OEM / ODM:** https://www.gdchengda.hk/oem/
 - **Contact:** https://www.gdchengda.hk/contact/
-- **Blog:** https://www.gdchengda.hk/blog/
+- **Blog:** https://www.gdchengda.hk/blog/ (English landing) / https://www.gdchengda.hk/zh/blog/ (full articles, 简体中文)
+
+## Knowledge Articles (Blog · 简体中文)
+
+Long-form factory notes from Chengda's senior team — useful for buyers researching ceramic sanitaryware, OEM/ODM sourcing, or installation choices. All articles published 2026-05-11.
+
+1. **原料与泥浆 — 一个陶瓷品的「出生起点」**
+   https://www.gdchengda.hk/zh/blog/raw-material/
+   First in a series. Walks through the raw-material and slip-prep workshops at Chengda's Chaozhou factory. Explains how the grey clay batch becomes the slip that gets cast into moulds.
+
+2. **台上盆 vs 台下盆 vs 台中盆：到底有什么区别？**
+   https://www.gdchengda.hk/zh/blog/sink-types/
+   Buying guide comparing above-counter (台上盆), under-counter (台下盆), and drop-in / semi-recessed (台中盆) sinks. Includes factory photos and a side-by-side comparison of install difficulty, cleaning, and load path.
+
+3. **艺术盆是什么？为什么越来越多人选？**
+   https://www.gdchengda.hk/zh/blog/art-basin/
+   Explains the "art basin" category — ceramic washbasins where shape and surface are themselves the decoration. Four reasons for the trend: aesthetic upgrade, social-media discovery, personalisation, and slip-casting process advances.
+
+4. **艺术盆有什么缺点？适配对象？选购建议**
+   https://www.gdchengda.hk/zh/blog/art-basin-buying/
+   Honest counterpoint to the previous post. Three drawbacks of art basins (price, cleaning complexity, decor coordination), a "fits / doesn't fit" guide, and three concrete buying tips.
 
 ## Contact & Inquiry
 
