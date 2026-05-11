@@ -1,26 +1,52 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8" /><title>Blog · Chengda</title>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Blog · Notes from the kiln · Chengda</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Process, sourcing and design notes from a 25-year ceramic sanitaryware factory in Chaozhou. Articles currently published in Chinese — English summaries here." />
 <link rel="canonical" href="https://www.gdchengda.hk/blog/" />
 <link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/blog/" />
-<link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/blog/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://www.gdchengda.hk/zh/blog/" />
 <link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/blog/" />
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Chengda Blog — Notes from the kiln" />
+<meta property="og:description" content="Process, sourcing and design notes from a 25-year ceramic sanitaryware factory in Chaozhou." />
+<meta property="og:url" content="https://www.gdchengda.hk/blog/" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/porcelain.css?v=2" />
 <style>
-  .post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  @media (max-width: 1000px) { .post-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 600px) { .post-grid { grid-template-columns: 1fr; } }
-  .post { background: var(--bg-2); border-radius: var(--r-lg); overflow: hidden; transition: transform .35s var(--t), box-shadow .35s var(--t); cursor: pointer; }
-  .post:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -24px rgba(20,23,27,0.18); }
-  .post .img { aspect-ratio: 16/10; background: radial-gradient(circle at 50% 38%, #fff 0%, #eef0f4 70%, #dee2e8 100%); }
-  .post .body { padding: 24px 26px 28px; }
-  .post .meta { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; margin-bottom: 10px; }
-  .post h3 { font-size: 18px; font-weight: 500; line-height: 1.35; letter-spacing: -0.01em; }
+  .lang-note {
+    background: var(--bg-2); border-radius: var(--r-md);
+    padding: 18px 24px; margin-bottom: 32px;
+    display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
+    font-size: 14px; color: var(--ink-2);
+  }
+  .lang-note strong { color: var(--ink); }
+  .lang-note a { color: var(--accent); border-bottom: 1px solid var(--accent); padding-bottom: 1px; }
+  .blog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  @media (max-width: 760px) { .blog-grid { grid-template-columns: 1fr; } }
+  .b-card {
+    background: var(--bg-2); border-radius: 32px; padding: 32px 32px 36px;
+    text-decoration: none; transition: transform 0.4s var(--t), box-shadow 0.4s var(--t);
+    display: flex; flex-direction: column; min-height: 280px;
+  }
+  .b-card:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -24px rgba(20,23,27,0.18); }
+  .b-card .num {
+    font-style: italic; font-size: 80px; font-weight: 400;
+    color: var(--ink-2); opacity: 0.18; line-height: 1; margin-bottom: 24px;
+    font-family: 'Newsreader', 'Inter', serif;
+  }
+  .b-card .tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; color: var(--muted); margin-bottom: 12px; }
+  .b-card h2 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.3; color: var(--ink); margin-bottom: 8px; }
+  .b-card .zh-sub { font-size: 13px; color: var(--muted); margin-bottom: 12px; font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+  .b-card p { font-size: 14px; line-height: 1.65; color: var(--ink-2); }
+  .b-card .read { margin-top: auto; padding-top: 24px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; color: var(--ink); display: flex; gap: 6px; align-items: center; }
 </style>
-</head><body>
+</head>
+<body>
 
 <div id="shell-nav"></div>
 
@@ -28,19 +54,53 @@
   <div class="wrap">
     <div class="crumbs"><a href="/">Home</a><span class="sep">/</span><span>Blog</span></div>
     <h1>Notes from <span class="soft">the kiln.</span></h1>
-    <div class="sub"><span>Process</span><span>Materials</span><span>Design</span></div>
+    <div class="sub"><span>Process</span><span>Sourcing</span><span>Design</span></div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="post-grid">
-      <a class="post" href="/blog-post/"><div class="img"></div><div class="body"><div class="meta">Process · 6 min</div><h3>Why we fire vitreous china at 1,250 °C — and what changes at 1,200.</h3></div></a>
-      <a class="post" href="/blog-post/"><div class="img"></div><div class="body"><div class="meta">Materials · 4 min</div><h3>Slip casting: how a basin is shaped before it ever sees a kiln.</h3></div></a>
-      <a class="post" href="/blog-post/"><div class="img"></div><div class="body"><div class="meta">Design · 5 min</div><h3>The geometry of an above-counter basin — five proportions that work.</h3></div></a>
-      <a class="post" href="/blog-post/"><div class="img"></div><div class="body"><div class="meta">QC · 3 min</div><h3>Inside our QC process: every basin, every batch, every step.</h3></div></a>
-      <a class="post" href="/blog-post/"><div class="img"></div><div class="body"><div class="meta">OEM · 7 min</div><h3>From CAD to container: a 60-day OEM run, day by day.</h3></div></a>
-      <a class="post" href="/blog-post/"><div class="img"></div><div class="body"><div class="meta">Glaze · 4 min</div><h3>Matte vs gloss: which finish ages better, and why.</h3></div></a>
+    <div class="lang-note">
+      <span>📖</span>
+      <span><strong>Articles are currently published in Chinese.</strong> English summaries below — full text at <a href="/zh/blog/">/zh/blog/</a>. Translations coming soon.</span>
+    </div>
+
+    <div class="blog-grid">
+      <a href="/zh/blog/raw-material/" class="b-card">
+        <div class="num">01</div>
+        <div class="tag">Process · Series 01</div>
+        <h2>Raw materials &amp; slip — where a ceramic begins</h2>
+        <div class="zh-sub">原料与泥浆——一个陶瓷品的「出生起点」</div>
+        <p>Before a basin is white and smooth, it is a pile of grey clay. A walk through Chengda's raw-material and slip-prep workshops in Chaozhou.</p>
+        <div class="read">Read in 中文 · 5 min →</div>
+      </a>
+
+      <a href="/zh/blog/sink-types/" class="b-card">
+        <div class="num">02</div>
+        <div class="tag">Buying guide</div>
+        <h2>Above-counter vs under-counter vs drop-in basin</h2>
+        <div class="zh-sub">台上盆 vs 台下盆 vs 台中盆：到底有什么区别？</div>
+        <p>The core difference between three sink installations — relative position of the rim to the countertop decides install method, cleaning, load path. With factory photos.</p>
+        <div class="read">Read in 中文 · 4 min →</div>
+      </a>
+
+      <a href="/zh/blog/art-basin/" class="b-card">
+        <div class="num">03</div>
+        <div class="tag">Design trend</div>
+        <h2>What is an art basin? Why are more people choosing one?</h2>
+        <div class="zh-sub">艺术盆是什么？为什么越来越多人选？</div>
+        <p>Aesthetic upgrade, social-media discovery, personalisation, ceramic-process advances — four reasons the art basin has gone mainstream.</p>
+        <div class="read">Read in 中文 · 6 min →</div>
+      </a>
+
+      <a href="/zh/blog/art-basin-buying/" class="b-card">
+        <div class="num">04</div>
+        <div class="tag">Buying guide</div>
+        <h2>Art basin: drawbacks, who it suits, three buying tips</h2>
+        <div class="zh-sub">艺术盆有什么缺点？适配对象？选购建议</div>
+        <p>Every product has trade-offs — writing them down builds trust. Three downsides + a clear "fits / doesn't fit" call + three concrete tips.</p>
+        <div class="read">Read in 中文 · 7 min →</div>
+      </a>
     </div>
   </div>
 </section>
@@ -49,4 +109,23 @@
 
 <script src="/assets/site-shell.js?v=2"></script>
 <script>renderShell('blog');</script>
-</body></html>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Chengda — Notes from the kiln",
+  "description": "Process, sourcing and design notes from a 25-year ceramic sanitaryware factory in Chaozhou.",
+  "publisher": {"@type": "Organization", "name": "Chengda", "url": "https://www.gdchengda.hk/"},
+  "inLanguage": ["en", "zh-Hans"],
+  "url": "https://www.gdchengda.hk/blog/",
+  "blogPost": [
+    {"@type": "BlogPosting", "headline": "Raw materials & slip — where a ceramic begins", "url": "https://www.gdchengda.hk/zh/blog/raw-material/", "inLanguage": "zh-Hans", "datePublished": "2026-05-11"},
+    {"@type": "BlogPosting", "headline": "Above-counter vs under-counter vs drop-in basin", "url": "https://www.gdchengda.hk/zh/blog/sink-types/", "inLanguage": "zh-Hans", "datePublished": "2026-05-11"},
+    {"@type": "BlogPosting", "headline": "What is an art basin? Why are more people choosing one?", "url": "https://www.gdchengda.hk/zh/blog/art-basin/", "inLanguage": "zh-Hans", "datePublished": "2026-05-11"},
+    {"@type": "BlogPosting", "headline": "Art basin: drawbacks, who it suits, three buying tips", "url": "https://www.gdchengda.hk/zh/blog/art-basin-buying/", "inLanguage": "zh-Hans", "datePublished": "2026-05-11"}
+  ]
+}
+</script>
+</body>
+</html>
