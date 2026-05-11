@@ -91,5 +91,23 @@
     if (nav) addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY>12));
     const b = document.querySelector('.nav-burger'); const d = document.getElementById('navDrawer');
     if (b && d) b.addEventListener('click', () => d.classList.toggle('open'));
+
+    // Scroll-reveal: gentle fade + lift as sections enter the viewport.
+    // Respects prefers-reduced-motion. Observer disconnects per-element after reveal.
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduced && 'IntersectionObserver' in window) {
+      const sel = 'section, .stats, .porcelain-frame, .card-grid > *, .hf-row, .bt-card, .b-card, .cap, .step, .p-card';
+      const targets = document.querySelectorAll(sel);
+      targets.forEach(t => t.classList.add('reveal'));
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('reveal-in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.06, rootMargin: '0px 0px -6% 0px' });
+      targets.forEach(t => io.observe(t));
+    }
   };
 })();

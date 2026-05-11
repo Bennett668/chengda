@@ -498,3 +498,24 @@ img, svg { display: block; max-width: 100%; }
   font-family: var(--font-mono); font-size: 11px;
   letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
 }
+
+/* === Scroll-reveal: gentle fade + lift === */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s var(--t), transform 0.9s var(--t);
+  will-change: opacity, transform;
+}
+.reveal-in {
+  opacity: 1;
+  transform: none;
+}
+.card-grid > .reveal,
+.hf-grid .reveal,
+.bt-grid .reveal {
+  transition-delay: calc(var(--reveal-i, 0) * 60ms);
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}

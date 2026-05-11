@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="/assets/hero/toilet-3q.webp" fetchpriority="high" />
-<link rel="stylesheet" href="/assets/porcelain.css?v=3" />
+<link rel="stylesheet" href="/assets/porcelain.css?v=4" />
 <style>
   .hero { padding: 128px 0 72px; position: relative; overflow: hidden; }
   .hero::before {
@@ -65,7 +65,7 @@
   .actions { display: flex; gap: 12px; flex-wrap: wrap; }
   .stats-section { padding-bottom: clamp(40px, 6vh, 72px); }
   .hero-meta .r { display: flex; gap: 8px; align-items: center; }
-  .cert-chip { display: inline-flex; align-items: center; background: var(--ink); color: #fff; padding: 6px 12px; border-radius: 999px; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; }
+  .cert-chip { display: inline-flex; align-items: center; background: transparent; color: var(--ink); padding: 5px 11px; border-radius: 999px; border: 1px solid var(--ink); font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; }
   /* zh-specific tweak — Noto Sans TC works best for body */
   body { font-family: 'Inter', 'Noto Sans TC', -apple-system, system-ui, sans-serif; }
 </style>
@@ -267,7 +267,7 @@
 <div id="shell-footer"></div>
 
 <script src="/assets/icons.js?v=6"></script>
-<script src="/assets/site-shell.js?v=2"></script>
+<script src="/assets/site-shell.js?v=3"></script>
 <script>
 renderShell('home');
 const ICONS = window.CHENGDA_ICONS || {};
