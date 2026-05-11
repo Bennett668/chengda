@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,wght@1,300;1,400;1,500&family=Noto+Sans+TC:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="/assets/hero/toilet-hero-v2.webp" fetchpriority="high" />
-<link rel="stylesheet" href="/assets/porcelain.css?v=8" />
+<link rel="stylesheet" href="/assets/porcelain.css?v=9" />
 <style>
   /* Hero — homepage only */
   .hero {
@@ -66,40 +66,41 @@
     transform: translateY(-2px);
     box-shadow: none;
   }
-  .hero-stack {
-    display: flex; flex-direction: column; align-items: center;
-    gap: clamp(28px, 4.5vh, 56px);
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: clamp(32px, 5vw, 80px);
+    align-items: center;
+    min-height: 60vh;
   }
-  .hero-stack .porcelain-frame {
-    width: min(640px, 88vw);
-    aspect-ratio: 4 / 5;
-  }
-  .hero-copy {
-    text-align: center;
-    display: flex; flex-direction: column; align-items: center;
-    max-width: 820px;
-  }
+  @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
   .hero h1 {
-    font-size: clamp(40px, 6.4vw, 96px);
+    font-size: clamp(44px, 7.4vw, 112px);
     font-weight: 500;
-    line-height: 1.02;
+    line-height: 1.0;
     letter-spacing: -0.045em;
   }
   .hero h1 .soft { color: var(--muted); font-style: italic; font-weight: 400; font-family: 'Newsreader', 'Inter', serif; letter-spacing: -0.015em; }
   .hero-sub {
-    margin-top: 28px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    align-items: center;
+    gap: 28px;
+    align-items: flex-start;
   }
   .hero-sub p {
     font-size: clamp(16px, 1.25vw, 18px);
     color: var(--ink-2);
-    max-width: 52ch;
+    max-width: 44ch;
     line-height: 1.55;
   }
-  .actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  /* Photo fills the frame: object-fit cover, no mask — its own gray bg blends with hero bg */
+  .hero .porcelain-frame { aspect-ratio: 3 / 4; width: 100%; }
+  .hero .porcelain-frame img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center;
+    -webkit-mask-image: none; mask-image: none;
+  }
 
   /* Stats sit just under hero */
   .stats-section { padding-bottom: clamp(40px, 6vh, 72px); }
@@ -171,11 +172,8 @@
       <div class="r"><span class="cert-chip">CUPC</span><span class="cert-chip">ISO 9001</span></div>
     </div>
 
-    <div class="hero-stack">
-      <div class="porcelain-frame">
-        <img src="/assets/hero/toilet-hero-v2.webp" alt="Chengda one-piece ceramic toilet — vitreous china, super-siphon flush" fetchpriority="high" decoding="async" />
-      </div>
-      <div class="hero-copy">
+    <div class="hero-grid">
+      <div>
         <h1>Sanitaryware,<br/><span class="soft">shaped in porcelain.</span></h1>
         <div class="hero-sub">
           <p>Vitreous china washbasins, pedestals and toilets — fired at 1,250&nbsp;°C in one Chaozhou facility. OEM &amp; ODM for partners in 50+ countries.</p>
@@ -184,6 +182,9 @@
             <a href="/contact/" class="btn">Get a quote</a>
           </div>
         </div>
+      </div>
+      <div class="porcelain-frame">
+        <img src="/assets/hero/toilet-hero-v2.webp" alt="Chengda T201 one-piece ceramic toilet — vitreous china, super-siphon flush" fetchpriority="high" decoding="async" />
       </div>
     </div>
   </div>
