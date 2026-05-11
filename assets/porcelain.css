@@ -358,6 +358,11 @@ img, svg { display: block; max-width: 100%; }
   width: 70%; height: 70%;
   opacity: 0.9;
 }
+.porcelain-frame img {
+  width: 78%; height: 78%;
+  object-fit: contain;
+  position: relative; z-index: 1;
+}
 .porcelain-frame .badge {
   position: absolute; top: 20px; left: 20px;
   display: inline-flex; align-items: center; gap: 8px;

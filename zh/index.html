@@ -17,6 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/assets/products/T215/hero.webp" fetchpriority="high" />
 <link rel="stylesheet" href="/assets/porcelain.css?v=2" />
 <style>
   .hero { padding: 128px 0 72px; position: relative; overflow: hidden; }
@@ -85,10 +86,10 @@
       </div>
       <div class="porcelain-frame">
         <span class="badge mono"><span class="dot"></span>生產中</span>
-        <span id="hero-ico"></span>
+        <img src="/assets/products/T215/hero.webp" alt="程達 T215 — 旗艦 760 mm 連體陶瓷馬桶" fetchpriority="high" decoding="async" />
         <div class="tag mono">
           <span>型號參考</span>
-          <span class="v">WB‑101 · 玻化瓷</span>
+          <span class="v">T215 · 旗艦 760 mm</span>
         </div>
       </div>
     </div>
@@ -167,7 +168,6 @@
 renderShell('home');
 const ICONS = window.CHENGDA_ICONS || {};
 const place = (id, key) => { const el = document.getElementById(id); if (el && ICONS[key]) el.innerHTML = ICONS[key]; };
-place('hero-ico', 'washbasin');
 place('ico-washbasin', 'washbasin');
 place('ico-pedestal', 'pedestal');
 place('ico-smart', 'smarttoilet');
