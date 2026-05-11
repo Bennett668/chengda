@@ -1,6 +1,6 @@
 /* ============ Chengda · Porcelain shared stylesheet ============ */
 :root {
-  --bg: #ffffff;
+  --bg: #fff;
   --bg-2: #f4f5f7;
   --bg-3: #ebedf0;
   --line: #e6e8ec;
@@ -247,7 +247,7 @@ img, svg { display: block; max-width: 100%; }
 /* ============ Subpage hero ============ */
 .subpage-hero {
   padding: 128px 0 48px;
-  background: linear-gradient(180deg, #ffffff 0%, var(--bg-2) 100%);
+  background: linear-gradient(180deg, #fff 0%, var(--bg-2) 100%);
 }
 .subpage-hero h1 {
   font-size: clamp(40px, 6vw, 88px);
