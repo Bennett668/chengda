@@ -238,7 +238,7 @@
         </div>
       </a>
       <a class="p-card" href="/products/?cat=standard">
-        <div class="img"><img src="/assets/products/T201/card.webp" alt="Chengda toilet — T201" loading="lazy" decoding="async" style="width:78%;height:78%;object-fit:contain" /></div>
+        <div class="img"><span id="ico-toilet"></span></div>
         <div class="meta">
           <div class="name">Toilet</div>
           <div class="idx">03 / 04</div>
@@ -338,6 +338,7 @@ const ICONS = window.CHENGDA_ICONS || {};
 const place = (id, key) => { const el = document.getElementById(id); if (el && ICONS[key]) el.innerHTML = ICONS[key]; };
 place('ico-washbasin', 'washbasin');
 place('ico-pedestal', 'pedestal');
+place('ico-toilet', 'toilet');
 place('ico-smart', 'smarttoilet');
 </script>
 
