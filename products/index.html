@@ -34,7 +34,7 @@
   .tab {
     height: 38px; padding: 0 18px;
     border: 1px solid var(--line-2); border-radius: var(--r-pill);
-    background: #fff; color: var(--ink-2);
+    background: var(--bg-2); color: var(--ink-2);
     font-size: 13px; font-weight: 500;
     display: inline-flex; align-items: center; gap: 8px;
     cursor: pointer; transition: all .2s var(--t);
@@ -55,7 +55,7 @@
     position: relative; display: flex; align-items: center; justify-content: center;
     padding: 0; overflow: hidden;
   }
-  .pcard:hover .img { background: #fff; }
+  .pcard:hover .img { background: var(--bg-2); }
   .pcard .img svg { width: 65%; height: 65%; opacity: 0.85; }
   .pcard .img img { width: 100%; height: 100%; object-fit: cover; object-position: center 58%; transition: transform .5s var(--t); }
   .pcard:hover .img img { transform: scale(1.04); }
