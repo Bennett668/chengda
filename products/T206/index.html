@@ -67,8 +67,8 @@
     transition: background .2s var(--t);
   }
   .related a:hover { background: #fff; box-shadow: 0 12px 24px -16px rgba(20,23,27,0.18); }
-  .related .thumb { width: 56px; height: 56px; flex-shrink: 0; background: #fff; border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; }
-  .related .thumb img { width: 90%; height: 90%; object-fit: contain; }
+  .related .thumb { width: 56px; height: 56px; flex-shrink: 0; background: var(--bg-2); border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .related .thumb img { width: 100%; height: 100%; object-fit: cover; }
   .related .meta .c { font-family: var(--font-mono); font-size: 10px; color: var(--muted); letter-spacing: 0.12em; }
   .related .meta .n { font-size: 13px; font-weight: 500; margin-top: 2px; }
 </style>
