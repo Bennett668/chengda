@@ -359,7 +359,7 @@ img, svg { display: block; max-width: 100%; }
   opacity: 0.9;
 }
 .porcelain-frame img {
-  width: 78%; height: 78%;
+  width: 88%; height: 88%;
   object-fit: contain;
   position: relative; z-index: 1;
 }
