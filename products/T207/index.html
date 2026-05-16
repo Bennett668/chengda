@@ -35,17 +35,32 @@
   }
   .pd-hero img { width: 100%; height: 100%; object-fit: contain; }
 
-  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 16px; }
-  .gallery .gi {
-    aspect-ratio: 1/1;
-    background: var(--bg-2);
-    
-    border-radius: var(--r-lg);
-    overflow: hidden;
-    display: flex; align-items: center; justify-content: center;
-    padding: 0;
+  .gallery {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: var(--pad);
+    padding: 8px var(--pad) 24px;
+    margin-left: calc(var(--pad) * -1);
+    margin-right: calc(var(--pad) * -1);
+    scrollbar-width: none;
   }
-  .gallery .gi img { width: 100%; height: 100%; object-fit: cover; object-position: center 55%; transform: scale(1.05); }
+  .gallery::-webkit-scrollbar { display: none; }
+  .gallery .gi {
+    flex: 0 0 auto;
+    width: clamp(220px, 28vw, 360px);
+    aspect-ratio: 3/4;
+    display: flex; align-items: center; justify-content: center;
+    scroll-snap-align: start;
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity .9s var(--t), transform .9s var(--t);
+  }
+  .gallery .gi.in { opacity: 1; transform: translateX(0); }
+  .gallery .gi img { width: 100%; height: 100%; object-fit: contain; }
 
   .spec-card {
     margin-top: 24px;
@@ -118,13 +133,29 @@
 
 <div style="margin-top:64px">
   <div class="eyebrow mono" style="color:var(--muted);margin-bottom:18px">Gallery</div>
-  <div class="gallery">
-    <div class="gi"><img src="/assets/products/T207/g1.webp" alt="T207 view 1" loading="lazy" decoding="async" /></div>
-    <div class="gi"><img src="/assets/products/T207/g2.webp" alt="T207 view 2" loading="lazy" decoding="async" /></div>
-    <div class="gi"><img src="/assets/products/T207/g3.webp" alt="T207 view 3" loading="lazy" decoding="async" /></div>
-    <div class="gi"><img src="/assets/products/T207/g4.webp" alt="T207 view 4" loading="lazy" decoding="async" /></div>
-    <div class="gi"><img src="/assets/products/T207/g5.webp" alt="T207 view 5" loading="lazy" decoding="async" /></div>
+  <div class="gallery" id="gallery">
+    <div class="gi"><img src="/assets/products/T207/g1.webp?v=2" alt="T207 view 1" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T207/g2.webp?v=2" alt="T207 view 2" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T207/g3.webp?v=2" alt="T207 view 3" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T207/g4.webp?v=2" alt="T207 view 4" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T207/g5.webp?v=2" alt="T207 view 5" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T207/g6.webp?v=2" alt="T207 view 6" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T207/g7.webp?v=2" alt="T207 view 7" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T207/g8.webp?v=2" alt="T207 view 8" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T207/g9.webp?v=2" alt="T207 view 9" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T207/g10.webp?v=2" alt="T207 view 10" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T207/g11.webp?v=2" alt="T207 view 11" loading="lazy" decoding="async" /></div>
   </div>
+  <script>
+  (function(){
+    const root = document.getElementById('gallery'); if (!root) return;
+    const items = root.querySelectorAll('.gi');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { root, rootMargin: '0px 80px 0px 80px', threshold: 0.15 });
+    items.forEach(i => io.observe(i));
+  })();
+  </script>
 </div>
 
 
