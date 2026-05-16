@@ -48,6 +48,8 @@
   @media (max-width: 600px)  { .product-grid { grid-template-columns: 1fr; } }
   .pcard { background: var(--bg-2); border-radius: var(--r-lg); overflow: hidden;
     transition: transform .35s var(--t), box-shadow .35s var(--t), background .35s var(--t); cursor: pointer; }
+  .pcard[data-code="T207"] { background: #fff; }
+  .pcard[data-code="T207"] .img { background: #fff; }
   .pcard:hover { transform: translateY(-4px); background:#fff; box-shadow: 0 24px 48px -24px rgba(20,23,27,0.18); }
   .pcard .img {
     aspect-ratio: 1/1;
@@ -134,7 +136,7 @@ function render() {
       ? `<img src="${it.img}" alt="${it.code}" loading="lazy" decoding="async" />`
       : (ICONS[C.icon]||'');
     return `
-    <a class="pcard" href="${href}">
+    <a class="pcard" data-code="${it.code}" href="${href}">
       <div class="img">${visual}</div>
       <div class="info"><div class="name">${it.name}</div><div class="dims">${it.dims}</div></div>
     </a>`;
