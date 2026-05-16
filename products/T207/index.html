@@ -41,13 +41,18 @@
     margin-top: 16px;
     overflow-x: auto;
     overflow-y: hidden;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x proximity;
     scroll-padding-left: var(--pad);
     padding: 8px var(--pad) 24px;
     margin-left: calc(var(--pad) * -1);
     margin-right: calc(var(--pad) * -1);
     scrollbar-width: none;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
   }
+  .gallery.dragging { cursor: grabbing; scroll-snap-type: none; }
+  .gallery.dragging .gi { pointer-events: none; }
   .gallery::-webkit-scrollbar { display: none; }
   .gallery .gi {
     flex: 0 0 auto;
@@ -179,52 +184,91 @@
 
     const track = document.getElementById('gscroll');
     const thumb = document.getElementById('gthumb');
-    function maxScroll(){ return root.scrollWidth - root.clientWidth; }
-    function trackW(){ return track.clientWidth; }
-    function thumbW(){
-      const ratio = root.clientWidth / root.scrollWidth;
-      return Math.max(36, Math.round(trackW() * ratio));
-    }
-    function sync(){
-      const tw = thumbW();
-      thumb.style.width = tw + 'px';
-      const m = maxScroll();
-      const p = m > 0 ? (root.scrollLeft / m) * (trackW() - tw) : 0;
-      thumb.style.left = p + 'px';
-    }
-    root.addEventListener('scroll', sync, { passive: true });
-    window.addEventListener('resize', sync);
-    requestAnimationFrame(sync);
+    const maxScroll = () => root.scrollWidth - root.clientWidth;
+    const trackW = () => track.clientWidth;
+    const thumbW = () => Math.max(36, Math.round(trackW() * (root.clientWidth / root.scrollWidth)));
 
-    let dragging = false, startX = 0, startLeft = 0;
-    function setFromClient(clientX){
-      const rect = track.getBoundingClientRect();
-      const tw = thumbW();
-      const x = Math.max(0, Math.min(trackW() - tw, clientX - rect.left - tw / 2));
-      const ratio = (trackW() - tw) > 0 ? x / (trackW() - tw) : 0;
-      root.scrollLeft = ratio * maxScroll();
+    let raf = null, twCache = thumbW();
+    function sync(){
+      raf = null;
+      twCache = thumbW();
+      thumb.style.width = twCache + 'px';
+      const m = maxScroll();
+      const p = m > 0 ? (root.scrollLeft / m) * (trackW() - twCache) : 0;
+      thumb.style.transform = `translateX(${p}px)`;
     }
+    function queueSync(){ if (raf == null) raf = requestAnimationFrame(sync); }
+    root.addEventListener('scroll', queueSync, { passive: true });
+    window.addEventListener('resize', queueSync);
+    sync();
+
+    // Drag the thumb
+    let tDrag = false, tStartX = 0, tStartLeft = 0;
     thumb.addEventListener('pointerdown', (e) => {
-      dragging = true; thumb.classList.add('drag');
-      startX = e.clientX; startLeft = parseFloat(thumb.style.left || '0');
+      e.preventDefault();
+      tDrag = true; thumb.classList.add('drag');
+      tStartX = e.clientX;
+      const m = maxScroll();
+      tStartLeft = m > 0 ? (root.scrollLeft / m) * (trackW() - twCache) : 0;
       thumb.setPointerCapture(e.pointerId);
     });
     thumb.addEventListener('pointermove', (e) => {
-      if (!dragging) return;
-      const tw = thumbW();
-      const dx = e.clientX - startX;
-      const newLeft = Math.max(0, Math.min(trackW() - tw, startLeft + dx));
-      const ratio = (trackW() - tw) > 0 ? newLeft / (trackW() - tw) : 0;
-      root.scrollLeft = ratio * maxScroll();
+      if (!tDrag) return;
+      const room = trackW() - twCache;
+      const newLeft = Math.max(0, Math.min(room, tStartLeft + (e.clientX - tStartX)));
+      root.scrollLeft = room > 0 ? (newLeft / room) * maxScroll() : 0;
     });
-    thumb.addEventListener('pointerup', (e) => {
-      dragging = false; thumb.classList.remove('drag');
+    const tEnd = (e) => {
+      if (!tDrag) return;
+      tDrag = false; thumb.classList.remove('drag');
       try { thumb.releasePointerCapture(e.pointerId); } catch(_) {}
-    });
+    };
+    thumb.addEventListener('pointerup', tEnd);
+    thumb.addEventListener('pointercancel', tEnd);
+
+    // Click the track to jump (smooth)
     track.addEventListener('click', (e) => {
       if (e.target === thumb) return;
-      setFromClient(e.clientX);
+      const rect = track.getBoundingClientRect();
+      const tw = twCache;
+      const room = trackW() - tw;
+      const x = Math.max(0, Math.min(room, e.clientX - rect.left - tw / 2));
+      root.scrollTo({ left: room > 0 ? (x / room) * maxScroll() : 0, behavior: 'smooth' });
     });
+
+    // Grab + drag anywhere on the gallery
+    let gDrag = false, gStartX = 0, gStartLeft = 0, gMoved = 0;
+    root.addEventListener('pointerdown', (e) => {
+      if (e.pointerType === 'touch') return; // let native touch handle
+      gDrag = true; gMoved = 0;
+      gStartX = e.clientX; gStartLeft = root.scrollLeft;
+      root.classList.add('dragging');
+      root.setPointerCapture(e.pointerId);
+    });
+    root.addEventListener('pointermove', (e) => {
+      if (!gDrag) return;
+      const dx = e.clientX - gStartX;
+      gMoved = Math.max(gMoved, Math.abs(dx));
+      root.scrollLeft = gStartLeft - dx;
+    });
+    const gEnd = (e) => {
+      if (!gDrag) return;
+      gDrag = false;
+      root.classList.remove('dragging');
+      try { root.releasePointerCapture(e.pointerId); } catch(_) {}
+    };
+    root.addEventListener('pointerup', gEnd);
+    root.addEventListener('pointercancel', gEnd);
+    // Prevent stray clicks after a drag (e.g. so dragging doesn't open an image)
+    root.addEventListener('click', (e) => { if (gMoved > 6) { e.preventDefault(); e.stopPropagation(); } }, true);
+
+    // Redirect vertical mouse wheel to horizontal scroll within the gallery
+    root.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX) && Math.abs(e.deltaY) > 0) {
+        e.preventDefault();
+        root.scrollLeft += e.deltaY;
+      }
+    }, { passive: false });
   })();
   </script>
 </div>
