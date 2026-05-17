@@ -71,9 +71,9 @@
 ### Countertop Round Basin (With Tap Hole)
 | Model | External Size (mm) |
 |-------|-------------------|
-| CB0118 | 470x415x175 |
-| CB0120 | 510x460x200 |
-| CB0122 | 540x480x200 |
+| CB0218 | 470x415x175 |
+| CB0220 | 510x460x200 |
+| CB0222 | 540x480x200 |
 
 ## Product Line 2: White Art Basins (白色艺术盆)
 
@@ -213,6 +213,40 @@ Flush technology notes:
 - **Rimless** (T203): fully glazed bowl with no rim ledge for residue
 - **Concealed cistern** (T204–T206): tank hidden inside a continuous shroud, flush-back silhouette
 - **Super siphon** (T207–T215): vortex pre-rinse combined with high-velocity siphonic pull
+
+
+
+## Product Line 7: Wall-Hung Toilets (壁掛馬桶 · T10 series)
+
+All wall-mounted ceramic, dual-flush, P-trap 180 mm typical, PP soft-close seat. 23 models published, T101–T123. MOQ 100 pcs (OEM from 200 pcs); lead time 45–60 days; CUPC + ISO 9001 certified.
+
+| Model | Detail page |
+|-------|-------------|
+| T101 | https://www.gdchengda.hk/products/T101/ |
+| T102 | https://www.gdchengda.hk/products/T102/ |
+| T103 | https://www.gdchengda.hk/products/T103/ |
+| T104 | https://www.gdchengda.hk/products/T104/ |
+| T105 | https://www.gdchengda.hk/products/T105/ |
+| T106 | https://www.gdchengda.hk/products/T106/ |
+| T107 | https://www.gdchengda.hk/products/T107/ |
+| T108 | https://www.gdchengda.hk/products/T108/ |
+| T109 | https://www.gdchengda.hk/products/T109/ |
+| T110 | https://www.gdchengda.hk/products/T110/ |
+| T111 | https://www.gdchengda.hk/products/T111/ |
+| T112 | https://www.gdchengda.hk/products/T112/ |
+| T113 | https://www.gdchengda.hk/products/T113/ |
+| T114 | https://www.gdchengda.hk/products/T114/ |
+| T115 | https://www.gdchengda.hk/products/T115/ |
+| T116 | https://www.gdchengda.hk/products/T116/ |
+| T117 | https://www.gdchengda.hk/products/T117/ |
+| T118 | https://www.gdchengda.hk/products/T118/ |
+| T119 | https://www.gdchengda.hk/products/T119/ |
+| T120 | https://www.gdchengda.hk/products/T120/ |
+| T121 | https://www.gdchengda.hk/products/T121/ |
+| T122 | https://www.gdchengda.hk/products/T122/ |
+| T123 | https://www.gdchengda.hk/products/T123/ |
+
+Listing page: https://www.gdchengda.hk/products/?cat=wallhung
 
 ## Knowledge Base — Long-Form Articles (Blog · 简体中文)
 
