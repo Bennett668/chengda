@@ -28,8 +28,9 @@ Three product lines currently in production with rendered photography and direct
 - UB04 — slanted oval: UB0413, UB0414, UB0415, UB0416, UB0417, UB0418, UB0418-1, UB0420, UB0420-1, UB0422, UB0424
 - UB05 — boat-base rectangular: UB0522, UB0523
 
-Listing: https://www.gdchengda.hk/products/?cat=washbasin (or /zh/products/?cat=washbasin)
-Detail-page pattern: https://www.gdchengda.hk/products/{CODE}/ (e.g. /products/CB0118/ , /products/UB0316/)
+Listing: https://www.gdchengda.hk/products/?cat=washbasin (or /zh/products/?cat=washbasin for 繁體中文)
+Detail-page pattern (EN): https://www.gdchengda.hk/products/{CODE}/
+Detail-page pattern (zh-Hant): https://www.gdchengda.hk/zh/products/{CODE}/
 
 ### 2. One-Piece Floor-Mount Ceramic Toilets (連體坐便器) — 15 models published
 
@@ -38,15 +39,15 @@ T201–T215 series. All floor-mount, S-trap, dual-flush, antibacterial smart-cle
 - Concealed cistern (T204–T206), low silhouette down to 650 mm
 - Super siphon (T207–T215), vortex pre-rinse + high-velocity siphonic pull
 
-Listing: https://www.gdchengda.hk/products/?cat=standard
-Detail pages: /products/T201/ through /products/T215/
+Listing (EN): https://www.gdchengda.hk/products/?cat=standard · (zh-Hant): /zh/products/?cat=standard
+Detail pages: /products/T201/ through /products/T215/ (mirrored at /zh/products/T201/ through /zh/products/T215/)
 
 ### 3. Wall-Hung Toilets (壁掛馬桶 · T10 series) — 23 models published
 
 T101–T123. Wall-mounted ceramic, dual-flush, P-trap 180 mm, soft-close PP seat.
 
-Listing: https://www.gdchengda.hk/products/?cat=wallhung
-Detail pages: /products/T101/ through /products/T123/
+Listing (EN): https://www.gdchengda.hk/products/?cat=wallhung · (zh-Hant): /zh/products/?cat=wallhung
+Detail pages: /products/T101/ through /products/T123/ (mirrored at /zh/products/T101/ through /zh/products/T123/)
 
 ## OEM/ODM Services
 
