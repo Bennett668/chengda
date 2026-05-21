@@ -25,8 +25,8 @@ Four product categories in production with rendered photography and direct catal
 - UB01 — slanted rectangular: UB0116, UB0118, UB0118-A, UB0120, UB0121, UB0121-D, UB0122, UB0124, UB0124-A, UB0124-D, UB0126
 - UB02 — stepped rectangular: UB0218, UB0219, UB0221
 - UB03 — flat-base: UB0316, UB0318, UB0320, UB0322, UB0324
-- UB04 — slanted oval: UB0413, UB0414, UB0415, UB0416, UB0417, UB0418, UB0418-1, UB0420, UB0420-1, UB0422, UB0424
-- UB05 — boat-base rectangular: UB0522, UB0523
+- UB04 — slanted round: UB0413, UB0414, UB0415, UB0416, UB0417, UB0418, UB0418-1, UB0420, UB0420-1, UB0422, UB0424
+- UB05 — wave-base rectangular: UB0522, UB0523
 
 Listing: https://www.gdchengda.hk/products/?cat=washbasin (or /zh/products/?cat=washbasin for 繁體中文)
 Detail-page pattern (EN): https://www.gdchengda.hk/products/{CODE}/
