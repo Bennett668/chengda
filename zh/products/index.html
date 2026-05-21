@@ -22,28 +22,38 @@
   .layout { display: grid; grid-template-columns: 260px 1fr; gap: 64px; }
   @media (max-width: 980px) { .layout { grid-template-columns: 1fr; } .cat-side { position: static !important; } }
   .cat-side { position: sticky; top: 96px; align-self: start; }
-  .cat-list { list-style: none; }
-  .cat-list li a {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 16px 0; border-bottom: 1px solid var(--line);
-    font-size: 16px; font-weight: 500; color: var(--muted);
-    transition: color .2s var(--t);
+  .cat-tree { list-style: none; }
+  .cat-group { border-bottom: 1px solid var(--line); }
+  .cat-node {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    cursor: pointer; user-select: none; color: var(--muted);
+    transition: color .2s var(--t); text-decoration: none;
   }
-  .cat-list li a:hover, .cat-list li a.active { color: var(--ink); }
-  .cat-list li a .n { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
-  .tab-row { display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
-  .tab {
-    height: 38px; padding: 0 18px;
-    border: 1px solid var(--line-2); border-radius: var(--r-pill);
-    background: #fff; color: var(--ink-2);
-    font-size: 13px; font-weight: 500;
-    display: inline-flex; align-items: center; gap: 8px;
-    cursor: pointer; transition: all .2s var(--t);
+  .cat-node:hover { color: var(--ink); }
+  .cat-node.active { color: var(--ink); }
+  .cat-row-0 { padding: 16px 0; font-size: 16px; font-weight: 600; color: var(--ink); }
+  .cat-row-1 { padding: 11px 0; font-size: 14px; font-weight: 500; }
+  .cat-row-2 { padding: 8px 0 8px 20px; font-size: 13px; }
+  .cat-node.active.cat-row-1, .cat-node.active.cat-row-2 { font-weight: 600; }
+  .cat-label { display: flex; align-items: center; gap: 8px; min-width: 0; }
+  .cat-caret { width: 6px; height: 10px; flex-shrink: 0; position: relative; }
+  .cat-caret.has::before {
+    content: ''; position: absolute; top: 50%; left: 0; width: 0; height: 0;
+    border-style: solid; border-width: 3.5px 0 3.5px 5px;
+    border-color: transparent transparent transparent var(--muted);
+    transform: translateY(-50%); transition: transform .25s var(--t);
   }
-  .tab .count { font-family: var(--font-mono); font-size: 10px; color: var(--muted); }
-  .tab:hover { border-color: var(--ink); }
-  .tab.active { background: var(--ink); color: #fff; border-color: var(--ink); }
-  .tab.active .count { color: rgba(255,255,255,0.6); }
+  .cat-caret.has.open::before { transform: translateY(-50%) rotate(90deg); }
+  .cat-node:hover .cat-caret.has::before { border-left-color: var(--ink); }
+  .cat-node.active .cat-caret.has::before { border-left-color: var(--ink); }
+  .cat-count { font-family: var(--font-mono); font-size: 10px; color: var(--muted); flex-shrink: 0; }
+  .cat-node.active .cat-count { color: var(--ink-2); }
+  .cat-sub { padding: 2px 0 8px; }
+  .cat-children { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .3s var(--t); }
+  .cat-children.open { grid-template-rows: 1fr; }
+  .cat-children-inner { overflow: hidden; }
+  .grid-empty { grid-column: 1 / -1; text-align: center; padding: 72px 24px;
+    color: var(--muted); font-size: 14px; line-height: 1.6; }
   .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   @media (max-width: 1100px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 600px)  { .product-grid { grid-template-columns: 1fr; } }
@@ -81,15 +91,9 @@
   <div class="wrap">
     <div class="layout">
       <aside class="cat-side">
-        <ul class="cat-list" id="catList">
-          <li><a data-cat="washbasin" href="?cat=washbasin">面盆 <span class="n">38</span></a></li>
-          <li><a data-cat="pedestal" href="?cat=pedestal">柱盆 <span class="n">54</span></a></li>
-          <li><a data-cat="standard" href="?cat=standard">普通馬桶 <span class="n">40</span></a></li>
-          <li><a data-cat="smart" href="?cat=smart">智能馬桶 <span class="n">即將</span></a></li>
-        </ul>
+        <nav class="cat-tree" id="catNav"></nav>
       </aside>
       <div>
-        <div class="tab-row" id="tabRow"></div>
         <div class="product-grid" id="grid"></div>
       </div>
     </div>
@@ -324,46 +328,147 @@ const CATS = {
     items:[{code:"PB101",name:"PB101 · 落地柱盆 · 單孔",dims:"520 × 550 × 850 mm",sub:"floor",img:"/assets/products/PB101/card.webp?v=2"},{code:"PB102",name:"PB102 · 落地柱盆 · 單孔",dims:"500 × 500 × 850 mm",sub:"floor",img:"/assets/products/PB102/card.webp?v=2"},{code:"PB103",name:"PB103 · 落地柱盆 · 單孔",dims:"580 × 420 × 855 mm",sub:"floor",img:"/assets/products/PB103/card.webp?v=2"},{code:"PB104",name:"PB104 · 落地柱盆 · 單孔",dims:"425 × 425 × 950 mm",sub:"floor",img:"/assets/products/PB104/card.webp?v=2"},{code:"PB105",name:"PB105 · 落地柱盆 · 單孔",dims:"460 × 460 × 860 mm",sub:"floor",img:"/assets/products/PB105/card.webp?v=2"},{code:"PB106",name:"PB106 · 落地柱盆 · 單孔",dims:"540 × 400 × 840 mm",sub:"floor",img:"/assets/products/PB106/card.webp?v=2"},{code:"PB107",name:"PB107 · 落地柱盆 · 單孔",dims:"550 × 480 × 850 mm",sub:"floor",img:"/assets/products/PB107/card.webp?v=2"},{code:"PB108",name:"PB108 · 落地柱盆 · 單孔",dims:"510 × 460 × 830 mm",sub:"floor",img:"/assets/products/PB108/card.webp?v=2"},{code:"PB109",name:"PB109 · 落地柱盆 · 單孔",dims:"450 × 460 × 960 mm",sub:"floor",img:"/assets/products/PB109/card.webp?v=2"},{code:"PB110",name:"PB110 · 落地柱盆 · 單孔",dims:"460 × 460 × 850 mm",sub:"floor",img:"/assets/products/PB110/card.webp?v=2"},{code:"PB111",name:"PB111 · 落地柱盆 · 單孔",dims:"375 × 360 × 830 mm",sub:"floor",img:"/assets/products/PB111/card.webp?v=2"},{code:"PB112",name:"PB112 · 落地柱盆 · 單孔",dims:"340 × 320 × 820 mm",sub:"floor",img:"/assets/products/PB112/card.webp?v=2"},{code:"PB113",name:"PB113 · 落地柱盆 · 單孔",dims:"470 × 320 × 840 mm",sub:"floor",img:"/assets/products/PB113/card.webp?v=2"},{code:"PB114",name:"PB114 · 落地柱盆 · 單孔",dims:"455 × 385 × 870 mm",sub:"floor",img:"/assets/products/PB114/card.webp?v=2"},{code:"PB115",name:"PB115 · 落地柱盆 · 單孔",dims:"460 × 340 × 850 mm",sub:"floor",img:"/assets/products/PB115/card.webp?v=2"},{code:"PB116",name:"PB116 · 落地柱盆 · 單孔",dims:"440 × 390 × 860 mm",sub:"floor",img:"/assets/products/PB116/card.webp?v=2"},{code:"PB117",name:"PB117 · 落地柱盆 · 單孔",dims:"—",sub:"floor",img:"/assets/products/PB117/card.webp?v=2"},{code:"PB118",name:"PB118 · 落地柱盆 · 單孔",dims:"—",sub:"floor",img:"/assets/products/PB118/card.webp?v=2"},{code:"PB119",name:"PB119 · 落地柱盆 · 單孔",dims:"—",sub:"floor",img:"/assets/products/PB119/card.webp?v=2"},{code:"PB120",name:"PB120 · 落地柱盆 · 單孔",dims:"—",sub:"floor",img:"/assets/products/PB120/card.webp?v=2"},{code:"PB121",name:"PB121 · 落地柱盆 · 單孔",dims:"—",sub:"floor",img:"/assets/products/PB121/card.webp?v=2"},{code:"PB122",name:"PB122 · 落地柱盆 · 單孔",dims:"—",sub:"floor",img:"/assets/products/PB122/card.webp?v=2"},{code:"PB123",name:"PB123 · 落地柱盆 · 單孔",dims:"—",sub:"floor",img:"/assets/products/PB123/card.webp?v=2"},{code:"PB124",name:"PB124 · 落地柱盆 · 單孔",dims:"—",sub:"floor",img:"/assets/products/PB124/card.webp?v=2"},{code:"PB125",name:"PB125 · 落地柱盆 · 單孔",dims:"—",sub:"floor",img:"/assets/products/PB125/card.webp?v=2"},{code:"PB201",name:"PB201 · 落地柱盆",dims:"460 × 460 × 850 mm",sub:"floor",img:"/assets/products/PB201/card.webp?v=2"},{code:"PB202",name:"PB202 · 落地柱盆",dims:"400 × 400 × 850 mm",sub:"floor",img:"/assets/products/PB202/card.webp?v=2"},{code:"PB203",name:"PB203 · 落地柱盆",dims:"460 × 460 × 830 mm",sub:"floor",img:"/assets/products/PB203/card.webp?v=2"},{code:"PB204",name:"PB204 · 落地柱盆",dims:"465 × 465 × 870 mm",sub:"floor",img:"/assets/products/PB204/card.webp?v=2"},{code:"PB205",name:"PB205 · 落地柱盆",dims:"400 × 400 × 850 mm",sub:"floor",img:"/assets/products/PB205/card.webp?v=2"},{code:"PB206",name:"PB206 · 落地柱盆",dims:"500 × 380 × 860 mm",sub:"floor",img:"/assets/products/PB206/card.webp?v=2"},{code:"PB207",name:"PB207 · 落地柱盆",dims:"625 × 420 × 845 mm",sub:"floor",img:"/assets/products/PB207/card.webp?v=2"},{code:"PB208",name:"PB208 · 落地柱盆",dims:"605 × 410 × 845 mm",sub:"floor",img:"/assets/products/PB208/card.webp?v=2"},{code:"PB209",name:"PB209 · 落地柱盆",dims:"470 × 400 × 870 mm",sub:"floor",img:"/assets/products/PB209/card.webp?v=2"},{code:"PB210",name:"PB210 · 落地柱盆",dims:"500 × 500 × 890 mm",sub:"floor",img:"/assets/products/PB210/card.webp?v=2"},{code:"PB211",name:"PB211 · 落地柱盆",dims:"360 × 360 × 860 mm",sub:"floor",img:"/assets/products/PB211/card.webp?v=2"},{code:"PB212",name:"PB212 · 落地柱盆",dims:"400 × 400 × 860 mm",sub:"floor",img:"/assets/products/PB212/card.webp?v=2"},{code:"PB213",name:"PB213 · 落地柱盆",dims:"—",sub:"floor",img:"/assets/products/PB213/card.webp?v=2"},{code:"PB214",name:"PB214 · 落地柱盆",dims:"—",sub:"floor",img:"/assets/products/PB214/card.webp?v=2"},{code:"PB215",name:"PB215 · 落地柱盆",dims:"—",sub:"floor",img:"/assets/products/PB215/card.webp?v=2"},{code:"PB216",name:"PB216 · 落地柱盆",dims:"—",sub:"floor",img:"/assets/products/PB216/card.webp?v=2"},{code:"PB217",name:"PB217 · 落地柱盆",dims:"—",sub:"floor",img:"/assets/products/PB217/card.webp?v=2"},{code:"PB218",name:"PB218 · 落地柱盆",dims:"—",sub:"floor",img:"/assets/products/PB218/card.webp?v=2"},{code:"PB219",name:"PB219 · 落地柱盆",dims:"—",sub:"floor",img:"/assets/products/PB219/card.webp?v=2"},{code:"PB220",name:"PB220 · 落地柱盆",dims:"—",sub:"floor",img:"/assets/products/PB220/card.webp?v=2"},{code:"WB100",name:"WB100 · 掛牆面盆",dims:"515 × 515 × 440 mm",sub:"wall",img:"/assets/products/WB100/card.webp?v=3"},{code:"WB101",name:"WB101 · 掛牆面盆",dims:"500 × 410 × 400 mm",sub:"wall",img:"/assets/products/WB101/card.webp?v=3"},{code:"WB102",name:"WB102 · 掛牆面盆",dims:"450 × 400 × 390 mm",sub:"wall",img:"/assets/products/WB102/card.webp?v=3"},{code:"WB103",name:"WB103 · 掛牆面盆",dims:"385 × 385 × 610 mm",sub:"wall",img:"/assets/products/WB103/card.webp?v=3"},{code:"WB104",name:"WB104 · 掛牆面盆",dims:"360 × 415 × 445 mm",sub:"wall",img:"/assets/products/WB104/card.webp?v=3"},{code:"WB105",name:"WB105 · 掛牆面盆",dims:"375 × 345 × 420 mm",sub:"wall",img:"/assets/products/WB105/card.webp?v=3"},{code:"WB106",name:"WB106 · 掛牆面盆",dims:"395 × 310 × 385 mm",sub:"wall",img:"/assets/products/WB106/card.webp?v=3"},{code:"WB107",name:"WB107 · 掛牆面盆",dims:"510 × 350 × 390 mm",sub:"wall",img:"/assets/products/WB107/card.webp?v=3"},{code:"WB108",name:"WB108 · 掛牆面盆",dims:"420 × 420 × 390 mm",sub:"wall",img:"/assets/products/WB108/card.webp?v=3"}]},
   standard: { title:'普通馬桶。', sub:['38 款式 · 立式 + 掛式','雙鈕沖水 · 抗菌釉面','緩降座圈'], icon:'toilet',
     tabs:[{id:'all',label:'全部',count:38},{id:'floor',label:'立式',count:17},{id:'wall',label:'掛式',count:23}],
-    items:[{code:"T201",name:"T201 · 瀑布虹吸 · 弧線一體",dims:"690 × 375 × 660 mm",sub:"floor",img:"/assets/products/T201/card.webp?v=7"},{code:"T202",name:"T202 · 瀑布超漩 · 窄底盤",dims:"680 × 360 × 700 mm",sub:"floor",img:"/assets/products/T202/card.webp?v=7"},{code:"T203",name:"T203 · 無唇 · 全釉內壁",dims:"660 × 370 × 700 mm",sub:"floor",img:"/assets/products/T203/card.webp?v=7"},{code:"T204",name:"T204 · 隱藏水箱 · 650mm 低姿態",dims:"700 × 365 × 650 mm",sub:"floor",img:"/assets/products/T204/card.webp?v=7"},{code:"T205",name:"T205 · 隱藏水箱 · 軟肩身型",dims:"700 × 365 × 650 mm",sub:"floor",img:"/assets/products/T205/card.webp?v=7"},{code:"T206",name:"T206 · 隱藏水箱 · 方肩",dims:"680 × 370 × 700 mm",sub:"floor",img:"/assets/products/T206/card.webp?v=7"},{code:"T207",name:"T207 · 雕塑身型 · 430mm 寬座圈",dims:"680 × 430 × 680 mm",sub:"floor",img:"/assets/products/T207/card.webp?v=7"},{code:"T208",name:"T208 · 軟方一體",dims:"700 × 370 × 720 mm",sub:"floor",img:"/assets/products/T208/card.webp?v=7"},{code:"T209",name:"T209 · 高水箱 · 超漩虹吸",dims:"680 × 365 × 750 mm",sub:"floor",img:"/assets/products/T209/card.webp?v=7"},{code:"T210",name:"T210 · 寬底盤 · 380mm 坐高",dims:"700 × 395 × 710 mm",sub:"floor",img:"/assets/products/T210/card.webp?v=7"},{code:"T211",name:"T211 · 高水箱 · 軟柱身",dims:"680 × 365 × 750 mm",sub:"floor",img:"/assets/products/T211/card.webp?v=7"},{code:"T212",name:"T212 · 高水箱 · 方肩",dims:"680 × 365 × 750 mm",sub:"floor",img:"/assets/products/T212/card.webp?v=7"},{code:"T213",name:"T213 · 高水箱 · 修長",dims:"680 × 365 × 750 mm",sub:"floor",img:"/assets/products/T213/card.webp?v=7"},{code:"T214",name:"T214 · 高水箱 · 建築感",dims:"680 × 365 × 750 mm",sub:"floor",img:"/assets/products/T214/card.webp?v=7"},{code:"T215",name:"T215 · 旗艦 760mm 水箱",dims:"680 × 365 × 760 mm",sub:"floor",img:"/assets/products/T215/card.webp?v=7"},{code:"T216",name:"T216 · 連體坐廁 · 立式",dims:"—",sub:"floor",img:"/assets/products/T216/card.webp?v=7"},{code:"T217",name:"T217 · 連體坐廁 · 立式",dims:"—",sub:"floor",img:"/assets/products/T217/card.webp?v=7"},{code:"T101",name:"T101 · 壁掛馬桶",dims:"485 × 360 × 365 mm",sub:"wall",img:"/assets/products/T101/card.webp"},{code:"T102",name:"T102 · 壁掛馬桶",dims:"485 × 360 × 365 mm",sub:"wall",img:"/assets/products/T102/card.webp"},{code:"T103",name:"T103 · 壁掛馬桶",dims:"555 × 360 × 395 mm",sub:"wall",img:"/assets/products/T103/card.webp"},{code:"T104",name:"T104 · 壁掛馬桶",dims:"575 × 360 × 365 mm",sub:"wall",img:"/assets/products/T104/card.webp"},{code:"T105",name:"T105 · 壁掛馬桶",dims:"570 × 360 × 365 mm",sub:"wall",img:"/assets/products/T105/card.webp"},{code:"T106",name:"T106 · 壁掛馬桶",dims:"525 × 360 × 365 mm",sub:"wall",img:"/assets/products/T106/card.webp"},{code:"T107",name:"T107 · 壁掛馬桶",dims:"540 × 360 × 365 mm",sub:"wall",img:"/assets/products/T107/card.webp"},{code:"T108",name:"T108 · 壁掛馬桶",dims:"525 × 360 × 365 mm",sub:"wall",img:"/assets/products/T108/card.webp"},{code:"T109",name:"T109 · 壁掛馬桶",dims:"555 × 360 × 365 mm",sub:"wall",img:"/assets/products/T109/card.webp"},{code:"T110",name:"T110 · 壁掛馬桶",dims:"555 × 360 × 395 mm",sub:"wall",img:"/assets/products/T110/card.webp"},{code:"T111",name:"T111 · 壁掛馬桶",dims:"525 × 365 × 365 mm",sub:"wall",img:"/assets/products/T111/card.webp"},{code:"T112",name:"T112 · 壁掛馬桶",dims:"570 × 390 × 365 mm",sub:"wall",img:"/assets/products/T112/card.webp"},{code:"T113",name:"T113 · 壁掛馬桶",dims:"515 × 365 × 360 mm",sub:"wall",img:"/assets/products/T113/card.webp"},{code:"T114",name:"T114 · 壁掛馬桶",dims:"525 × 365 × 350 mm",sub:"wall",img:"/assets/products/T114/card.webp"},{code:"T115",name:"T115 · 壁掛馬桶",dims:"485 × 365 × 350 mm",sub:"wall",img:"/assets/products/T115/card.webp"},{code:"T116",name:"T116 · 壁掛馬桶",dims:"525 × 365 × 365 mm",sub:"wall",img:"/assets/products/T116/card.webp"},{code:"T117",name:"T117 · 壁掛馬桶",dims:"525 × 360 × 365 mm",sub:"wall",img:"/assets/products/T117/card.webp"},{code:"T118",name:"T118 · 壁掛馬桶",dims:"510 × 360 × 355 mm",sub:"wall",img:"/assets/products/T118/card.webp"},{code:"T119",name:"T119 · 壁掛馬桶",dims:"490 × 360 × 360 mm",sub:"wall",img:"/assets/products/T119/card.webp"},{code:"T120",name:"T120 · 壁掛馬桶",dims:"485 × 365 × 350 mm",sub:"wall",img:"/assets/products/T120/card.webp"},{code:"T121",name:"T121 · 壁掛馬桶",dims:"525 × 360 × 365 mm",sub:"wall",img:"/assets/products/T121/card.webp"},{code:"T122",name:"T122 · 壁掛馬桶",dims:"555 × 360 × 410 mm",sub:"wall",img:"/assets/products/T122/card.webp"},{code:"T123",name:"T123 · 壁掛馬桶",dims:"525 × 360 × 365 mm",sub:"wall",img:"/assets/products/T123/card.webp"}]},
+    items:[{code:"T201",name:"T201 · 瀑布虹吸 · 弧線一體",dims:"690 × 375 × 660 mm",sub:"floor",img:"/assets/products/T201/card.webp?v=8"},{code:"T202",name:"T202 · 瀑布超漩 · 窄底盤",dims:"680 × 360 × 700 mm",sub:"floor",img:"/assets/products/T202/card.webp?v=8"},{code:"T203",name:"T203 · 無唇 · 全釉內壁",dims:"660 × 370 × 700 mm",sub:"floor",img:"/assets/products/T203/card.webp?v=8"},{code:"T204",name:"T204 · 隱藏水箱 · 650mm 低姿態",dims:"700 × 365 × 650 mm",sub:"floor",img:"/assets/products/T204/card.webp?v=8"},{code:"T205",name:"T205 · 隱藏水箱 · 軟肩身型",dims:"700 × 365 × 650 mm",sub:"floor",img:"/assets/products/T205/card.webp?v=8"},{code:"T206",name:"T206 · 隱藏水箱 · 方肩",dims:"680 × 370 × 700 mm",sub:"floor",img:"/assets/products/T206/card.webp?v=8"},{code:"T207",name:"T207 · 雕塑身型 · 430mm 寬座圈",dims:"680 × 430 × 680 mm",sub:"floor",img:"/assets/products/T207/card.webp?v=8"},{code:"T208",name:"T208 · 軟方一體",dims:"700 × 370 × 720 mm",sub:"floor",img:"/assets/products/T208/card.webp?v=8"},{code:"T209",name:"T209 · 高水箱 · 超漩虹吸",dims:"680 × 365 × 750 mm",sub:"floor",img:"/assets/products/T209/card.webp?v=8"},{code:"T210",name:"T210 · 寬底盤 · 380mm 坐高",dims:"700 × 395 × 710 mm",sub:"floor",img:"/assets/products/T210/card.webp?v=8"},{code:"T211",name:"T211 · 高水箱 · 軟柱身",dims:"680 × 365 × 750 mm",sub:"floor",img:"/assets/products/T211/card.webp?v=8"},{code:"T212",name:"T212 · 高水箱 · 方肩",dims:"680 × 365 × 750 mm",sub:"floor",img:"/assets/products/T212/card.webp?v=8"},{code:"T213",name:"T213 · 高水箱 · 修長",dims:"680 × 365 × 750 mm",sub:"floor",img:"/assets/products/T213/card.webp?v=8"},{code:"T214",name:"T214 · 高水箱 · 建築感",dims:"680 × 365 × 750 mm",sub:"floor",img:"/assets/products/T214/card.webp?v=8"},{code:"T215",name:"T215 · 旗艦 760mm 水箱",dims:"680 × 365 × 760 mm",sub:"floor",img:"/assets/products/T215/card.webp?v=8"},{code:"T216",name:"T216 · 連體坐廁 · 立式",dims:"—",sub:"floor",img:"/assets/products/T216/card.webp?v=8"},{code:"T217",name:"T217 · 連體坐廁 · 立式",dims:"—",sub:"floor",img:"/assets/products/T217/card.webp?v=8"},{code:"T101",name:"T101 · 壁掛馬桶",dims:"485 × 360 × 365 mm",sub:"wall",img:"/assets/products/T101/card.webp"},{code:"T102",name:"T102 · 壁掛馬桶",dims:"485 × 360 × 365 mm",sub:"wall",img:"/assets/products/T102/card.webp"},{code:"T103",name:"T103 · 壁掛馬桶",dims:"555 × 360 × 395 mm",sub:"wall",img:"/assets/products/T103/card.webp"},{code:"T104",name:"T104 · 壁掛馬桶",dims:"575 × 360 × 365 mm",sub:"wall",img:"/assets/products/T104/card.webp"},{code:"T105",name:"T105 · 壁掛馬桶",dims:"570 × 360 × 365 mm",sub:"wall",img:"/assets/products/T105/card.webp"},{code:"T106",name:"T106 · 壁掛馬桶",dims:"525 × 360 × 365 mm",sub:"wall",img:"/assets/products/T106/card.webp"},{code:"T107",name:"T107 · 壁掛馬桶",dims:"540 × 360 × 365 mm",sub:"wall",img:"/assets/products/T107/card.webp"},{code:"T108",name:"T108 · 壁掛馬桶",dims:"525 × 360 × 365 mm",sub:"wall",img:"/assets/products/T108/card.webp"},{code:"T109",name:"T109 · 壁掛馬桶",dims:"555 × 360 × 365 mm",sub:"wall",img:"/assets/products/T109/card.webp"},{code:"T110",name:"T110 · 壁掛馬桶",dims:"555 × 360 × 395 mm",sub:"wall",img:"/assets/products/T110/card.webp"},{code:"T111",name:"T111 · 壁掛馬桶",dims:"525 × 365 × 365 mm",sub:"wall",img:"/assets/products/T111/card.webp"},{code:"T112",name:"T112 · 壁掛馬桶",dims:"570 × 390 × 365 mm",sub:"wall",img:"/assets/products/T112/card.webp"},{code:"T113",name:"T113 · 壁掛馬桶",dims:"515 × 365 × 360 mm",sub:"wall",img:"/assets/products/T113/card.webp"},{code:"T114",name:"T114 · 壁掛馬桶",dims:"525 × 365 × 350 mm",sub:"wall",img:"/assets/products/T114/card.webp"},{code:"T115",name:"T115 · 壁掛馬桶",dims:"485 × 365 × 350 mm",sub:"wall",img:"/assets/products/T115/card.webp"},{code:"T116",name:"T116 · 壁掛馬桶",dims:"525 × 365 × 365 mm",sub:"wall",img:"/assets/products/T116/card.webp"},{code:"T117",name:"T117 · 壁掛馬桶",dims:"525 × 360 × 365 mm",sub:"wall",img:"/assets/products/T117/card.webp"},{code:"T118",name:"T118 · 壁掛馬桶",dims:"510 × 360 × 355 mm",sub:"wall",img:"/assets/products/T118/card.webp"},{code:"T119",name:"T119 · 壁掛馬桶",dims:"490 × 360 × 360 mm",sub:"wall",img:"/assets/products/T119/card.webp"},{code:"T120",name:"T120 · 壁掛馬桶",dims:"485 × 365 × 350 mm",sub:"wall",img:"/assets/products/T120/card.webp"},{code:"T121",name:"T121 · 壁掛馬桶",dims:"525 × 360 × 365 mm",sub:"wall",img:"/assets/products/T121/card.webp"},{code:"T122",name:"T122 · 壁掛馬桶",dims:"555 × 360 × 410 mm",sub:"wall",img:"/assets/products/T122/card.webp"},{code:"T123",name:"T123 · 壁掛馬桶",dims:"525 × 360 × 365 mm",sub:"wall",img:"/assets/products/T123/card.webp"}]},
   smart: { title:'智能馬桶。', sub:['新系列','加熱坐圈 · 自動沖水'], icon:'smarttoilet',
     tabs:[{id:'all',label:'全部',count:6},{id:'floor',label:'落地',count:3},{id:'wall',label:'掛牆',count:3}],
     items:[{code:'ST101',name:'Lumen Smart',dims:'720 × 400 × 480',sub:'floor'},{code:'ST108',name:'Volt Smart',dims:'700 × 390 × 470',sub:'floor'},{code:'ST115',name:'Aria Smart',dims:'710 × 395 × 475',sub:'floor'},{code:'SW201',name:'Float Smart',dims:'540 × 360 × 320',sub:'wall'},{code:'SW208',name:'Edge Smart',dims:'560 × 370 × 330',sub:'wall'},{code:'SW214',name:'Plate Smart',dims:'550 × 365 × 325',sub:'wall'}]},
 };
+const TREES = {
+  washbasin: [
+    {id:'g_above', label:'台上盆 · 藝術盆'},
+    {id:'g_semi', label:'台中盆', children:[
+      {id:'CB01', label:'CB01 · 斜底圓盆 · 無龍頭孔'},
+      {id:'CB02', label:'CB02 · 斜底圓盆 · 有龍頭孔'},
+    ]},
+    {id:'g_under', label:'台下盆', children:[
+      {id:'UB01', label:'UB01 · 斜底方盆'},
+      {id:'UB02', label:'UB02 · 梯底方盆'},
+      {id:'UB03', label:'UB03 · 平底方盆'},
+      {id:'UB04', label:'UB04 · 斜底圓盆'},
+      {id:'UB05', label:'UB05 · 波浪底方盆'},
+    ]},
+  ],
+  pedestal: [
+    {id:'floor', label:'立式柱盆'},
+    {id:'wall', label:'掛牆面盆'},
+  ],
+  standard: [
+    {id:'floor', label:'立式'},
+    {id:'wall', label:'掛式'},
+  ],
+  smart: [],
+};
+const CAT_ORDER = ['washbasin','pedestal','standard','smart'];
+const CAT_LABEL = {washbasin:'面盆', pedestal:'柱盆', standard:'普通馬桶', smart:'智能馬桶'};
+
 const params = new URLSearchParams(location.search);
 let cat = params.get('cat') || 'washbasin'; if (!CATS[cat]) cat='washbasin';
 let sub = params.get('sub') || 'all';
 const C = CATS[cat];
 document.getElementById('catTitle').textContent = C.title;
 document.getElementById('catSub').innerHTML = C.sub.map(s=>`<span>${s}</span>`).join('');
-document.querySelectorAll('#catList a').forEach(a=>a.classList.toggle('active', a.dataset.cat===cat));
-const tabRow = document.getElementById('tabRow');
 const grid = document.getElementById('grid');
-if (C.comingSoon) {
-  tabRow.innerHTML = '';
-  grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:88px 24px;"><div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;color:var(--muted);text-transform:uppercase;margin-bottom:18px;">即將上線</div><h2 style="font-size:clamp(26px,3.6vw,40px);font-weight:500;letter-spacing:-0.03em;margin-bottom:14px;">智能馬桶系列</h2><p style="font-size:15px;color:var(--ink-2);max-width:48ch;margin:0 auto 26px;line-height:1.65;">立式 ST10 與掛式 ST20 智能馬桶系列正在準備中。如需智能馬桶 OEM / ODM 報價,歡迎即時查詢 —— 24 小時內回覆。</p><a href="/zh/contact/" class="btn primary"><span>查詢智能馬桶</span><span class="arr"></span></a></div>`;
-} else {
-  tabRow.innerHTML = C.tabs.map(t=>`<button class="tab ${t.id===sub?'active':''}" data-sub="${t.id}">${t.label} <span class="count">${String(t.count).padStart(2,'0')}</span></button>`).join('');
-  const render = () => {
-    const items = sub==='all' ? C.items : C.items.filter(i=>i.sub===sub);
-    grid.innerHTML = items.map(it=>{
-      const href = it.img ? `/zh/products/${it.code}/` : '#';
-      const visual = it.img ? `<img src="${it.img}" alt="${it.code}" loading="lazy" decoding="async" />` : (ICONS[C.icon]||'');
-      return `
-    <a class="pcard" data-code="${it.code}" href="${href}">
-      <div class="img">${visual}</div>
-      <div class="info"><div class="name">${it.name}</div><div class="dims">${it.dims}</div></div>
-    </a>`;
-    }).join('');
-  };
-  render();
-  tabRow.addEventListener('click', e=>{
-    const b = e.target.closest('.tab'); if(!b) return;
-    sub = b.dataset.sub;
-    document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active', t===b));
-    render();
-    const u=new URL(location.href); u.searchParams.set('sub',sub); history.replaceState(null,'',u);
-  });
+const catNav = document.getElementById('catNav');
+
+function leafIds(n){ return (n.children&&n.children.length) ? n.children.flatMap(leafIds) : [n.id]; }
+function findNode(id){
+  let r=null;
+  (function w(ns){ for(const n of ns){ if(n.id===id){r=n;return;} if(n.children)w(n.children); } })(TREES[cat]||[]);
+  return r;
 }
+function itemsFor(id){
+  if(id==='all') return C.items;
+  const n=findNode(id);
+  const leaves=new Set(n?leafIds(n):[id]);
+  return C.items.filter(i=>leaves.has(i.sub));
+}
+function countOf(id){ return itemsFor(id).length; }
+function openPath(){
+  const path=new Set();
+  (function w(ns,anc){ for(const n of ns){
+    if(n.id===sub){ anc.forEach(x=>path.add(x)); if(n.children&&n.children.length)path.add(n.id); }
+    if(n.children)w(n.children,anc.concat(n.id));
+  } })(TREES[cat]||[], []);
+  return path;
+}
+function isComingSoon(){ return cat==='smart' || C.comingSoon; }
+
+function renderGrid(){
+  if(isComingSoon()){ grid.innerHTML='<div class="grid-empty">智能馬桶系列即將上線 —— <a href="/zh/contact/" style="color:var(--ink);text-decoration:underline;">查詢 OEM</a>。</div>'; return; }
+  const items=itemsFor(sub);
+  if(!items.length){ grid.innerHTML='<div class="grid-empty">此子分類即將上線 —— <a href="/zh/contact/" style="color:var(--ink);text-decoration:underline;">聯絡我哋</a>查詢 OEM。</div>'; return; }
+  grid.innerHTML=items.map(it=>{
+    const href=it.img?`/zh/products/${it.code}/`:'#';
+    const visual=it.img?`<img src="${it.img}" alt="${it.code}" loading="lazy" decoding="async" />`:(ICONS[C.icon]||'');
+    return `<a class="pcard" data-code="${it.code}" href="${href}"><div class="img">${visual}</div><div class="info"><div class="name">${it.name}</div><div class="dims">${it.dims}</div></div></a>`;
+  }).join('');
+}
+
+function nodeHtml(n,depth){
+  const has=!!(n.children&&n.children.length);
+  const cnt=countOf(n.id);
+  const op=openPath();
+  const isOpen=op.has(n.id);
+  const active=n.id===sub;
+  let h='<div class="cat-item">';
+  h+=`<div class="cat-node cat-row-${depth}${active?' active':''}" data-sel="${n.id}" data-has="${has?1:0}">`;
+  h+=`<span class="cat-label"><span class="cat-caret${has?' has':''}${isOpen?' open':''}"></span><span>${n.label}</span></span>`;
+  h+=`<span class="cat-count">${cnt||''}</span></div>`;
+  if(has){
+    h+=`<div class="cat-children${isOpen?' open':''}"><div class="cat-children-inner">`;
+    h+=n.children.map(c=>nodeHtml(c,depth+1)).join('');
+    h+='</div></div>';
+  }
+  h+='</div>';
+  return h;
+}
+function renderNav(){
+  let h='';
+  for(const cc of CAT_ORDER){
+    const isCur=cc===cat;
+    const total=CATS[cc].items.length;
+    const cntTxt = cc==='smart' ? '即將' : total;
+    h+='<div class="cat-group">';
+    h+=`<a class="cat-node cat-row-0${isCur&&sub==='all'?' active':''}" href="?cat=${cc}" data-cat="${cc}" data-sel="all">`;
+    h+=`<span class="cat-label">${CAT_LABEL[cc]}</span><span class="cat-count">${cntTxt}</span></a>`;
+    if(isCur && (TREES[cat]||[]).length){
+      h+='<div class="cat-sub">'+TREES[cat].map(n=>nodeHtml(n,1)).join('')+'</div>';
+    }
+    h+='</div>';
+  }
+  catNav.innerHTML=h;
+}
+function selectNode(sel){
+  sub=sel;
+  catNav.querySelectorAll('.cat-node').forEach(n=>{
+    const on = n.classList.contains('cat-row-0')
+      ? (n.dataset.cat===cat && sel==='all')
+      : (n.dataset.sel===sel);
+    n.classList.toggle('active',on);
+  });
+  const u=new URL(location.href);
+  if(sel==='all')u.searchParams.delete('sub'); else u.searchParams.set('sub',sel);
+  history.replaceState(null,'',u);
+  renderGrid();
+}
+catNav.addEventListener('click', e=>{
+  const root=e.target.closest('a.cat-row-0');
+  if(root){
+    if(root.dataset.cat!==cat) return;
+    e.preventDefault(); selectNode('all'); return;
+  }
+  const node=e.target.closest('.cat-node'); if(!node) return;
+  if(node.dataset.has==='1'){
+    const item=node.parentElement;
+    const ch=item.querySelector(':scope > .cat-children');
+    const car=node.querySelector('.cat-caret');
+    if(ch){ ch.classList.toggle('open'); if(car)car.classList.toggle('open'); }
+  }
+  selectNode(node.dataset.sel);
+});
+
+renderNav();
+renderGrid();
 </script>
 
 <script type="application/ld+json">
