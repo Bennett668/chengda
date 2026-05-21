@@ -84,6 +84,7 @@
           <li><a data-cat="washbasin" href="?cat=washbasin">Washbasin <span class="n">38</span></a></li>
           <li><a data-cat="pedestal" href="?cat=pedestal">Pedestal Basin <span class="n">54</span></a></li>
           <li><a data-cat="standard" href="?cat=standard">Standard Toilet <span class="n">38</span></a></li>
+          <li><a data-cat="smart" href="?cat=smart">Smart Toilet <span class="n">soon</span></a></li>
         </ul>
       </aside>
       <div>
@@ -336,30 +337,33 @@ document.getElementById('catTitle').textContent = C.title;
 document.getElementById('catSub').innerHTML = C.sub.map(s=>`<span>${s}</span>`).join('');
 document.querySelectorAll('#catList a').forEach(a=>a.classList.toggle('active', a.dataset.cat===cat));
 const tabRow = document.getElementById('tabRow');
-tabRow.innerHTML = C.tabs.map(t=>`<button class="tab ${t.id===sub?'active':''}" data-sub="${t.id}">${t.label} <span class="count">${String(t.count).padStart(2,'0')}</span></button>`).join('');
 const grid = document.getElementById('grid');
-function render() {
-  const items = sub==='all' ? C.items : C.items.filter(i=>i.sub===sub);
-  grid.innerHTML = items.map(it=>{
-    const href = it.img ? `/products/${it.code}/` : '#';
-    const visual = it.img
-      ? `<img src="${it.img}" alt="${it.code}" loading="lazy" decoding="async" />`
-      : (ICONS[C.icon]||'');
-    return `
+if (C.comingSoon) {
+  tabRow.innerHTML = '';
+  grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:88px 24px;"><div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;color:var(--muted);text-transform:uppercase;margin-bottom:18px;">Coming soon</div><h2 style="font-size:clamp(26px,3.6vw,40px);font-weight:500;letter-spacing:-0.03em;margin-bottom:14px;">Smart Toilet Series</h2><p style="font-size:15px;color:var(--ink-2);max-width:48ch;margin:0 auto 26px;line-height:1.65;">The floor-standing ST10 and wall-hung ST20 smart-toilet series are in preparation. For smart-toilet OEM/ODM quotes, get in touch — we respond within 24 hours.</p><a href="/contact/" class="btn primary"><span>Enquire about smart toilets</span><span class="arr"></span></a></div>`;
+} else {
+  tabRow.innerHTML = C.tabs.map(t=>`<button class="tab ${t.id===sub?'active':''}" data-sub="${t.id}">${t.label} <span class="count">${String(t.count).padStart(2,'0')}</span></button>`).join('');
+  const render = () => {
+    const items = sub==='all' ? C.items : C.items.filter(i=>i.sub===sub);
+    grid.innerHTML = items.map(it=>{
+      const href = it.img ? `/products/${it.code}/` : '#';
+      const visual = it.img ? `<img src="${it.img}" alt="${it.code}" loading="lazy" decoding="async" />` : (ICONS[C.icon]||'');
+      return `
     <a class="pcard" data-code="${it.code}" href="${href}">
       <div class="img">${visual}</div>
       <div class="info"><div class="name">${it.name}</div><div class="dims">${it.dims}</div></div>
     </a>`;
-  }).join('');
-}
-render();
-tabRow.addEventListener('click', e=>{
-  const b = e.target.closest('.tab'); if(!b) return;
-  sub = b.dataset.sub;
-  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active', t===b));
+    }).join('');
+  };
   render();
-  const u=new URL(location.href); u.searchParams.set('sub',sub); history.replaceState(null,'',u);
-});
+  tabRow.addEventListener('click', e=>{
+    const b = e.target.closest('.tab'); if(!b) return;
+    sub = b.dataset.sub;
+    document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active', t===b));
+    render();
+    const u=new URL(location.href); u.searchParams.set('sub',sub); history.replaceState(null,'',u);
+  });
+}
 </script>
 
 <script type="application/ld+json">
