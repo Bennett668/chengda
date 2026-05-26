@@ -30,21 +30,164 @@
 <link rel="stylesheet" href="/assets/porcelain.css?v=15" />
 <link rel="preload" as="image" href="/assets/products/UB0116/card.webp" />
 <style>
-  .pd { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 64px; align-items: start; }
+  /* ===== Top section: media + info ===== */
+  .pd { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
   @media (max-width: 980px) { .pd { grid-template-columns: 1fr; gap: 32px; } }
-  .pd h1 { font-size: clamp(36px,5vw,72px); font-weight: 500; letter-spacing: -0.04em; line-height: 1; margin-bottom: 14px; }
-  .pd .code { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; color: var(--muted); text-transform: uppercase; margin-bottom: 18px; }
-  .pd .lede { font-size: 17px; line-height: 1.6; color: var(--ink-2); margin: 8px 0 24px; max-width: 52ch; }
-  .pd .actions { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+
+  .pd-media { display: flex; flex-direction: column; gap: 14px; }
   .pd-hero { aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; background: #fff; }
   .pd-hero img { width: 100%; height: 100%; object-fit: contain; }
+
+  .pd-thumbs-wrap { display: grid; grid-template-columns: 32px 1fr 32px; gap: 8px; align-items: center; }
+  .pd-arrow {
+    width: 32px; height: 80px; border: 1px solid var(--line); background: #fff;
+    border-radius: var(--r-md); cursor: pointer; display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: 18px; line-height: 1;
+    transition: color .2s var(--t), border-color .2s var(--t);
+  }
+  .pd-arrow:hover { color: var(--ink); border-color: var(--ink); }
+  .pd-thumbs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+  .pd-thumb {
+    aspect-ratio: 1/1; background: #fff; border: 1px solid var(--line); padding: 0; cursor: pointer;
+    overflow: hidden; border-radius: var(--r-md); transition: border-color .2s var(--t);
+  }
+  .pd-thumb img { width: 100%; height: 100%; object-fit: contain; padding: 6px; box-sizing: border-box; }
+  .pd-thumb:hover { border-color: var(--muted); }
+  .pd-thumb.is-active { border-color: var(--ink); border-width: 2px; }
+
+  /* ===== Info column ===== */
+  .pd-eyebrow {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 12px;
+  }
+  .pd h1 {
+    font-size: clamp(40px, 5vw, 56px); font-weight: 600; letter-spacing: -0.03em;
+    line-height: 1; margin: 0 0 18px;
+  }
+  .pd-lede { font-size: 15px; line-height: 1.6; color: var(--ink-2); margin: 0 0 24px; max-width: 44ch; }
+
+  .pd-divider { border: 0; border-top: 1px solid var(--line); margin: 24px 0; }
+
+  /* 4 feature icons */
+  .pd-features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 24px 0 28px; }
+  .pd-feat { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; }
+  .pd-feat-ico {
+    width: 48px; height: 48px; border-radius: 50%; background: var(--bg-2);
+    display: flex; align-items: center; justify-content: center; color: var(--ink);
+  }
+  .pd-feat-ico svg { width: 24px; height: 24px; }
+  .pd-feat-label { font-size: 12px; color: var(--ink-2); line-height: 1.3; }
+
+  /* Spec rows */
+  .pd-specs { display: grid; grid-template-columns: 140px 1fr; row-gap: 0; column-gap: 24px;
+    border-top: 1px solid var(--line); }
+  .pd-specs > div { padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .pd-specs .k { color: var(--ink); font-size: 14px; font-weight: 500; }
+  .pd-specs .v { color: var(--ink); font-size: 14px; }
+  .pd-specs .v .small { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  /* Action buttons */
+  .pd-actions { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+  .pd-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 13px 22px; font-size: 14px; font-weight: 500;
+    border-radius: 999px; border: 1px solid var(--ink); cursor: pointer;
+    text-decoration: none; transition: background .2s var(--t), color .2s var(--t);
+    background: var(--ink); color: #fff;
+  }
+  .pd-btn.outline { background: #fff; color: var(--ink); }
+  .pd-btn:hover { opacity: 0.85; }
+  .pd-btn .arr { display: inline-block; transition: transform .2s var(--t); }
+  .pd-btn:hover .arr { transform: translateX(3px); }
+
+  /* ===== TECHNICAL DRAWING section ===== */
+  .section-block { background: var(--bg-2); border-radius: var(--r-lg); padding: 28px 32px; margin-top: 24px; }
+  .section-title {
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--ink); margin: 0 0 22px; font-weight: 600;
+  }
+  .pd-tech-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 32px; align-items: start; }
+  @media (max-width: 880px) { .pd-tech-grid { grid-template-columns: 1fr; } }
+  .pd-tech-draws { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .pd-tech-draw { background: #fff; border-radius: var(--r-md); padding: 16px; }
+  .pd-tech-draw svg { width: 100%; height: auto; display: block; }
+
+  .pd-tech-specs { display: grid; grid-template-columns: 1fr auto; row-gap: 0; }
+  .pd-tech-specs > div { padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+  .pd-tech-specs .k { color: var(--muted); }
+  .pd-tech-specs .v { color: var(--ink); font-weight: 500; text-align: right; }
+
+  /* ===== 4-col bottom ===== */
+  .pd-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
+  @media (max-width: 1100px) { .pd-cols { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .pd-cols { grid-template-columns: 1fr; } }
+  .pd-col { background: #fff; border: 1px solid var(--line); border-radius: var(--r-lg); padding: 22px 24px; }
+  .pd-col h3 {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--ink); margin: 0 0 18px; font-weight: 600;
+  }
+  .pd-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+  .pd-col li { display: flex; gap: 12px; align-items: flex-start; font-size: 13px; color: var(--ink-2); line-height: 1.45; }
+  .pd-col-ico {
+    flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--bg-2);
+    display: flex; align-items: center; justify-content: center; color: var(--ink);
+  }
+  .pd-col-ico svg { width: 14px; height: 14px; }
+
+  .pd-pack-img { width: 100%; aspect-ratio: 4/3; background: var(--bg-2); border-radius: var(--r-md); margin-bottom: 14px;
+    display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .pd-pack-img svg { width: 70%; height: auto; }
+  .pd-pack-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .pd-pack-list li { display: flex; gap: 10px; align-items: center; font-size: 13px; color: var(--ink-2); }
+  .pd-pack-list li::before { content: "›"; color: var(--muted); flex-shrink: 0; }
+
+  .pd-loadtable { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .pd-loadtable th, .pd-loadtable td { padding: 10px 8px; border-bottom: 1px solid var(--line); text-align: left; }
+  .pd-loadtable thead th { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--muted); font-weight: 500; }
+  .pd-loadtable tbody td { color: var(--ink); }
+  .pd-loadtable tbody td:last-child { font-weight: 500; }
+
+  /* ===== Factory strength ===== */
+  .pd-factory { display: grid; grid-template-columns: 1fr 2fr; gap: 32px; margin-top: 16px;
+    background: #fff; border: 1px solid var(--line); border-radius: var(--r-lg); padding: 28px 32px; align-items: start; }
+  @media (max-width: 880px) { .pd-factory { grid-template-columns: 1fr; } }
+  .pd-factory-text h3 {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--ink); margin: 0 0 18px; font-weight: 600;
+  }
+  .pd-factory-text ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+  .pd-factory-text li { display: flex; gap: 12px; align-items: center; font-size: 13px; color: var(--ink-2); }
+  .pd-factory-photos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  @media (max-width: 600px) { .pd-factory-photos { grid-template-columns: repeat(2, 1fr); } }
+  .pd-factory-ph {
+    aspect-ratio: 1/1; background: linear-gradient(135deg, #ededea 0%, #d9d6cf 100%);
+    border-radius: var(--r-md); display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--muted);
+  }
+
+  /* ===== WhatsApp CTA ===== */
+  .pd-whats { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    background: var(--bg-2); border-radius: var(--r-lg); padding: 28px 32px; margin-top: 16px; }
+  .pd-whats-text { display: flex; align-items: center; gap: 16px; }
+  .pd-whats-ico {
+    flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; background: var(--ink);
+    display: flex; align-items: center; justify-content: center; color: #fff;
+  }
+  .pd-whats h3 { font-size: 18px; font-weight: 600; color: var(--ink); margin: 0 0 4px; letter-spacing: -0.01em; }
+  .pd-whats p { font-size: 13px; color: var(--ink-2); margin: 0; }
+
+  /* Section spacing in main */
+  .pd-section { margin-top: 56px; }
+  @media (max-width: 880px) { .pd-section { margin-top: 36px; } }
 </style>
 </head>
 <body>
 
 <div id="shell-nav"></div>
 
-<section class="subpage-hero" style="padding-bottom:32px">
+<section class="subpage-hero" style="padding-bottom:24px">
   <div class="wrap">
     <div class="crumbs">
       <a href="/zh/">首頁</a><span class="sep">/</span>
@@ -58,30 +201,214 @@
 <section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="pd">
-      <div class="pd-hero">
-        <img src="/assets/products/UB0116/card.webp" alt="誠達 UB0116 內斜矩形下嵌盆" fetchpriority="high" />
+      <div class="pd-media">
+        <div class="pd-hero">
+          <img id="pd-main" src="/assets/products/UB0116/card.webp" alt="誠達 UB0116 內斜矩形下嵌盆" fetchpriority="high" />
+        </div>
+        <div class="pd-thumbs-wrap">
+          <button class="pd-arrow prev" aria-label="上一張">‹</button>
+          <div class="pd-thumbs" role="tablist" aria-label="UB0116 產品照片">
+            <button type="button" class="pd-thumb is-active" role="tab" aria-selected="true" data-src="/assets/products/UB0116/card.webp" data-alt="誠達 UB0116 主圖"><img src="/assets/products/UB0116/card.webp" alt="" loading="lazy" /></button>
+            <button type="button" class="pd-thumb" role="tab" aria-selected="false" data-src="/assets/products/UB0116/gallery/p6.webp" data-alt="UB0116 側面"><img src="/assets/products/UB0116/gallery/p6-sm.webp" alt="" loading="lazy" /></button>
+            <button type="button" class="pd-thumb" role="tab" aria-selected="false" data-src="/assets/products/UB0116/gallery/p2.webp" data-alt="UB0116 俯視"><img src="/assets/products/UB0116/gallery/p2-sm.webp" alt="" loading="lazy" /></button>
+            <button type="button" class="pd-thumb" role="tab" aria-selected="false" data-src="/assets/products/UB0116/gallery/p1.webp" data-alt="UB0116 正面"><img src="/assets/products/UB0116/gallery/p1-sm.webp" alt="" loading="lazy" /></button>
+            <button type="button" class="pd-thumb" role="tab" aria-selected="false" data-src="/assets/products/UB0116/gallery/p3.webp" data-alt="UB0116 底部"><img src="/assets/products/UB0116/gallery/p3-sm.webp" alt="" loading="lazy" /></button>
+            <button type="button" class="pd-thumb" role="tab" aria-selected="false" data-src="/assets/products/UB0116/gallery/m1.webp" data-alt="UB0116 實測"><img src="/assets/products/UB0116/gallery/m1-sm.webp" alt="" loading="lazy" /></button>
+          </div>
+          <button class="pd-arrow next" aria-label="下一張">›</button>
+        </div>
       </div>
+
       <div>
-        <div class="code">UB0116 · 陶瓷面盆</div>
-        <h1>UB0116.</h1>
-        <p class="lede">下嵌式內斜底面盆，引導排水順暢、清潔便捷。</p>
-        <p class="lede">適合酒店、公寓及現代住宅浴室使用。</p>
+        <div class="pd-eyebrow">下嵌面盆</div>
+        <h1>UB0116</h1>
+        <p class="pd-lede">下嵌式內斜底矩形面盆，盆底向排水口傾斜，引導排水順暢、清潔便捷。</p>
 
-        <div>
-          <div class="data-row"><div class="k">系列</div><div class="v">內斜矩形下嵌盆</div></div>
-          <div class="data-row"><div class="k">尺寸</div><div class="v">410 × 290 × 180 mm<span class="small">16.1″ × 11.4″ × 7.1″</span></div></div>
-          <div class="data-row"><div class="k">材質</div><div class="v">高溫燒製陶瓷<span class="small">玻化瓷 · 1,250 °C 燒製</span></div></div>
-          <div class="data-row"><div class="k">釉面</div><div class="v">抗菌易潔釉面</div></div>
-          <div class="data-row"><div class="k">認證</div><div class="v">CUPC · ISO 9001</div></div>
-          <div class="data-row"><div class="k">起訂量</div><div class="v">100 件起訂<span class="small">OEM 客製從 200 件起</span></div></div>
-          <div class="data-row"><div class="k">交期</div><div class="v">45 – 60 日</div></div>
+        <hr class="pd-divider" />
+
+        <div class="pd-features">
+          <div class="pd-feat">
+            <div class="pd-feat-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3.5 4-6 7-6 10a6 6 0 0 0 12 0c0-3-2.5-6-6-10z"/><path d="M9 14h6M9 17h6"/></svg>
+            </div>
+            <div class="pd-feat-label">快速排水</div>
+          </div>
+          <div class="pd-feat">
+            <div class="pd-feat-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15c0-2 1-3 3-3l9-9c1 1 2 2 2 3l-9 9c0 2-1 3-3 3z"/><path d="M16 5l3 3"/><path d="M18 14l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/></svg>
+            </div>
+            <div class="pd-feat-label">輕鬆清潔</div>
+          </div>
+          <div class="pd-feat">
+            <div class="pd-feat-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 4-3 5-3 9a3 3 0 0 0 6 0c0-2-1-3-1-5 2 1 4 4 4 7a6 6 0 0 1-12 0c0-5 5-7 6-11z"/></svg>
+            </div>
+            <div class="pd-feat-label">高溫陶瓷</div>
+          </div>
+          <div class="pd-feat">
+            <div class="pd-feat-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <div class="pd-feat-label">納米釉面</div>
+          </div>
         </div>
 
-        <div class="actions">
-          <a href="/zh/contact/?model=UB0116" class="btn primary"><span>索取報價 · UB0116</span><span class="arr"></span></a>
-          <a href="/zh/products/?cat=washbasin" class="btn">全部面盆</a>
+        <div class="pd-specs">
+          <div class="k">系列</div><div class="v">內斜矩形下嵌盆</div>
+          <div class="k">尺寸</div><div class="v">410 × 290 × 180 mm<span class="small">16.1″ × 11.4″ × 7.1″</span></div>
+          <div class="k">材質</div><div class="v">高溫燒製陶瓷<span class="small">玻化瓷 · 1,250 °C 燒製</span></div>
+          <div class="k">釉面</div><div class="v">抗菌納米釉面</div>
+          <div class="k">認證</div><div class="v">cUPC · ISO 9001</div>
+          <div class="k">起訂量</div><div class="v">100 件起訂<span class="small">OEM 客製從 200 件起</span></div>
+          <div class="k">交期</div><div class="v">45 – 60 日</div>
+        </div>
+
+        <div class="pd-actions">
+          <a href="/zh/contact/?model=UB0116" class="pd-btn"><span>索取報價 – UB0116</span><span class="arr">→</span></a>
+          <button type="button" class="pd-btn outline" id="addInquiry">加入詢價清單</button>
         </div>
       </div>
+    </div>
+
+    <div class="pd-section">
+      <div class="section-block">
+        <h2 class="section-title">技術圖（mm）</h2>
+        <div class="pd-tech-grid">
+          <div class="pd-tech-draws">
+            <div class="pd-tech-draw">
+              <svg viewBox="0 0 240 200" stroke="#1a1a1a" stroke-width="1" fill="none" font-family="JetBrains Mono, monospace" font-size="11">
+                <line x1="40" y1="30" x2="220" y2="30" /><line x1="40" y1="26" x2="40" y2="34" /><line x1="220" y1="26" x2="220" y2="34" />
+                <text x="130" y="22" text-anchor="middle" fill="#1a1a1a">410</text>
+                <line x1="20" y1="50" x2="20" y2="170" /><line x1="16" y1="50" x2="24" y2="50" /><line x1="16" y1="170" x2="24" y2="170" />
+                <text x="14" y="115" text-anchor="end" fill="#1a1a1a">290</text>
+                <rect x="40" y="50" width="180" height="120" rx="6" />
+                <circle cx="130" cy="110" r="6" /><circle cx="130" cy="110" r="2" fill="#1a1a1a" />
+              </svg>
+            </div>
+            <div class="pd-tech-draw">
+              <svg viewBox="0 0 240 200" stroke="#1a1a1a" stroke-width="1" fill="none" font-family="JetBrains Mono, monospace" font-size="11">
+                <line x1="60" y1="30" x2="200" y2="30" /><line x1="60" y1="26" x2="60" y2="34" /><line x1="200" y1="26" x2="200" y2="34" />
+                <text x="130" y="22" text-anchor="middle" fill="#1a1a1a">290</text>
+                <line x1="220" y1="50" x2="220" y2="170" /><line x1="216" y1="50" x2="224" y2="50" /><line x1="216" y1="170" x2="224" y2="170" />
+                <text x="228" y="115" text-anchor="start" fill="#1a1a1a">180</text>
+                <path d="M 60 50 L 200 50 L 180 170 L 80 170 Z" />
+                <line x1="60" y1="50" x2="200" y2="50" />
+              </svg>
+            </div>
+            <div class="pd-tech-draw">
+              <svg viewBox="0 0 240 200" stroke="#1a1a1a" stroke-width="1" fill="none" font-family="JetBrains Mono, monospace" font-size="11">
+                <rect x="10" y="40" width="60" height="14" fill="#d9d6cf" stroke="none" />
+                <rect x="170" y="40" width="60" height="14" fill="#d9d6cf" stroke="none" />
+                <line x1="10" y1="40" x2="70" y2="40" /><line x1="10" y1="54" x2="70" y2="54" />
+                <line x1="170" y1="40" x2="230" y2="40" /><line x1="170" y1="54" x2="230" y2="54" />
+                <text x="40" y="34" text-anchor="middle" fill="#1a1a1a">20</text>
+                <path d="M 60 54 L 70 60 L 80 175 L 160 175 L 170 60 L 180 54" />
+                <line x1="220" y1="60" x2="220" y2="175" /><line x1="216" y1="60" x2="224" y2="60" /><line x1="216" y1="175" x2="224" y2="175" />
+                <text x="228" y="120" text-anchor="start" fill="#1a1a1a">180</text>
+                <text x="120" y="195" text-anchor="middle" fill="#1a1a1a">Min. 30</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="pd-tech-specs">
+            <div class="k">安裝方式</div><div class="v">下嵌</div>
+            <div class="k">盆型</div><div class="v">矩形</div>
+            <div class="k">溢水孔</div><div class="v">無</div>
+            <div class="k">排水口尺寸</div><div class="v">Ø45 mm</div>
+            <div class="k">開孔模板</div><div class="v">提供</div>
+            <div class="k">龍頭孔</div><div class="v">無</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pd-cols">
+      <div class="pd-col">
+        <h3>產品特性</h3>
+        <ul>
+          <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3c-3 4-5 7-5 10a5 5 0 0 0 10 0c0-3-2-6-5-10z"/></svg></span> 內斜盆底，快速排水</li>
+          <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 16c0-2 1-3 3-3l8-8 2 2-8 8c0 2-1 3-3 3z"/></svg></span> 表面光滑，清潔便捷</li>
+          <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1 3-2 4-2 7a3 3 0 0 0 5 1 4 4 0 0 1 3 5 6 6 0 0 1-12 0c0-4 4-6 6-13z"/></svg></span> 高溫燒製陶瓷</li>
+          <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2v6c0 4-3 8-7 10-4-2-7-6-7-10V5z"/><path d="M9 12l2 2 4-4"/></svg></span> 納米抗菌釉面</li>
+        </ul>
+      </div>
+
+      <div class="pd-col">
+        <h3>OEM / ODM 支援</h3>
+        <ul>
+          <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></span> Logo 客製</li>
+          <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7l8-4 8 4-8 4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg></span> 包裝客製</li>
+          <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12c0-4 4-7 8-7s8 3 8 7-4 7-8 7-8-3-8-7z"/><path d="M8 12h8M12 8v8"/></svg></span> 造型開發</li>
+          <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></span> 顏色客製</li>
+          <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7l7-3 7 3v10l-7 3-7-3z"/><path d="M9 13h6"/></svg></span> 低 MOQ 支援</li>
+        </ul>
+      </div>
+
+      <div class="pd-col">
+        <h3>包裝</h3>
+        <div class="pd-pack-img" aria-hidden="true">
+          <svg viewBox="0 0 200 160" fill="none" stroke="#88857d" stroke-width="1.5" stroke-linejoin="round">
+            <path d="M40 60 L100 30 L160 60 L100 90 Z" fill="#fff" />
+            <path d="M40 60 L40 130 L100 160 L100 90 Z" fill="#ebe8e0" />
+            <path d="M100 90 L100 160 L160 130 L160 60 Z" fill="#d9d6cf" />
+            <path d="M70 45 L130 75" stroke-dasharray="2 3" />
+            <text x="130" y="115" font-family="JetBrains Mono, monospace" font-size="10" fill="#88857d" text-anchor="middle">Chengda</text>
+          </svg>
+        </div>
+        <ul class="pd-pack-list">
+          <li>5 層出口紙箱</li>
+          <li>泡綿防護</li>
+          <li>提供卡板裝載</li>
+        </ul>
+      </div>
+
+      <div class="pd-col">
+        <h3>裝櫃量</h3>
+        <table class="pd-loadtable">
+          <thead>
+            <tr><th>貨櫃</th><th>數量（件）</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>20GP</td><td>720 件</td></tr>
+            <tr><td>40GP</td><td>1,560 件</td></tr>
+            <tr><td>40HQ</td><td>1,820 件</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="pd-factory">
+      <div class="pd-factory-text">
+        <h3>工廠實力</h3>
+        <ul>
+          <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></span> 20+ 年陶瓷製造經驗</li>
+          <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></span> 先進生產線</li>
+          <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></span> 穩定品質管控</li>
+          <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></span> 月產能：50,000+ 件</li>
+          <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></span> 工廠直供</li>
+        </ul>
+      </div>
+      <div class="pd-factory-photos">
+        <div class="pd-factory-ph">工廠相片 1</div>
+        <div class="pd-factory-ph">工廠相片 2</div>
+        <div class="pd-factory-ph">工廠相片 3</div>
+        <div class="pd-factory-ph">工廠相片 4</div>
+      </div>
+    </div>
+
+    <div class="pd-whats">
+      <div class="pd-whats-text">
+        <div class="pd-whats-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 5c-1.9-1.9-4.4-3-7-3a10 10 0 0 0-8.7 14.9L2 22l5.3-1.3A10 10 0 0 0 22 12c0-2.6-1.1-5.1-3-7zm-7 15c-1.7 0-3.4-.5-4.9-1.4l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 20zm4.4-5.5c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.1-.3.2-.5.1-.7-.3-1.4-.8-1.9-1.4-.5-.5-.9-1.1-1.2-1.7-.1-.2 0-.4.1-.5l.5-.5c.1-.1.2-.3.2-.4.1-.1.1-.3 0-.4-.1-.1-.7-1.6-.9-2.1-.1-.5-.3-.5-.4-.5h-.5c-.1 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3 1 2.5c.1.1 1.6 2.5 3.9 3.5.6.2 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.5-.3z"/></svg>
+        </div>
+        <div>
+          <h3>尋找可靠的陶瓷面盆供應商？</h3>
+          <p>立即聯絡我們，索取報價、產品目錄或 OEM／ODM 方案。</p>
+        </div>
+      </div>
+      <a href="https://wa.me/8613829094740?text=UB0116%20%E8%A9%A2%E5%83%B9" class="pd-btn" target="_blank" rel="noopener">
+        <span>WhatsApp 聯絡我們</span><span class="arr">→</span>
+      </a>
     </div>
   </div>
 </section>
@@ -91,6 +418,51 @@
 <script src="/assets/icons.js?v=6"></script>
 <script src="/assets/site-shell.js?v=4"></script>
 <script>renderShell('products');</script>
+<script>
+(() => {
+  const thumbs = Array.from(document.querySelectorAll('.pd-thumb'));
+  const main = document.getElementById('pd-main');
+  const prev = document.querySelector('.pd-arrow.prev');
+  const next = document.querySelector('.pd-arrow.next');
+  let idx = 0;
+  function set(i) {
+    idx = (i + thumbs.length) % thumbs.length;
+    const t = thumbs[idx];
+    main.src = t.dataset.src;
+    main.alt = t.dataset.alt || main.alt;
+    thumbs.forEach((tt, j) => {
+      const a = j === idx;
+      tt.classList.toggle('is-active', a);
+      tt.setAttribute('aria-selected', a ? 'true' : 'false');
+    });
+  }
+  thumbs.forEach((t, i) => t.addEventListener('click', () => set(i)));
+  prev && prev.addEventListener('click', () => set(idx - 1));
+  next && next.addEventListener('click', () => set(idx + 1));
+
+  const addBtn = document.getElementById('addInquiry');
+  if (addBtn) {
+    addBtn.addEventListener('click', () => {
+      const list = JSON.parse(localStorage.getItem('inquiryList') || '[]');
+      if (!list.includes('UB0116')) {
+        list.push('UB0116');
+        localStorage.setItem('inquiryList', JSON.stringify(list));
+        addBtn.textContent = '✓ 已加入詢價清單';
+        addBtn.disabled = true;
+        addBtn.style.opacity = '0.6';
+      } else {
+        addBtn.textContent = '✓ 已在詢價清單中';
+      }
+    });
+    const list = JSON.parse(localStorage.getItem('inquiryList') || '[]');
+    if (list.includes('UB0116')) {
+      addBtn.textContent = '✓ 已加入詢價清單';
+      addBtn.disabled = true;
+      addBtn.style.opacity = '0.6';
+    }
+  }
+})();
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
