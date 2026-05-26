@@ -121,10 +121,10 @@
   .pd-tech-specs .v { color: var(--ink); font-weight: 500; text-align: right; }
 
   /* ===== 4-col bottom ===== */
-  .pd-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
+  .pd-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 16px; background: var(--bg-2); border-radius: var(--r-lg); padding: 32px 36px; }
   @media (max-width: 1100px) { .pd-cols { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 600px) { .pd-cols { grid-template-columns: 1fr; } }
-  .pd-col { background: #fff; border: 1px solid var(--line); border-radius: var(--r-lg); padding: 22px 24px; display: flex; flex-direction: column; }
+  .pd-col { background: transparent; border: 0; border-radius: 0; padding: 0; display: flex; flex-direction: column; }
   .pd-col h3 {
     font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.16em;
     text-transform: uppercase; color: var(--ink); margin: 0 0 18px; font-weight: 600;
