@@ -131,7 +131,7 @@
       sr.type = 'speculationrules';
       sr.id = 'spec-rules';
       sr.textContent = JSON.stringify({
-        prerender: [{ where: { href_matches: '/*' }, eagerness: 'moderate' }]
+        prerender: [{ where: { href_matches: '/*' }, eagerness: 'conservative' }]
       });
       document.body.appendChild(sr);
     }

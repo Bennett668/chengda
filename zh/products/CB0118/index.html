@@ -29,7 +29,8 @@
 <meta name="robots" content="index, follow" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,wght@1,300;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,wght@1,300;1,400;1,500&display=swap" onload="this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,wght@1,300;1,400;1,500&display=swap"></noscript>
 <link rel="stylesheet" href="/assets/porcelain.css?v=15" />
 <link rel="preload" as="image" href="/assets/products/CB0118/card.webp" fetchpriority="high" />
 <style>
@@ -397,9 +398,9 @@
 
 <div id="shell-footer"></div>
 
-<script src="/assets/icons.js?v=6"></script>
-<script src="/assets/site-shell.js?v=5"></script>
-<script>renderShell('products');</script>
+<script src="/assets/icons.js?v=6" defer></script>
+<script src="/assets/site-shell.js?v=6" defer></script>
+<script>document.addEventListener('DOMContentLoaded',()=>renderShell('products'));</script>
 <script>
 (() => {
   const thumbs = Array.from(document.querySelectorAll('.pd-thumb'));
