@@ -72,7 +72,7 @@
   .pd-divider { border: 0; border-top: 1px solid var(--line); margin: 24px 0; }
 
   /* 4 feature icons */
-  .pd-features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 24px 0 28px; }
+  .pd-features { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin: 24px 0 28px; }
   .pd-feat { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; }
   .pd-feat-ico {
     width: 48px; height: 48px; border-radius: 50%; background: var(--bg-2);
@@ -121,7 +121,7 @@
   .pd-tech-specs .v { color: var(--ink); font-weight: 500; text-align: right; }
 
   /* ===== 4-col bottom ===== */
-  .pd-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
+  .pd-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; align-items: start; }
   @media (max-width: 1100px) { .pd-cols { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 600px) { .pd-cols { grid-template-columns: 1fr; } }
   .pd-col { background: #fff; border: 1px solid var(--line); border-radius: var(--r-lg); padding: 22px 24px; }
@@ -231,39 +231,35 @@
 
         <div class="pd-features">
           <div class="pd-feat">
-            <div class="pd-feat-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3.5 4-6 7-6 10a6 6 0 0 0 12 0c0-3-2.5-6-6-10z"/><path d="M9 14h6M9 17h6"/></svg>
-            </div>
+            <div class="pd-feat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3.5 4-6 7-6 10a6 6 0 0 0 12 0c0-3-2.5-6-6-10z"/><path d="M9 14h6M9 17h6"/></svg></div>
             <div class="pd-feat-label">快速排水</div>
           </div>
           <div class="pd-feat">
-            <div class="pd-feat-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15c0-2 1-3 3-3l9-9c1 1 2 2 2 3l-9 9c0 2-1 3-3 3z"/><path d="M16 5l3 3"/><path d="M18 14l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/></svg>
-            </div>
+            <div class="pd-feat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15c0-2 1-3 3-3l9-9c1 1 2 2 2 3l-9 9c0 2-1 3-3 3z"/><path d="M16 5l3 3"/><path d="M18 14l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/></svg></div>
             <div class="pd-feat-label">輕鬆清潔</div>
           </div>
           <div class="pd-feat">
-            <div class="pd-feat-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 4-3 5-3 9a3 3 0 0 0 6 0c0-2-1-3-1-5 2 1 4 4 4 7a6 6 0 0 1-12 0c0-5 5-7 6-11z"/></svg>
-            </div>
+            <div class="pd-feat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 4-3 5-3 9a3 3 0 0 0 6 0c0-2-1-3-1-5 2 1 4 4 4 7a6 6 0 0 1-12 0c0-5 5-7 6-11z"/></svg></div>
             <div class="pd-feat-label">高溫陶瓷</div>
           </div>
           <div class="pd-feat">
-            <div class="pd-feat-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg>
-            </div>
+            <div class="pd-feat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></div>
             <div class="pd-feat-label">納米釉面</div>
+          </div>
+          <div class="pd-feat">
+            <div class="pd-feat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v5"/><path d="M9 6l3 3 3-3"/><rect x="4" y="11" width="16" height="9" rx="1.5"/><path d="M4 14h16"/></svg></div>
+            <div class="pd-feat-label">高壓注漿成型</div>
           </div>
         </div>
 
         <div class="pd-specs">
           <div class="k">系列</div><div class="v">內斜圓形下嵌盆</div>
           <div class="k">尺寸</div><div class="v">470 × 400 × 195 mm<span class="small">18.5″ × 15.7″ × 7.7″</span></div>
+          <div class="k">成型工藝</div><div class="v">高壓注漿成型</div>
           <div class="k">材質</div><div class="v">高溫燒製陶瓷<span class="small">玻化瓷 · 1,250 °C 燒製</span></div>
           <div class="k">釉面</div><div class="v">抗菌易潔釉面</div>
-          <div class="k">認證</div><div class="v">CUPC · ISO 9001</div>
-          <div class="k">起訂量</div><div class="v">100 件起訂<span class="small">OEM 客製從 200 件起</span></div>
-          <div class="k">交期</div><div class="v">45 – 60 日</div>
+          <div class="k">起訂量</div><div class="v">100 件起訂<span class="small">OEM／ODM 客製，歡迎進一步洽談</span></div>
+          <div class="k">交期</div><div class="v">15 – 30 日<span class="small">視訂購數量而定</span></div>
         </div>
 
         <div class="pd-actions">
@@ -350,12 +346,15 @@
       <div class="pd-col">
         <h3>包裝</h3>
         <div class="pd-pack-img" aria-hidden="true">
-          <svg viewBox="0 0 200 160" fill="none" stroke="#88857d" stroke-width="1.5" stroke-linejoin="round">
-            <path d="M40 60 L100 30 L160 60 L100 90 Z" fill="#fff" />
-            <path d="M40 60 L40 130 L100 160 L100 90 Z" fill="#ebe8e0" />
-            <path d="M100 90 L100 160 L160 130 L160 60 Z" fill="#d9d6cf" />
-            <path d="M70 45 L130 75" stroke-dasharray="2 3" />
-            <text x="130" y="115" font-family="JetBrains Mono, monospace" font-size="10" fill="#88857d" text-anchor="middle">Chengda</text>
+          <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="150" cy="200" rx="115" ry="6" fill="rgba(0,0,0,0.10)"/>
+            <path d="M 30 65 L 215 65 L 215 188 L 30 188 Z" fill="#b8916d"/>
+            <path d="M 30 65 L 100 32 L 285 32 L 215 65 Z" fill="#d4ad84"/>
+            <path d="M 215 65 L 285 32 L 285 155 L 215 188 Z" fill="#9a7853"/>
+            <path d="M 122 47 L 192 47" stroke="#e8d2ad" stroke-width="3" stroke-dasharray="0"/>
+            <path d="M 125 49 L 189 49" stroke="#c4a482" stroke-width="0.5" stroke-dasharray="2 2"/>
+            <text x="122" y="138" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#2d1f12" text-anchor="middle" letter-spacing="1">CHENGDA</text>
+            <text x="250" y="138" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#2d1f12" text-anchor="middle" letter-spacing="0.5" transform="rotate(0 250 138)">CHENGDA</text>
           </svg>
         </div>
         <ul class="pd-pack-list">
@@ -480,7 +479,7 @@
   "manufacturer":{"@type":"Organization","@id":"https://www.gdchengda.hk/#organization","name":"Guangdong Chengda Intelligent Technology Co., Ltd."},
   "url": "https://www.gdchengda.hk/zh/products/UB0420-1/", "inLanguage": "zh-Hant",
   
-  "additionalProperty":[{"@type":"PropertyValue","name":"材質","value":"玻化瓷"},{"@type":"PropertyValue","name":"燒製溫度","value":"1,250 °C"},{"@type":"PropertyValue","name":"認證","value":"CUPC · ISO 9001"},{"@type":"PropertyValue","name":"起訂量","value":"100 件起訂（OEM 客製從 200 件起）"},{"@type":"PropertyValue","name":"交期","value":"45–60 日"}]
+  "additionalProperty":[{"@type":"PropertyValue","name":"材質","value":"玻化瓷"},{"@type":"PropertyValue","name":"燒製溫度","value":"1,250 °C"},{"@type":"PropertyValue","name":"成型工藝","value":"高壓注漿成型"},{"@type":"PropertyValue","name":"認證","value":"CUPC · ISO 9001"},{"@type":"PropertyValue","name":"起訂量","value":"100 件起訂（OEM／ODM 客製洽談）"},{"@type":"PropertyValue","name":"交期","value":"15–30 日"}]
 }
 </script>
 <script type="application/ld+json">
