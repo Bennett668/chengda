@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemaps-image/0.9">
+        xmlns:image="http://www.google.com/schemas/sitemaps-image/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.gdchengda.hk/</loc>
     <lastmod>2026-05-17</lastmod>
@@ -207,7 +208,7 @@
     <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/"/>
   </url>
   <url>
     <loc>https://www.gdchengda.hk/zh/products/</loc>
