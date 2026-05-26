@@ -21,6 +21,9 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <meta name="theme-color" content="#14171b" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; base-uri 'self'; object-src 'none'" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<meta name="robots" content="index, follow" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,wght@1,300;1,400;1,500&display=swap" rel="stylesheet">
@@ -59,31 +62,36 @@
         </div>
         <div class="ci-block">
           <h3>Direct</h3>
-          <div class="data-row"><div class="k">Phone</div><div class="v">+86 138 2909 4740</div></div>
-          <div class="data-row"><div class="k">Email</div><div class="v">13829094740@163.com</div></div>
+          <div class="data-row"><div class="k">Phone</div><div class="v"><a href="tel:+8613829094740" style="color:inherit;text-decoration:none">+86 138 2909 4740</a><span class="small">WhatsApp / 微信 same number</span></div></div>
+          <div class="data-row"><div class="k">Email</div><div class="v"><span class="cd-email" data-u="13829094740" data-d="163" data-t="com">[ enable JavaScript to view ]</span></div></div>
           <div class="data-row"><div class="k">WeChat</div><div class="v">Chengda_koi888</div></div>
         </div>
         <div class="ci-block">
-          <h3>Departments</h3>
-          <div class="data-row"><div class="k">Sales</div><div class="v">sales@gdchengda.hk<span class="small">Quotes · MOQ · lead times</span></div></div>
-          <div class="data-row"><div class="k">OEM / ODM</div><div class="v">oem@gdchengda.hk<span class="small">Custom shapes · glazing · packaging</span></div></div>
-          <div class="data-row"><div class="k">Press</div><div class="v">press@gdchengda.hk</div></div>
+          <h3>What we cover</h3>
+          <div class="data-row"><div class="k">Sales</div><div class="v">Quotes · MOQ · lead times</div></div>
+          <div class="data-row"><div class="k">OEM / ODM</div><div class="v">Custom shapes · glazing · packaging</div></div>
+          <div class="data-row"><div class="k">Project</div><div class="v">Hospitality · residential developments</div></div>
         </div>
       </div>
       <div>
         <div class="form-card">
           <h3 style="font-size:13px;font-family:var(--font-mono);font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:20px">Send an inquiry</h3>
-          <form class="form-grid" onsubmit="event.preventDefault(); document.getElementById('thanks').style.display='block'; this.style.display='none'">
-            <label>Name *<input type="text" required /></label>
-            <label>Company<input type="text" /></label>
-            <label>Email *<input type="email" required /></label>
-            <label>Phone<input type="tel" /></label>
-            <label>Country<input type="text" /></label>
+          <form class="form-grid" action="https://formsubmit.co/13829094740@163.com" method="POST">
+            <input type="hidden" name="_subject" value="New inquiry from gdchengda.hk" />
+            <input type="hidden" name="_captcha" value="true" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://www.gdchengda.hk/contact/?sent=1" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+            <label>Name *<input type="text" name="name" required /></label>
+            <label>Company<input type="text" name="company" /></label>
+            <label>Email *<input type="email" name="email" required /></label>
+            <label>Phone<input type="tel" name="phone" /></label>
+            <label>Country<input type="text" name="country" /></label>
             <label>Order type
-              <select><option>Wholesale / Distribution</option><option>OEM / ODM</option><option>Project / Hospitality</option><option>Sample / Inquiry</option></select>
+              <select name="order_type"><option>Wholesale / Distribution</option><option>OEM / ODM</option><option>Project / Hospitality</option><option>Sample / Inquiry</option></select>
             </label>
-            <label class="full">Estimated quantity<input type="text" placeholder="e.g. 500 pcs · 1 × 40HQ container" /></label>
-            <label class="full">Message *<textarea required placeholder="Tell us about your project — target market, timeline, customisation…"></textarea></label>
+            <label class="full">Estimated quantity<input type="text" name="quantity" placeholder="e.g. 500 pcs · 1 × 40HQ container" /></label>
+            <label class="full">Message *<textarea name="message" required placeholder="Tell us about your project — target market, timeline, customisation…"></textarea></label>
             <div class="submit-row" style="grid-column:1/-1">
               <span class="note">We respond within 24h</span>
               <button class="submit-btn" type="submit">Send inquiry →</button>
@@ -101,8 +109,26 @@
 
 <div id="shell-footer"></div>
 
-<script src="/assets/site-shell.js?v=4"></script>
+<script src="/assets/site-shell.js?v=5"></script>
 <script>renderShell('contact');</script>
+<script>
+(() => {
+  // Email obfuscation render
+  document.querySelectorAll('.cd-email').forEach(el => {
+    const u = el.dataset.u, d = el.dataset.d, t = el.dataset.t;
+    if (!u || !d || !t) return;
+    const addr = u + '@' + d + '.' + t;
+    el.innerHTML = '<a href="mailto:' + addr + '" style="color:inherit;text-decoration:none">' + addr + '</a>';
+  });
+  // Show thanks message if redirected back from Formsubmit
+  if (new URLSearchParams(location.search).get('sent') === '1') {
+    const form = document.querySelector('.form-card form');
+    const thanks = document.getElementById('thanks');
+    if (form) form.style.display = 'none';
+    if (thanks) thanks.style.display = 'block';
+  }
+})();
+</script>
 
 <script type="application/ld+json">
 {

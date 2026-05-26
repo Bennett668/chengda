@@ -1,0 +1,6 @@
+Contact: mailto:13829094740@163.com
+Contact: https://www.gdchengda.hk/contact/
+Expires: 2027-05-26T00:00:00.000Z
+Preferred-Languages: en, zh-Hant, zh-Hans
+Canonical: https://www.gdchengda.hk/.well-known/security.txt
+Policy: Responsible disclosure appreciated. Please email findings before public release; we aim to respond within 5 business days.

@@ -70,7 +70,7 @@
         <a href="${P}/contact/">${L.contact}</a>
       </div>
       <div class="footer-col"><h4>${L.fContact}</h4>
-        <a href="mailto:13829094740@163.com">13829094740@163.com</a>
+        <a class="cd-email-footer" data-u="13829094740" data-d="163" data-t="com" href="#">[ email ]</a>
         <a href="tel:+8613829094740">+86 138 2909 4740</a>
         <a href="#">WeChat: Chengda_koi888</a>
       </div>
@@ -91,6 +91,15 @@
     if (nav) addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY>12));
     const b = document.querySelector('.nav-burger'); const d = document.getElementById('navDrawer');
     if (b && d) b.addEventListener('click', () => d.classList.toggle('open'));
+
+    // Email obfuscation: rebuild mailto links from data attributes
+    document.querySelectorAll('.cd-email-footer').forEach(el => {
+      const u = el.dataset.u, d = el.dataset.d, t = el.dataset.t;
+      if (!u || !d || !t) return;
+      const addr = u + '@' + d + '.' + t;
+      el.href = 'mailto:' + addr;
+      el.textContent = addr;
+    });
 
     // Scroll-reveal: gentle fade + lift as sections enter the viewport.
     // Respects prefers-reduced-motion. Observer disconnects per-element after reveal.
