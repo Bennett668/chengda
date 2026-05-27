@@ -261,13 +261,15 @@
 <script src="/assets/icons.js?v=6" defer></script>
 <script src="/assets/site-shell.js?v=6" defer></script>
 <script>
-renderShell('home');
-const ICONS = window.CHENGDA_ICONS || {};
-const place = (id, key) => { const el = document.getElementById(id); if (el && ICONS[key]) el.innerHTML = ICONS[key]; };
-place('ico-washbasin', 'washbasin');
-place('ico-pedestal', 'pedestal');
-place('ico-toilet', 'toilet');
-place('ico-smart', 'smarttoilet');
+document.addEventListener('DOMContentLoaded', () => {
+  renderShell('home');
+  const ICONS = window.CHENGDA_ICONS || {};
+  const place = (id, key) => { const el = document.getElementById(id); if (el && ICONS[key]) el.innerHTML = ICONS[key]; };
+  place('ico-washbasin', 'washbasin');
+  place('ico-pedestal', 'pedestal');
+  place('ico-toilet', 'toilet');
+  place('ico-smart', 'smarttoilet');
+});
 </script>
 
 <script type="application/ld+json">

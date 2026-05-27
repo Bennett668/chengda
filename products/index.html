@@ -322,6 +322,7 @@
 <script src="/assets/icons.js?v=6" defer></script>
 <script src="/assets/site-shell.js?v=6" defer></script>
 <script>
+document.addEventListener('DOMContentLoaded', () => {
 renderShell('products');
 const ICONS = window.CHENGDA_ICONS || {};
 const CATS = {
@@ -477,6 +478,7 @@ catNav.addEventListener('click', e=>{
 applyCatHeader();
 renderNav();
 renderGrid();
+});
 </script>
 
 <script type="application/ld+json">

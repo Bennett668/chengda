@@ -68,8 +68,10 @@
 <script src="/assets/icons.js?v=6" defer></script>
 <script src="/assets/site-shell.js?v=6" defer></script>
 <script>
-renderShell('products');
-const ICONS = window.CHENGDA_ICONS || {};
-const el = document.getElementById('pd-ico'); if (el && ICONS.washbasin) el.innerHTML = ICONS.washbasin;
+document.addEventListener('DOMContentLoaded', () => {
+  renderShell('products');
+  const ICONS = window.CHENGDA_ICONS || {};
+  const el = document.getElementById('pd-ico'); if (el && ICONS.washbasin) el.innerHTML = ICONS.washbasin;
+});
 </script>
 </body></html>
