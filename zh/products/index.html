@@ -18,6 +18,15 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,wght@1,300;1,400;1,500&display=swap" onload="this.rel=\'stylesheet\'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,wght@1,300;1,400;1,500&display=swap"></noscript>
 <link rel="canonical" href="https://www.gdchengda.hk/zh/products/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="zh_HK" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:title" content="產品 · 程達" />
+<meta property="og:description" content="瀏覽 132 款生產中的陶瓷衛浴 — 面盆、柱盆、標準馬桶、智能馬桶。CUPC 認證，潮州 OEM／ODM，自 1999 年。" />
+<meta property="og:image" content="https://www.gdchengda.hk/assets/og-home.webp" />
+<meta property="og:url" content="https://www.gdchengda.hk/zh/products/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.gdchengda.hk/assets/og-home.webp" />
 <link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/products/" />
 <link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/products/" />
 <link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/products/" />
@@ -79,7 +88,37 @@
   .pcard .code { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: var(--ink); line-height: 1.15; }
   .pcard .name { font-size: 13px; font-weight: 500; color: var(--muted); margin-top: 6px; letter-spacing: -0.005em; line-height: 1.35; }
   .pcard .dims { font-size: 12px; color: var(--ink); font-weight: 600; margin-top: 10px; font-variant-numeric: tabular-nums; line-height: 1.5; }
+
+  /* Buyer FAQ (audit #9) — reuses the homepage hf-* component */
+  .home-faq .hf-grid { border-radius: var(--r-lg); overflow: hidden; background: var(--line, #E8E9EB); display: flex; flex-direction: column; gap: 1px; }
+  .hf-row { background: #fff; display: grid; grid-template-columns: 320px 1fr; gap: 48px; padding: 28px 32px; }
+  @media (max-width: 760px) { .hf-row { grid-template-columns: 1fr; gap: 12px; padding: 24px 24px 28px; } }
+  .hf-q { display: flex; flex-direction: column; gap: 4px; }
+  .hf-q .n { font-size: 11px; letter-spacing: 0.12em; color: var(--muted); font-family: var(--font-mono); }
+  .hf-q h3 { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.35; color: var(--ink); margin: 0; }
+  .hf-a { font-size: 15px; line-height: 1.6; color: var(--ink-2); }
+  .hf-a strong { color: var(--ink); font-weight: 600; }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://www.gdchengda.hk/zh/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "產品",
+      "item": "https://www.gdchengda.hk/zh/products/"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -318,6 +357,43 @@
     <li><a href="/products/T214/">T214</a></li>
     <li><a href="/products/T215/">T215</a></li>
 </ul>
+
+<section class="section home-faq" id="faq">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">採購常見問題</div><h2 style="margin-top:8px">採購 <span class="soft">常見問題。</span></h2></div>
+    <div class="hf-grid">
+      <div class="hf-row">
+        <div class="hf-q"><div class="n">01</div><h3>請問貴司的最小訂購量(MOQ)是多少？</h3></div>
+        <div class="hf-a">標準目錄型號：100 件起。OEM/ODM 客製模具：200 件起。新合作夥伴可洽詢小批量試單。</div>
+      </div>
+      <div class="hf-row">
+        <div class="hf-q"><div class="n">02</div><h3>OEM / ODM 訂單的交期多久？</h3></div>
+        <div class="hf-a">標準型號 45 – 60 天從訂單確認到出貨備妥。OEM 含新模具開發另加 15 – 30 天樣品確認時間,確認後再進入量產。</div>
+      </div>
+      <div class="hf-row">
+        <div class="hf-q"><div class="n">03</div><h3>可以提供樣品嗎？</h3></div>
+        <div class="hf-a">可以。標準目錄樣品 7 – 10 天出貨。樣品費按出廠成本加運費收取,首次批量訂單後折抵。客製 OEM 樣品需 25 – 35 天並需付模具費訂金。</div>
+      </div>
+      <div class="hf-row">
+        <div class="hf-q"><div class="n">04</div><h3>程達有哪些認證？</h3></div>
+        <div class="hf-a">CUPC（北美市場准入）+ ISO 9001 品質管理體系。其他區域認證如 WaterMark(澳洲)、CE(歐洲)、SASO(沙烏地阿拉伯)可按市場需求安排。</div>
+      </div>
+      <div class="hf-row">
+        <div class="hf-q"><div class="n">05</div><h3>出口哪些國家？貿易條款有哪些？</h3></div>
+        <div class="hf-a">出口 50+ 國家。FOB 深圳、FOB 廣州、CIF 指定港口皆可。出口報關、燻蒸、托盤包裝、20GP / 40HQ 貨櫃裝櫃由我方處理。</div>
+      </div>
+      <div class="hf-row">
+        <div class="hf-q"><div class="n">06</div><h3>造型、顏色、品牌能客製嗎？</h3></div>
+        <div class="hf-a">可以。造型、尺寸、釉色、釉面(光面/啞光/紋理)、內盆結構、包裝設計、品牌印刷皆可客製。模具費約 USD 3,000 起,依複雜度而定。客製模具歸客戶所有。</div>
+      </div>
+      <div class="hf-row">
+        <div class="hf-q"><div class="n">07</div><h3>付款條件如何？</h3></div>
+        <div class="hf-a">標準條款:30% T/T 訂金確認訂單,70% 尾款憑提單副本付清。USD 50,000 以上訂單可接受即期信用狀。長期合作可議。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div id="shell-footer"></div>
 
 <script src="/assets/icons.js?v=6" defer></script>

@@ -6,6 +6,15 @@
 <meta name="description" content="Browse 132 ceramic sanitaryware models in production — washbasins, pedestal basins, standard toilets, and smart toilets. CUPC certified, OEM/ODM from Chaozhou since 1999." />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="canonical" href="https://www.gdchengda.hk/products/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="zh_HK" />
+<meta property="og:title" content="Products · Chengda" />
+<meta property="og:description" content="Browse 132 ceramic sanitaryware models in production — washbasins, pedestal basins, standard toilets, and smart toilets. CUPC certified, OEM/ODM from Chaozhou since 1999." />
+<meta property="og:image" content="https://www.gdchengda.hk/assets/og-home.webp" />
+<meta property="og:url" content="https://www.gdchengda.hk/products/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.gdchengda.hk/assets/og-home.webp" />
 <link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/products/" />
 <link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/products/" />
 <link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/products/" />
@@ -78,7 +87,37 @@
   .pcard .code { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: var(--ink); line-height: 1.15; }
   .pcard .name { font-size: 13px; font-weight: 500; color: var(--muted); margin-top: 6px; letter-spacing: -0.005em; line-height: 1.35; }
   .pcard .dims { font-size: 12px; color: var(--ink); font-weight: 600; margin-top: 10px; font-variant-numeric: tabular-nums; line-height: 1.5; }
+
+  /* Buyer FAQ (audit #9) — reuses the homepage hf-* component */
+  .home-faq .hf-grid { border-radius: var(--r-lg); overflow: hidden; background: var(--line, #E8E9EB); display: flex; flex-direction: column; gap: 1px; }
+  .hf-row { background: #fff; display: grid; grid-template-columns: 320px 1fr; gap: 48px; padding: 28px 32px; }
+  @media (max-width: 760px) { .hf-row { grid-template-columns: 1fr; gap: 12px; padding: 24px 24px 28px; } }
+  .hf-q { display: flex; flex-direction: column; gap: 4px; }
+  .hf-q .n { font-size: 11px; letter-spacing: 0.12em; color: var(--muted); font-family: var(--font-mono); }
+  .hf-q h3 { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.35; color: var(--ink); margin: 0; }
+  .hf-a { font-size: 15px; line-height: 1.6; color: var(--ink-2); }
+  .hf-a strong { color: var(--ink); font-weight: 600; }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.gdchengda.hk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Products",
+      "item": "https://www.gdchengda.hk/products/"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -318,6 +357,43 @@
     <li><a href="/products/T214/">T214</a></li>
     <li><a href="/products/T215/">T215</a></li>
 </ul>
+
+<section class="section home-faq" id="faq">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">For buyers · Quick answers</div><h2 style="margin-top:8px">Sourcing <span class="soft">FAQ.</span></h2></div>
+    <div class="hf-grid">
+      <div class="hf-row">
+        <div class="hf-q"><div class="n">01</div><h3>What is your MOQ (minimum order quantity)?</h3></div>
+        <div class="hf-a">Standard catalog models: 100 pieces minimum. OEM/ODM with custom tooling: 200 pieces minimum. We also accept smaller trial orders for new partners — please contact our sales team to discuss.</div>
+      </div>
+      <div class="hf-row">
+        <div class="hf-q"><div class="n">02</div><h3>What is the lead time for OEM/ODM orders?</h3></div>
+        <div class="hf-a">45 – 60 days for standard models from order confirmation to ready-to-ship. OEM with new mould tooling adds an extra 15 – 30 days for sample production and approval before mass production starts.</div>
+      </div>
+      <div class="hf-row">
+        <div class="hf-q"><div class="n">03</div><h3>Do you provide samples?</h3></div>
+        <div class="hf-a">Yes. Standard catalog samples ship within 7 – 10 days. Sample fee is charged at unit cost plus freight, and is credited back against your first bulk order. Custom OEM samples take 25 – 35 days and require tooling-fee deposit.</div>
+      </div>
+      <div class="hf-row">
+        <div class="hf-q"><div class="n">04</div><h3>What certifications does Chengda hold?</h3></div>
+        <div class="hf-a">CUPC (cUPC, for North American market access) and ISO 9001 quality management system. Additional regional certifications such as WaterMark (Australia), CE (Europe) and SASO (Saudi Arabia) can be arranged for specific markets on request.</div>
+      </div>
+      <div class="hf-row">
+        <div class="hf-q"><div class="n">05</div><h3>Do you ship internationally? Which Incoterms do you support?</h3></div>
+        <div class="hf-a">Yes — we export to 50+ countries. FOB Shenzhen, FOB Guangzhou, and CIF named-port are all supported. We handle export documentation, fumigation, palletisation and 20GP / 40HQ container loading.</div>
+      </div>
+      <div class="hf-row">
+        <div class="hf-q"><div class="n">06</div><h3>Can I customise the shape, colour or branding?</h3></div>
+        <div class="hf-a">Yes. Shape, external dimensions, glaze colour and glaze finish (gloss / matte / textured), inner-bowl geometry, packaging design and brand printing are all customisable. Tooling fees start from approximately USD 3,000 depending on complexity. Custom moulds remain your property.</div>
+      </div>
+      <div class="hf-row">
+        <div class="hf-q"><div class="n">07</div><h3>What payment terms do you accept?</h3></div>
+        <div class="hf-a">Standard terms: 30% T/T deposit on order confirmation, 70% balance paid against B/L copy before vessel sails. Letter of Credit (L/C) at sight is also accepted for orders above USD 50,000. Other terms negotiable for repeat partners.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div id="shell-footer"></div>
 
 <script src="/assets/icons.js?v=6" defer></script>
