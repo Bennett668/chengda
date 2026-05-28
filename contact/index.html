@@ -36,6 +36,12 @@
   .ci-block h3 { font-size: 13px; font-family: var(--font-mono); font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
   .submit-btn { background: var(--ink); color: #fff; border: 0; border-radius: var(--r-pill); padding: 0 24px; height: 48px; font: inherit; font-weight: 500; cursor: pointer; transition: background .2s var(--t); }
   .submit-btn:hover { background: #000; }
+  .inquiry-chips { margin-bottom: 4px; }
+  .inq-label { font-size: 13px; font-family: var(--font-mono); font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+  .inq-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .inq-pill { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 13px; padding: 5px 8px 5px 12px; border: 1px solid var(--line-2); border-radius: var(--r-pill); background: #fff; }
+  .inq-pill button { border: 0; background: none; cursor: pointer; font-size: 15px; line-height: 1; color: var(--muted); padding: 0 2px; transition: color .15s var(--t); }
+  .inq-pill button:hover { color: var(--ink); }
 </style>
 </head>
 <body>
@@ -121,13 +127,65 @@
     const addr = u + '@' + d + '.' + t;
     el.innerHTML = '<a href="mailto:' + addr + '" style="color:inherit;text-decoration:none">' + addr + '</a>';
   });
-  // Show thanks message if redirected back from Formsubmit
+  // Show thanks message if redirected back from Formsubmit — and clear the inquiry basket
   if (new URLSearchParams(location.search).get('sent') === '1') {
     const form = document.querySelector('.form-card form');
     const thanks = document.getElementById('thanks');
     if (form) form.style.display = 'none';
     if (thanks) thanks.style.display = 'block';
+    try { localStorage.removeItem('inquiryList'); } catch (e) {}
   }
+
+  // Inquiry hand-off: pull ?model= (single "Request Quote" link) + localStorage.inquiryList
+  // (the "Add to Inquiry List" basket), prefill the form, and let the buyer edit the list.
+  (function () {
+    const params = new URLSearchParams(location.search);
+    let basket = [];
+    try { basket = JSON.parse(localStorage.getItem('inquiryList') || '[]'); } catch (e) { basket = []; }
+    if (!Array.isArray(basket)) basket = [];
+    const single = params.get('model');
+    let list = single ? [single].concat(basket) : basket.slice();
+    list = list.filter((v, i) => typeof v === 'string' && v && list.indexOf(v) === i);
+    if (!list.length) return;
+
+    const form = document.querySelector('.form-card form');
+    if (!form) return;
+    const msg = form.querySelector('textarea[name="message"]');
+    const PREFIX = 'I would like to request a quote for the following ';
+    const sentence = () => PREFIX + (list.length > 1 ? 'models' : 'model') + ': ' + list.join(', ') + '.';
+
+    // Hidden field so the model list reaches the email cleanly even if the buyer edits the message
+    let hidden = form.querySelector('input[name="inquiry_models"]');
+    if (!hidden) { hidden = document.createElement('input'); hidden.type = 'hidden'; hidden.name = 'inquiry_models'; form.appendChild(hidden); }
+
+    // Removable chip list above the Message field
+    const wrap = document.createElement('div');
+    wrap.className = 'full inquiry-chips';
+    const msgLabel = msg ? msg.closest('label') : null;
+    if (msgLabel) msgLabel.parentNode.insertBefore(wrap, msgLabel); else form.prepend(wrap);
+
+    function sync() {
+      hidden.value = list.join(', ');
+      if (!list.length) { wrap.innerHTML = ''; return; }
+      wrap.innerHTML = '<div class="inq-label">Your inquiry list (' + list.length + ')</div>'
+        + '<div class="inq-pills">' + list.map(c =>
+            '<span class="inq-pill" data-code="' + c + '">' + c + '<button type="button" aria-label="Remove ' + c + '">×</button></span>'
+          ).join('') + '</div>';
+    }
+    sync();
+
+    // Prefill the message only when empty — never clobber what the buyer typed
+    if (msg && !msg.value.trim()) msg.value = sentence() + '\n\n';
+
+    wrap.addEventListener('click', (e) => {
+      const btn = e.target.closest('button'); if (!btn) return;
+      const pill = btn.closest('.inq-pill'); const code = pill && pill.dataset.code; if (!code) return;
+      list = list.filter(c => c !== code);
+      try { localStorage.setItem('inquiryList', JSON.stringify(list)); } catch (e) {}
+      if (msg && msg.value.startsWith(PREFIX)) msg.value = list.length ? sentence() + '\n\n' : '';
+      sync();
+    });
+  })();
 })();
 </script>
 
