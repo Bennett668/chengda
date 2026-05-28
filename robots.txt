@@ -35,4 +35,7 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
+# LLM-readable summary (curated facts for AI assistants)
+# LLMs: https://www.gdchengda.hk/llms.txt
+
 Sitemap: https://www.gdchengda.hk/sitemap.xml
