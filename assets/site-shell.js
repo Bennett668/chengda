@@ -83,6 +83,15 @@
 </footer>`;
 
   window.renderShell = function(active){
+    // Language switch: prefer the page's declared hreflang alternate so that
+    // blog articles (no path-mirrored counterpart) don't 404. Fall back to the
+    // blind /zh transform already in L.altPath.
+    try {
+      const sel = ZH ? 'link[rel="alternate"][hreflang="en"]'
+                     : 'link[rel="alternate"][hreflang="zh-Hant"], link[rel="alternate"][hreflang="zh-Hans"]';
+      const alt = document.querySelector(sel);
+      if (alt && alt.href) { const u = new URL(alt.href); L.altPath = u.pathname + u.search + u.hash; }
+    } catch(e){}
     const n = document.getElementById('shell-nav');
     const f = document.getElementById('shell-footer');
     if (n) n.outerHTML = NAV(active);
@@ -90,7 +99,32 @@
     const nav = document.getElementById('nav');
     if (nav) addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY>12));
     const b = document.querySelector('.nav-burger'); const d = document.getElementById('navDrawer');
-    if (b && d) b.addEventListener('click', () => d.classList.toggle('open'));
+    if (b && d) {
+      b.setAttribute('aria-expanded', 'false');
+      b.setAttribute('aria-controls', 'navDrawer');
+      b.addEventListener('click', () => {
+        const open = d.classList.toggle('open');
+        b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && d.classList.contains('open')) {
+          d.classList.remove('open'); b.setAttribute('aria-expanded', 'false'); b.focus();
+        }
+      });
+    }
+
+    // Skip-to-content link + main target (a11y 2.4.1 bypass blocks)
+    if (!document.querySelector('.skip-link')) {
+      const nav = document.getElementById('nav');
+      let first = nav ? nav.nextElementSibling : null;
+      while (first && first.id === 'navDrawer') first = first.nextElementSibling;
+      if (first && !first.id) { first.id = 'main'; first.setAttribute('tabindex', '-1'); }
+      const skip = document.createElement('a');
+      skip.className = 'skip-link';
+      skip.href = '#' + (first && first.id ? first.id : 'main');
+      skip.textContent = ZH ? '跳至內容' : 'Skip to content';
+      document.body.insertBefore(skip, document.body.firstChild);
+    }
 
     // Email obfuscation: rebuild mailto links from data attributes
     document.querySelectorAll('.cd-email-footer').forEach(el => {
