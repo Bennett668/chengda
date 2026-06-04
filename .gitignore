@@ -1,2 +1,6 @@
 .DS_Store
 *.pen
+
+# macOS AppleDouble junk (exFAT/LaCie drive)
+._*
+**/._*
