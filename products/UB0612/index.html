@@ -42,7 +42,7 @@
 
   .pd-media { display: flex; flex-direction: column; gap: 14px; }
   .pd-hero { aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; background: #fff; }
-  .pd-hero img { width: 100%; height: 100%; object-fit: contain; }
+  .pd-hero img { width: 100%; height: 100%; object-fit: contain; transition: opacity 0.3s ease; }
 
   .pd-thumbs-wrap { display: grid; grid-template-columns: 32px 1fr 32px; gap: 8px; align-items: center; }
   .pd-arrow {
@@ -52,7 +52,7 @@
     transition: color .2s var(--t), border-color .2s var(--t);
   }
   .pd-arrow:hover { color: var(--ink); border-color: var(--ink); }
-  .pd-thumbs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+  .pd-thumbs { display: grid; grid-template-columns: repeat(8, 1fr); gap: 8px; }
   .pd-thumb {
     aspect-ratio: 1/1; background: #fff; border: 1px solid var(--line); padding: 0; cursor: pointer;
     overflow: hidden; border-radius: var(--r-md); transition: border-color .2s var(--t);
@@ -213,7 +213,23 @@
       <!-- LEFT: media -->
       <div class="pd-media">
         <div class="pd-hero">
-          <img id="pd-main" src="/assets/products/_placeholder/card.webp" alt="Chengda UB0612 Undercounter Basin" fetchpriority="high" />
+          <img id="pd-main" src="/assets/products/UB0612/gallery/u1.webp" alt="Chengda UB0612 Undercounter Basin" fetchpriority="high" />
+        </div>
+        <div class="pd-thumbs-wrap">
+          <button class="pd-arrow prev" aria-label="Previous photo">‹</button>
+          <div class="pd-thumbs" role="tablist" aria-label="UB0612 photographs">
+            <button type="button" class="pd-thumb is-active" role="tab" aria-selected="true" data-src="/assets/products/UB0612/gallery/u1.webp" data-alt="UB0612 product photo 1"><img src="/assets/products/UB0612/gallery/u1-sm.webp" alt="" loading="lazy" /></button>
+            <button type="button" class="pd-thumb" role="tab" aria-selected="false" data-src="/assets/products/UB0612/gallery/u2.webp" data-alt="UB0612 product photo 2"><img src="/assets/products/UB0612/gallery/u2-sm.webp" alt="" loading="lazy" /></button>
+            <button type="button" class="pd-thumb" role="tab" aria-selected="false" data-src="/assets/products/UB0612/gallery/u3.webp" data-alt="UB0612 product photo 3"><img src="/assets/products/UB0612/gallery/u3-sm.webp" alt="" loading="lazy" /></button>
+            <button type="button" class="pd-thumb" role="tab" aria-selected="false" data-src="/assets/products/UB0612/gallery/u4.webp" data-alt="UB0612 product photo 4"><img src="/assets/products/UB0612/gallery/u4-sm.webp" alt="" loading="lazy" /></button>
+            <button type="button" class="pd-thumb" role="tab" aria-selected="false" data-src="/assets/products/UB0612/gallery/u5.webp" data-alt="UB0612 product photo 5"><img src="/assets/products/UB0612/gallery/u5-sm.webp" alt="" loading="lazy" /></button>
+            <button type="button" class="pd-thumb" role="tab" aria-selected="false" data-src="/assets/products/UB0612/gallery/u6.webp" data-alt="UB0612 product photo 6"><img src="/assets/products/UB0612/gallery/u6-sm.webp" alt="" loading="lazy" /></button>
+            <button type="button" class="pd-thumb" role="tab" aria-selected="false" data-src="/assets/products/UB0612/gallery/u7.webp" data-alt="UB0612 product photo 7"><img src="/assets/products/UB0612/gallery/u7-sm.webp" alt="" loading="lazy" /></button>
+            <button type="button" class="pd-thumb" role="tab" aria-selected="false" data-src="/assets/products/UB0612/gallery/u8.webp" data-alt="UB0612 product photo 8"><img src="/assets/products/UB0612/gallery/u8-sm.webp" alt="" loading="lazy" /></button>
+            <button type="button" class="pd-thumb" role="tab" aria-selected="false" data-src="/assets/products/UB0612/gallery/u9.webp" data-alt="UB0612 product photo 9"><img src="/assets/products/UB0612/gallery/u9-sm.webp" alt="" loading="lazy" /></button>
+            <button type="button" class="pd-thumb" role="tab" aria-selected="false" data-src="/assets/products/UB0612/gallery/u10.webp" data-alt="UB0612 product photo 10"><img src="/assets/products/UB0612/gallery/u10-sm.webp" alt="" loading="lazy" /></button>
+          </div>
+          <button class="pd-arrow next" aria-label="Next photo">›</button>
         </div>
       </div>
 
@@ -407,7 +423,8 @@
   function set(i) {
     idx = (i + thumbs.length) % thumbs.length;
     const t = thumbs[idx];
-    main.src = t.dataset.src;
+    main.style.opacity = '0';
+    setTimeout(() => { main.src = t.dataset.src; main.style.opacity = '1'; }, 300);
     main.alt = t.dataset.alt || main.alt;
     thumbs.forEach((tt, j) => {
       const a = j === idx;
@@ -418,6 +435,17 @@
   thumbs.forEach((t, i) => t.addEventListener('click', () => set(i)));
   prev && prev.addEventListener('click', () => set(idx - 1));
   next && next.addEventListener('click', () => set(idx + 1));
+
+  let autoTimer = null;
+  const startAuto = () => { stopAuto(); autoTimer = setInterval(() => set(idx + 1), 3000); };
+  function stopAuto() { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } }
+  thumbs.forEach(t => { const im = new Image(); im.src = t.dataset.src; });
+  const media = document.querySelector('.pd-media');
+  if (media && thumbs.length > 1) {
+    media.addEventListener('mouseenter', stopAuto);
+    media.addEventListener('mouseleave', startAuto);
+    startAuto();
+  }
 
   // Inquiry list (localStorage)
   const addBtn = document.getElementById('addInquiry');
