@@ -170,8 +170,9 @@
     aspect-ratio: 1/1; background: linear-gradient(135deg, #ededea 0%, #d9d6cf 100%);
     border-radius: var(--r-md); display: flex; align-items: center; justify-content: center;
     font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--muted);
+    text-transform: uppercase; color: var(--muted); overflow: hidden;
   }
+  .pd-factory-ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
   /* ===== WhatsApp CTA ===== */
   .pd-whats { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
@@ -396,10 +397,10 @@
         </ul>
       </div>
       <div class="pd-factory-photos">
-        <div class="pd-factory-ph">工廠相片 1</div>
-        <div class="pd-factory-ph">工廠相片 2</div>
-        <div class="pd-factory-ph">工廠相片 3</div>
-        <div class="pd-factory-ph">工廠相片 4</div>
+        <div class="pd-factory-ph"><img src="/assets/factory/factory-1.webp" alt="程達陶瓷成型車間 — 石膏模具" loading="lazy" decoding="async" width="1000" height="1000" /></div>
+        <div class="pd-factory-ph"><img src="/assets/factory/factory-2.webp" alt="陶瓷坯體晾乾架" loading="lazy" decoding="async" width="1000" height="1000" /></div>
+        <div class="pd-factory-ph"><img src="/assets/factory/factory-3.webp" alt="程達陶瓷生產大車間" loading="lazy" decoding="async" width="1000" height="1000" /></div>
+        <div class="pd-factory-ph"><img src="/assets/factory/factory-4.webp" alt="程達面盆展廳" loading="lazy" decoding="async" width="1000" height="1000" /></div>
       </div>
     </div>
 
