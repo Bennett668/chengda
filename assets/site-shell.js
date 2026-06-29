@@ -89,7 +89,7 @@
         <a href="${P}/contact/">${L.contact}</a>
       </div>
       <div class="footer-col"><h4>${L.fContact}</h4>
-        <a class="cd-email-footer" data-u="13829094740" data-d="163" data-t="com" href="#">[ email ]</a>
+        <a class="cd-email-footer" data-u="chengdakoi168" data-d="gmail" data-t="com" href="#">[ email ]</a>
         <a href="tel:+8613829094740">+86 138 2909 4740</a>
         <a href="https://wa.me/12132160960" target="_blank" rel="noopener">WhatsApp: +1 (213) 216-0960</a>
         <a href="#">WeChat: Chengda_koi888</a>
