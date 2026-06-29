@@ -9,7 +9,7 @@
     footerTag:'瓷器衛浴，以瓷塑形。潮州，自 1999。',
     follow:'關注我們', waMsg:'您好，程達衛浴，我想了解你們的陶瓷衛浴產品。',
     fProducts:'產品', fCompany:'公司', fContact:'聯絡',
-    fWashbasin:'面盆', fPedestal:'柱盆', fToilet:'馬桶', fSmart:'智能馬桶',
+    fWashbasin:'面盆', fPedestal:'柱盆', fToilet:'馬桶', fVanity:'櫃盆',
     fOem:'OEM / ODM', fHours:'',
     copyr:'© 2026 廣東程達智能科技有限公司', addr:'潮州 · 廣東 · 中國'
   } : {
@@ -18,7 +18,7 @@
     footerTag:'Vitreous china sanitaryware, shaped in porcelain. Made in Chaozhou since 1999.',
     follow:'Follow us', waMsg:"Hi Chengda, I'm interested in your ceramic sanitaryware.",
     fProducts:'Products', fCompany:'Company', fContact:'Contact',
-    fWashbasin:'Washbasin', fPedestal:'Pedestal', fToilet:'Toilet', fSmart:'Smart Toilet',
+    fWashbasin:'Washbasin', fPedestal:'Pedestal', fToilet:'Toilet', fVanity:'Vanity Basin',
     fOem:'OEM &amp; ODM', fHours:'',
     copyr:'© 2026 Guangdong Chengda Intelligent Tech.', addr:'Chaozhou · Guangdong · China'
   };
@@ -82,7 +82,7 @@
         <a href="${P}/products/?cat=washbasin">${L.fWashbasin}</a>
         <a href="${P}/products/?cat=pedestal">${L.fPedestal}</a>
         <a href="${P}/products/?cat=standard">${L.fToilet}</a>
-        <a href="${P}/products/?cat=smart">${L.fSmart}</a>
+        <a href="${P}/products/?cat=vanity">${L.fVanity}</a>
       </div>
       <div class="footer-col"><h4>${L.fCompany}</h4>
         <a href="${P}/about/">${L.about}</a>

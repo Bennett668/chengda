@@ -397,7 +397,7 @@
 <div id="shell-footer"></div>
 
 <script src="/assets/icons.js?v=6" defer></script>
-<script src="/assets/site-shell.js?v=8" defer></script>
+<script src="/assets/site-shell.js?v=9" defer></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 renderShell('products');
@@ -412,11 +412,15 @@ const CATS = {
   standard: { title:'Standard Toilet.', sub:['38 models · floor-standing + wall-hung','Dual-flush · antibacterial glaze','Soft-close seat'], icon:'toilet',
     tabs:[{id:'all',label:'All',count:38},{id:'floor',label:'Floor-Standing',count:17},{id:'wall',label:'Wall-Hung',count:23}],
     items:[{code:"T201",name:"T201 · Cascade Siphon · Curved One-Piece",dims:"690 × 375 × 660 mm<br>27.2″ × 14.8″ × 26.0″",sub:"floor",img:"/assets/products/T201/card.webp?v=8"},{code:"T202",name:"T202 · Cascade Vortex · Narrow Footprint",dims:"680 × 360 × 700 mm<br>26.8″ × 14.2″ × 27.6″",sub:"floor",img:"/assets/products/T202/card.webp?v=8"},{code:"T203",name:"T203 · Rimless · Fully Glazed Bowl",dims:"660 × 370 × 700 mm<br>26.0″ × 14.6″ × 27.6″",sub:"floor",img:"/assets/products/T203/card.webp?v=8"},{code:"T204",name:"T204 · Concealed Cistern · 650 mm Low Silhouette",dims:"700 × 365 × 650 mm<br>27.6″ × 14.4″ × 25.6″",sub:"floor",img:"/assets/products/T204/card.webp?v=8"},{code:"T205",name:"T205 · Concealed Cistern · Soft-Shoulder Body",dims:"700 × 365 × 650 mm<br>27.6″ × 14.4″ × 25.6″",sub:"floor",img:"/assets/products/T205/card.webp?v=8"},{code:"T206",name:"T206 · Concealed Cistern · Squared Shoulder",dims:"680 × 370 × 700 mm<br>26.8″ × 14.6″ × 27.6″",sub:"floor",img:"/assets/products/T206/card.webp?v=8"},{code:"T207",name:"T207 · Sculpted Body · 430 mm Seat Width",dims:"680 × 430 × 680 mm<br>26.8″ × 16.9″ × 26.8″",sub:"floor",img:"/assets/products/T207/card.webp?v=8"},{code:"T208",name:"T208 · Soft-Square One-Piece",dims:"700 × 370 × 720 mm<br>27.6″ × 14.6″ × 28.3″",sub:"floor",img:"/assets/products/T208/card.webp?v=8"},{code:"T209",name:"T209 · Tall Tank · Super Siphon",dims:"680 × 365 × 750 mm<br>26.8″ × 14.4″ × 29.5″",sub:"floor",img:"/assets/products/T209/card.webp?v=8"},{code:"T210",name:"T210 · Wide Stance · 380 mm Seat Height",dims:"700 × 395 × 710 mm<br>27.6″ × 15.6″ × 28.0″",sub:"floor",img:"/assets/products/T210/card.webp?v=8"},{code:"T211",name:"T211 · Tall Tank · Soft Cylinder",dims:"680 × 365 × 750 mm<br>26.8″ × 14.4″ × 29.5″",sub:"floor",img:"/assets/products/T211/card.webp?v=8"},{code:"T212",name:"T212 · Tall Tank · Squared Shoulder",dims:"680 × 365 × 750 mm<br>26.8″ × 14.4″ × 29.5″",sub:"floor",img:"/assets/products/T212/card.webp?v=8"},{code:"T213",name:"T213 · Tall Tank · Slim Profile",dims:"680 × 365 × 750 mm<br>26.8″ × 14.4″ × 29.5″",sub:"floor",img:"/assets/products/T213/card.webp?v=8"},{code:"T214",name:"T214 · Tall Tank · Architectural",dims:"680 × 365 × 750 mm<br>26.8″ × 14.4″ × 29.5″",sub:"floor",img:"/assets/products/T214/card.webp?v=8"},{code:"T215",name:"T215 · Flagship 760 mm Tank",dims:"680 × 365 × 760 mm<br>26.8″ × 14.4″ × 29.9″",sub:"floor",img:"/assets/products/T215/card.webp?v=8"},{code:"T216",name:"T216 · One-Piece Toilet · Floor-Standing",dims:"485 × 360 × 365 mm<br>19.1″ × 14.2″ × 14.4″",sub:"floor",img:"/assets/products/T216/card.webp?v=8"},{code:"T217",name:"T217 · One-Piece Toilet · Floor-Standing",dims:"485 × 360 × 365 mm<br>19.1″ × 14.2″ × 14.4″",sub:"floor",img:"/assets/products/T217/card.webp?v=8"},{code:"T101",name:"T101 · Wall-Hung Toilet",dims:"485 × 360 × 365 mm<br>19.1″ × 14.2″ × 14.4″",sub:"wall",img:"/assets/products/T101/card.webp?v=2"},{code:"T102",name:"T102 · Wall-Hung Toilet",dims:"485 × 360 × 365 mm<br>19.1″ × 14.2″ × 14.4″",sub:"wall",img:"/assets/products/T102/card.webp?v=2"},{code:"T103",name:"T103 · Wall-Hung Toilet",dims:"555 × 360 × 395 mm<br>21.9″ × 14.2″ × 15.6″",sub:"wall",img:"/assets/products/T103/card.webp?v=2"},{code:"T104",name:"T104 · Wall-Hung Toilet",dims:"575 × 360 × 365 mm<br>22.6″ × 14.2″ × 14.4″",sub:"wall",img:"/assets/products/T104/card.webp?v=2"},{code:"T105",name:"T105 · Wall-Hung Toilet",dims:"570 × 360 × 365 mm<br>22.4″ × 14.2″ × 14.4″",sub:"wall",img:"/assets/products/T105/card.webp?v=2"},{code:"T106",name:"T106 · Wall-Hung Toilet",dims:"525 × 360 × 365 mm<br>20.7″ × 14.2″ × 14.4″",sub:"wall",img:"/assets/products/T106/card.webp?v=2"},{code:"T107",name:"T107 · Wall-Hung Toilet",dims:"540 × 360 × 365 mm<br>21.3″ × 14.2″ × 14.4″",sub:"wall",img:"/assets/products/T107/card.webp?v=2"},{code:"T108",name:"T108 · Wall-Hung Toilet",dims:"525 × 360 × 365 mm<br>20.7″ × 14.2″ × 14.4″",sub:"wall",img:"/assets/products/T108/card.webp?v=2"},{code:"T109",name:"T109 · Wall-Hung Toilet",dims:"555 × 360 × 365 mm<br>21.9″ × 14.2″ × 14.4″",sub:"wall",img:"/assets/products/T109/card.webp?v=2"},{code:"T110",name:"T110 · Wall-Hung Toilet",dims:"555 × 360 × 395 mm<br>21.9″ × 14.2″ × 15.6″",sub:"wall",img:"/assets/products/T110/card.webp?v=2"},{code:"T111",name:"T111 · Wall-Hung Toilet",dims:"525 × 365 × 365 mm<br>20.7″ × 14.4″ × 14.4″",sub:"wall",img:"/assets/products/T111/card.webp?v=2"},{code:"T112",name:"T112 · Wall-Hung Toilet",dims:"570 × 390 × 365 mm<br>22.4″ × 15.4″ × 14.4″",sub:"wall",img:"/assets/products/T112/card.webp?v=2"},{code:"T113",name:"T113 · Wall-Hung Toilet",dims:"515 × 365 × 360 mm<br>20.3″ × 14.4″ × 14.2″",sub:"wall",img:"/assets/products/T113/card.webp?v=2"},{code:"T114",name:"T114 · Wall-Hung Toilet",dims:"525 × 365 × 350 mm<br>20.7″ × 14.4″ × 13.8″",sub:"wall",img:"/assets/products/T114/card.webp?v=2"},{code:"T115",name:"T115 · Wall-Hung Toilet",dims:"485 × 365 × 350 mm<br>19.1″ × 14.4″ × 13.8″",sub:"wall",img:"/assets/products/T115/card.webp?v=2"},{code:"T116",name:"T116 · Wall-Hung Toilet",dims:"525 × 365 × 365 mm<br>20.7″ × 14.4″ × 14.4″",sub:"wall",img:"/assets/products/T116/card.webp?v=2"},{code:"T117",name:"T117 · Wall-Hung Toilet",dims:"525 × 360 × 365 mm<br>20.7″ × 14.2″ × 14.4″",sub:"wall",img:"/assets/products/T117/card.webp?v=2"},{code:"T118",name:"T118 · Wall-Hung Toilet",dims:"510 × 360 × 355 mm<br>20.1″ × 14.2″ × 14.0″",sub:"wall",img:"/assets/products/T118/card.webp?v=2"},{code:"T119",name:"T119 · Wall-Hung Toilet",dims:"490 × 360 × 360 mm<br>19.3″ × 14.2″ × 14.2″",sub:"wall",img:"/assets/products/T119/card.webp?v=2"},{code:"T120",name:"T120 · Wall-Hung Toilet",dims:"485 × 365 × 350 mm<br>19.1″ × 14.4″ × 13.8″",sub:"wall",img:"/assets/products/T120/card.webp?v=2"},{code:"T121",name:"T121 · Wall-Hung Toilet",dims:"525 × 360 × 365 mm<br>20.7″ × 14.2″ × 14.4″",sub:"wall",img:"/assets/products/T121/card.webp?v=2"},{code:"T122",name:"T122 · Wall-Hung Toilet",dims:"555 × 360 × 410 mm<br>21.9″ × 14.2″ × 16.1″",sub:"wall",img:"/assets/products/T122/card.webp?v=2"},{code:"T123",name:"T123 · Wall-Hung Toilet",dims:"525 × 360 × 365 mm<br>20.7″ × 14.2″ × 14.4″",sub:"wall",img:"/assets/products/T123/card.webp?v=2"}]},
+  vanity: { title:'Vanity Basin.', sub:['Cabinet basin series','Ceramic basin + vanity unit','OEM / ODM'], icon:'washbasin',
+    tabs:[{id:'all',label:'All',count:0}],
+    items:[] },
   smart: { title:'Smart Toilet.', sub:['New series','Heated seat · Auto flush'], icon:'smarttoilet',
     tabs:[{id:'all',label:'All',count:6},{id:'floor',label:'Floor',count:3},{id:'wall',label:'Wall-Hung',count:3}],
     items:[{code:'ST101',name:'Lumen Smart',dims:'720 × 400 × 480',sub:'floor'},{code:'ST108',name:'Volt Smart',dims:'700 × 390 × 470',sub:'floor'},{code:'ST115',name:'Aria Smart',dims:'710 × 395 × 475',sub:'floor'},{code:'SW201',name:'Float Smart',dims:'540 × 360 × 320',sub:'wall'},{code:'SW208',name:'Edge Smart',dims:'560 × 370 × 330',sub:'wall'},{code:'SW214',name:'Plate Smart',dims:'550 × 365 × 325',sub:'wall'}]},
 };
 const TREES = {
+  vanity: [],
   washbasin: [
     {id:'g_above', label:'Vessel Basin', children:[
       {id:'A10', label:'A10 · Square'},
@@ -449,8 +453,8 @@ const TREES = {
     {id:'st_wall', label:'Wall-Hung'},
   ],
 };
-const CAT_ORDER = ['washbasin','pedestal','standard','smart'];
-const CAT_LABEL = {washbasin:'Washbasin', pedestal:'Pedestal Basin', standard:'Standard Toilet', smart:'Smart Toilet'};
+const CAT_ORDER = ['washbasin','pedestal','vanity','standard','smart'];
+const CAT_LABEL = {washbasin:'Washbasin', pedestal:'Pedestal Basin', standard:'Standard Toilet', smart:'Smart Toilet', vanity:'Vanity Basin'};
 
 const params = new URLSearchParams(location.search);
 let cat = params.get('cat') || 'washbasin'; if (!CATS[cat]) cat='washbasin';
@@ -480,14 +484,14 @@ function openPathIn(cc,selSub){
   } })(TREES[cc]||[], []);
   return path;
 }
-function isComingSoon(cc){ return cc==='smart' || CATS[cc].comingSoon; }
+function isComingSoon(cc){ return cc==='smart' || cc==='vanity' || CATS[cc].comingSoon; }
 
 function applyCatHeader(){
   document.getElementById('catTitle').textContent = CATS[cat].title;
   document.getElementById('catSub').innerHTML = CATS[cat].sub.map(s=>`<span>${s}</span>`).join('');
 }
 function renderGrid(){
-  if(isComingSoon(cat)){ grid.innerHTML='<div class="grid-empty">Smart Toilet series — coming soon. <a href="/contact/" style="color:var(--ink);text-decoration:underline;">Enquire about OEM</a>.</div>'; return; }
+  if(isComingSoon(cat)){ grid.innerHTML='<div class="grid-empty">'+CAT_LABEL[cat]+' series — coming soon. <a href="/contact/" style="color:var(--ink);text-decoration:underline;">Enquire about OEM</a>.</div>'; return; }
   const items=itemsIn(cat,sub);
   if(!items.length){ grid.innerHTML='<div class="grid-empty">This sub-category is coming soon — <a href="/contact/" style="color:var(--ink);text-decoration:underline;">contact us</a> for OEM enquiries.</div>'; return; }
   grid.innerHTML=items.map(it=>{
