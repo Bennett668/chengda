@@ -4,7 +4,7 @@
   const P = ZH ? '/zh' : '';
 
   const L = ZH ? {
-    home:'首頁', about:'關於', products:'產品', oem:'OEM', blog:'文章', contact:'聯絡',
+    home:'首頁', about:'關於', products:'產品', oem:'OEM', blog:'文章', videos:'影片', contact:'聯絡',
     cta:'索取報價', langSwitch:'EN', altPath: location.pathname.replace(/^\/zh/, '') || '/',
     footerTag:'瓷器衛浴，以瓷塑形。潮州，自 1999。',
     follow:'關注我們', waMsg:'您好，程達衛浴，我想了解你們的陶瓷衛浴產品。',
@@ -13,7 +13,7 @@
     fOem:'OEM / ODM', fHours:'',
     copyr:'© 2026 廣東程達智能科技有限公司', addr:'潮州 · 廣東 · 中國'
   } : {
-    home:'Home', about:'About', products:'Products', oem:'OEM', blog:'Blog', contact:'Contact',
+    home:'Home', about:'About', products:'Products', oem:'OEM', blog:'Blog', videos:'Videos', contact:'Contact',
     cta:'Get a quote →', langSwitch:'繁', altPath: '/zh' + (location.pathname === '/' ? '/' : location.pathname),
     footerTag:'Vitreous china sanitaryware, shaped in porcelain. Made in Chaozhou since 1999.',
     follow:'Follow us', waMsg:"Hi Chengda, I'm interested in your ceramic sanitaryware.",
@@ -33,6 +33,7 @@
       <a href="${P}/products/"${active==='products'?' class="active"':''}>${L.products}</a>
       <a href="${P}/oem/"${active==='oem'?' class="active"':''}>${L.oem}</a>
       <a href="${P}/blog/"${active==='blog'?' class="active"':''}>${L.blog}</a>
+      <a href="${P}/videos/"${active==='videos'?' class="active"':''}>${L.videos}</a>
       <a href="${P}/contact/"${active==='contact'?' class="active"':''}>${L.contact}</a>
     </nav>
     <a href="${L.altPath}" class="lang-switch" aria-label="Switch language">${L.langSwitch}</a>
@@ -46,6 +47,7 @@
   <a href="${P}/products/">${L.products}</a>
   <a href="${P}/oem/">${L.oem}</a>
   <a href="${P}/blog/">${L.blog}</a>
+  <a href="${P}/videos/">${L.videos}</a>
   <a href="${P}/contact/">${L.contact}</a>
   <a href="${L.altPath}">${L.langSwitch}</a>
   <a href="${P}/contact/">${L.cta}</a>

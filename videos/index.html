@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Videos · Chengda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Watch Chengda — real footage from our Chaozhou ceramic sanitaryware factory: production process, people and products. Also on TikTok." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Chengda Videos — Inside a ceramic sanitaryware factory" />
+<meta property="og:description" content="Real footage from our Chaozhou factory floor — process, people and product. Also on TikTok." />
+<meta property="og:image" content="https://www.gdchengda.hk/assets/og-home.webp" />
+<meta property="og:url" content="https://www.gdchengda.hk/videos/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.gdchengda.hk/assets/og-home.webp" />
+<link rel="canonical" href="https://www.gdchengda.hk/videos/" />
+<link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/videos/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/videos/" />
+<link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/videos/" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#14171b" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self'; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; base-uri 'self'; object-src 'none'" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<meta name="robots" content="index, follow" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,wght@1,300;1,400;1,500&display=swap" onload="this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,wght@1,300;1,400;1,500&display=swap"></noscript>
+<link rel="stylesheet" href="/assets/porcelain.css?v=18" />
+</head>
+<body>
+
+<div id="shell-nav"></div>
+
+<section class="subpage-hero">
+  <div class="wrap">
+    <div class="crumbs"><a href="/">Home</a><span class="sep">/</span><span>Videos</span></div>
+    <h1>Videos <span class="soft">&amp; reels.</span></h1>
+    <div class="sub"><span>Behind the scenes</span><span>Factory floor</span><span>Also on TikTok</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Watch</div>
+      <h2 style="margin-top:8px">Inside the <span class="soft">factory.</span></h2>
+      <p>Real footage from our Chaozhou facility — process, people and product. Tap any clip to play.</p>
+    </div>
+
+    <div class="video-grid">
+      <figure class="v-card" data-src="/assets/videos/rebirth.mp4">
+        <div class="v-frame">
+          <img src="/assets/videos/rebirth-poster.webp" alt="Reborn in a ceramic factory — Chengda Chaozhou workshop" loading="lazy" decoding="async" width="1080" height="1920" />
+          <button class="v-play" type="button" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+        </div>
+        <figcaption class="v-cap">
+          <span class="v-title">Reborn in a ceramic factory</span>
+          <span class="v-tag">Factory life</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div style="margin-top:48px">
+      <a href="https://www.tiktok.com/t/ZP8s3wpPg/" target="_blank" rel="noopener" class="more-link">Follow us on TikTok →</a>
+    </div>
+  </div>
+</section>
+
+<div id="shell-footer"></div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Reborn in a ceramic factory",
+  "description": "Behind-the-scenes footage from Chengda's ceramic sanitaryware factory in Chaozhou, China.",
+  "thumbnailUrl": "https://www.gdchengda.hk/assets/videos/rebirth-poster.webp",
+  "contentUrl": "https://www.gdchengda.hk/assets/videos/rebirth.mp4",
+  "uploadDate": "2026-06-29",
+  "publisher": { "@type": "Organization", "name": "Guangdong Chengda Intelligent Technology Co., Ltd.", "url": "https://www.gdchengda.hk/" }
+}
+</script>
+
+<script src="/assets/site-shell.js?v=8" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    renderShell('videos');
+    document.querySelectorAll('.v-card').forEach(function (card) {
+      var frame = card.querySelector('.v-frame');
+      var src = card.getAttribute('data-src');
+      if (!frame || !src) return;
+      frame.addEventListener('click', function () {
+        if (frame.querySelector('video')) return;
+        var v = document.createElement('video');
+        v.src = src; v.controls = true; v.autoplay = true; v.playsInline = true;
+        v.setAttribute('playsinline', ''); v.setAttribute('preload', 'metadata');
+        frame.innerHTML = ''; frame.appendChild(v);
+      });
+    });
+  });
+</script>
+</body>
+</html>
