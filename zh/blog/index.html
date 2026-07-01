@@ -1,14 +1,23 @@
 <!doctype html>
-<html lang="zh-Hans">
+<html lang="zh-Hant">
 <head>
 <meta charset="utf-8" />
-<title>博客 · 工艺笔记 · 程达</title>
+<title>文章 · 窯邊筆記 · 程達</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="陶瓷卫浴的生产工艺、面盆选购、艺术盆趋势——来自广东程达 25 年一线工厂的笔记。" />
+<meta name="description" content="來自潮州 25 年陶瓷衛浴工廠的製程、選料與設計筆記——面盆、馬桶、智能衛浴與 OEM/ODM 採購指南。" />
 <link rel="canonical" href="https://www.gdchengda.hk/zh/blog/" />
-<link rel="alternate" hreflang="zh-Hans" href="https://www.gdchengda.hk/zh/blog/" />
 <link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/blog/" />
-<link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/zh/blog/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/blog/" />
+<link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/blog/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="程達文章 — 窯邊筆記" />
+<meta property="og:description" content="來自潮州 25 年陶瓷衛浴工廠的製程、選料與設計筆記。" />
+<meta property="og:image" content="https://www.gdchengda.hk/assets/blog/cover.webp" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.gdchengda.hk/assets/blog/cover.webp" />
+<meta property="og:url" content="https://www.gdchengda.hk/zh/blog/" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
@@ -19,11 +28,11 @@
 <meta name="robots" content="index, follow" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,wght@1,300;1,400;1,500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" onload="this.rel=\'stylesheet\'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,wght@1,300;1,400;1,500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,wght@1,300;1,400;1,500&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" onload="this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,wght@1,300;1,400;1,500&family=Noto+Sans+TC:wght@400;500;600;700&display=swap"></noscript>
 <link rel="stylesheet" href="/assets/porcelain.css?v=18" />
 <style>
-  body { font-family: 'Inter', 'Noto Sans SC', -apple-system, system-ui, sans-serif; }
+  body { font-family: 'Inter', 'Noto Sans TC', -apple-system, system-ui, sans-serif; }
   .blog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
   @media (max-width: 760px) { .blog-grid { grid-template-columns: 1fr; } }
   .b-card {
@@ -33,25 +42,15 @@
   }
   .b-card:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -24px rgba(20,23,27,0.18); }
   .b-card .num {
-    font-family: var(--font-heading, 'Newsreader'), serif;
     font-style: italic; font-size: 80px; font-weight: 400;
     color: var(--ink-2); opacity: 0.18; line-height: 1; margin-bottom: 24px;
+    font-family: 'Newsreader', 'Noto Sans TC', serif;
   }
-  .b-card .tag {
-    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em;
-    color: var(--muted); margin-bottom: 12px;
-  }
-  .b-card h2 { font-size: 24px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.25; color: var(--ink); margin-bottom: 10px; }
-  .b-card p { font-size: 15px; line-height: 1.65; color: var(--ink-2); }
+  .b-card .tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 12px; }
+  .b-card h2 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.4; color: var(--ink); margin-bottom: 10px; }
+  .b-card p { font-size: 14px; line-height: 1.75; color: var(--ink-2); }
   .b-card .read { margin-top: auto; padding-top: 24px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; color: var(--ink); display: flex; gap: 6px; align-items: center; }
 </style>
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Chengda 工藝筆記 · 陶瓷衛浴 從泥到瓷" />
-<meta property="og:description" content="陶瓷卫浴的生产工艺、面盆选购、艺术盆趋势——来自广东程达 25 年一线工厂的笔记。" />
-<meta property="og:image" content="https://www.gdchengda.hk/assets/blog/cover.webp" />
-<meta property="og:url" content="https://www.gdchengda.hk/zh/blog/" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://www.gdchengda.hk/assets/blog/cover.webp" />
 </head>
 <body>
 
@@ -59,53 +58,102 @@
 
 <section class="subpage-hero">
   <div class="wrap">
-    <div class="crumbs"><a href="/zh/">首页</a><span class="sep">/</span><span>博客</span></div>
-    <h1>陶瓷衞浴 <span class="soft">从泥到瓷。</span></h1>
-    <div class="sub"><span>工艺</span><span>选购</span><span>设计趋势</span></div>
+    <div class="crumbs"><a href="/zh/">首頁</a><span class="sep">/</span><span>文章</span></div>
+    <h1>窯邊<span class="soft">筆記。</span></h1>
+    <div class="sub"><span>製程</span><span>選料</span><span>設計</span></div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
+
     <div class="blog-grid">
-      <a href="/zh/blog/inside-the-factory/" class="b-card">
+      <a href="/zh/blog/how-to-choose-ceramic-basin/" class="b-card">
+        <div class="num">01</div>
+        <div class="tag">選購指南</div>
+        <h2>如何為工程挑選陶瓷面盆</h2>
+        <p>B2B 買家指南——面盆類型、龍頭孔、釉面、玻化瓷品質、認證、尺寸、MOQ 與出口包裝，一次把規格定對。</p>
+        <div class="read">閱讀全文 · 9 分鐘 →</div>
+      </a>
+
+      <a href="/zh/blog/undermount-basin-vs-countertop-basin/" class="b-card">
+        <div class="num">02</div>
+        <div class="tag">選購指南</div>
+        <h2>檯下盆 vs 檯上盆：哪一種更適合？</h2>
+        <p>兩種安裝方式的核心差異——檯面需求、清潔、成本、溢水孔與出錯率，附工廠實拍。</p>
+        <div class="read">閱讀全文 · 8 分鐘 →</div>
+      </a>
+
+      <a href="/zh/blog/bathroom-cabinet-basin-matching/" class="b-card">
+        <div class="num">03</div>
+        <div class="tag">選購指南</div>
+        <h2>浴室櫃與面盆搭配指南</h2>
+        <p>給進口商與工程買家：面盆類型、浴室櫃尺寸（mm）、龍頭孔位與配套要點，搭得剛好。</p>
+        <div class="read">閱讀全文 · 9 分鐘 →</div>
+      </a>
+
+      <a href="/zh/blog/smart-toilet-vs-regular-toilet/" class="b-card">
+        <div class="num">04</div>
+        <div class="tag">產品對比</div>
+        <h2>智能馬桶 vs 普通馬桶：採購方該懂的事</h2>
+        <p>功能、電壓、水路、認證與價格——下單前先弄清兩者的差別。</p>
+        <div class="read">閱讀全文 · 9 分鐘 →</div>
+      </a>
+
+      <a href="/zh/blog/oem-odm-bathroom-products/" class="b-card">
         <div class="num">05</div>
-        <div class="tag">工厂实拍 · 视频</div>
-        <h2>走进我们的陶瓷卫浴工厂——潮州一线实拍</h2>
-        <p>带你走一遍潮州车间：成型、1250℃ 烧成、上釉、检验、包装。文末附车间真实实拍视频。</p>
-        <div class="read">5 分钟阅读 →</div>
+        <div class="tag">代工指南</div>
+        <h2>衛浴產品的 OEM 與 ODM 採購指南</h2>
+        <p>OEM 與 ODM 的分別、MOQ、陶瓷開模成本、貼牌與認證——全球採購方的實用指南。</p>
+        <div class="read">閱讀全文 · 9 分鐘 →</div>
+      </a>
+
+      <a href="/zh/blog/inside-the-factory/" class="b-card">
+        <div class="num">06</div>
+        <div class="tag">工廠實拍 · 影片</div>
+        <h2>走進我們的潮州陶瓷衛浴工廠</h2>
+        <p>帶你走一趟潮州車間——每一件面盆與馬桶如何成型、1,250 °C 燒成、逐件檢驗，附一線實拍。</p>
+        <div class="read">閱讀全文 · 5 分鐘 →</div>
       </a>
 
       <a href="/zh/blog/raw-material/" class="b-card">
-        <div class="num">01</div>
-        <div class="tag">工艺 · 系列一</div>
-        <h2>原料与泥浆——一个陶瓷品的「出生起点」</h2>
-        <p>洗脸盆、马桶、小便斗最初是一堆灰白色的泥巴。带你走进潮州工厂的原料车间和制浆车间。</p>
-        <div class="read">5 分钟阅读 →</div>
+        <div class="num">07</div>
+        <div class="tag">製程 · 系列 01</div>
+        <h2>原料與泥漿——一件陶瓷的起點</h2>
+        <p>在潔白光滑之前，它只是一堆灰泥。走進程達潮州的原料與練泥車間。</p>
+        <div class="read">閱讀全文 · 5 分鐘 →</div>
       </a>
 
       <a href="/zh/blog/sink-types/" class="b-card">
-        <div class="num">02</div>
-        <div class="tag">选购指南</div>
-        <h2>台上盆 vs 台下盆 vs 台中盆：到底有什么区别？</h2>
-        <p>三种面盆的核心差别一文看懂——盆口与台面的相对位置决定了安装方式、清洁难度和承重结构。</p>
-        <div class="read">4 分钟阅读 →</div>
+        <div class="num">08</div>
+        <div class="tag">選購指南</div>
+        <h2>檯上盆、檯下盆與嵌入盆的區別</h2>
+        <p>三種安裝方式的核心差異——盆緣與檯面的相對位置，決定安裝、清潔與受力，附工廠照片。</p>
+        <div class="read">閱讀全文 · 4 分鐘 →</div>
       </a>
 
       <a href="/zh/blog/art-basin/" class="b-card">
-        <div class="num">03</div>
-        <div class="tag">设计趋势</div>
-        <h2>艺术盆是什么？为什么越来越多人选？</h2>
-        <p>审美升级、社交媒体种草、个性化需求、工艺进步——艺术盆走红的四个原因。</p>
-        <div class="read">6 分钟阅读 →</div>
+        <div class="num">09</div>
+        <div class="tag">設計趨勢</div>
+        <h2>什麼是藝術盆？為什麼越來越多人選？</h2>
+        <p>美感升級、社群曝光、個性化、陶瓷工藝進步——藝術盆走向主流的四個原因。</p>
+        <div class="read">閱讀全文 · 6 分鐘 →</div>
       </a>
 
       <a href="/zh/blog/art-basin-buying/" class="b-card">
-        <div class="num">04</div>
-        <div class="tag">选购指南</div>
-        <h2>艺术盆有什么缺点？适配对象？选购建议</h2>
-        <p>三大缺点 + 适合 / 不适合的人群 + 三条选购建议——一篇讲清楚要不要买艺术盆。</p>
-        <div class="read">7 分钟阅读 →</div>
+        <div class="num">10</div>
+        <div class="tag">選購指南</div>
+        <h2>藝術盆：缺點、適合誰、三個選購技巧</h2>
+        <p>每種產品都有取捨，寫下來才建立信任。三個缺點 + 明確「適不適合」+ 三個實用建議。</p>
+        <div class="read">閱讀全文 · 7 分鐘 →</div>
+      </a>
+
+      <a href="/zh/blog/why-1250-c/" class="b-card">
+        <div class="num">11</div>
+        <div class="tag">製程</div>
+        <h2>為什麼我們在 1,250 °C 燒製</h2>
+        <p>五十度之差，決定面盆是冬天開裂還是十年耐用。談玻化溫度窗口的門道。</p>
+        <div class="read">閱讀全文 · 6 分鐘 →</div>
       </a>
     </div>
   </div>
@@ -120,17 +168,23 @@
 {
   "@context": "https://schema.org",
   "@type": "Blog",
-  "name": "Chengda 工艺笔记",
-  "description": "陶瓷卫浴的生产工艺、面盆选购、艺术盆趋势——来自广东程达 25 年一线工厂的笔记。",
-  "publisher": {"@type": "Organization", "name": "广东程达智能科技有限公司", "url": "https://www.gdchengda.hk/"},
-  "inLanguage": "zh-Hans",
+  "name": "程達 — 窯邊筆記",
+  "description": "來自潮州 25 年陶瓷衛浴工廠的製程、選料與設計筆記。",
+  "publisher": {"@type": "Organization", "name": "程達", "url": "https://www.gdchengda.hk/"},
+  "inLanguage": "zh-Hant",
   "url": "https://www.gdchengda.hk/zh/blog/",
   "blogPost": [
-    {"@type": "BlogPosting", "headline": "走进我们的陶瓷卫浴工厂——潮州一线实拍", "url": "https://www.gdchengda.hk/zh/blog/inside-the-factory/", "datePublished": "2026-06-29"},
-    {"@type": "BlogPosting", "headline": "原料与泥浆——一个陶瓷品的「出生起点」", "url": "https://www.gdchengda.hk/zh/blog/raw-material/", "datePublished": "2026-05-11"},
-    {"@type": "BlogPosting", "headline": "台上盆 vs 台下盆 vs 台中盆：到底有什么区别？", "url": "https://www.gdchengda.hk/zh/blog/sink-types/", "datePublished": "2026-05-11"},
-    {"@type": "BlogPosting", "headline": "艺术盆是什么？为什么越来越多人选？", "url": "https://www.gdchengda.hk/zh/blog/art-basin/", "datePublished": "2026-05-11"},
-    {"@type": "BlogPosting", "headline": "艺术盆有什么缺点？适配对象？选购建议", "url": "https://www.gdchengda.hk/zh/blog/art-basin-buying/", "datePublished": "2026-05-11"}
+    {"@type": "BlogPosting", "headline": "如何為工程挑選陶瓷面盆", "url": "https://www.gdchengda.hk/zh/blog/how-to-choose-ceramic-basin/", "inLanguage": "zh-Hant", "datePublished": "2026-06-30"},
+    {"@type": "BlogPosting", "headline": "檯下盆 vs 檯上盆：哪一種更適合？", "url": "https://www.gdchengda.hk/zh/blog/undermount-basin-vs-countertop-basin/", "inLanguage": "zh-Hant", "datePublished": "2026-06-30"},
+    {"@type": "BlogPosting", "headline": "浴室櫃與面盆搭配指南", "url": "https://www.gdchengda.hk/zh/blog/bathroom-cabinet-basin-matching/", "inLanguage": "zh-Hant", "datePublished": "2026-06-30"},
+    {"@type": "BlogPosting", "headline": "智能馬桶 vs 普通馬桶：採購方該懂的事", "url": "https://www.gdchengda.hk/zh/blog/smart-toilet-vs-regular-toilet/", "inLanguage": "zh-Hant", "datePublished": "2026-06-30"},
+    {"@type": "BlogPosting", "headline": "衛浴產品的 OEM 與 ODM 採購指南", "url": "https://www.gdchengda.hk/zh/blog/oem-odm-bathroom-products/", "inLanguage": "zh-Hant", "datePublished": "2026-06-30"},
+    {"@type": "BlogPosting", "headline": "走進我們的潮州陶瓷衛浴工廠", "url": "https://www.gdchengda.hk/zh/blog/inside-the-factory/", "inLanguage": "zh-Hant", "datePublished": "2026-06-29"},
+    {"@type": "BlogPosting", "headline": "原料與泥漿——一件陶瓷的起點", "url": "https://www.gdchengda.hk/zh/blog/raw-material/", "inLanguage": "zh-Hant", "datePublished": "2026-05-11"},
+    {"@type": "BlogPosting", "headline": "檯上盆、檯下盆與嵌入盆的區別", "url": "https://www.gdchengda.hk/zh/blog/sink-types/", "inLanguage": "zh-Hant", "datePublished": "2026-05-11"},
+    {"@type": "BlogPosting", "headline": "什麼是藝術盆？為什麼越來越多人選？", "url": "https://www.gdchengda.hk/zh/blog/art-basin/", "inLanguage": "zh-Hant", "datePublished": "2026-05-11"},
+    {"@type": "BlogPosting", "headline": "藝術盆：缺點、適合誰、三個選購技巧", "url": "https://www.gdchengda.hk/zh/blog/art-basin-buying/", "inLanguage": "zh-Hant", "datePublished": "2026-05-11"},
+    {"@type": "BlogPosting", "headline": "為什麼我們在 1,250 °C 燒製", "url": "https://www.gdchengda.hk/zh/blog/why-1250-c/", "inLanguage": "zh-Hant", "datePublished": "2026-03-12"}
   ]
 }
 </script>
