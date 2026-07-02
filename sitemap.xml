@@ -70,6 +70,9 @@
     <lastmod>2026-03-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/blog/why-1250-c/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/blog/why-1250-c/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/blog/why-1250-c/" />
   </url>
   <url>
     <loc>https://www.gdchengda.hk/blog/inside-the-factory/</loc>
@@ -316,7 +319,9 @@
     <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/" />
   </url>
   <url>
     <loc>https://www.gdchengda.hk/zh/products/</loc>
@@ -386,9 +391,9 @@
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/blog/raw-material/" />
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/blog/raw-material/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/zh/blog/raw-material/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/blog/raw-material/" />
   </url>
   <url>
     <loc>https://www.gdchengda.hk/zh/blog/sink-types/</loc>
@@ -407,27 +412,27 @@
       <image:loc>https://www.gdchengda.hk/assets/blog/%E5%8F%B0%E4%B8%AD%E7%9B%86.webp</image:loc>
       <image:title>台中盆——盆边与台面齐平</image:title>
     </image:image>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/blog/sink-types/" />
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/blog/sink-types/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/zh/blog/sink-types/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/blog/sink-types/" />
   </url>
   <url>
     <loc>https://www.gdchengda.hk/zh/blog/art-basin/</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/blog/art-basin/" />
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/blog/art-basin/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/zh/blog/art-basin/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/blog/art-basin/" />
   </url>
   <url>
     <loc>https://www.gdchengda.hk/zh/blog/art-basin-buying/</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/blog/art-basin-buying/" />
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/blog/art-basin-buying/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/zh/blog/art-basin-buying/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/blog/art-basin-buying/" />
   </url>
   <url>
     <loc>https://www.gdchengda.hk/products/CB0116/</loc>
