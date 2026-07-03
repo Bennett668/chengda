@@ -205,3 +205,42 @@
     }
   };
 })();
+
+/* Dynamic TOC indicator + smooth-scroll (blog articles). Reacts to the .active
+   class that the article's scroll-spy already toggles; no per-page edits needed. */
+(function(){
+  function initTocMotion(){
+    var toc = document.querySelector('.toc ul');
+    if (!toc) return;
+    var nav = toc.closest('.toc');
+    if (nav) nav.classList.add('has-indicator');
+    var ind = document.createElement('span');
+    ind.className = 'toc-indicator';
+    toc.appendChild(ind);
+    function move(){
+      var a = toc.querySelector('a.active') || toc.querySelector('a');
+      if (!a) return;
+      ind.style.height = a.offsetHeight + 'px';
+      ind.style.transform = 'translateY(' + a.offsetTop + 'px)';
+    }
+    // follow the .active toggling done by the article's scroll-spy
+    var mo = new MutationObserver(move);
+    toc.querySelectorAll('a').forEach(function(a){
+      mo.observe(a, { attributes: true, attributeFilter: ['class'] });
+    });
+    window.addEventListener('resize', move, { passive: true });
+    // smooth scroll on TOC click
+    toc.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        var t = document.getElementById(a.getAttribute('href').slice(1));
+        if (t){ e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          if (history.replaceState) history.replaceState(null, '', '#' + t.id); }
+      });
+    });
+    setTimeout(move, 60);
+    move();
+  }
+  if (document.readyState === 'loading')
+    document.addEventListener('DOMContentLoaded', initTocMotion);
+  else initTocMotion();
+})();
