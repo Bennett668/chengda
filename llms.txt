@@ -29,8 +29,8 @@ Four product categories in production with rendered photography and direct catal
 - UB05 — wave-base rectangular: UB0522, UB0523
 
 Listing: https://www.gdchengda.hk/products/?cat=washbasin (or /zh/products/?cat=washbasin for 繁體中文)
-Detail-page pattern (EN): https://www.gdchengda.hk/products/{CODE}/
-Detail-page pattern (zh-Hant): https://www.gdchengda.hk/zh/products/{CODE}/
+Detail-page pattern (EN): /products/<CODE>/ — e.g. https://www.gdchengda.hk/products/UB0116/
+Detail-page pattern (zh-Hant): /zh/products/<CODE>/ — e.g. https://www.gdchengda.hk/zh/products/UB0116/
 
 ### 2. Pedestal Basins (柱盆) — 54 models published
 
@@ -42,7 +42,7 @@ Detail-page pattern (zh-Hant): https://www.gdchengda.hk/zh/products/{CODE}/
 - WB100–WB108
 
 Listing (EN): https://www.gdchengda.hk/products/?cat=pedestal · (zh-Hant): /zh/products/?cat=pedestal
-Detail-page pattern: /products/{CODE}/ and /zh/products/{CODE}/
+Detail-page pattern: /products/<CODE>/ and /zh/products/<CODE>/ — e.g. /products/PB101/
 
 ### 3. Standard Toilets (普通馬桶) — 40 models published
 
