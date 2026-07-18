@@ -48,6 +48,8 @@
   /* ---- Cinematic full-bleed band ---- */
   .band { position: relative; width: 100%; margin: 0; overflow: hidden; }
   .band img { width: 100%; height: clamp(360px, 66vh, 720px); object-fit: cover; display: block; filter: brightness(0.93) contrast(1.04) saturate(1.03); }
+  /* 手機：完整顯示橫幅原圖（原比例），不再拉高裁掉左右兩側 */
+  @media (max-width: 760px) { .band img { height: auto; } }
   .band .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,12,15,0) 22%, rgba(10,12,15,0.32) 55%, rgba(10,12,15,0.7) 80%, rgba(10,12,15,0.92) 100%); pointer-events: none; }
   .band .bcap { position: absolute; left: var(--pad); right: var(--pad); bottom: clamp(24px, 5vh, 48px); color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.65); }
   .band .bcap .t { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.9; }
