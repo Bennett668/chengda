@@ -91,6 +91,10 @@
   .pd-specs .k { color: var(--ink); font-size: 14px; font-weight: 500; }
   .pd-specs .v { color: var(--ink); font-size: 14px; }
   .pd-specs .v .small { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .pd-specs .flush-key, .pd-specs .flush-value { display: flex; align-items: center; }
+  .pd-specs .flush-value { gap: 18px; min-width: 0; }
+  .pd-flush-mark { flex: 0 0 auto; width: 130px; max-width: 100%; height: 54px; margin: -11px 0; object-fit: contain; mix-blend-mode: multiply; }
+  @media (max-width: 600px) { .pd-specs .flush-value { flex-direction: column; align-items: flex-start; gap: 4px; } .pd-flush-mark { width: 110px; height: 46px; margin: 0 0 -2px; } }
 
   /* Action buttons */
   .pd-actions { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
@@ -267,7 +271,7 @@ gtag('config', 'G-J7PPP48QXC');
           <div class="k">Series</div><div class="v">Wall-Hung Toilet</div>
           <div class="k">Dimensions</div><div class="v">515 × 365 × 360 mm<span class="small">20.3″ × 14.4″ × 14.2″</span></div>
           <div class="k">Net Weight</div><div class="v">24.9 kg</div>
-          <div class="k">Flushing Type</div><div class="v">Dual-hole flushing</div>
+          <div class="k flush-key">Flushing Type</div><div class="v flush-value"><span>Dual-hole flushing</span><img class="pd-flush-mark" src="/assets/products/T113/flush-mark.png" alt="Dual-hole flushing mark" /></div>
           <div class="k">Outlet / P-Trap</div><div class="v">Ø100/80 mm<span class="small">P-trap: 180 mm</span></div>
           <div class="k">Seat Options</div><div class="v">PP or UF seat</div>
           <div class="k">Material</div><div class="v">High-temp fired ceramic<span class="small">Vitreous china, 1,250 °C</span></div>
