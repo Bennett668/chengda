@@ -441,6 +441,16 @@ const CATS = {
     tabs:[{id:'all',label:'All',count:6},{id:'floor',label:'Floor',count:3},{id:'wall',label:'Wall-Hung',count:3}],
     items:[{code:'ST101',name:'Lumen Smart',dims:'720 × 400 × 480',sub:'floor'},{code:'ST108',name:'Volt Smart',dims:'700 × 390 × 470',sub:'floor'},{code:'ST115',name:'Aria Smart',dims:'710 × 395 × 475',sub:'floor'},{code:'SW201',name:'Float Smart',dims:'540 × 360 × 320',sub:'wall'},{code:'SW208',name:'Edge Smart',dims:'560 × 370 × 330',sub:'wall'},{code:'SW214',name:'Plate Smart',dims:'550 × 365 × 325',sub:'wall'}]},
 };
+const TOILET_FLUSH = {
+  T101:'Dual-Hole Flush', T102:'Dual-Hole Flush', T103:'Straight Flush',
+  T104:'Straight Flush', T105:'Straight Flush', T106:'Dual-Hole Flush',
+  T107:'Dual-Hole Flush', T108:'Dual-Hole Flush', T109:'Dual-Hole Flush',
+  T110:'Dual-Hole Flush', T111:'Double-Hole Super-Rotation', T112:'Dual-Hole Flush',
+  T113:'Dual-Hole Flush', T114:'Single-Hole Flush', T115:'Single-Hole Flush',
+  T116:'Dual-Hole Rimless Flush', T117:'Whirlwind Flush', T118:'Single-Hole Flush',
+  T119:'Single-Hole Flush', T120:'Single-Hole Flush', T121:'Single-Hole Super-Rotation',
+  T122:'Single-Hole Flush', T123:'Single-Hole Super-Rotation'
+};
 const TREES = {
   vanity: [
     {id:"VB01", label:"VB01 · E-Type Thin-Rim"},
@@ -527,7 +537,9 @@ function renderGrid(){
     const visual=it.img?`<img src="${it.img}" alt="${it.name}" loading="lazy" decoding="async" />`:(ICONS[CATS[cat].icon]||'');
     const prefix=it.code+' · ';
     const nameRest=it.name.startsWith(prefix)?it.name.slice(prefix.length):it.name;
-    return `<a class="pcard" data-code="${it.code}" href="${href}"><div class="img">${visual}</div><div class="info"><div class="code">${it.code}</div><div class="name">${nameRest}</div><div class="dims">${it.dims}</div></div></a>`;
+    const flush=TOILET_FLUSH[it.code];
+    const displayName=flush?`${nameRest} · ${flush}`:nameRest;
+    return `<a class="pcard" data-code="${it.code}" href="${href}"><div class="img">${visual}</div><div class="info"><div class="code">${it.code}</div><div class="name">${displayName}</div><div class="dims">${it.dims}</div></div></a>`;
   }).join('');
 }
 function nodeHtml(cc,n,depth,openSet){
