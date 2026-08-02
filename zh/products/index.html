@@ -90,6 +90,9 @@
   .pcard .name { font-size: 13px; font-weight: 500; color: var(--muted); margin-top: 6px; letter-spacing: -0.005em; line-height: 1.35; }
   .pcard .flush-tag { display: inline-block; margin-left: 7px; padding: 2px 6px; border-radius: 3px; background: var(--ink); color: #fff; font-size: 11px; font-weight: 600; line-height: 1.35; letter-spacing: 0; vertical-align: 1px; white-space: nowrap; }
   .pcard .flush-mark { position: absolute; top: 50%; right: 12px; width: 94px; height: 84px; object-fit: contain; transform: translateY(-50%); mix-blend-mode: multiply; pointer-events: none; }
+  .pcard .flush-mark.flush-mark-t117 { right: 4px; width: 122px; }
+  .pcard .flush-mark.flush-mark-t121,
+  .pcard .flush-mark.flush-mark-t123 { right: 4px; width: 112px; }
   .pcard .dims { font-size: 12px; color: var(--ink); font-weight: 600; margin-top: 10px; font-variant-numeric: tabular-nums; line-height: 1.5; }
 
   /* Buyer FAQ (audit #9) — reuses the homepage hf-* component */
@@ -565,7 +568,7 @@ function renderGrid(){
     const flushTag=flush?`<span class="flush-tag">${flush}</span>`:'';
     const flushMark=TOILET_FLUSH_MARKS[it.code];
     const infoClass=flushMark?'info has-flush-mark':'info';
-    const flushMarkHtml=flushMark?`<img class="flush-mark" src="${flushMark}" alt="${flush}沖水標誌" loading="lazy" decoding="async" />`:'';
+    const flushMarkHtml=flushMark?`<img class="flush-mark flush-mark-${it.code.toLowerCase()}" src="${flushMark}" alt="${flush}沖水標誌" loading="lazy" decoding="async" />`:'';
     return `<a class="pcard" data-code="${it.code}" href="${href}"><div class="img">${visual}</div><div class="${infoClass}"><div class="code">${it.code}</div><div class="name">${nameRest}${flushTag}</div><div class="dims">${it.dims}</div>${flushMarkHtml}</div></a>`;
   }).join('');
 }
