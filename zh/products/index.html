@@ -85,15 +85,15 @@
   .pcard .img img { width: 100%; height: 100%; object-fit: cover; object-position: center 58%; transition: transform .5s var(--t); }
   .pcard:hover .img img { transform: scale(1.04); }
   .pcard .info { position: relative; padding: 18px 20px 22px; }
-  .pcard .info.has-flush-mark { min-height: 134px; padding-right: 112px; box-sizing: border-box; }
+  .pcard .info.has-flush-mark { min-height: 156px; padding-right: 112px; box-sizing: border-box; }
   .pcard .code { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: var(--ink); line-height: 1.15; }
   .pcard .name { font-size: 13px; font-weight: 500; color: var(--muted); margin-top: 6px; letter-spacing: -0.005em; line-height: 1.35; }
-  .pcard .flush-tag { display: inline-block; margin-left: 7px; padding: 2px 6px; border-radius: 3px; background: var(--ink); color: #fff; font-size: 11px; font-weight: 600; line-height: 1.35; letter-spacing: 0; vertical-align: 1px; white-space: nowrap; }
+  .pcard .flush-tag { display: block; width: max-content; max-width: 100%; box-sizing: border-box; margin: 4px 0 0; padding: 2px 6px; border-radius: 3px; background: var(--ink); color: #fff; font-size: 11px; font-weight: 600; line-height: 1.35; letter-spacing: 0; white-space: nowrap; }
   .pcard .flush-mark { position: absolute; top: 50%; right: 12px; width: 94px; height: 84px; object-fit: contain; transform: translateY(-50%); mix-blend-mode: multiply; pointer-events: none; }
   .pcard .flush-mark.flush-mark-t117 { right: 4px; width: 122px; }
   .pcard .flush-mark.flush-mark-t121,
   .pcard .flush-mark.flush-mark-t123 { right: 4px; width: 112px; }
-  .pcard .dims { font-size: 12px; color: var(--ink); font-weight: 600; margin-top: 10px; font-variant-numeric: tabular-nums; line-height: 1.5; }
+  .pcard .dims { font-size: 12px; color: var(--ink); font-weight: 600; margin-top: 8px; font-variant-numeric: tabular-nums; line-height: 1.5; }
 
   /* Buyer FAQ (audit #9) — reuses the homepage hf-* component */
   .home-faq .hf-grid { border-radius: var(--r-lg); overflow: hidden; background: var(--line, #E8E9EB); display: flex; flex-direction: column; gap: 1px; }
