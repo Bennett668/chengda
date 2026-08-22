@@ -101,18 +101,31 @@
   .hero .porcelain-frame {
     aspect-ratio: 1 / 1; width: 100%; max-width: 620px; overflow: hidden;
     display: grid; place-items: center; justify-self: end; background: #fff;
-    perspective: 1200px;
+    position: relative; isolation: isolate;
   }
-  .hero .porcelain-frame img {
+  .hero #hero-basin {
+    position: absolute; inset: 6%;
     width: 88%; height: 88%; object-fit: contain; object-position: center;
-    animation: hero-basin-turn 4.8s ease-in-out infinite alternate;
-    transform-origin: center; transform-style: preserve-3d;
-    backface-visibility: hidden; will-change: transform; user-select: none;
+    opacity: 0; transition: opacity 0.28s ease; user-select: none;
     -webkit-mask-image: none; mask-image: none;
   }
-  @keyframes hero-basin-turn {
-    from { transform: rotateY(-30deg) translateX(-20px) scale(0.95); }
-    to { transform: rotateY(30deg) translateX(20px) scale(0.95); }
+  .hero .porcelain-frame.is-assembled #hero-basin { opacity: 1; }
+  .hero-basin-fragments {
+    position: absolute; inset: 6%; pointer-events: none;
+    z-index: 2; transition: opacity 0.28s ease;
+  }
+  .hero-basin-fragments.is-fading { opacity: 0; }
+  .hero .porcelain-frame .hero-basin-fragment {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;
+    opacity: 0; will-change: transform, opacity;
+    transform: translate3d(var(--tx), var(--ty), 0) rotate(var(--rz)) scale(var(--scale));
+    animation: hero-fragment-assemble 1.15s cubic-bezier(0.22, 0.8, 0.24, 1) forwards;
+    animation-delay: var(--delay);
+  }
+  @keyframes hero-fragment-assemble {
+    0% { opacity: 0; }
+    22% { opacity: 1; }
+    100% { opacity: 1; transform: translate3d(0, 0, 0) rotate(0deg) scale(1); }
   }
   @media (max-width: 900px) {
     .hero .porcelain-frame { max-width: 560px; justify-self: center; }
@@ -207,7 +220,7 @@ gtag('config', 'G-J7PPP48QXC');
           </div>
         </div>
       </div>
-      <div class="porcelain-frame" aria-label="A rotating Chengda ceramic basin">
+      <div class="porcelain-frame" aria-label="A Chengda ceramic basin assembling from fragments">
         <img id="hero-basin" src="/assets/products/A107/gallery/lead.webp" alt="Chengda A107 ceramic art basin" fetchpriority="high" decoding="async" />
       </div>
     </div>
@@ -357,7 +370,7 @@ gtag('config', 'G-J7PPP48QXC');
 
 <script src="/assets/icons.js?v=6" defer></script>
 <script src="/assets/site-shell.js?v=9" defer></script>
-<script src="/assets/home-hero.js?v=1" defer></script>
+<script src="/assets/home-hero.js?v=2" defer></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   renderShell('home');
