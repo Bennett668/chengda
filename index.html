@@ -101,17 +101,19 @@
   .hero .porcelain-frame {
     aspect-ratio: 1 / 1; width: 100%; max-width: 620px; overflow: hidden;
     display: grid; place-items: center; justify-self: end; background: #fff;
+    perspective: 1200px;
   }
   .hero .porcelain-frame img {
     width: 88%; height: 88%; object-fit: contain; object-position: center;
-    animation: hero-basin-spin 26s linear infinite;
-    transform-origin: center; will-change: transform; user-select: none;
+    animation: hero-basin-turn 8s ease-in-out infinite alternate;
+    transform-origin: center; transform-style: preserve-3d;
+    backface-visibility: hidden; will-change: transform; user-select: none;
     -webkit-mask-image: none; mask-image: none;
   }
   .hero .porcelain-frame:hover img { animation-play-state: paused; }
-  @keyframes hero-basin-spin {
-    from { transform: rotate(0turn) scale(0.96); }
-    to { transform: rotate(1turn) scale(0.96); }
+  @keyframes hero-basin-turn {
+    from { transform: rotateY(-16deg) translateX(-8px) scale(0.96); }
+    to { transform: rotateY(16deg) translateX(8px) scale(0.96); }
   }
   @media (max-width: 900px) {
     .hero .porcelain-frame { max-width: 560px; justify-self: center; }
