@@ -105,21 +105,17 @@
   }
   .hero .porcelain-frame img {
     width: 88%; height: 88%; object-fit: contain; object-position: center;
-    animation: hero-basin-turn 8s ease-in-out infinite alternate;
+    animation: hero-basin-turn 4.8s ease-in-out infinite alternate;
     transform-origin: center; transform-style: preserve-3d;
     backface-visibility: hidden; will-change: transform; user-select: none;
     -webkit-mask-image: none; mask-image: none;
   }
-  .hero .porcelain-frame:hover img { animation-play-state: paused; }
   @keyframes hero-basin-turn {
-    from { transform: rotateY(-16deg) translateX(-8px) scale(0.96); }
-    to { transform: rotateY(16deg) translateX(8px) scale(0.96); }
+    from { transform: rotateY(-30deg) translateX(-20px) scale(0.95); }
+    to { transform: rotateY(30deg) translateX(20px) scale(0.95); }
   }
   @media (max-width: 900px) {
     .hero .porcelain-frame { max-width: 560px; justify-self: center; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .hero .porcelain-frame img { animation: none; }
   }
 
   /* Stats sit just under hero */
