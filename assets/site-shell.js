@@ -132,6 +132,21 @@
       wa.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">' + WA_PATH + '</svg><span>WhatsApp</span>';
       document.body.appendChild(wa);
     }
+    if (!document.getElementById('catalog-request-script')) {
+      const style = document.createElement('link');
+      style.rel = 'stylesheet';
+      style.href = '/assets/catalog-request.css?v=1';
+      const script = document.createElement('script');
+      script.id = 'catalog-request-script';
+      script.src = '/assets/catalog-request.js?v=1';
+      script.onload = () => {
+        const init = () => { if (window.initCatalogRequest) window.initCatalogRequest(); };
+        if (style.sheet) init();
+        else style.addEventListener('load', init, { once: true });
+      };
+      document.head.appendChild(style);
+      document.body.appendChild(script);
+    }
     const nav = document.getElementById('nav');
     if (nav) addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY>12));
     const b = document.querySelector('.nav-burger'); const d = document.getElementById('navDrawer');
