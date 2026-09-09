@@ -74,6 +74,20 @@
   @media (max-width: 880px) { .certpts { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 520px) { .certpts { grid-template-columns: 1fr; } }
 
+  /* ---- Showroom: separate photographs, with undistorted proportions ---- */
+  .showroom-gallery { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
+  .showroom-gallery figure { grid-column: span 2; aspect-ratio: 1; margin: 0; overflow: hidden; border-radius: 8px; }
+  .showroom-gallery .showroom-wide { grid-column: span 3; aspect-ratio: 8 / 5; }
+  .showroom-gallery img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .showroom-gallery .showroom-toilets { object-position: 50% 65%; }
+  .showroom-gallery .showroom-collection { object-position: 50% 65%; }
+  .showroom-gallery .showroom-finishes { object-position: 50% 55%; }
+  @media (max-width: 640px) {
+    .showroom-gallery { grid-template-columns: 1fr; gap: 12px; }
+    .showroom-gallery figure { grid-column: auto; aspect-ratio: 4 / 5; }
+    .showroom-gallery .showroom-wide { grid-column: auto; aspect-ratio: 8 / 5; }
+  }
+
   /* ---- Capability cards (the hard-power tech) ---- */
   .cap3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   @media (max-width: 880px) { .cap3 { grid-template-columns: 1fr; } }
@@ -359,9 +373,23 @@ gtag('config', 'G-J7PPP48QXC');
       <h2 style="margin-top:8px">200+ models. <span class="soft">One standard.</span></h2>
       <p>White, matte, marble and hand-gilded — across basins, toilets and smart sanitaryware. Every glaze is mixed and kiln-fired in our own Chaozhou facility.</p>
     </div>
-    <figure style="margin:0;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line)">
-      <img src="/assets/factory/factory-4.webp" alt="Chengda art-basin showroom — coloured, marble and gold-glazed ceramic basins" loading="lazy" decoding="async" width="1600" height="900" style="width:100%;display:block" />
-    </figure>
+    <div class="showroom-gallery">
+      <figure class="showroom-wide">
+        <img src="/assets/about/showroom-colour-basins.webp" alt="Coloured round ceramic basins on the Chengda showroom display wall" loading="lazy" decoding="async" width="1600" height="900" />
+      </figure>
+      <figure class="showroom-wide">
+        <img class="showroom-toilets" src="/assets/about/showroom-toilets.webp" alt="White ceramic toilets displayed in the Chengda showroom" loading="lazy" decoding="async" width="1600" height="1200" />
+      </figure>
+      <figure>
+        <img class="showroom-collection" src="/assets/about/showroom-basin-collection.webp" alt="Chengda basin collection with sculpted, coloured and metallic finishes" loading="lazy" decoding="async" width="1350" height="1800" />
+      </figure>
+      <figure>
+        <img class="showroom-finishes" src="/assets/about/showroom-glaze-wall.webp" alt="Marble-patterned, white and gold-glazed basins along the showroom wall" loading="lazy" decoding="async" width="1012" height="1800" />
+      </figure>
+      <figure>
+        <img class="showroom-finishes" src="/assets/about/showroom-art-basins.webp" alt="Decorative art basins arranged on showroom display stands" loading="lazy" decoding="async" width="1012" height="1800" />
+      </figure>
+    </div>
   </div>
 </section>
 

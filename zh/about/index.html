@@ -75,6 +75,20 @@
   @media (max-width: 880px) { .certpts { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 520px) { .certpts { grid-template-columns: 1fr; } }
 
+  /* ---- Showroom: separate photographs, with undistorted proportions ---- */
+  .showroom-gallery { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
+  .showroom-gallery figure { grid-column: span 2; aspect-ratio: 1; margin: 0; overflow: hidden; border-radius: 8px; }
+  .showroom-gallery .showroom-wide { grid-column: span 3; aspect-ratio: 8 / 5; }
+  .showroom-gallery img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .showroom-gallery .showroom-toilets { object-position: 50% 65%; }
+  .showroom-gallery .showroom-collection { object-position: 50% 65%; }
+  .showroom-gallery .showroom-finishes { object-position: 50% 55%; }
+  @media (max-width: 640px) {
+    .showroom-gallery { grid-template-columns: 1fr; gap: 12px; }
+    .showroom-gallery figure { grid-column: auto; aspect-ratio: 4 / 5; }
+    .showroom-gallery .showroom-wide { grid-column: auto; aspect-ratio: 8 / 5; }
+  }
+
   /* ---- Capability cards (the hard-power tech) ---- */
   .cap3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   @media (max-width: 880px) { .cap3 { grid-template-columns: 1fr; } }
@@ -360,9 +374,23 @@ gtag('config', 'G-J7PPP48QXC');
       <h2 style="margin-top:8px">200+ 型號，<span class="soft">同一標準。</span></h2>
       <p>白瓷、啞光、大理石紋與手工描金 —— 涵蓋面盆、馬桶與智能衛浴。每一種釉料都在我們潮州自有廠房內調配與燒製。</p>
     </div>
-    <figure style="margin:0;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line)">
-      <img src="/assets/factory/factory-4.webp" alt="程達藝術盆展廳 —— 彩色、大理石紋與描金陶瓷面盆" loading="lazy" decoding="async" width="1600" height="900" style="width:100%;display:block" />
-    </figure>
+    <div class="showroom-gallery">
+      <figure class="showroom-wide">
+        <img src="/assets/about/showroom-colour-basins.webp" alt="程達展廳展示牆上的彩色圓形陶瓷面盆" loading="lazy" decoding="async" width="1600" height="900" />
+      </figure>
+      <figure class="showroom-wide">
+        <img class="showroom-toilets" src="/assets/about/showroom-toilets.webp" alt="程達展廳內陳列的白瓷馬桶" loading="lazy" decoding="async" width="1600" height="1200" />
+      </figure>
+      <figure>
+        <img class="showroom-collection" src="/assets/about/showroom-basin-collection.webp" alt="程達面盆系列，涵蓋造型、彩色與金屬釉面" loading="lazy" decoding="async" width="1350" height="1800" />
+      </figure>
+      <figure>
+        <img class="showroom-finishes" src="/assets/about/showroom-glaze-wall.webp" alt="展廳牆面陳列的大理石紋、白瓷與描金面盆" loading="lazy" decoding="async" width="1012" height="1800" />
+      </figure>
+      <figure>
+        <img class="showroom-finishes" src="/assets/about/showroom-art-basins.webp" alt="展廳展示架上的裝飾藝術面盆" loading="lazy" decoding="async" width="1012" height="1800" />
+      </figure>
+    </div>
   </div>
 </section>
 
