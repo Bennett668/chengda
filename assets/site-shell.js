@@ -126,8 +126,10 @@
       wa.className = 'wa-float';
       wa.href = 'https://wa.me/12132160960?text=' + encodeURIComponent(L.waMsg);
       wa.target = '_blank'; wa.rel = 'noopener';
-      wa.setAttribute('aria-label', 'WhatsApp');
-      wa.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">' + WA_PATH + '</svg>';
+      const waLabel = ZH ? '透過 WhatsApp 聯絡我們' : 'Chat with us on WhatsApp';
+      wa.setAttribute('aria-label', waLabel);
+      wa.title = waLabel;
+      wa.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">' + WA_PATH + '</svg><span>WhatsApp</span>';
       document.body.appendChild(wa);
     }
     const nav = document.getElementById('nav');

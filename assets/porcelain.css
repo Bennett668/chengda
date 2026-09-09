@@ -533,15 +533,23 @@ img, svg { display: block; max-width: 100%; }
 /* === Floating WhatsApp button (primary inquiry channel) === */
 .wa-float {
   position: fixed; z-index: 90;
-  right: clamp(16px, 3vw, 32px); bottom: clamp(16px, 3vw, 32px);
-  display: grid; place-items: center;
-  width: 56px; height: 56px; border-radius: 50%;
-  background: #25D366; color: #fff;
-  box-shadow: 0 6px 20px rgba(37,211,102,.4), 0 2px 6px rgba(0,0,0,.15);
-  transition: transform .2s var(--t), box-shadow .2s var(--t);
+  right: max(clamp(16px, 3vw, 32px), env(safe-area-inset-right, 0px));
+  bottom: max(clamp(16px, 3vw, 32px), env(safe-area-inset-bottom, 0px));
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  width: 174px; height: 62px; border: 2px solid #fff; border-radius: var(--r-pill);
+  background: #098549; color: #fff;
+  font-size: 15px; font-weight: 600; line-height: 1; letter-spacing: 0;
+  text-decoration: none; white-space: nowrap;
+  box-shadow: 0 6px 24px rgba(9,133,73,.28), 0 2px 6px rgba(0,0,0,.15);
+  transition: transform .2s var(--t), background .2s var(--t), box-shadow .2s var(--t);
 }
-.wa-float svg { width: 30px; height: 30px; }
-.wa-float:hover { transform: scale(1.08); box-shadow: 0 8px 28px rgba(37,211,102,.5); }
+.wa-float svg { width: 32px; height: 32px; flex: none; }
+.wa-float:hover { transform: translateY(-2px); background: #076c3b; box-shadow: 0 8px 28px rgba(9,133,73,.35); }
+.wa-float:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+@media (max-width: 640px) {
+  .wa-float { width: 148px; height: 52px; gap: 8px; font-size: 14px; }
+  .wa-float svg { width: 27px; height: 27px; }
+}
 @media (prefers-reduced-motion: reduce) {
   .wa-float, .social-link { transition: none; }
   .wa-float:hover, .social-link:hover { transform: none; }
