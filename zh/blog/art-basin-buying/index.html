@@ -362,6 +362,21 @@
   .reading blockquote { border-left: 2px solid var(--ink); padding-left: 20px; margin: 34px 0; font-size: 19px; line-height: 1.55; color: var(--ink); font-style: italic; }
 </style>
 <!-- Google tag (gtag.js) -->
+<!-- Chengda browser analytics preference -->
+<script>
+(function () {
+  var key = 'chengda.analytics.exclude.v1';
+  function syncPreference() {
+    try {
+      window['ga-disable-G-J7PPP48QXC'] = window.localStorage.getItem(key) === '1';
+    } catch (error) { /* Storage may be unavailable in restricted browsers. */ }
+  }
+  syncPreference();
+  window.addEventListener('storage', function (event) {
+    if (event.key === key || event.key === null) syncPreference();
+  });
+}());
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7PPP48QXC"></script>
 <script>
 window.dataLayer = window.dataLayer || [];

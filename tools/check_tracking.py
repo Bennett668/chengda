@@ -1,4 +1,4 @@
-"""Audit tracked website pages and repair only the GA4 CSP allowlist."""
+"""Audit and repair GA4 tags, browser exclusions, and the CSP allowlist."""
 
 import argparse
 from collections import Counter
@@ -9,6 +9,22 @@ import subprocess
 
 REPO = Path(__file__).resolve().parents[1]
 MEASUREMENT_ID = 'G-J7PPP48QXC'
+GUARD = '''<!-- Chengda browser analytics preference -->
+<script>
+(function () {
+  var key = 'chengda.analytics.exclude.v1';
+  function syncPreference() {
+    try {
+      window['ga-disable-G-J7PPP48QXC'] = window.localStorage.getItem(key) === '1';
+    } catch (error) { /* Storage may be unavailable in restricted browsers. */ }
+  }
+  syncPreference();
+  window.addEventListener('storage', function (event) {
+    if (event.key === key || event.key === null) syncPreference();
+  });
+}());
+</script>
+'''
 TAG = '''<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7PPP48QXC"></script>
 <script>
@@ -75,6 +91,10 @@ def run(fix=False):
         page = Page(source)
         original = source
         counts['tracked_html'] += 1
+        if name == 'analytics-preferences/index.html':
+            if page.tags or 'content="noindex, nofollow"' not in source:
+                problems.append({'page': name, 'issue': 'invalid_preferences_page'})
+            continue
         if not page.tags:
             counts['without_ga_tag'] += 1
             if page.redirect or '<head' not in source.lower():
@@ -89,6 +109,13 @@ def run(fix=False):
         counts['with_ga_tag'] += 1
         if len(page.tags) != 1 or MEASUREMENT_ID not in page.tags[0]:
             problems.append({'page': name, 'issue': 'unexpected_ga_tag'})
+        ga_start = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-J7PPP48QXC"></script>'
+        if source.count(GUARD) != 1 or source.find(GUARD) > source.find(ga_start):
+            if fix and GUARD not in source and source.count(ga_start) == 1:
+                source = source.replace(ga_start, GUARD + ga_start, 1)
+                counts['added_browser_exclusion'] += 1
+            else:
+                problems.append({'page': name, 'issue': 'missing_or_misordered_browser_exclusion'})
         new_source = source
         for raw, policy in page.policies:
             parsed = directives(policy)
