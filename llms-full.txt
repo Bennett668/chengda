@@ -186,34 +186,29 @@ Series A101–A160. Available in multiple sizes per model.
 | WB107 | 510x350x390 | Single |
 | WB108 | 420x420x390 | Single |
 
-## Product Line 6: One-Piece Ceramic Toilets (连体坐便器)
+## Product Line 6: One-Piece Ceramic Toilets (T20)
 
-All models: floor-mount, S-trap, dual-flush, antibacterial smart-clean glaze, PP soft-close seat, CUPC certified. MOQ flexible; stock can ship immediately; standard production about 15 days; new tooling about 45 days.
+Floor-mounted ceramic toilets with floor outlets. Dimensions and rough-in options are model-specific. Net weights await confirmation. Loading quantities are estimates based on carton dimensions and 85% container volume utilization; confirm final packing before ordering.
 
-| Model | Size W×D×H (mm) | Flush | Rough-in (mm) | Detail page |
-|-------|-----------------|-------|---------------|-------------|
-| T201 | 690×375×660 | Cascade siphon | 200/250/300/350/400 | https://www.gdchengda.hk/products/T201/ |
-| T202 | 680×360×700 | Cascade vortex | 200/250/300/350/400 | https://www.gdchengda.hk/products/T202/ |
-| T203 | 660×370×700 | Rimless vortex | 200/250/300/350/400 | https://www.gdchengda.hk/products/T203/ |
-| T204 | 700×365×650 | Concealed cistern | 200/250/300/350/400 | https://www.gdchengda.hk/products/T204/ |
-| T205 | 700×365×650 | Concealed cistern | 250/300/350/400 | https://www.gdchengda.hk/products/T205/ |
-| T206 | 680×370×700 | Concealed cistern | 300/400 | https://www.gdchengda.hk/products/T206/ |
-| T207 | 680×430×680 | Super siphon | 305/400 | https://www.gdchengda.hk/products/T207/ |
-| T208 | 700×370×720 | Super siphon | 305/400 | https://www.gdchengda.hk/products/T208/ |
-| T209 | 680×365×750 | Super siphon | 305/400 | https://www.gdchengda.hk/products/T209/ |
-| T210 | 700×395×710 | Super siphon | 305/400 | https://www.gdchengda.hk/products/T210/ |
-| T211 | 680×365×750 | Super siphon | 305/400 | https://www.gdchengda.hk/products/T211/ |
-| T212 | 680×365×750 | Super siphon | 305/400 | https://www.gdchengda.hk/products/T212/ |
-| T213 | 680×365×750 | Super siphon | 305/400 | https://www.gdchengda.hk/products/T213/ |
-| T214 | 680×365×750 | Super siphon | 305/400 | https://www.gdchengda.hk/products/T214/ |
-| T215 | 680×365×760 | Super siphon | 305/400 | https://www.gdchengda.hk/products/T215/ |
-
-Flush technology notes:
-- **Cascade siphon / cascade vortex** (T201, T202): gravity-led pull rather than pressurised jet — quieter, gentler on glaze
-- **Rimless** (T203): fully glazed bowl with no rim ledge for residue
-- **Concealed cistern** (T204–T206): tank hidden inside a continuous shroud, flush-back silhouette
-- **Super siphon** (T207–T215): vortex pre-rinse combined with high-velocity siphonic pull
-
+| Model | Length × Width × Height (mm) | Flushing type | Rough-in (mm) | Estimated 20GP / 40GP / 40HQ (pcs) | Detail page |
+|---|---|---|---|---|---|
+| T201 | 690×375×660 | Cascade siphon flushing | 200/250/300/350/400 | 110 / 240 / 270 | https://www.gdchengda.hk/products/T201/ |
+| T202 | 680×360×700 | Cascade vortex flushing | 200/250/300/350/400 | 110 / 240 / 270 | https://www.gdchengda.hk/products/T202/ |
+| T203 | 660×370×700 | Rimless vortex flushing | 200/250/300/350/400 | 120 / 240 / 270 | https://www.gdchengda.hk/products/T203/ |
+| T204 | 700×365×650 | Concealed flushing | 200/250/300/350/400 | 120 / 240 / 280 | https://www.gdchengda.hk/products/T204/ |
+| T205 | 700×365×650 | Concealed flushing | 250/300/350/400 | 120 / 240 / 280 | https://www.gdchengda.hk/products/T205/ |
+| T206 | 680×370×700 | Concealed flushing | 300/400 | 110 / 230 / 260 | https://www.gdchengda.hk/products/T206/ |
+| T207 | 680×430×680 | Super vortex siphon flushing | 305/400 | 100 / 210 / 240 | https://www.gdchengda.hk/products/T207/ |
+| T208 | 700×370×720 | Super vortex siphon flushing | 305/400 | 110 / 220 / 250 | https://www.gdchengda.hk/products/T208/ |
+| T209 | 700×370×720 | Super vortex siphon flushing | 305/400 | 110 / 220 / 250 | https://www.gdchengda.hk/products/T209/ |
+| T210 | 700×395×710 | Super vortex siphon flushing | 305/400 | 100 / 210 / 240 | https://www.gdchengda.hk/products/T210/ |
+| T211 | 680×365×750 | Super vortex siphon flushing | 305/400 | 110 / 220 / 250 | https://www.gdchengda.hk/products/T211/ |
+| T212 | 680×365×750 | Super vortex siphon flushing | 305/400 | 110 / 220 / 250 | https://www.gdchengda.hk/products/T212/ |
+| T213 | 680×365×750 | Super vortex siphon flushing | 305/400 | 110 / 220 / 250 | https://www.gdchengda.hk/products/T213/ |
+| T214 | 680×365×750 | Super vortex siphon flushing | 305/400 | 110 / 220 / 250 | https://www.gdchengda.hk/products/T214/ |
+| T215 | 680×365×760 | Super vortex siphon flushing | 305/400 | 100 / 220 / 250 | https://www.gdchengda.hk/products/T215/ |
+| T216 | 680×365×760 | Super vortex siphon flushing | 305/400 | 100 / 220 / 250 | https://www.gdchengda.hk/products/T216/ |
+| T217 | 680×390×765 | Single-hole super vortex siphon flushing | 305/400 | 100 / 210 / 230 | https://www.gdchengda.hk/products/T217/ |
 
 
 ## Product Line 7: Wall-Hung Toilets (壁掛馬桶 · T10 series)

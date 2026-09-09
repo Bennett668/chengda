@@ -1,0 +1,379 @@
+{
+  "source": "马桶产品数据.xlsx: 马桶T20 and 装柜计算依据; 2026-09-09",
+  "products": [
+    {
+      "sku": "T201",
+      "dimensions": [
+        690,
+        375,
+        660
+      ],
+      "inches": "27.2″ × 14.8″ × 26.0″",
+      "roughIn": "200/250/300/350/400",
+      "flush": "Cascade siphon flushing",
+      "flushZh": "瀑布虹吸式沖水",
+      "loading": [
+        110,
+        240,
+        270
+      ],
+      "carton": [
+        710,
+        445,
+        745
+      ]
+    },
+    {
+      "sku": "T202",
+      "dimensions": [
+        680,
+        360,
+        700
+      ],
+      "inches": "26.8″ × 14.2″ × 27.6″",
+      "roughIn": "200/250/300/350/400",
+      "flush": "Cascade vortex flushing",
+      "flushZh": "瀑布超漩式沖水",
+      "loading": [
+        110,
+        240,
+        270
+      ],
+      "carton": [
+        700,
+        430,
+        785
+      ]
+    },
+    {
+      "sku": "T203",
+      "dimensions": [
+        660,
+        370,
+        700
+      ],
+      "inches": "26.0″ × 14.6″ × 27.6″",
+      "roughIn": "200/250/300/350/400",
+      "flush": "Rimless vortex flushing",
+      "flushZh": "無唇超漩式沖水",
+      "loading": [
+        120,
+        240,
+        270
+      ],
+      "carton": [
+        680,
+        440,
+        785
+      ]
+    },
+    {
+      "sku": "T204",
+      "dimensions": [
+        700,
+        365,
+        650
+      ],
+      "inches": "27.6″ × 14.4″ × 25.6″",
+      "roughIn": "200/250/300/350/400",
+      "flush": "Concealed flushing",
+      "flushZh": "隱藏式沖水",
+      "loading": [
+        120,
+        240,
+        280
+      ],
+      "carton": [
+        720,
+        435,
+        735
+      ]
+    },
+    {
+      "sku": "T205",
+      "dimensions": [
+        700,
+        365,
+        650
+      ],
+      "inches": "27.6″ × 14.4″ × 25.6″",
+      "roughIn": "250/300/350/400",
+      "flush": "Concealed flushing",
+      "flushZh": "隱藏式沖水",
+      "loading": [
+        120,
+        240,
+        280
+      ],
+      "carton": [
+        720,
+        435,
+        735
+      ]
+    },
+    {
+      "sku": "T206",
+      "dimensions": [
+        680,
+        370,
+        700
+      ],
+      "inches": "26.8″ × 14.6″ × 27.6″",
+      "roughIn": "300/400",
+      "flush": "Concealed flushing",
+      "flushZh": "隱藏式沖水",
+      "loading": [
+        110,
+        230,
+        260
+      ],
+      "carton": [
+        700,
+        440,
+        785
+      ]
+    },
+    {
+      "sku": "T207",
+      "dimensions": [
+        680,
+        430,
+        680
+      ],
+      "inches": "26.8″ × 16.9″ × 26.8″",
+      "roughIn": "305/400",
+      "flush": "Super vortex siphon flushing",
+      "flushZh": "超漩虹吸式",
+      "loading": [
+        100,
+        210,
+        240
+      ],
+      "carton": [
+        700,
+        500,
+        765
+      ]
+    },
+    {
+      "sku": "T208",
+      "dimensions": [
+        700,
+        370,
+        720
+      ],
+      "inches": "27.6″ × 14.6″ × 28.3″",
+      "roughIn": "305/400",
+      "flush": "Super vortex siphon flushing",
+      "flushZh": "超漩虹吸式",
+      "loading": [
+        110,
+        220,
+        250
+      ],
+      "carton": [
+        720,
+        440,
+        805
+      ]
+    },
+    {
+      "sku": "T209",
+      "dimensions": [
+        700,
+        370,
+        720
+      ],
+      "inches": "27.6″ × 14.6″ × 28.3″",
+      "roughIn": "305/400",
+      "flush": "Super vortex siphon flushing",
+      "flushZh": "超漩虹吸式",
+      "loading": [
+        110,
+        220,
+        250
+      ],
+      "carton": [
+        720,
+        440,
+        805
+      ]
+    },
+    {
+      "sku": "T210",
+      "dimensions": [
+        700,
+        395,
+        710
+      ],
+      "inches": "27.6″ × 15.6″ × 28.0″",
+      "roughIn": "305/400",
+      "flush": "Super vortex siphon flushing",
+      "flushZh": "超漩虹吸式",
+      "loading": [
+        100,
+        210,
+        240
+      ],
+      "carton": [
+        720,
+        465,
+        795
+      ]
+    },
+    {
+      "sku": "T211",
+      "dimensions": [
+        680,
+        365,
+        750
+      ],
+      "inches": "26.8″ × 14.4″ × 29.5″",
+      "roughIn": "305/400",
+      "flush": "Super vortex siphon flushing",
+      "flushZh": "超漩虹吸式",
+      "loading": [
+        110,
+        220,
+        250
+      ],
+      "carton": [
+        700,
+        435,
+        835
+      ]
+    },
+    {
+      "sku": "T212",
+      "dimensions": [
+        680,
+        365,
+        750
+      ],
+      "inches": "26.8″ × 14.4″ × 29.5″",
+      "roughIn": "305/400",
+      "flush": "Super vortex siphon flushing",
+      "flushZh": "超漩虹吸式",
+      "loading": [
+        110,
+        220,
+        250
+      ],
+      "carton": [
+        700,
+        435,
+        835
+      ]
+    },
+    {
+      "sku": "T213",
+      "dimensions": [
+        680,
+        365,
+        750
+      ],
+      "inches": "26.8″ × 14.4″ × 29.5″",
+      "roughIn": "305/400",
+      "flush": "Super vortex siphon flushing",
+      "flushZh": "超漩虹吸式",
+      "loading": [
+        110,
+        220,
+        250
+      ],
+      "carton": [
+        700,
+        435,
+        835
+      ]
+    },
+    {
+      "sku": "T214",
+      "dimensions": [
+        680,
+        365,
+        750
+      ],
+      "inches": "26.8″ × 14.4″ × 29.5″",
+      "roughIn": "305/400",
+      "flush": "Super vortex siphon flushing",
+      "flushZh": "超漩虹吸式",
+      "loading": [
+        110,
+        220,
+        250
+      ],
+      "carton": [
+        700,
+        435,
+        835
+      ]
+    },
+    {
+      "sku": "T215",
+      "dimensions": [
+        680,
+        365,
+        760
+      ],
+      "inches": "26.8″ × 14.4″ × 29.9″",
+      "roughIn": "305/400",
+      "flush": "Super vortex siphon flushing",
+      "flushZh": "超漩虹吸式",
+      "loading": [
+        100,
+        220,
+        250
+      ],
+      "carton": [
+        700,
+        435,
+        845
+      ]
+    },
+    {
+      "sku": "T216",
+      "dimensions": [
+        680,
+        365,
+        760
+      ],
+      "inches": "26.8″ × 14.4″ × 29.9″",
+      "roughIn": "305/400",
+      "flush": "Super vortex siphon flushing",
+      "flushZh": "超漩虹吸式",
+      "loading": [
+        100,
+        220,
+        250
+      ],
+      "carton": [
+        700,
+        435,
+        845
+      ]
+    },
+    {
+      "sku": "T217",
+      "dimensions": [
+        680,
+        390,
+        765
+      ],
+      "inches": "26.8″ × 15.4″ × 30.1″",
+      "roughIn": "305/400",
+      "flush": "Single-hole super vortex siphon flushing",
+      "flushZh": "單孔超漩虹吸式",
+      "loading": [
+        100,
+        210,
+        230
+      ],
+      "carton": [
+        700,
+        460,
+        850
+      ]
+    }
+  ]
+}
