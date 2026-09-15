@@ -213,6 +213,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-J7PPP48QXC');
 </script>
+<link rel="stylesheet" href="/assets/product-video-section.css?v=9" />
 </head>
 <body>
 
@@ -235,14 +236,14 @@ gtag('config', 'G-J7PPP48QXC');
       <div class="pd-media">
         <div class="pd-hero">
           <img id="pd-main" src="/assets/products/T202/card.webp" alt="連體馬桶 T202" fetchpriority="high" />
-          <video id="pd-video" data-src="/assets/products/T202/video.mp4" poster="/assets/products/T202/card.webp" controls muted playsinline preload="none" hidden aria-label="播放產品影片 T202"></video>
-          <p id="pd-video-error" class="pd-video-error" role="status" hidden>影片暫時無法播放。<a href="/assets/products/T202/video.mp4" target="_blank" rel="noopener">開啟影片</a></p>
+
+
         </div>
         <div class="pd-thumbs-wrap">
           <button class="pd-arrow prev" aria-label="Previous photo">‹</button>
           <div class="pd-thumbs" role="tablist" aria-label="T202 photographs">
             <button type="button" class="pd-thumb is-active" role="tab" aria-selected="true" data-src="/assets/products/T202/card.webp" data-alt="T202 連體馬桶 — 主圖"><img src="/assets/products/T202/card.webp" alt="" loading="lazy" /></button>
-            <button type="button" class="pd-thumb pd-thumb-video" role="tab" aria-selected="false" tabindex="-1" data-media="video" aria-label="播放產品影片 T202" title="播放產品影片 T202"><img src="/assets/products/T202/card.webp" alt="" loading="lazy" /><span class="pd-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg></span></button>
+
             <button type="button" class="pd-thumb" role="tab" aria-selected="false" data-src="/assets/products/T202/hero.webp" data-alt="T202 連體馬桶 — 立體圖"><img src="/assets/products/T202/hero.webp" alt="" loading="lazy" /></button>
             <button type="button" class="pd-thumb" role="tab" aria-selected="false" data-src="/assets/products/T202/g1.webp" data-alt="T202 連體馬桶 — 細節 1"><img src="/assets/products/T202/g1.webp" alt="" loading="lazy" /></button>
             <button type="button" class="pd-thumb" role="tab" aria-selected="false" data-src="/assets/products/T202/g2.webp" data-alt="T202 連體馬桶 — 細節 2"><img src="/assets/products/T202/g2.webp" alt="" loading="lazy" /></button>
@@ -330,8 +331,20 @@ gtag('config', 'G-J7PPP48QXC');
       </div>
     </div>
 
-    <div class="pd-cols">
-      <div class="pd-col">
+    <div class="pd-presentation">
+<section class="pd-film" id="product-video" aria-labelledby="product-video-title">
+      <div class="pd-film-header">
+        <h2 id="product-video-title"><span class="pd-film-title-accent">影片</span></h2>
+      </div>
+      <div class="pd-film-player">
+        <video id="pd-video" data-src="/assets/products/T202/video-with-audio.mp4" poster="/assets/products/T202/video-poster.webp" controls playsinline preload="none" aria-label="T202 產品影片"></video>
+        <button type="button" class="pd-film-start" aria-label="播放 T202 影片" title="播放影片"><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg></span></button>
+        <p id="pd-video-error" class="pd-video-error" role="status" hidden>影片暫時無法播放。<a href="/assets/products/T202/video-with-audio.mp4" target="_blank" rel="noopener">開啟影片</a></p>
+      </div>
+    </section>
+
+<div class="pd-cols">
+<div class="pd-col">
         <h3>產品特性</h3>
         <ul>
                     <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4v6M16 4v6M8 14a4 4 0 0 0 8 0v-1H8z"/></svg></span> 瀑布超漩式沖水</li>
@@ -342,7 +355,7 @@ gtag('config', 'G-J7PPP48QXC');
         </ul>
       </div>
 
-      <div class="pd-col">
+<div class="pd-col">
         <h3>OEM / ODM 支援</h3>
         <ul>
           <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></span> Logo 客製</li>
@@ -352,32 +365,8 @@ gtag('config', 'G-J7PPP48QXC');
           <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7l7-3 7 3v10l-7 3-7-3z"/><path d="M9 13h6"/></svg></span> 低 MOQ 支援</li>
         </ul>
       </div>
-
-      <div class="pd-col">
-        <h3>包裝</h3>
-        <div class="pd-pack-img">
-          <img src="/assets/packaging/carton-sm.webp" alt="Chengda 7-layer export carton" loading="lazy" />
-        </div>
-        <ul class="pd-pack-list">
-          <li>7 層出口紙箱</li>
-        </ul>
-      </div>
-
-      <div class="pd-col">
-        <h3>裝櫃量</h3>
-        <table class="pd-loadtable">
-          <thead>
-            <tr><th>貨櫃</th><th>數量（件）</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>20GP</td><td>110 件</td></tr>
-            <tr><td>40GP</td><td>240 件</td></tr>
-            <tr><td>40HQ</td><td>270 件</td></tr>
-          </tbody>
-        </table>
-        <p class="pd-loading-note">估算值：按預估外箱及 85% 櫃容利用率計算，實際數量以包裝確認為準。</p>
-      </div>
-    </div>
+</div>
+</div>
 
     <div class="pd-factory">
       <div class="pd-factory-text">
@@ -394,11 +383,11 @@ gtag('config', 'G-J7PPP48QXC');
         <div class="pd-factory-ph"><img src="/assets/factory/factory-1.webp" alt="程達陶瓷成型車間 — 石膏模具" loading="lazy" decoding="async" width="1000" height="1000" /></div>
         <div class="pd-factory-ph"><img src="/assets/factory/factory-2.webp" alt="陶瓷坯體晾乾架" loading="lazy" decoding="async" width="1000" height="1000" /></div>
         <div class="pd-factory-ph"><img src="/assets/factory/factory-3.webp" alt="程達陶瓷生產大車間" loading="lazy" decoding="async" width="1000" height="1000" /></div>
-        <div class="pd-factory-ph"><img src="/assets/factory/factory-4.webp" alt="程達面盆展廳" loading="lazy" decoding="async" width="1000" height="1000" /></div>
+        <div class="pd-factory-ph"><img src="/assets/factory/certificate-wall-img1392.webp" alt="程達工廠展示牆上的證書" loading="lazy" decoding="async" width="1600" height="1200" /></div>
       </div>
     </div>
 
-    
+
     <div class="pd-section rel-section">
       <div class="section-block">
         <h2 class="section-title">同系列其他型號</h2>
@@ -433,7 +422,7 @@ gtag('config', 'G-J7PPP48QXC');
 
 <div id="shell-footer"></div>
 
-<script src="/assets/product-media.js?v=1" defer></script>
+<script src="/assets/product-video-section.js?v=5" defer></script>
 <script src="/assets/icons.js?v=6" defer></script>
 <script src="/assets/site-shell.js?v=12" defer></script>
 <script>document.addEventListener('DOMContentLoaded',()=>renderShell('products'));</script>

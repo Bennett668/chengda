@@ -216,6 +216,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-J7PPP48QXC');
 </script>
+<link rel="stylesheet" href="/assets/product-video-section.css?v=9" />
 </head>
 <body>
 
@@ -324,9 +325,20 @@ gtag('config', 'G-J7PPP48QXC');
       </div>
     </div>
 
-    <!-- 4-column detail -->
-    <div class="pd-cols">
-      <div class="pd-col">
+    <div class="pd-presentation">
+<section class="pd-film" id="product-video" aria-labelledby="product-video-title">
+      <div class="pd-film-header">
+        <h2 id="product-video-title"><span class="pd-film-title-accent">Video</span></h2>
+      </div>
+      <div class="pd-film-player">
+        <video id="pd-video" data-src="/assets/products/T104/video-with-audio.mp4" poster="/assets/products/T104/video-poster.webp" controls playsinline preload="none" aria-label="T104 product video"></video>
+        <button type="button" class="pd-film-start" aria-label="Play T104 video" title="Play video"><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg></span></button>
+        <p id="pd-video-error" class="pd-video-error" role="status" hidden>Video unavailable. <a href="/assets/products/T104/video-with-audio.mp4" target="_blank" rel="noopener">Open video</a></p>
+      </div>
+    </section>
+
+<div class="pd-cols">
+<div class="pd-col">
         <h3>Product Features</h3>
         <ul>
                     <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3c-3 4-5 7-5 10a5 5 0 0 0 10 0c0-3-2-6-5-10z"/></svg></span> Slanted bottom for fast drainage</li>
@@ -337,7 +349,7 @@ gtag('config', 'G-J7PPP48QXC');
         </ul>
       </div>
 
-      <div class="pd-col">
+<div class="pd-col">
         <h3>OEM / ODM Support</h3>
         <ul>
           <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></span> Logo customization</li>
@@ -347,31 +359,8 @@ gtag('config', 'G-J7PPP48QXC');
           <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7l7-3 7 3v10l-7 3-7-3z"/><path d="M9 13h6"/></svg></span> Low MOQ supported</li>
         </ul>
       </div>
-
-      <div class="pd-col">
-        <h3>Packaging</h3>
-        <div class="pd-pack-img">
-          <img src="/assets/packaging/carton-sm.webp" alt="Chengda export carton — 5-layer kraft, foam-protected" loading="lazy" />
-        </div>
-        <ul class="pd-pack-list">
-          <li>7-layer export carton</li>
-        </ul>
-      </div>
-
-      <div class="pd-col">
-        <h3>Loading Capacity</h3>
-        <table class="pd-loadtable">
-          <thead>
-            <tr><th>Container</th><th>Quantity (pcs)</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>20GP</td><td>240 pcs</td></tr>
-            <tr><td>40GP</td><td>490 pcs</td></tr>
-            <tr><td>40HQ</td><td>560 pcs</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+</div>
+</div>
 
     <!-- Factory strength -->
     <div class="pd-factory">
@@ -389,7 +378,7 @@ gtag('config', 'G-J7PPP48QXC');
         <div class="pd-factory-ph"><img src="/assets/factory/factory-1.webp" alt="Chengda ceramic casting workshop — rows of plaster moulds" loading="lazy" decoding="async" width="1000" height="1000" /></div>
         <div class="pd-factory-ph"><img src="/assets/factory/factory-2.webp" alt="Greenware ceramic basins drying on racks" loading="lazy" decoding="async" width="1000" height="1000" /></div>
         <div class="pd-factory-ph"><img src="/assets/factory/factory-3.webp" alt="Chengda ceramic production hall" loading="lazy" decoding="async" width="1000" height="1000" /></div>
-        <div class="pd-factory-ph"><img src="/assets/factory/factory-4.webp" alt="Chengda washbasin showroom" loading="lazy" decoding="async" width="1000" height="1000" /></div>
+        <div class="pd-factory-ph"><img src="/assets/factory/certificate-wall-img1392.webp" alt="Framed certificates on the Chengda factory display wall" loading="lazy" decoding="async" width="1600" height="1200" /></div>
       </div>
     </div>
 
@@ -429,32 +418,12 @@ gtag('config', 'G-J7PPP48QXC');
 
 <div id="shell-footer"></div>
 
+<script src="/assets/product-video-section.js?v=5" defer></script>
 <script src="/assets/icons.js?v=6" defer></script>
 <script src="/assets/site-shell.js?v=12" defer></script>
 <script>document.addEventListener('DOMContentLoaded',()=>renderShell('products'));</script>
 <script>
 (() => {
-  // Gallery: thumbs + arrows
-  const thumbs = Array.from(document.querySelectorAll('.pd-thumb'));
-  const main = document.getElementById('pd-main');
-  const prev = document.querySelector('.pd-arrow.prev');
-  const next = document.querySelector('.pd-arrow.next');
-  let idx = 0;
-  function set(i) {
-    idx = (i + thumbs.length) % thumbs.length;
-    const t = thumbs[idx];
-    main.src = t.dataset.src;
-    main.alt = t.dataset.alt || main.alt;
-    thumbs.forEach((tt, j) => {
-      const a = j === idx;
-      tt.classList.toggle('is-active', a);
-      tt.setAttribute('aria-selected', a ? 'true' : 'false');
-    });
-  }
-  thumbs.forEach((t, i) => t.addEventListener('click', () => set(i)));
-  prev && prev.addEventListener('click', () => set(idx - 1));
-  next && next.addEventListener('click', () => set(idx + 1));
-
   // Inquiry list (localStorage)
   const addBtn = document.getElementById('addInquiry');
   if (addBtn) {

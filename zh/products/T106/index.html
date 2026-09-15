@@ -216,6 +216,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-J7PPP48QXC');
 </script>
+<link rel="stylesheet" href="/assets/product-video-section.css?v=9" />
 </head>
 <body>
 
@@ -323,8 +324,9 @@ gtag('config', 'G-J7PPP48QXC');
       </div>
     </div>
 
-    <div class="pd-cols">
-      <div class="pd-col">
+    <div class="pd-presentation pd-presentation--no-video">
+<div class="pd-cols">
+<div class="pd-col">
         <h3>產品特性</h3>
         <ul>
                     <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3c-3 4-5 7-5 10a5 5 0 0 0 10 0c0-3-2-6-5-10z"/></svg></span> 內斜盆底，快速排水</li>
@@ -335,7 +337,7 @@ gtag('config', 'G-J7PPP48QXC');
         </ul>
       </div>
 
-      <div class="pd-col">
+<div class="pd-col">
         <h3>OEM / ODM 支援</h3>
         <ul>
           <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></span> Logo 客製</li>
@@ -345,31 +347,8 @@ gtag('config', 'G-J7PPP48QXC');
           <li><span class="pd-col-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7l7-3 7 3v10l-7 3-7-3z"/><path d="M9 13h6"/></svg></span> 低 MOQ 支援</li>
         </ul>
       </div>
-
-      <div class="pd-col">
-        <h3>包裝</h3>
-        <div class="pd-pack-img">
-          <img src="/assets/packaging/carton-sm.webp" alt="Chengda export carton — 5-layer kraft, foam-protected" loading="lazy" />
-        </div>
-        <ul class="pd-pack-list">
-          <li>7 層出口紙箱</li>
-        </ul>
-      </div>
-
-      <div class="pd-col">
-        <h3>裝櫃量</h3>
-        <table class="pd-loadtable">
-          <thead>
-            <tr><th>貨櫃</th><th>數量（件）</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>20GP</td><td>260 件</td></tr>
-            <tr><td>40GP</td><td>540 件</td></tr>
-            <tr><td>40HQ</td><td>610 件</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+</div>
+</div>
 
     <div class="pd-factory">
       <div class="pd-factory-text">
@@ -386,7 +365,7 @@ gtag('config', 'G-J7PPP48QXC');
         <div class="pd-factory-ph"><img src="/assets/factory/factory-1.webp" alt="程達陶瓷成型車間 — 石膏模具" loading="lazy" decoding="async" width="1000" height="1000" /></div>
         <div class="pd-factory-ph"><img src="/assets/factory/factory-2.webp" alt="陶瓷坯體晾乾架" loading="lazy" decoding="async" width="1000" height="1000" /></div>
         <div class="pd-factory-ph"><img src="/assets/factory/factory-3.webp" alt="程達陶瓷生產大車間" loading="lazy" decoding="async" width="1000" height="1000" /></div>
-        <div class="pd-factory-ph"><img src="/assets/factory/factory-4.webp" alt="程達面盆展廳" loading="lazy" decoding="async" width="1000" height="1000" /></div>
+        <div class="pd-factory-ph"><img src="/assets/factory/certificate-wall-img1392.webp" alt="程達工廠展示牆上的證書" loading="lazy" decoding="async" width="1600" height="1200" /></div>
       </div>
     </div>
 
@@ -425,31 +404,12 @@ gtag('config', 'G-J7PPP48QXC');
 
 <div id="shell-footer"></div>
 
+<script src="/assets/product-video-section.js?v=5" defer></script>
 <script src="/assets/icons.js?v=6" defer></script>
 <script src="/assets/site-shell.js?v=12" defer></script>
 <script>document.addEventListener('DOMContentLoaded',()=>renderShell('products'));</script>
 <script>
 (() => {
-  const thumbs = Array.from(document.querySelectorAll('.pd-thumb'));
-  const main = document.getElementById('pd-main');
-  const prev = document.querySelector('.pd-arrow.prev');
-  const next = document.querySelector('.pd-arrow.next');
-  let idx = 0;
-  function set(i) {
-    idx = (i + thumbs.length) % thumbs.length;
-    const t = thumbs[idx];
-    main.src = t.dataset.src;
-    main.alt = t.dataset.alt || main.alt;
-    thumbs.forEach((tt, j) => {
-      const a = j === idx;
-      tt.classList.toggle('is-active', a);
-      tt.setAttribute('aria-selected', a ? 'true' : 'false');
-    });
-  }
-  thumbs.forEach((t, i) => t.addEventListener('click', () => set(i)));
-  prev && prev.addEventListener('click', () => set(idx - 1));
-  next && next.addEventListener('click', () => set(idx + 1));
-
   const addBtn = document.getElementById('addInquiry');
   if (addBtn) {
     addBtn.addEventListener('click', () => {
