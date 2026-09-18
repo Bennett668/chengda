@@ -24,7 +24,7 @@ for (const lang of ['', 'zh/']) {
       assert.match(photos[3][1], /width="1600" height="1200"/);
       total++;
     }
-    assert.equal(total, 267);
+    assert.equal(total, 269);
   });
 
   for (const sku of [...Array.from({length:23}, (_,i) => `T${101+i}`), ...Array.from({length:17}, (_,i) => `T${201+i}`)]) {
