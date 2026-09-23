@@ -196,6 +196,7 @@
     }
     function open(manual) {
       rememberShown();
+      launcher.classList.remove('is-suggested');
       panel.hidden = false;
       launcher.hidden = true;
       launcher.setAttribute('aria-expanded', 'true');
@@ -295,7 +296,12 @@
         const overlay = Array.from(document.querySelectorAll('.nav-drawer.open, dialog[open], [aria-modal="true"]:not([hidden])'))
           .some(element => element.getClientRects().length && getComputedStyle(element).visibility !== 'hidden');
         if (editing || overlay) { remaining = 5000; schedule(); return; }
-        if (!document.hidden && !shown) open(false);
+        if (!document.hidden && !shown) {
+          if (window.matchMedia('(max-width: 760px)').matches) {
+            rememberShown();
+            launcher.classList.add('is-suggested');
+          } else open(false);
+        }
       }, remaining);
     }
     document.addEventListener('visibilitychange', () => {

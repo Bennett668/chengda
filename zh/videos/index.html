@@ -33,6 +33,7 @@
   body { font-family: 'Inter', 'Noto Sans TC', -apple-system, system-ui, sans-serif; }
   .v-lightbox { position: fixed; inset: 0; z-index: 200; display: none; align-items: center; justify-content: center; background: rgba(8,9,12,0.94); padding: 20px; }
   .v-lightbox.open { display: flex; }
+  dialog.v-lightbox { margin: 0; width: 100%; height: 100%; max-width: none; max-height: none; border: 0; }
   .v-lightbox video { max-height: 90vh; max-width: 94vw; aspect-ratio: 9 / 16; background: #000; border-radius: 14px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
   .v-lightbox-close { position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border: 0; border-radius: 50%; background: rgba(255,255,255,0.16); color: #fff; font-size: 20px; line-height: 1; cursor: pointer; display: grid; place-items: center; }
   .v-lightbox-close:hover { background: rgba(255,255,255,0.28); }
@@ -244,16 +245,23 @@ gtag('config', 'G-J7PPP48QXC');
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     renderShell('videos');
-    var lb = document.createElement('div');
+    var lb = document.createElement('dialog');
+    lb.setAttribute('aria-label', '影片');
+    lb.setAttribute('aria-modal', 'true');
+    var trigger;
     lb.className = 'v-lightbox';
     lb.innerHTML = '<button class="v-lightbox-close" type="button" aria-label="關閉">✕</button>';
     document.body.appendChild(lb);
     function close() {
+      if (!lb.open) return;
       lb.classList.remove('open');
       var v = lb.querySelector('video');
       if (v) { v.pause(); v.remove(); }
       document.documentElement.style.overflow = '';
+      lb.close();
+      if (trigger) trigger.focus();
     }
+    lb.addEventListener('cancel', function (e) { e.preventDefault(); close(); });
     lb.querySelector('.v-lightbox-close').addEventListener('click', close);
     lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
@@ -262,6 +270,8 @@ gtag('config', 'G-J7PPP48QXC');
       var frame = card.querySelector('.v-frame');
       if (!src || !frame) return;
       frame.addEventListener('click', function () {
+        if (lb.open) return;
+        trigger = frame;
         var v = document.createElement('video');
         v.src = src; v.controls = true; v.autoplay = true; v.playsInline = true;
         v.setAttribute('playsinline', '');
@@ -269,6 +279,8 @@ gtag('config', 'G-J7PPP48QXC');
         v.setAttribute('preload', 'metadata');
         lb.appendChild(v);
         lb.classList.add('open');
+        lb.showModal();
+        lb.querySelector('.v-lightbox-close').focus();
         document.documentElement.style.overflow = 'hidden';
       });
     });

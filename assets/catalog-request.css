@@ -19,6 +19,7 @@
   box-shadow: 0 3px 14px rgb(0 0 0 / 10%);
 }
 .catalog-launch:hover { background: var(--bg-2); }
+.catalog-launch.is-suggested { background: #edf8f2; border-color: #16845a; color: #125a40; }
 .catalog-request {
   width: 372px; max-width: calc(100% - 32px);
   max-height: calc(100vh - 180px); max-height: calc(100dvh - 180px);

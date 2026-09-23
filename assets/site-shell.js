@@ -165,10 +165,10 @@
     if (!document.getElementById('catalog-request-script')) {
       const style = document.createElement('link');
       style.rel = 'stylesheet';
-      style.href = '/assets/catalog-request.css?v=1';
+      style.href = '/assets/catalog-request.css?v=2';
       const script = document.createElement('script');
       script.id = 'catalog-request-script';
-      script.src = '/assets/catalog-request.js?v=1';
+      script.src = '/assets/catalog-request.js?v=2';
       script.onload = () => {
         const init = () => { if (window.initCatalogRequest) window.initCatalogRequest(); };
         if (style.sheet) init();
