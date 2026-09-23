@@ -49,7 +49,7 @@
   <a href="${P}/blog/">${L.blog}</a>
   <a href="${P}/videos/">${L.videos}</a>
   <a href="${P}/contact/">${L.contact}</a>
-  <a href="${L.altPath}">${L.langSwitch}</a>
+  <a href="${L.altPath}" class="lang-switch">${L.langSwitch}</a>
   <a href="${P}/contact/">${L.cta}</a>
 </div>`;
 
@@ -105,6 +105,32 @@
   </div>
 </footer>`;
 
+  function languageTarget() {
+    const current = new URL(location.href);
+    const sel = ZH ? 'link[rel="alternate"][hreflang="en"]'
+      : 'link[rel="alternate"][hreflang="zh-Hant"], link[rel="alternate"][hreflang="zh-Hans"]';
+    const alt = document.querySelector(sel);
+    const target = new URL(alt?.href || L.altPath, current);
+    target.search = current.search;
+    target.hash = current.hash;
+    if (/^\/(zh\/)?products\/$/.test(current.pathname)) {
+      const cat = current.searchParams.get('cat');
+      const sub = current.searchParams.get('sub');
+      if (!ZH && ((cat === 'washbasin' && /^(A10|A20|A30|g_above)$/.test(sub)) || cat === 'art')) {
+        target.searchParams.set('cat', 'art');
+        if (sub === 'g_above') target.searchParams.set('sub', 'all');
+      } else if (ZH && cat === 'art') {
+        target.searchParams.set('cat', 'washbasin');
+        target.searchParams.set('sub', !sub || sub === 'all' ? 'g_above' : sub);
+      }
+    }
+    return target.pathname + target.search + target.hash;
+  }
+  window.updateLanguageLinks = function() {
+    const target = languageTarget();
+    document.querySelectorAll('a.lang-switch').forEach((link) => { link.href = target; });
+  };
+
   window.renderShell = function(active){
     // Language switch: prefer the page's declared hreflang alternate so that
     // blog articles (no path-mirrored counterpart) don't 404. Fall back to the
@@ -119,6 +145,10 @@
     const f = document.getElementById('shell-footer');
     if (n) n.outerHTML = NAV(active);
     if (f) f.outerHTML = FOOTER;
+    window.updateLanguageLinks();
+    document.querySelectorAll('a.lang-switch').forEach((link) => {
+      link.addEventListener('click', window.updateLanguageLinks);
+    });
 
     // Floating WhatsApp button — primary inquiry channel, fixed on every page.
     if (!document.querySelector('.wa-float')) {
