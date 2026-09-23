@@ -271,7 +271,7 @@ gtag('config', 'G-J7PPP48QXC');
       if (!src || !frame) return;
       frame.addEventListener('click', function () {
         if (lb.open) return;
-        trigger = frame;
+        trigger = frame.querySelector('.v-play') || frame;
         var v = document.createElement('video');
         v.src = src; v.controls = true; v.autoplay = true; v.playsInline = true;
         v.setAttribute('playsinline', '');
