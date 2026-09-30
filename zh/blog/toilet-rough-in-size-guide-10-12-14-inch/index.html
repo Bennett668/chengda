@@ -22,7 +22,7 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <meta name="theme-color" content="#14171b" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; base-uri 'self'; object-src 'none'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://formsubmit.co https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; base-uri 'self'; object-src 'none'" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta name="robots" content="index, follow" />
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -355,6 +355,29 @@
   .faq-item h3 { margin: 0 0 8px; font-size: 17px; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
   .faq-item p { font-size: 15.5px; line-height: 1.65; color: var(--ink-2); margin: 0; }
 </style>
+<!-- Google tag (gtag.js) -->
+<!-- Chengda browser analytics preference -->
+<script>
+(function () {
+  var key = 'chengda.analytics.exclude.v1';
+  function syncPreference() {
+    try {
+      window['ga-disable-G-J7PPP48QXC'] = window.localStorage.getItem(key) === '1';
+    } catch (error) { /* Storage may be unavailable in restricted browsers. */ }
+  }
+  syncPreference();
+  window.addEventListener('storage', function (event) {
+    if (event.key === key || event.key === null) syncPreference();
+  });
+}());
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J7PPP48QXC"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-J7PPP48QXC');
+</script>
 </head><body>
 
 <div id="shell-nav"></div>
