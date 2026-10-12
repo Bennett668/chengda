@@ -122,6 +122,8 @@
     launcher.className = 'catalog-launch';
     launcher.setAttribute('aria-controls', 'catalog-request');
     launcher.setAttribute('aria-expanded', 'false');
+    launcher.setAttribute('aria-label', text.launch);
+    launcher.title = text.launch;
     launcher.innerHTML = icon('book') + '<span>' + text.launch + '</span>';
     const panel = document.createElement('aside');
     panel.id = 'catalog-request';
@@ -168,7 +170,11 @@
           <button type="button" class="catalog-done">${text.continue}</button>
         </div>
       </div>`;
-    document.body.append(launcher, panel);
+    const contactActions = document.querySelector('.nav-contact-actions');
+    if (contactActions) contactActions.prepend(launcher);
+    else document.body.appendChild(launcher);
+    document.body.appendChild(panel);
+    window.updateContactActions?.();
     const form = panel.querySelector('form');
     const fields = form.querySelector('.catalog-fields');
     const validation = form.querySelector('.catalog-validation');
@@ -211,7 +217,7 @@
       panel.hidden = true;
       launcher.hidden = false;
       launcher.setAttribute('aria-expanded', 'false');
-      if (hadFocus) launcher.focus();
+      if (hadFocus) launcher.focus({preventScroll:true});
     }
     launcher.addEventListener('click', () => open(true));
     panel.querySelectorAll('.catalog-close, .catalog-dismiss, .catalog-done').forEach(button => button.addEventListener('click', close));

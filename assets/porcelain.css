@@ -531,6 +531,7 @@ img, svg { display: block; max-width: 100%; }
 .social-link[data-net="linkedin"]:hover  { background:#0A66C2;  border-color:#0A66C2; }
 
 /* === Floating WhatsApp button (primary inquiry channel) === */
+.nav-contact-actions { display: contents; }
 .wa-float {
   position: fixed; z-index: 90;
   right: max(clamp(16px, 3vw, 32px), env(safe-area-inset-right, 0px));
@@ -549,6 +550,18 @@ img, svg { display: block; max-width: 100%; }
 @media (max-width: 640px) {
   .wa-float { width: 148px; height: 52px; gap: 8px; font-size: 14px; }
   .wa-float svg { width: 27px; height: 27px; }
+}
+@media (max-width: 800px) {
+  .nav-inner { gap: 4px; }
+  .nav-inner .brand { margin-right: auto; }
+  .nav-inner .lang-switch { margin: 0; padding: 0; width: 36px; height: 44px; display: grid; place-items: center; }
+  .nav-contact-actions { display: flex; width: 92px; gap: 4px; align-items: center; justify-content: flex-end; flex: none; }
+  .nav-contact-actions .wa-float { position: static; width: 44px; height: 44px; box-shadow: none; border: 0; }
+  .nav-contact-actions .wa-float span { display: none; }
+  .nav-contact-actions .wa-float svg { width: 25px; height: 25px; }
+  .nav-inner .nav-burger { width: 44px; height: 44px; margin-left: 0; flex: none; align-items: center; }
+  .nav-inner .nav-burger span { width: 24px; }
+  .nav-inner .nav-burger:focus-visible { outline-color: var(--ink); }
 }
 @media (prefers-reduced-motion: reduce) {
   .wa-float, .social-link { transition: none; }

@@ -28,6 +28,11 @@ jobs:
         run: node tools/build-catalog-first-paint.cjs
       - name: Ensure GA4 tracking is present and permitted
         run: python3 tools/check_tracking.py --fix
+      - name: Normalize shared assets and verify release references
+        run: |
+          node tools/sync-shared-assets.cjs --write
+          node tools/sync-shared-assets.cjs --check
+          node --test tools/shared-assets.test.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

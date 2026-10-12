@@ -38,6 +38,7 @@
     </nav>
     <a href="${L.altPath}" class="lang-switch" aria-label="Switch language">${L.langSwitch}</a>
     <a href="${P}/contact/" class="nav-cta">${L.cta}</a>
+    <div class="nav-contact-actions"></div>
     <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -162,13 +163,21 @@
       wa.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">' + WA_PATH + '</svg><span>WhatsApp</span>';
       document.body.appendChild(wa);
     }
+    const mobileContacts = matchMedia('(max-width: 800px)');
+    window.updateContactActions = () => {
+      const target = mobileContacts.matches ? document.querySelector('.nav-contact-actions') : document.body;
+      if (!target) return;
+      document.querySelectorAll('.catalog-launch, .wa-float').forEach(action => target.appendChild(action));
+    };
+    mobileContacts.addEventListener('change', window.updateContactActions);
+    window.updateContactActions();
     if (!document.getElementById('catalog-request-script')) {
       const style = document.createElement('link');
       style.rel = 'stylesheet';
-      style.href = '/assets/catalog-request.css?v=2';
+      style.href = '/assets/catalog-request.css?v=3';
       const script = document.createElement('script');
       script.id = 'catalog-request-script';
-      script.src = '/assets/catalog-request.js?v=2';
+      script.src = '/assets/catalog-request.js?v=3';
       script.onload = () => {
         const init = () => { if (window.initCatalogRequest) window.initCatalogRequest(); };
         if (style.sheet) init();
