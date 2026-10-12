@@ -45,6 +45,8 @@ jobs:
         run: |
           node tools/migrate-product-inquiry.cjs --check
           node --test tools/product-inquiry.test.cjs
+      - name: Guard approved product previews
+        run: node --test tools/product-previews.test.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

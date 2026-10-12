@@ -4,6 +4,36 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 const sharp = require('sharp');
 const root = path.resolve(__dirname, '..');
+const {execFileSync} = require('node:child_process');
+
+async function buildFollowup() {
+  const python = process.env.PYTHON || 'python3';
+  const inventory = JSON.parse(execFileSync(python, ['tools/product_previews.py', '--inventory'], {cwd:root, encoding:'utf8'}));
+  const manifest = {};
+  const digest = buffer => crypto.createHash('sha256').update(buffer).digest('hex');
+  for (const [code, entry] of Object.entries(inventory)) {
+    const target = manifest[code] = {gallery:[], drawings:[]};
+    for (const [kind, sources] of Object.entries(entry)) for (const source of sources) {
+      const original = fs.readFileSync(path.join(root, source));
+      const metadata = await sharp(original).metadata();
+      const item = {source, sourceHash:digest(original), width:metadata.width, height:metadata.height};
+      const previews = [];
+      for (const width of kind === 'gallery' ? [192] : [720,1440]) {
+        const url = kind === 'gallery' ? source.replace(`/${code}/`, `/${code}/thumbs/`) : source.replace('.webp', `-${width}.webp`);
+        const resized = sharp(original).resize(kind === 'gallery'
+          ? {width,height:width,fit:'inside',withoutEnlargement:true} : {width,withoutEnlargement:true});
+        const {data,info} = await resized.webp({quality:kind === 'gallery'?90:92}).toBuffer({resolveWithObject:true});
+        fs.mkdirSync(path.dirname(path.join(root,url)), {recursive:true});
+        fs.writeFileSync(path.join(root,url),data);
+        previews.push({url,width:info.width,height:info.height,bytes:data.length,hash:digest(data)});
+      }
+      if(kind === 'gallery') item.thumbnail=previews[0]; else item.previews=previews;
+      target[kind].push(item);
+    }
+  }
+  fs.writeFileSync(path.join(root,'tools/product-previews.json'),JSON.stringify(manifest,null,2)+'\n');
+  execFileSync(python,['tools/product_previews.py','--write'],{cwd:root,stdio:'inherit'});
+}
 
 async function build() {
   const marks = {};
@@ -38,4 +68,4 @@ async function build() {
   }
   console.log(`Built ${seen.size} distinct flush marks, 10 thumbnails and 2 drawing previews.`);
 }
-build().catch(error => { console.error(error); process.exitCode = 1; });
+(process.argv.includes('--followup') ? buildFollowup() : build()).catch(error => { console.error(error); process.exitCode = 1; });
