@@ -52,7 +52,8 @@ for (const lang of ['', 'zh/']) {
         if (m[0].includes('application/ld+json')) JSON.parse(m[1]);
         else new vm.Script(m[1]);
       }
-      assert.ok(html.includes('inquiryList'));
+      assert.match(html, /id="addInquiry"/);
+      assert.match(html, /src="\/assets\/product-inquiry\.js\?v=1" defer/);
     });
   }
 }

@@ -444,31 +444,7 @@ gtag('config', 'G-J7PPP48QXC');
 <script src="/assets/product-gallery.js?v=1" defer></script>
 <script src="/assets/site-shell.js?v=15" defer></script>
 <script>document.addEventListener('DOMContentLoaded',()=>renderShell('products'));</script>
-<script>
-(() => {
-  const addBtn = document.getElementById('addInquiry');
-  if (addBtn) {
-    addBtn.addEventListener('click', () => {
-      const list = JSON.parse(localStorage.getItem('inquiryList') || '[]');
-      if (!list.includes('PB220')) {
-        list.push('PB220');
-        localStorage.setItem('inquiryList', JSON.stringify(list));
-        addBtn.textContent = '✓ 已加入詢價清單';
-        addBtn.disabled = true;
-        addBtn.style.opacity = '0.6';
-      } else {
-        addBtn.textContent = '✓ 已在詢價清單中';
-      }
-    });
-    const list = JSON.parse(localStorage.getItem('inquiryList') || '[]');
-    if (list.includes('PB220')) {
-      addBtn.textContent = '✓ 已加入詢價清單';
-      addBtn.disabled = true;
-      addBtn.style.opacity = '0.6';
-    }
-  }
-})();
-</script>
+<script src="/assets/product-inquiry.js?v=1" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

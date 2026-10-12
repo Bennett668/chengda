@@ -438,32 +438,7 @@ gtag('config', 'G-J7PPP48QXC');
 <script src="/assets/product-gallery.js?v=1" defer></script>
 <script src="/assets/site-shell.js?v=15" defer></script>
 <script>document.addEventListener('DOMContentLoaded',()=>renderShell('products'));</script>
-<script>
-(() => {
-  const addBtn = document.getElementById('addInquiry');
-  if (addBtn) {
-    addBtn.addEventListener('click', () => {
-      const list = JSON.parse(localStorage.getItem('inquiryList') || '[]');
-      if (!list.includes('A205')) {
-        list.push('A205');
-        localStorage.setItem('inquiryList', JSON.stringify(list));
-        addBtn.textContent = '✓ Added to Inquiry List';
-        addBtn.disabled = true;
-        addBtn.style.opacity = '0.6';
-      } else {
-        addBtn.textContent = '✓ Already in Inquiry List';
-      }
-    });
-    // On load, check if already in list
-    const list = JSON.parse(localStorage.getItem('inquiryList') || '[]');
-    if (list.includes('A205')) {
-      addBtn.textContent = '✓ In Inquiry List';
-      addBtn.disabled = true;
-      addBtn.style.opacity = '0.6';
-    }
-  }
-})();
-</script>
+<script src="/assets/product-inquiry.js?v=1" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

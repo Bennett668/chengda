@@ -28,7 +28,8 @@ for (const lang of ['', 'zh/']) {
         else new vm.Script(m[1]);
       }
       assert.ok(html.includes(`rel="canonical" href="https://www.gdchengda.hk/${lang}products/${p.sku}/"`));
-      assert.ok(html.includes(`list.push('${p.sku}')`));
+      assert.match(html, /id="addInquiry"/);
+      assert.match(html, /src="\/assets\/product-inquiry\.js\?v=1" defer/);
       const catalog = fs.readFileSync(path.join(root, lang, 'products/index.html'), 'utf8');
       assert.equal((catalog.match(new RegExp(`code:"${p.sku}"`, 'g')) || []).length, 1);
       const record = catalog.match(new RegExp(`\\{code:"${p.sku}"[^}]+\\}`))[0];

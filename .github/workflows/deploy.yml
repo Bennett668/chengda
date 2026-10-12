@@ -41,6 +41,10 @@ jobs:
         run: |
           python3 tools/product_media.py
           python3 tools/product_media_test.py
+      - name: Guard product inquiry state
+        run: |
+          node tools/migrate-product-inquiry.cjs --check
+          node --test tools/product-inquiry.test.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
