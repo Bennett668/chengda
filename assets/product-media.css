@@ -1,0 +1,26 @@
+.pd-media .pd-thumbs {
+  grid-template-columns: repeat(auto-fit, minmax(44px, 1fr));
+}
+.pd-tech-draws.product-drawings {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.product-drawings .pd-tech-draw {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-drawings .pd-tech-draw img {
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: contain;
+}
+@media (max-width: 560px) {
+  .pd { grid-template-columns: minmax(0, 1fr); }
+  .pd > * { min-width: 0; }
+  .pd-features { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pd-specs { grid-template-columns: 96px minmax(0, 1fr); column-gap: 14px; }
+  .pd-specs .v { overflow-wrap: anywhere; }
+  .pd-tech-draws.product-drawings { grid-template-columns: minmax(0, 1fr); }
+}

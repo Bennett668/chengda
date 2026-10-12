@@ -1,0 +1,4283 @@
+{
+  "source": "Existing published same-model English galleries; reviewed Traditional Chinese unique photos retained in both languages. No source media deleted.",
+  "products": {
+    "A101": {
+      "main": "/assets/products/A101/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A101/gallery/lead.webp",
+          "thumb": "/assets/products/A101/gallery/u0-sm.webp",
+          "alt": "A101 studio render",
+          "zhAlt": "A101 產品主圖"
+        },
+        {
+          "src": "/assets/products/A101/gallery/u1.webp",
+          "thumb": "/assets/products/A101/gallery/u1-sm.webp",
+          "alt": "A101 product photo 1",
+          "zhAlt": "A101 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A101/gallery/u2.webp",
+          "thumb": "/assets/products/A101/gallery/u2-sm.webp",
+          "alt": "A101 product photo 2",
+          "zhAlt": "A101 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A101/gallery/u3.webp",
+          "thumb": "/assets/products/A101/gallery/u3-sm.webp",
+          "alt": "A101 product photo 3",
+          "zhAlt": "A101 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A101/gallery/u4.webp",
+          "thumb": "/assets/products/A101/gallery/u4-sm.webp",
+          "alt": "A101 product photo 4",
+          "zhAlt": "A101 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A101/gallery/u5.webp",
+          "thumb": "/assets/products/A101/gallery/u5-sm.webp",
+          "alt": "A101 product photo 5",
+          "zhAlt": "A101 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A101/gallery/u6.webp",
+          "thumb": "/assets/products/A101/gallery/u6-sm.webp",
+          "alt": "A101 product photo 6",
+          "zhAlt": "A101 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A101/gallery/u7.webp",
+          "thumb": "/assets/products/A101/gallery/u7-sm.webp",
+          "alt": "A101 product photo 7",
+          "zhAlt": "A101 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A101/gallery/u8.webp",
+          "thumb": "/assets/products/A101/gallery/u8-sm.webp",
+          "alt": "A101 product photo 8",
+          "zhAlt": "A101 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A101/gallery/u9.webp",
+          "thumb": "/assets/products/A101/gallery/u9-sm.webp",
+          "alt": "A101 product photo 9",
+          "zhAlt": "A101 產品照片 9"
+        },
+        {
+          "src": "/assets/products/A101/gallery/u10.webp",
+          "thumb": "/assets/products/A101/gallery/u10-sm.webp",
+          "alt": "A101 product photo 10",
+          "zhAlt": "A101 產品照片 10"
+        },
+        {
+          "src": "/assets/products/A101/gallery/u11.webp",
+          "thumb": "/assets/products/A101/gallery/u11-sm.webp",
+          "alt": "A101 product photo 11",
+          "zhAlt": "A101 產品照片 11"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A101/dim-1.webp",
+        "/assets/products/A101/dim-2.webp"
+      ]
+    },
+    "A102": {
+      "main": "/assets/products/A102/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A102/gallery/lead.webp",
+          "thumb": "/assets/products/A102/gallery/u0-sm.webp",
+          "alt": "A102 studio render",
+          "zhAlt": "A102 產品主圖"
+        },
+        {
+          "src": "/assets/products/A102/gallery/u1.webp",
+          "thumb": "/assets/products/A102/gallery/u1-sm.webp",
+          "alt": "A102 product photo 1",
+          "zhAlt": "A102 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A102/gallery/u2.webp",
+          "thumb": "/assets/products/A102/gallery/u2-sm.webp",
+          "alt": "A102 product photo 2",
+          "zhAlt": "A102 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A102/gallery/u3.webp",
+          "thumb": "/assets/products/A102/gallery/u3-sm.webp",
+          "alt": "A102 product photo 3",
+          "zhAlt": "A102 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A102/gallery/u4.webp",
+          "thumb": "/assets/products/A102/gallery/u4-sm.webp",
+          "alt": "A102 product photo 4",
+          "zhAlt": "A102 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A102/gallery/u5.webp",
+          "thumb": "/assets/products/A102/gallery/u5-sm.webp",
+          "alt": "A102 product photo 5",
+          "zhAlt": "A102 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A102/gallery/u6.webp",
+          "thumb": "/assets/products/A102/gallery/u6-sm.webp",
+          "alt": "A102 product photo 6",
+          "zhAlt": "A102 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A102/gallery/u7.webp",
+          "thumb": "/assets/products/A102/gallery/u7-sm.webp",
+          "alt": "A102 product photo 7",
+          "zhAlt": "A102 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A102/gallery/u8.webp",
+          "thumb": "/assets/products/A102/gallery/u8-sm.webp",
+          "alt": "A102 product photo 8",
+          "zhAlt": "A102 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A102/gallery/u9.webp",
+          "thumb": "/assets/products/A102/gallery/u9-sm.webp",
+          "alt": "A102 product photo 9",
+          "zhAlt": "A102 產品照片 9"
+        },
+        {
+          "src": "/assets/products/A102/gallery/u10.webp",
+          "thumb": "/assets/products/A102/gallery/u10-sm.webp",
+          "alt": "A102 product photo 10",
+          "zhAlt": "A102 產品照片 10"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A102/dim-1.webp",
+        "/assets/products/A102/dim-2.webp"
+      ]
+    },
+    "A103": {
+      "main": "/assets/products/A103/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A103/gallery/lead.webp",
+          "thumb": "/assets/products/A103/gallery/u0-sm.webp",
+          "alt": "A103 studio render",
+          "zhAlt": "A103 產品主圖"
+        },
+        {
+          "src": "/assets/products/A103/gallery/u1.webp",
+          "thumb": "/assets/products/A103/gallery/u1-sm.webp",
+          "alt": "A103 product photo 1",
+          "zhAlt": "A103 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A103/gallery/u2.webp",
+          "thumb": "/assets/products/A103/gallery/u2-sm.webp",
+          "alt": "A103 product photo 2",
+          "zhAlt": "A103 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A103/gallery/u3.webp",
+          "thumb": "/assets/products/A103/gallery/u3-sm.webp",
+          "alt": "A103 product photo 3",
+          "zhAlt": "A103 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A103/gallery/u4.webp",
+          "thumb": "/assets/products/A103/gallery/u4-sm.webp",
+          "alt": "A103 product photo 4",
+          "zhAlt": "A103 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A103/gallery/u5.webp",
+          "thumb": "/assets/products/A103/gallery/u5-sm.webp",
+          "alt": "A103 product photo 5",
+          "zhAlt": "A103 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A103/gallery/u6.webp",
+          "thumb": "/assets/products/A103/gallery/u6-sm.webp",
+          "alt": "A103 product photo 6",
+          "zhAlt": "A103 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A103/gallery/u7.webp",
+          "thumb": "/assets/products/A103/gallery/u7-sm.webp",
+          "alt": "A103 product photo 7",
+          "zhAlt": "A103 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A103/gallery/u8.webp",
+          "thumb": "/assets/products/A103/gallery/u8-sm.webp",
+          "alt": "A103 product photo 8",
+          "zhAlt": "A103 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A103/gallery/u9.webp",
+          "thumb": "/assets/products/A103/gallery/u9-sm.webp",
+          "alt": "A103 product photo 9",
+          "zhAlt": "A103 產品照片 9"
+        },
+        {
+          "src": "/assets/products/A103/gallery/u10.webp",
+          "thumb": "/assets/products/A103/gallery/u10-sm.webp",
+          "alt": "A103 product photo 10",
+          "zhAlt": "A103 產品照片 10"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A103/dim-1.webp",
+        "/assets/products/A103/dim-2.webp"
+      ]
+    },
+    "A104": {
+      "main": "/assets/products/A104/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A104/gallery/lead.webp",
+          "thumb": "/assets/products/A104/gallery/u0-sm.webp",
+          "alt": "A104 studio render",
+          "zhAlt": "A104 產品主圖"
+        },
+        {
+          "src": "/assets/products/A104/gallery/u1.webp",
+          "thumb": "/assets/products/A104/gallery/u1-sm.webp",
+          "alt": "A104 product photo 1",
+          "zhAlt": "A104 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A104/gallery/u2.webp",
+          "thumb": "/assets/products/A104/gallery/u2-sm.webp",
+          "alt": "A104 product photo 2",
+          "zhAlt": "A104 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A104/gallery/u3.webp",
+          "thumb": "/assets/products/A104/gallery/u3-sm.webp",
+          "alt": "A104 product photo 3",
+          "zhAlt": "A104 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A104/gallery/u4.webp",
+          "thumb": "/assets/products/A104/gallery/u4-sm.webp",
+          "alt": "A104 product photo 4",
+          "zhAlt": "A104 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A104/gallery/u5.webp",
+          "thumb": "/assets/products/A104/gallery/u5-sm.webp",
+          "alt": "A104 product photo 5",
+          "zhAlt": "A104 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A104/gallery/u6.webp",
+          "thumb": "/assets/products/A104/gallery/u6-sm.webp",
+          "alt": "A104 product photo 6",
+          "zhAlt": "A104 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A104/gallery/u7.webp",
+          "thumb": "/assets/products/A104/gallery/u7-sm.webp",
+          "alt": "A104 product photo 7",
+          "zhAlt": "A104 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A104/gallery/u8.webp",
+          "thumb": "/assets/products/A104/gallery/u8-sm.webp",
+          "alt": "A104 product photo 8",
+          "zhAlt": "A104 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A104/gallery/u9.webp",
+          "thumb": "/assets/products/A104/gallery/u9-sm.webp",
+          "alt": "A104 product photo 9",
+          "zhAlt": "A104 產品照片 9"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A104/dim-1.webp",
+        "/assets/products/A104/dim-2.webp"
+      ]
+    },
+    "A105": {
+      "main": "/assets/products/A105/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A105/gallery/lead.webp",
+          "thumb": "/assets/products/A105/gallery/u0-sm.webp",
+          "alt": "A105 studio render",
+          "zhAlt": "A105 產品主圖"
+        },
+        {
+          "src": "/assets/products/A105/gallery/u1.webp",
+          "thumb": "/assets/products/A105/gallery/u1-sm.webp",
+          "alt": "A105 product photo 1",
+          "zhAlt": "A105 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A105/gallery/u2.webp",
+          "thumb": "/assets/products/A105/gallery/u2-sm.webp",
+          "alt": "A105 product photo 2",
+          "zhAlt": "A105 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A105/gallery/u3.webp",
+          "thumb": "/assets/products/A105/gallery/u3-sm.webp",
+          "alt": "A105 product photo 3",
+          "zhAlt": "A105 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A105/gallery/u4.webp",
+          "thumb": "/assets/products/A105/gallery/u4-sm.webp",
+          "alt": "A105 product photo 4",
+          "zhAlt": "A105 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A105/gallery/u5.webp",
+          "thumb": "/assets/products/A105/gallery/u5-sm.webp",
+          "alt": "A105 product photo 5",
+          "zhAlt": "A105 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A105/gallery/u6.webp",
+          "thumb": "/assets/products/A105/gallery/u6-sm.webp",
+          "alt": "A105 product photo 6",
+          "zhAlt": "A105 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A105/gallery/u7.webp",
+          "thumb": "/assets/products/A105/gallery/u7-sm.webp",
+          "alt": "A105 product photo 7",
+          "zhAlt": "A105 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A105/gallery/u8.webp",
+          "thumb": "/assets/products/A105/gallery/u8-sm.webp",
+          "alt": "A105 product photo 8",
+          "zhAlt": "A105 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A105/gallery/u9.webp",
+          "thumb": "/assets/products/A105/gallery/u9-sm.webp",
+          "alt": "A105 product photo 9",
+          "zhAlt": "A105 產品照片 9"
+        },
+        {
+          "src": "/assets/products/A105/gallery/u10.webp",
+          "thumb": "/assets/products/A105/gallery/u10-sm.webp",
+          "alt": "A105 product photo 10",
+          "zhAlt": "A105 產品照片 10"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A105/dim-1.webp",
+        "/assets/products/A105/dim-2.webp"
+      ]
+    },
+    "A106": {
+      "main": "/assets/products/A106/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A106/gallery/lead.webp",
+          "thumb": "/assets/products/A106/gallery/u0-sm.webp",
+          "alt": "A106 studio render",
+          "zhAlt": "A106 產品主圖"
+        },
+        {
+          "src": "/assets/products/A106/gallery/u1.webp",
+          "thumb": "/assets/products/A106/gallery/u1-sm.webp",
+          "alt": "A106 product photo 1",
+          "zhAlt": "A106 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A106/gallery/u2.webp",
+          "thumb": "/assets/products/A106/gallery/u2-sm.webp",
+          "alt": "A106 product photo 2",
+          "zhAlt": "A106 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A106/gallery/u3.webp",
+          "thumb": "/assets/products/A106/gallery/u3-sm.webp",
+          "alt": "A106 product photo 3",
+          "zhAlt": "A106 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A106/gallery/u4.webp",
+          "thumb": "/assets/products/A106/gallery/u4-sm.webp",
+          "alt": "A106 product photo 4",
+          "zhAlt": "A106 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A106/gallery/u5.webp",
+          "thumb": "/assets/products/A106/gallery/u5-sm.webp",
+          "alt": "A106 product photo 5",
+          "zhAlt": "A106 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A106/gallery/u6.webp",
+          "thumb": "/assets/products/A106/gallery/u6-sm.webp",
+          "alt": "A106 product photo 6",
+          "zhAlt": "A106 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A106/gallery/u7.webp",
+          "thumb": "/assets/products/A106/gallery/u7-sm.webp",
+          "alt": "A106 product photo 7",
+          "zhAlt": "A106 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A106/gallery/u8.webp",
+          "thumb": "/assets/products/A106/gallery/u8-sm.webp",
+          "alt": "A106 product photo 8",
+          "zhAlt": "A106 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A106/gallery/u9.webp",
+          "thumb": "/assets/products/A106/gallery/u9-sm.webp",
+          "alt": "A106 product photo 9",
+          "zhAlt": "A106 產品照片 9"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A106/dim-1.webp",
+        "/assets/products/A106/dim-2.webp"
+      ]
+    },
+    "A201": {
+      "main": "/assets/products/A201/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A201/gallery/lead.webp",
+          "thumb": "/assets/products/A201/gallery/u0-sm.webp",
+          "alt": "A201 studio render",
+          "zhAlt": "A201 產品主圖"
+        },
+        {
+          "src": "/assets/products/A201/gallery/u1.webp",
+          "thumb": "/assets/products/A201/gallery/u1-sm.webp",
+          "alt": "A201 product photo 1",
+          "zhAlt": "A201 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A201/gallery/u2.webp",
+          "thumb": "/assets/products/A201/gallery/u2-sm.webp",
+          "alt": "A201 product photo 2",
+          "zhAlt": "A201 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A201/gallery/u3.webp",
+          "thumb": "/assets/products/A201/gallery/u3-sm.webp",
+          "alt": "A201 product photo 3",
+          "zhAlt": "A201 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A201/gallery/u4.webp",
+          "thumb": "/assets/products/A201/gallery/u4-sm.webp",
+          "alt": "A201 product photo 4",
+          "zhAlt": "A201 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A201/gallery/u5.webp",
+          "thumb": "/assets/products/A201/gallery/u5-sm.webp",
+          "alt": "A201 product photo 5",
+          "zhAlt": "A201 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A201/gallery/u6.webp",
+          "thumb": "/assets/products/A201/gallery/u6-sm.webp",
+          "alt": "A201 product photo 6",
+          "zhAlt": "A201 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A201/gallery/u7.webp",
+          "thumb": "/assets/products/A201/gallery/u7-sm.webp",
+          "alt": "A201 product photo 7",
+          "zhAlt": "A201 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A201/gallery/u8.webp",
+          "thumb": "/assets/products/A201/gallery/u8-sm.webp",
+          "alt": "A201 product photo 8",
+          "zhAlt": "A201 產品照片 8"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A201/dim-1.webp",
+        "/assets/products/A201/dim-2.webp"
+      ]
+    },
+    "A202": {
+      "main": "/assets/products/A202/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A202/gallery/lead.webp",
+          "thumb": "/assets/products/A202/gallery/u0-sm.webp",
+          "alt": "A202 studio render",
+          "zhAlt": "A202 產品主圖"
+        },
+        {
+          "src": "/assets/products/A202/gallery/u1.webp",
+          "thumb": "/assets/products/A202/gallery/u1-sm.webp",
+          "alt": "A202 product photo 1",
+          "zhAlt": "A202 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A202/gallery/u2.webp",
+          "thumb": "/assets/products/A202/gallery/u2-sm.webp",
+          "alt": "A202 product photo 2",
+          "zhAlt": "A202 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A202/gallery/u3.webp",
+          "thumb": "/assets/products/A202/gallery/u3-sm.webp",
+          "alt": "A202 product photo 3",
+          "zhAlt": "A202 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A202/gallery/u4.webp",
+          "thumb": "/assets/products/A202/gallery/u4-sm.webp",
+          "alt": "A202 product photo 4",
+          "zhAlt": "A202 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A202/gallery/u5.webp",
+          "thumb": "/assets/products/A202/gallery/u5-sm.webp",
+          "alt": "A202 product photo 5",
+          "zhAlt": "A202 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A202/gallery/u6.webp",
+          "thumb": "/assets/products/A202/gallery/u6-sm.webp",
+          "alt": "A202 product photo 6",
+          "zhAlt": "A202 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A202/gallery/u7.webp",
+          "thumb": "/assets/products/A202/gallery/u7-sm.webp",
+          "alt": "A202 product photo 7",
+          "zhAlt": "A202 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A202/gallery/u8.webp",
+          "thumb": "/assets/products/A202/gallery/u8-sm.webp",
+          "alt": "A202 product photo 8",
+          "zhAlt": "A202 產品照片 8"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A202/dim-1.webp",
+        "/assets/products/A202/dim-2.webp"
+      ]
+    },
+    "A203": {
+      "main": "/assets/products/A203/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A203/gallery/lead.webp",
+          "thumb": "/assets/products/A203/gallery/u0-sm.webp",
+          "alt": "A203 studio render",
+          "zhAlt": "A203 產品主圖"
+        },
+        {
+          "src": "/assets/products/A203/gallery/u1.webp",
+          "thumb": "/assets/products/A203/gallery/u1-sm.webp",
+          "alt": "A203 product photo 1",
+          "zhAlt": "A203 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A203/gallery/u2.webp",
+          "thumb": "/assets/products/A203/gallery/u2-sm.webp",
+          "alt": "A203 product photo 2",
+          "zhAlt": "A203 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A203/gallery/u3.webp",
+          "thumb": "/assets/products/A203/gallery/u3-sm.webp",
+          "alt": "A203 product photo 3",
+          "zhAlt": "A203 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A203/gallery/u4.webp",
+          "thumb": "/assets/products/A203/gallery/u4-sm.webp",
+          "alt": "A203 product photo 4",
+          "zhAlt": "A203 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A203/gallery/u5.webp",
+          "thumb": "/assets/products/A203/gallery/u5-sm.webp",
+          "alt": "A203 product photo 5",
+          "zhAlt": "A203 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A203/gallery/u6.webp",
+          "thumb": "/assets/products/A203/gallery/u6-sm.webp",
+          "alt": "A203 product photo 6",
+          "zhAlt": "A203 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A203/gallery/u7.webp",
+          "thumb": "/assets/products/A203/gallery/u7-sm.webp",
+          "alt": "A203 product photo 7",
+          "zhAlt": "A203 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A203/gallery/u8.webp",
+          "thumb": "/assets/products/A203/gallery/u8-sm.webp",
+          "alt": "A203 product photo 8",
+          "zhAlt": "A203 產品照片 8"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A203/dim-1.webp",
+        "/assets/products/A203/dim-2.webp"
+      ]
+    },
+    "A204": {
+      "main": "/assets/products/A204/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A204/gallery/lead.webp",
+          "thumb": "/assets/products/A204/gallery/u0-sm.webp",
+          "alt": "A204 studio render",
+          "zhAlt": "A204 產品主圖"
+        },
+        {
+          "src": "/assets/products/A204/gallery/u1.webp",
+          "thumb": "/assets/products/A204/gallery/u1-sm.webp",
+          "alt": "A204 product photo 1",
+          "zhAlt": "A204 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A204/gallery/u2.webp",
+          "thumb": "/assets/products/A204/gallery/u2-sm.webp",
+          "alt": "A204 product photo 2",
+          "zhAlt": "A204 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A204/gallery/u3.webp",
+          "thumb": "/assets/products/A204/gallery/u3-sm.webp",
+          "alt": "A204 product photo 3",
+          "zhAlt": "A204 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A204/gallery/u4.webp",
+          "thumb": "/assets/products/A204/gallery/u4-sm.webp",
+          "alt": "A204 product photo 4",
+          "zhAlt": "A204 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A204/gallery/u5.webp",
+          "thumb": "/assets/products/A204/gallery/u5-sm.webp",
+          "alt": "A204 product photo 5",
+          "zhAlt": "A204 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A204/gallery/u6.webp",
+          "thumb": "/assets/products/A204/gallery/u6-sm.webp",
+          "alt": "A204 product photo 6",
+          "zhAlt": "A204 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A204/gallery/u7.webp",
+          "thumb": "/assets/products/A204/gallery/u7-sm.webp",
+          "alt": "A204 product photo 7",
+          "zhAlt": "A204 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A204/gallery/u8.webp",
+          "thumb": "/assets/products/A204/gallery/u8-sm.webp",
+          "alt": "A204 product photo 8",
+          "zhAlt": "A204 產品照片 8"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A204/dim-1.webp",
+        "/assets/products/A204/dim-2.webp"
+      ]
+    },
+    "A205": {
+      "main": "/assets/products/A205/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A205/gallery/lead.webp",
+          "thumb": "/assets/products/A205/gallery/u0-sm.webp",
+          "alt": "A205 studio render",
+          "zhAlt": "A205 產品主圖"
+        },
+        {
+          "src": "/assets/products/A205/gallery/u1.webp",
+          "thumb": "/assets/products/A205/gallery/u1-sm.webp",
+          "alt": "A205 product photo 1",
+          "zhAlt": "A205 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A205/gallery/u2.webp",
+          "thumb": "/assets/products/A205/gallery/u2-sm.webp",
+          "alt": "A205 product photo 2",
+          "zhAlt": "A205 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A205/gallery/u3.webp",
+          "thumb": "/assets/products/A205/gallery/u3-sm.webp",
+          "alt": "A205 product photo 3",
+          "zhAlt": "A205 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A205/gallery/u4.webp",
+          "thumb": "/assets/products/A205/gallery/u4-sm.webp",
+          "alt": "A205 product photo 4",
+          "zhAlt": "A205 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A205/gallery/u5.webp",
+          "thumb": "/assets/products/A205/gallery/u5-sm.webp",
+          "alt": "A205 product photo 5",
+          "zhAlt": "A205 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A205/gallery/u6.webp",
+          "thumb": "/assets/products/A205/gallery/u6-sm.webp",
+          "alt": "A205 product photo 6",
+          "zhAlt": "A205 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A205/gallery/u7.webp",
+          "thumb": "/assets/products/A205/gallery/u7-sm.webp",
+          "alt": "A205 product photo 7",
+          "zhAlt": "A205 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A205/gallery/u8.webp",
+          "thumb": "/assets/products/A205/gallery/u8-sm.webp",
+          "alt": "A205 product photo 8",
+          "zhAlt": "A205 產品照片 8"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A205/dim-1.webp",
+        "/assets/products/A205/dim-2.webp"
+      ]
+    },
+    "A206": {
+      "main": "/assets/products/A206/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A206/gallery/lead.webp",
+          "thumb": "/assets/products/A206/gallery/u0-sm.webp",
+          "alt": "A206 studio render",
+          "zhAlt": "A206 產品主圖"
+        },
+        {
+          "src": "/assets/products/A206/gallery/u1.webp",
+          "thumb": "/assets/products/A206/gallery/u1-sm.webp",
+          "alt": "A206 product photo 1",
+          "zhAlt": "A206 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A206/gallery/u2.webp",
+          "thumb": "/assets/products/A206/gallery/u2-sm.webp",
+          "alt": "A206 product photo 2",
+          "zhAlt": "A206 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A206/gallery/u3.webp",
+          "thumb": "/assets/products/A206/gallery/u3-sm.webp",
+          "alt": "A206 product photo 3",
+          "zhAlt": "A206 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A206/gallery/u4.webp",
+          "thumb": "/assets/products/A206/gallery/u4-sm.webp",
+          "alt": "A206 product photo 4",
+          "zhAlt": "A206 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A206/gallery/u5.webp",
+          "thumb": "/assets/products/A206/gallery/u5-sm.webp",
+          "alt": "A206 product photo 5",
+          "zhAlt": "A206 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A206/gallery/u6.webp",
+          "thumb": "/assets/products/A206/gallery/u6-sm.webp",
+          "alt": "A206 product photo 6",
+          "zhAlt": "A206 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A206/gallery/u7.webp",
+          "thumb": "/assets/products/A206/gallery/u7-sm.webp",
+          "alt": "A206 product photo 7",
+          "zhAlt": "A206 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A206/gallery/u8.webp",
+          "thumb": "/assets/products/A206/gallery/u8-sm.webp",
+          "alt": "A206 product photo 8",
+          "zhAlt": "A206 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A206/gallery/u9.webp",
+          "thumb": "/assets/products/A206/gallery/u9-sm.webp",
+          "alt": "A206 product photo 9",
+          "zhAlt": "A206 產品照片 9"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A206/dim-1.webp",
+        "/assets/products/A206/dim-2.webp"
+      ]
+    },
+    "A207": {
+      "main": "/assets/products/A207/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A207/gallery/lead.webp",
+          "thumb": "/assets/products/A207/gallery/u0-sm.webp",
+          "alt": "A207 studio render",
+          "zhAlt": "A207 產品主圖"
+        },
+        {
+          "src": "/assets/products/A207/gallery/u1.webp",
+          "thumb": "/assets/products/A207/gallery/u1-sm.webp",
+          "alt": "A207 product photo 1",
+          "zhAlt": "A207 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A207/gallery/u2.webp",
+          "thumb": "/assets/products/A207/gallery/u2-sm.webp",
+          "alt": "A207 product photo 2",
+          "zhAlt": "A207 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A207/gallery/u3.webp",
+          "thumb": "/assets/products/A207/gallery/u3-sm.webp",
+          "alt": "A207 product photo 3",
+          "zhAlt": "A207 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A207/gallery/u4.webp",
+          "thumb": "/assets/products/A207/gallery/u4-sm.webp",
+          "alt": "A207 product photo 4",
+          "zhAlt": "A207 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A207/gallery/u5.webp",
+          "thumb": "/assets/products/A207/gallery/u5-sm.webp",
+          "alt": "A207 product photo 5",
+          "zhAlt": "A207 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A207/gallery/u6.webp",
+          "thumb": "/assets/products/A207/gallery/u6-sm.webp",
+          "alt": "A207 product photo 6",
+          "zhAlt": "A207 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A207/gallery/u7.webp",
+          "thumb": "/assets/products/A207/gallery/u7-sm.webp",
+          "alt": "A207 product photo 7",
+          "zhAlt": "A207 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A207/gallery/u8.webp",
+          "thumb": "/assets/products/A207/gallery/u8-sm.webp",
+          "alt": "A207 product photo 8",
+          "zhAlt": "A207 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A207/gallery/u9.webp",
+          "thumb": "/assets/products/A207/gallery/u9-sm.webp",
+          "alt": "A207 product photo 9",
+          "zhAlt": "A207 產品照片 9"
+        },
+        {
+          "src": "/assets/products/A207/gallery/u10.webp",
+          "thumb": "/assets/products/A207/gallery/u10-sm.webp",
+          "alt": "A207 product photo 10",
+          "zhAlt": "A207 產品照片 10"
+        },
+        {
+          "src": "/assets/products/A207/gallery/u11.webp",
+          "thumb": "/assets/products/A207/gallery/u11-sm.webp",
+          "alt": "A207 product photo 11",
+          "zhAlt": "A207 產品照片 11"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A207/dim-1.webp",
+        "/assets/products/A207/dim-2.webp"
+      ]
+    },
+    "A208": {
+      "main": "/assets/products/A208/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A208/gallery/lead.webp",
+          "thumb": "/assets/products/A208/gallery/u0-sm.webp",
+          "alt": "A208 studio render",
+          "zhAlt": "A208 產品主圖"
+        },
+        {
+          "src": "/assets/products/A208/gallery/u1.webp",
+          "thumb": "/assets/products/A208/gallery/u1-sm.webp",
+          "alt": "A208 product photo 1",
+          "zhAlt": "A208 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A208/gallery/u2.webp",
+          "thumb": "/assets/products/A208/gallery/u2-sm.webp",
+          "alt": "A208 product photo 2",
+          "zhAlt": "A208 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A208/gallery/u3.webp",
+          "thumb": "/assets/products/A208/gallery/u3-sm.webp",
+          "alt": "A208 product photo 3",
+          "zhAlt": "A208 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A208/gallery/u4.webp",
+          "thumb": "/assets/products/A208/gallery/u4-sm.webp",
+          "alt": "A208 product photo 4",
+          "zhAlt": "A208 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A208/gallery/u5.webp",
+          "thumb": "/assets/products/A208/gallery/u5-sm.webp",
+          "alt": "A208 product photo 5",
+          "zhAlt": "A208 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A208/gallery/u6.webp",
+          "thumb": "/assets/products/A208/gallery/u6-sm.webp",
+          "alt": "A208 product photo 6",
+          "zhAlt": "A208 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A208/gallery/u7.webp",
+          "thumb": "/assets/products/A208/gallery/u7-sm.webp",
+          "alt": "A208 product photo 7",
+          "zhAlt": "A208 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A208/gallery/u8.webp",
+          "thumb": "/assets/products/A208/gallery/u8-sm.webp",
+          "alt": "A208 product photo 8",
+          "zhAlt": "A208 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A208/gallery/u9.webp",
+          "thumb": "/assets/products/A208/gallery/u9-sm.webp",
+          "alt": "A208 product photo 9",
+          "zhAlt": "A208 產品照片 9"
+        },
+        {
+          "src": "/assets/products/A208/gallery/u10.webp",
+          "thumb": "/assets/products/A208/gallery/u10-sm.webp",
+          "alt": "A208 product photo 10",
+          "zhAlt": "A208 產品照片 10"
+        },
+        {
+          "src": "/assets/products/A208/gallery/u11.webp",
+          "thumb": "/assets/products/A208/gallery/u11-sm.webp",
+          "alt": "A208 product photo 11",
+          "zhAlt": "A208 產品照片 11"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A208/dim-1.webp",
+        "/assets/products/A208/dim-2.webp"
+      ]
+    },
+    "A301": {
+      "main": "/assets/products/A301/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A301/gallery/lead.webp",
+          "thumb": "/assets/products/A301/gallery/u0-sm.webp",
+          "alt": "A301 studio render",
+          "zhAlt": "A301 產品主圖"
+        },
+        {
+          "src": "/assets/products/A301/gallery/u1.webp",
+          "thumb": "/assets/products/A301/gallery/u1-sm.webp",
+          "alt": "A301 product photo 1",
+          "zhAlt": "A301 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A301/gallery/u2.webp",
+          "thumb": "/assets/products/A301/gallery/u2-sm.webp",
+          "alt": "A301 product photo 2",
+          "zhAlt": "A301 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A301/gallery/u3.webp",
+          "thumb": "/assets/products/A301/gallery/u3-sm.webp",
+          "alt": "A301 product photo 3",
+          "zhAlt": "A301 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A301/gallery/u4.webp",
+          "thumb": "/assets/products/A301/gallery/u4-sm.webp",
+          "alt": "A301 product photo 4",
+          "zhAlt": "A301 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A301/gallery/u5.webp",
+          "thumb": "/assets/products/A301/gallery/u5-sm.webp",
+          "alt": "A301 product photo 5",
+          "zhAlt": "A301 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A301/gallery/u6.webp",
+          "thumb": "/assets/products/A301/gallery/u6-sm.webp",
+          "alt": "A301 product photo 6",
+          "zhAlt": "A301 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A301/gallery/u7.webp",
+          "thumb": "/assets/products/A301/gallery/u7-sm.webp",
+          "alt": "A301 product photo 7",
+          "zhAlt": "A301 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A301/gallery/u8.webp",
+          "thumb": "/assets/products/A301/gallery/u8-sm.webp",
+          "alt": "A301 product photo 8",
+          "zhAlt": "A301 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A301/gallery/u9.webp",
+          "thumb": "/assets/products/A301/gallery/u9-sm.webp",
+          "alt": "A301 product photo 9",
+          "zhAlt": "A301 產品照片 9"
+        },
+        {
+          "src": "/assets/products/A301/gallery/u10.webp",
+          "thumb": "/assets/products/A301/gallery/u10-sm.webp",
+          "alt": "A301 product photo 10",
+          "zhAlt": "A301 產品照片 10"
+        },
+        {
+          "src": "/assets/products/A301/gallery/u11.webp",
+          "thumb": "/assets/products/A301/gallery/u11-sm.webp",
+          "alt": "A301 product photo 11",
+          "zhAlt": "A301 產品照片 11"
+        },
+        {
+          "src": "/assets/products/A301/gallery/u12.webp",
+          "thumb": "/assets/products/A301/gallery/u12-sm.webp",
+          "alt": "A301 product photo 12",
+          "zhAlt": "A301 產品照片 12"
+        },
+        {
+          "src": "/assets/products/A301/gallery/u13.webp",
+          "thumb": "/assets/products/A301/gallery/u13-sm.webp",
+          "alt": "A301 product photo 13",
+          "zhAlt": "A301 產品照片 13"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A301/dim-1.webp",
+        "/assets/products/A301/dim-2.webp"
+      ]
+    },
+    "A302": {
+      "main": "/assets/products/A302/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A302/gallery/lead.webp",
+          "thumb": "/assets/products/A302/gallery/u0-sm.webp",
+          "alt": "A302 studio render",
+          "zhAlt": "A302 產品主圖"
+        },
+        {
+          "src": "/assets/products/A302/gallery/u1.webp",
+          "thumb": "/assets/products/A302/gallery/u1-sm.webp",
+          "alt": "A302 product photo 1",
+          "zhAlt": "A302 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A302/gallery/u2.webp",
+          "thumb": "/assets/products/A302/gallery/u2-sm.webp",
+          "alt": "A302 product photo 2",
+          "zhAlt": "A302 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A302/gallery/u3.webp",
+          "thumb": "/assets/products/A302/gallery/u3-sm.webp",
+          "alt": "A302 product photo 3",
+          "zhAlt": "A302 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A302/gallery/u4.webp",
+          "thumb": "/assets/products/A302/gallery/u4-sm.webp",
+          "alt": "A302 product photo 4",
+          "zhAlt": "A302 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A302/gallery/u5.webp",
+          "thumb": "/assets/products/A302/gallery/u5-sm.webp",
+          "alt": "A302 product photo 5",
+          "zhAlt": "A302 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A302/gallery/u6.webp",
+          "thumb": "/assets/products/A302/gallery/u6-sm.webp",
+          "alt": "A302 product photo 6",
+          "zhAlt": "A302 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A302/gallery/u7.webp",
+          "thumb": "/assets/products/A302/gallery/u7-sm.webp",
+          "alt": "A302 product photo 7",
+          "zhAlt": "A302 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A302/gallery/u8.webp",
+          "thumb": "/assets/products/A302/gallery/u8-sm.webp",
+          "alt": "A302 product photo 8",
+          "zhAlt": "A302 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A302/gallery/u9.webp",
+          "thumb": "/assets/products/A302/gallery/u9-sm.webp",
+          "alt": "A302 product photo 9",
+          "zhAlt": "A302 產品照片 9"
+        },
+        {
+          "src": "/assets/products/A302/gallery/u10.webp",
+          "thumb": "/assets/products/A302/gallery/u10-sm.webp",
+          "alt": "A302 product photo 10",
+          "zhAlt": "A302 產品照片 10"
+        },
+        {
+          "src": "/assets/products/A302/gallery/u11.webp",
+          "thumb": "/assets/products/A302/gallery/u11-sm.webp",
+          "alt": "A302 product photo 11",
+          "zhAlt": "A302 產品照片 11"
+        },
+        {
+          "src": "/assets/products/A302/gallery/u12.webp",
+          "thumb": "/assets/products/A302/gallery/u12-sm.webp",
+          "alt": "A302 product photo 12",
+          "zhAlt": "A302 產品照片 12"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A302/dim-1.webp",
+        "/assets/products/A302/dim-2.webp"
+      ]
+    },
+    "A303": {
+      "main": "/assets/products/A303/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A303/gallery/lead.webp",
+          "thumb": "/assets/products/A303/gallery/u0-sm.webp",
+          "alt": "A303 studio render",
+          "zhAlt": "A303 產品主圖"
+        },
+        {
+          "src": "/assets/products/A303/gallery/u1.webp",
+          "thumb": "/assets/products/A303/gallery/u1-sm.webp",
+          "alt": "A303 product photo 1",
+          "zhAlt": "A303 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A303/gallery/u2.webp",
+          "thumb": "/assets/products/A303/gallery/u2-sm.webp",
+          "alt": "A303 product photo 2",
+          "zhAlt": "A303 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A303/gallery/u3.webp",
+          "thumb": "/assets/products/A303/gallery/u3-sm.webp",
+          "alt": "A303 product photo 3",
+          "zhAlt": "A303 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A303/gallery/u4.webp",
+          "thumb": "/assets/products/A303/gallery/u4-sm.webp",
+          "alt": "A303 product photo 4",
+          "zhAlt": "A303 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A303/gallery/u5.webp",
+          "thumb": "/assets/products/A303/gallery/u5-sm.webp",
+          "alt": "A303 product photo 5",
+          "zhAlt": "A303 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A303/gallery/u6.webp",
+          "thumb": "/assets/products/A303/gallery/u6-sm.webp",
+          "alt": "A303 product photo 6",
+          "zhAlt": "A303 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A303/gallery/u7.webp",
+          "thumb": "/assets/products/A303/gallery/u7-sm.webp",
+          "alt": "A303 product photo 7",
+          "zhAlt": "A303 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A303/gallery/u8.webp",
+          "thumb": "/assets/products/A303/gallery/u8-sm.webp",
+          "alt": "A303 product photo 8",
+          "zhAlt": "A303 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A303/gallery/u9.webp",
+          "thumb": "/assets/products/A303/gallery/u9-sm.webp",
+          "alt": "A303 product photo 9",
+          "zhAlt": "A303 產品照片 9"
+        },
+        {
+          "src": "/assets/products/A303/gallery/u10.webp",
+          "thumb": "/assets/products/A303/gallery/u10-sm.webp",
+          "alt": "A303 product photo 10",
+          "zhAlt": "A303 產品照片 10"
+        },
+        {
+          "src": "/assets/products/A303/gallery/u11.webp",
+          "thumb": "/assets/products/A303/gallery/u11-sm.webp",
+          "alt": "A303 product photo 11",
+          "zhAlt": "A303 產品照片 11"
+        },
+        {
+          "src": "/assets/products/A303/gallery/u12.webp",
+          "thumb": "/assets/products/A303/gallery/u12-sm.webp",
+          "alt": "A303 product photo 12",
+          "zhAlt": "A303 產品照片 12"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A303/dim-1.webp",
+        "/assets/products/A303/dim-2.webp"
+      ]
+    },
+    "A304": {
+      "main": "/assets/products/A304/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A304/gallery/lead.webp",
+          "thumb": "/assets/products/A304/gallery/u0-sm.webp",
+          "alt": "A304 studio render",
+          "zhAlt": "A304 產品主圖"
+        },
+        {
+          "src": "/assets/products/A304/gallery/u1.webp",
+          "thumb": "/assets/products/A304/gallery/u1-sm.webp",
+          "alt": "A304 product photo 1",
+          "zhAlt": "A304 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A304/gallery/u2.webp",
+          "thumb": "/assets/products/A304/gallery/u2-sm.webp",
+          "alt": "A304 product photo 2",
+          "zhAlt": "A304 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A304/gallery/u3.webp",
+          "thumb": "/assets/products/A304/gallery/u3-sm.webp",
+          "alt": "A304 product photo 3",
+          "zhAlt": "A304 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A304/gallery/u4.webp",
+          "thumb": "/assets/products/A304/gallery/u4-sm.webp",
+          "alt": "A304 product photo 4",
+          "zhAlt": "A304 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A304/gallery/u5.webp",
+          "thumb": "/assets/products/A304/gallery/u5-sm.webp",
+          "alt": "A304 product photo 5",
+          "zhAlt": "A304 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A304/gallery/u6.webp",
+          "thumb": "/assets/products/A304/gallery/u6-sm.webp",
+          "alt": "A304 product photo 6",
+          "zhAlt": "A304 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A304/gallery/u7.webp",
+          "thumb": "/assets/products/A304/gallery/u7-sm.webp",
+          "alt": "A304 product photo 7",
+          "zhAlt": "A304 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A304/gallery/u8.webp",
+          "thumb": "/assets/products/A304/gallery/u8-sm.webp",
+          "alt": "A304 product photo 8",
+          "zhAlt": "A304 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A304/gallery/u9.webp",
+          "thumb": "/assets/products/A304/gallery/u9-sm.webp",
+          "alt": "A304 product photo 9",
+          "zhAlt": "A304 產品照片 9"
+        },
+        {
+          "src": "/assets/products/A304/gallery/u10.webp",
+          "thumb": "/assets/products/A304/gallery/u10-sm.webp",
+          "alt": "A304 product photo 10",
+          "zhAlt": "A304 產品照片 10"
+        },
+        {
+          "src": "/assets/products/A304/gallery/u11.webp",
+          "thumb": "/assets/products/A304/gallery/u11-sm.webp",
+          "alt": "A304 product photo 11",
+          "zhAlt": "A304 產品照片 11"
+        },
+        {
+          "src": "/assets/products/A304/gallery/u12.webp",
+          "thumb": "/assets/products/A304/gallery/u12-sm.webp",
+          "alt": "A304 product photo 12",
+          "zhAlt": "A304 產品照片 12"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A304/dim-1.webp",
+        "/assets/products/A304/dim-2.webp"
+      ]
+    },
+    "A305": {
+      "main": "/assets/products/A305/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A305/gallery/lead.webp",
+          "thumb": "/assets/products/A305/gallery/u0-sm.webp",
+          "alt": "A305 studio render",
+          "zhAlt": "A305 產品主圖"
+        },
+        {
+          "src": "/assets/products/A305/gallery/u1.webp",
+          "thumb": "/assets/products/A305/gallery/u1-sm.webp",
+          "alt": "A305 product photo 1",
+          "zhAlt": "A305 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A305/gallery/u2.webp",
+          "thumb": "/assets/products/A305/gallery/u2-sm.webp",
+          "alt": "A305 product photo 2",
+          "zhAlt": "A305 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A305/gallery/u3.webp",
+          "thumb": "/assets/products/A305/gallery/u3-sm.webp",
+          "alt": "A305 product photo 3",
+          "zhAlt": "A305 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A305/gallery/u4.webp",
+          "thumb": "/assets/products/A305/gallery/u4-sm.webp",
+          "alt": "A305 product photo 4",
+          "zhAlt": "A305 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A305/gallery/u5.webp",
+          "thumb": "/assets/products/A305/gallery/u5-sm.webp",
+          "alt": "A305 product photo 5",
+          "zhAlt": "A305 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A305/gallery/u6.webp",
+          "thumb": "/assets/products/A305/gallery/u6-sm.webp",
+          "alt": "A305 product photo 6",
+          "zhAlt": "A305 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A305/gallery/u7.webp",
+          "thumb": "/assets/products/A305/gallery/u7-sm.webp",
+          "alt": "A305 product photo 7",
+          "zhAlt": "A305 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A305/gallery/u8.webp",
+          "thumb": "/assets/products/A305/gallery/u8-sm.webp",
+          "alt": "A305 product photo 8",
+          "zhAlt": "A305 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A305/gallery/u9.webp",
+          "thumb": "/assets/products/A305/gallery/u9-sm.webp",
+          "alt": "A305 product photo 9",
+          "zhAlt": "A305 產品照片 9"
+        },
+        {
+          "src": "/assets/products/A305/gallery/u10.webp",
+          "thumb": "/assets/products/A305/gallery/u10-sm.webp",
+          "alt": "A305 product photo 10",
+          "zhAlt": "A305 產品照片 10"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A305/dim-1.webp",
+        "/assets/products/A305/dim-2.webp"
+      ]
+    },
+    "A306": {
+      "main": "/assets/products/A306/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A306/gallery/lead.webp",
+          "thumb": "/assets/products/A306/gallery/u0-sm.webp",
+          "alt": "A306 studio render",
+          "zhAlt": "A306 產品主圖"
+        },
+        {
+          "src": "/assets/products/A306/gallery/u1.webp",
+          "thumb": "/assets/products/A306/gallery/u1-sm.webp",
+          "alt": "A306 product photo 1",
+          "zhAlt": "A306 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A306/gallery/u2.webp",
+          "thumb": "/assets/products/A306/gallery/u2-sm.webp",
+          "alt": "A306 product photo 2",
+          "zhAlt": "A306 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A306/gallery/u3.webp",
+          "thumb": "/assets/products/A306/gallery/u3-sm.webp",
+          "alt": "A306 product photo 3",
+          "zhAlt": "A306 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A306/gallery/u4.webp",
+          "thumb": "/assets/products/A306/gallery/u4-sm.webp",
+          "alt": "A306 product photo 4",
+          "zhAlt": "A306 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A306/gallery/u5.webp",
+          "thumb": "/assets/products/A306/gallery/u5-sm.webp",
+          "alt": "A306 product photo 5",
+          "zhAlt": "A306 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A306/gallery/u6.webp",
+          "thumb": "/assets/products/A306/gallery/u6-sm.webp",
+          "alt": "A306 product photo 6",
+          "zhAlt": "A306 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A306/gallery/u7.webp",
+          "thumb": "/assets/products/A306/gallery/u7-sm.webp",
+          "alt": "A306 product photo 7",
+          "zhAlt": "A306 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A306/gallery/u8.webp",
+          "thumb": "/assets/products/A306/gallery/u8-sm.webp",
+          "alt": "A306 product photo 8",
+          "zhAlt": "A306 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A306/gallery/u9.webp",
+          "thumb": "/assets/products/A306/gallery/u9-sm.webp",
+          "alt": "A306 product photo 9",
+          "zhAlt": "A306 產品照片 9"
+        },
+        {
+          "src": "/assets/products/A306/gallery/u10.webp",
+          "thumb": "/assets/products/A306/gallery/u10-sm.webp",
+          "alt": "A306 product photo 10",
+          "zhAlt": "A306 產品照片 10"
+        },
+        {
+          "src": "/assets/products/A306/gallery/u11.webp",
+          "thumb": "/assets/products/A306/gallery/u11-sm.webp",
+          "alt": "A306 product photo 11",
+          "zhAlt": "A306 產品照片 11"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A306/dim-1.webp",
+        "/assets/products/A306/dim-2.webp"
+      ]
+    },
+    "A307": {
+      "main": "/assets/products/A307/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A307/gallery/lead.webp",
+          "thumb": "/assets/products/A307/gallery/u0-sm.webp",
+          "alt": "A307 studio render",
+          "zhAlt": "A307 產品主圖"
+        },
+        {
+          "src": "/assets/products/A307/gallery/u1.webp",
+          "thumb": "/assets/products/A307/gallery/u1-sm.webp",
+          "alt": "A307 product photo 1",
+          "zhAlt": "A307 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A307/gallery/u2.webp",
+          "thumb": "/assets/products/A307/gallery/u2-sm.webp",
+          "alt": "A307 product photo 2",
+          "zhAlt": "A307 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A307/gallery/u3.webp",
+          "thumb": "/assets/products/A307/gallery/u3-sm.webp",
+          "alt": "A307 product photo 3",
+          "zhAlt": "A307 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A307/gallery/u4.webp",
+          "thumb": "/assets/products/A307/gallery/u4-sm.webp",
+          "alt": "A307 product photo 4",
+          "zhAlt": "A307 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A307/gallery/u5.webp",
+          "thumb": "/assets/products/A307/gallery/u5-sm.webp",
+          "alt": "A307 product photo 5",
+          "zhAlt": "A307 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A307/gallery/u6.webp",
+          "thumb": "/assets/products/A307/gallery/u6-sm.webp",
+          "alt": "A307 product photo 6",
+          "zhAlt": "A307 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A307/gallery/u7.webp",
+          "thumb": "/assets/products/A307/gallery/u7-sm.webp",
+          "alt": "A307 product photo 7",
+          "zhAlt": "A307 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A307/gallery/u8.webp",
+          "thumb": "/assets/products/A307/gallery/u8-sm.webp",
+          "alt": "A307 product photo 8",
+          "zhAlt": "A307 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A307/gallery/u9.webp",
+          "thumb": "/assets/products/A307/gallery/u9-sm.webp",
+          "alt": "A307 product photo 9",
+          "zhAlt": "A307 產品照片 9"
+        },
+        {
+          "src": "/assets/products/A307/gallery/u10.webp",
+          "thumb": "/assets/products/A307/gallery/u10-sm.webp",
+          "alt": "A307 product photo 10",
+          "zhAlt": "A307 產品照片 10"
+        },
+        {
+          "src": "/assets/products/A307/gallery/u11.webp",
+          "thumb": "/assets/products/A307/gallery/u11-sm.webp",
+          "alt": "A307 product photo 11",
+          "zhAlt": "A307 產品照片 11"
+        },
+        {
+          "src": "/assets/products/A307/gallery/u12.webp",
+          "thumb": "/assets/products/A307/gallery/u12-sm.webp",
+          "alt": "A307 product photo 12",
+          "zhAlt": "A307 產品照片 12"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A307/dim-1.webp",
+        "/assets/products/A307/dim-2.webp"
+      ]
+    },
+    "A308": {
+      "main": "/assets/products/A308/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A308/gallery/lead.webp",
+          "thumb": "/assets/products/A308/gallery/u0-sm.webp",
+          "alt": "A308 studio render",
+          "zhAlt": "A308 產品主圖"
+        },
+        {
+          "src": "/assets/products/A308/gallery/u1.webp",
+          "thumb": "/assets/products/A308/gallery/u1-sm.webp",
+          "alt": "A308 product photo 1",
+          "zhAlt": "A308 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A308/gallery/u2.webp",
+          "thumb": "/assets/products/A308/gallery/u2-sm.webp",
+          "alt": "A308 product photo 2",
+          "zhAlt": "A308 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A308/gallery/u3.webp",
+          "thumb": "/assets/products/A308/gallery/u3-sm.webp",
+          "alt": "A308 product photo 3",
+          "zhAlt": "A308 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A308/gallery/u4.webp",
+          "thumb": "/assets/products/A308/gallery/u4-sm.webp",
+          "alt": "A308 product photo 4",
+          "zhAlt": "A308 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A308/gallery/u5.webp",
+          "thumb": "/assets/products/A308/gallery/u5-sm.webp",
+          "alt": "A308 product photo 5",
+          "zhAlt": "A308 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A308/gallery/u6.webp",
+          "thumb": "/assets/products/A308/gallery/u6-sm.webp",
+          "alt": "A308 product photo 6",
+          "zhAlt": "A308 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A308/gallery/u7.webp",
+          "thumb": "/assets/products/A308/gallery/u7-sm.webp",
+          "alt": "A308 product photo 7",
+          "zhAlt": "A308 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A308/gallery/u8.webp",
+          "thumb": "/assets/products/A308/gallery/u8-sm.webp",
+          "alt": "A308 product photo 8",
+          "zhAlt": "A308 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A308/gallery/u9.webp",
+          "thumb": "/assets/products/A308/gallery/u9-sm.webp",
+          "alt": "A308 product photo 9",
+          "zhAlt": "A308 產品照片 9"
+        },
+        {
+          "src": "/assets/products/A308/gallery/u10.webp",
+          "thumb": "/assets/products/A308/gallery/u10-sm.webp",
+          "alt": "A308 product photo 10",
+          "zhAlt": "A308 產品照片 10"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A308/dim-1.webp",
+        "/assets/products/A308/dim-2.webp"
+      ]
+    },
+    "A309": {
+      "main": "/assets/products/A309/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A309/gallery/lead.webp",
+          "thumb": "/assets/products/A309/gallery/u0-sm.webp",
+          "alt": "A309 studio render",
+          "zhAlt": "A309 產品主圖"
+        },
+        {
+          "src": "/assets/products/A309/gallery/u1.webp",
+          "thumb": "/assets/products/A309/gallery/u1-sm.webp",
+          "alt": "A309 product photo 1",
+          "zhAlt": "A309 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A309/gallery/u2.webp",
+          "thumb": "/assets/products/A309/gallery/u2-sm.webp",
+          "alt": "A309 product photo 2",
+          "zhAlt": "A309 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A309/gallery/u3.webp",
+          "thumb": "/assets/products/A309/gallery/u3-sm.webp",
+          "alt": "A309 product photo 3",
+          "zhAlt": "A309 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A309/gallery/u4.webp",
+          "thumb": "/assets/products/A309/gallery/u4-sm.webp",
+          "alt": "A309 product photo 4",
+          "zhAlt": "A309 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A309/gallery/u5.webp",
+          "thumb": "/assets/products/A309/gallery/u5-sm.webp",
+          "alt": "A309 product photo 5",
+          "zhAlt": "A309 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A309/gallery/u6.webp",
+          "thumb": "/assets/products/A309/gallery/u6-sm.webp",
+          "alt": "A309 product photo 6",
+          "zhAlt": "A309 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A309/gallery/u7.webp",
+          "thumb": "/assets/products/A309/gallery/u7-sm.webp",
+          "alt": "A309 product photo 7",
+          "zhAlt": "A309 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A309/gallery/u8.webp",
+          "thumb": "/assets/products/A309/gallery/u8-sm.webp",
+          "alt": "A309 product photo 8",
+          "zhAlt": "A309 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A309/gallery/u9.webp",
+          "thumb": "/assets/products/A309/gallery/u9-sm.webp",
+          "alt": "A309 product photo 9",
+          "zhAlt": "A309 產品照片 9"
+        },
+        {
+          "src": "/assets/products/A309/gallery/u10.webp",
+          "thumb": "/assets/products/A309/gallery/u10-sm.webp",
+          "alt": "A309 product photo 10",
+          "zhAlt": "A309 產品照片 10"
+        },
+        {
+          "src": "/assets/products/A309/gallery/u11.webp",
+          "thumb": "/assets/products/A309/gallery/u11-sm.webp",
+          "alt": "A309 product photo 11",
+          "zhAlt": "A309 產品照片 11"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A309/dim-1.webp",
+        "/assets/products/A309/dim-2.webp"
+      ]
+    },
+    "A310": {
+      "main": "/assets/products/A310/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/A310/gallery/lead.webp",
+          "thumb": "/assets/products/A310/gallery/u0-sm.webp",
+          "alt": "A310 studio render",
+          "zhAlt": "A310 產品主圖"
+        },
+        {
+          "src": "/assets/products/A310/gallery/u1.webp",
+          "thumb": "/assets/products/A310/gallery/u1-sm.webp",
+          "alt": "A310 product photo 1",
+          "zhAlt": "A310 產品照片 1"
+        },
+        {
+          "src": "/assets/products/A310/gallery/u2.webp",
+          "thumb": "/assets/products/A310/gallery/u2-sm.webp",
+          "alt": "A310 product photo 2",
+          "zhAlt": "A310 產品照片 2"
+        },
+        {
+          "src": "/assets/products/A310/gallery/u3.webp",
+          "thumb": "/assets/products/A310/gallery/u3-sm.webp",
+          "alt": "A310 product photo 3",
+          "zhAlt": "A310 產品照片 3"
+        },
+        {
+          "src": "/assets/products/A310/gallery/u4.webp",
+          "thumb": "/assets/products/A310/gallery/u4-sm.webp",
+          "alt": "A310 product photo 4",
+          "zhAlt": "A310 產品照片 4"
+        },
+        {
+          "src": "/assets/products/A310/gallery/u5.webp",
+          "thumb": "/assets/products/A310/gallery/u5-sm.webp",
+          "alt": "A310 product photo 5",
+          "zhAlt": "A310 產品照片 5"
+        },
+        {
+          "src": "/assets/products/A310/gallery/u6.webp",
+          "thumb": "/assets/products/A310/gallery/u6-sm.webp",
+          "alt": "A310 product photo 6",
+          "zhAlt": "A310 產品照片 6"
+        },
+        {
+          "src": "/assets/products/A310/gallery/u7.webp",
+          "thumb": "/assets/products/A310/gallery/u7-sm.webp",
+          "alt": "A310 product photo 7",
+          "zhAlt": "A310 產品照片 7"
+        },
+        {
+          "src": "/assets/products/A310/gallery/u8.webp",
+          "thumb": "/assets/products/A310/gallery/u8-sm.webp",
+          "alt": "A310 product photo 8",
+          "zhAlt": "A310 產品照片 8"
+        },
+        {
+          "src": "/assets/products/A310/gallery/u9.webp",
+          "thumb": "/assets/products/A310/gallery/u9-sm.webp",
+          "alt": "A310 product photo 9",
+          "zhAlt": "A310 產品照片 9"
+        },
+        {
+          "src": "/assets/products/A310/gallery/u10.webp",
+          "thumb": "/assets/products/A310/gallery/u10-sm.webp",
+          "alt": "A310 product photo 10",
+          "zhAlt": "A310 產品照片 10"
+        },
+        {
+          "src": "/assets/products/A310/gallery/u11.webp",
+          "thumb": "/assets/products/A310/gallery/u11-sm.webp",
+          "alt": "A310 product photo 11",
+          "zhAlt": "A310 產品照片 11"
+        },
+        {
+          "src": "/assets/products/A310/gallery/u12.webp",
+          "thumb": "/assets/products/A310/gallery/u12-sm.webp",
+          "alt": "A310 product photo 12",
+          "zhAlt": "A310 產品照片 12"
+        },
+        {
+          "src": "/assets/products/A310/gallery/u13.webp",
+          "thumb": "/assets/products/A310/gallery/u13-sm.webp",
+          "alt": "A310 product photo 13",
+          "zhAlt": "A310 產品照片 13"
+        },
+        {
+          "src": "/assets/products/A310/gallery/u14.webp",
+          "thumb": "/assets/products/A310/gallery/u14-sm.webp",
+          "alt": "A310 product photo 14",
+          "zhAlt": "A310 產品照片 14"
+        },
+        {
+          "src": "/assets/products/A310/gallery/u15.webp",
+          "thumb": "/assets/products/A310/gallery/u15-sm.webp",
+          "alt": "A310 product photo 15",
+          "zhAlt": "A310 產品照片 15"
+        },
+        {
+          "src": "/assets/products/A310/gallery/u16.webp",
+          "thumb": "/assets/products/A310/gallery/u16-sm.webp",
+          "alt": "A310 product photo 16",
+          "zhAlt": "A310 產品照片 16"
+        }
+      ],
+      "drawings": [
+        "/assets/products/A310/dim-1.webp",
+        "/assets/products/A310/dim-2.webp"
+      ]
+    },
+    "CB0116": {
+      "main": "/assets/products/CB0116/card.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/CB0116/card.webp",
+          "thumb": "/assets/products/CB0116/gallery/u0-sm.webp",
+          "alt": "CB0116 studio render",
+          "zhAlt": "CB0116 產品主圖"
+        },
+        {
+          "src": "/assets/products/CB0116/gallery/u1.webp",
+          "thumb": "/assets/products/CB0116/gallery/u1-sm.webp",
+          "alt": "CB0116 product photo 1",
+          "zhAlt": "CB0116 產品照片 1"
+        },
+        {
+          "src": "/assets/products/CB0116/gallery/u2.webp",
+          "thumb": "/assets/products/CB0116/gallery/u2-sm.webp",
+          "alt": "CB0116 product photo 2",
+          "zhAlt": "CB0116 產品照片 2"
+        }
+      ]
+    },
+    "CB0118": {
+      "main": "/assets/products/CB0118/card.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/CB0118/card.webp",
+          "thumb": "/assets/products/CB0118/gallery/u0-sm.webp",
+          "alt": "CB0118 studio render",
+          "zhAlt": "CB0118 產品主圖"
+        },
+        {
+          "src": "/assets/products/CB0118/gallery/u1.webp",
+          "thumb": "/assets/products/CB0118/gallery/u1-sm.webp",
+          "alt": "CB0118 product photo 1",
+          "zhAlt": "CB0118 產品照片 1"
+        },
+        {
+          "src": "/assets/products/CB0118/gallery/u2.webp",
+          "thumb": "/assets/products/CB0118/gallery/u2-sm.webp",
+          "alt": "CB0118 product photo 2",
+          "zhAlt": "CB0118 產品照片 2"
+        }
+      ]
+    },
+    "CB0120": {
+      "main": "/assets/products/CB0120/card.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/CB0120/card.webp",
+          "thumb": "/assets/products/CB0120/gallery/u0-sm.webp",
+          "alt": "CB0120 studio render",
+          "zhAlt": "CB0120 產品主圖"
+        },
+        {
+          "src": "/assets/products/CB0120/gallery/u1.webp",
+          "thumb": "/assets/products/CB0120/gallery/u1-sm.webp",
+          "alt": "CB0120 product photo 1",
+          "zhAlt": "CB0120 產品照片 1"
+        },
+        {
+          "src": "/assets/products/CB0120/gallery/u2.webp",
+          "thumb": "/assets/products/CB0120/gallery/u2-sm.webp",
+          "alt": "CB0120 product photo 2",
+          "zhAlt": "CB0120 產品照片 2"
+        }
+      ]
+    },
+    "CB0218": {
+      "main": "/assets/products/CB0218/card.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/CB0218/card.webp",
+          "thumb": "/assets/products/CB0218/gallery/u0-sm.webp",
+          "alt": "CB0218 studio render",
+          "zhAlt": "CB0218 產品主圖"
+        },
+        {
+          "src": "/assets/products/CB0218/gallery/u1.webp",
+          "thumb": "/assets/products/CB0218/gallery/u1-sm.webp",
+          "alt": "CB0218 product photo 1",
+          "zhAlt": "CB0218 產品照片 1"
+        },
+        {
+          "src": "/assets/products/CB0218/gallery/u2.webp",
+          "thumb": "/assets/products/CB0218/gallery/u2-sm.webp",
+          "alt": "CB0218 product photo 2",
+          "zhAlt": "CB0218 產品照片 2"
+        }
+      ]
+    },
+    "CB0220": {
+      "main": "/assets/products/CB0220/card.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/CB0220/card.webp",
+          "thumb": "/assets/products/CB0220/gallery/u0-sm.webp",
+          "alt": "CB0220 studio render",
+          "zhAlt": "CB0220 產品主圖"
+        },
+        {
+          "src": "/assets/products/CB0220/gallery/u1.webp",
+          "thumb": "/assets/products/CB0220/gallery/u1-sm.webp",
+          "alt": "CB0220 product photo 1",
+          "zhAlt": "CB0220 產品照片 1"
+        },
+        {
+          "src": "/assets/products/CB0220/gallery/u2.webp",
+          "thumb": "/assets/products/CB0220/gallery/u2-sm.webp",
+          "alt": "CB0220 product photo 2",
+          "zhAlt": "CB0220 產品照片 2"
+        }
+      ]
+    },
+    "CB0222": {
+      "main": "/assets/products/CB0222/card.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/CB0222/card.webp",
+          "thumb": "/assets/products/CB0222/gallery/u0-sm.webp",
+          "alt": "CB0222 studio render",
+          "zhAlt": "CB0222 產品主圖"
+        },
+        {
+          "src": "/assets/products/CB0222/gallery/u1.webp",
+          "thumb": "/assets/products/CB0222/gallery/u1-sm.webp",
+          "alt": "CB0222 product photo 1",
+          "zhAlt": "CB0222 產品照片 1"
+        },
+        {
+          "src": "/assets/products/CB0222/gallery/u2.webp",
+          "thumb": "/assets/products/CB0222/gallery/u2-sm.webp",
+          "alt": "CB0222 product photo 2",
+          "zhAlt": "CB0222 產品照片 2"
+        }
+      ]
+    },
+    "UB0116": {
+      "main": "/assets/products/UB0116/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0116/gallery/lead.webp",
+          "thumb": "/assets/products/UB0116/gallery/u0-sm.webp",
+          "alt": "UB0116 studio render",
+          "zhAlt": "UB0116 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0116/gallery/u1.webp",
+          "thumb": "/assets/products/UB0116/gallery/u1-sm.webp",
+          "alt": "UB0116 product photo 1",
+          "zhAlt": "UB0116 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0116/gallery/u2.webp",
+          "thumb": "/assets/products/UB0116/gallery/u2-sm.webp",
+          "alt": "UB0116 product photo 2",
+          "zhAlt": "UB0116 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0116/gallery/u3.webp",
+          "thumb": "/assets/products/UB0116/gallery/u3-sm.webp",
+          "alt": "UB0116 product photo 3",
+          "zhAlt": "UB0116 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0116/gallery/u4.webp",
+          "thumb": "/assets/products/UB0116/gallery/u4-sm.webp",
+          "alt": "UB0116 product photo 4",
+          "zhAlt": "UB0116 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0116/gallery/u5.webp",
+          "thumb": "/assets/products/UB0116/gallery/u5-sm.webp",
+          "alt": "UB0116 product photo 5",
+          "zhAlt": "UB0116 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0116/gallery/u6.webp",
+          "thumb": "/assets/products/UB0116/gallery/u6-sm.webp",
+          "alt": "UB0116 product photo 6",
+          "zhAlt": "UB0116 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0116/gallery/u7.webp",
+          "thumb": "/assets/products/UB0116/gallery/u7-sm.webp",
+          "alt": "UB0116 product photo 7",
+          "zhAlt": "UB0116 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0116/gallery/m1.webp",
+          "thumb": "/assets/products/UB0116/thumbs/retained-m1.webp",
+          "alt": "UB0116 retained product photo",
+          "zhAlt": "UB0116 產品實測照片"
+        }
+      ]
+    },
+    "UB0118": {
+      "main": "/assets/products/UB0118/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0118/gallery/lead.webp",
+          "thumb": "/assets/products/UB0118/gallery/u0-sm.webp",
+          "alt": "UB0118 studio render",
+          "zhAlt": "UB0118 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0118/gallery/u1.webp",
+          "thumb": "/assets/products/UB0118/gallery/u1-sm.webp",
+          "alt": "UB0118 product photo 1",
+          "zhAlt": "UB0118 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0118/gallery/u2.webp",
+          "thumb": "/assets/products/UB0118/gallery/u2-sm.webp",
+          "alt": "UB0118 product photo 2",
+          "zhAlt": "UB0118 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0118/gallery/u3.webp",
+          "thumb": "/assets/products/UB0118/gallery/u3-sm.webp",
+          "alt": "UB0118 product photo 3",
+          "zhAlt": "UB0118 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0118/gallery/u4.webp",
+          "thumb": "/assets/products/UB0118/gallery/u4-sm.webp",
+          "alt": "UB0118 product photo 4",
+          "zhAlt": "UB0118 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0118/gallery/u5.webp",
+          "thumb": "/assets/products/UB0118/gallery/u5-sm.webp",
+          "alt": "UB0118 product photo 5",
+          "zhAlt": "UB0118 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0118/gallery/u6.webp",
+          "thumb": "/assets/products/UB0118/gallery/u6-sm.webp",
+          "alt": "UB0118 product photo 6",
+          "zhAlt": "UB0118 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0118/gallery/u7.webp",
+          "thumb": "/assets/products/UB0118/gallery/u7-sm.webp",
+          "alt": "UB0118 product photo 7",
+          "zhAlt": "UB0118 產品照片 7"
+        }
+      ]
+    },
+    "UB0118-A": {
+      "main": "/assets/products/UB0118-A/card.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0118-A/card.webp",
+          "thumb": "/assets/products/UB0118-A/gallery/u0-sm.webp",
+          "alt": "UB0118-A studio render",
+          "zhAlt": "UB0118-A 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0118-A/gallery/u1.webp",
+          "thumb": "/assets/products/UB0118-A/gallery/u1-sm.webp",
+          "alt": "UB0118-A product photo 1",
+          "zhAlt": "UB0118-A 產品照片 1"
+        }
+      ]
+    },
+    "UB0120": {
+      "main": "/assets/products/UB0120/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0120/gallery/lead.webp",
+          "thumb": "/assets/products/UB0120/gallery/u0-sm.webp",
+          "alt": "UB0120 studio render",
+          "zhAlt": "UB0120 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0120/gallery/u1.webp",
+          "thumb": "/assets/products/UB0120/gallery/u1-sm.webp",
+          "alt": "UB0120 product photo 1",
+          "zhAlt": "UB0120 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0120/gallery/u2.webp",
+          "thumb": "/assets/products/UB0120/gallery/u2-sm.webp",
+          "alt": "UB0120 product photo 2",
+          "zhAlt": "UB0120 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0120/gallery/u3.webp",
+          "thumb": "/assets/products/UB0120/gallery/u3-sm.webp",
+          "alt": "UB0120 product photo 3",
+          "zhAlt": "UB0120 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0120/gallery/u4.webp",
+          "thumb": "/assets/products/UB0120/gallery/u4-sm.webp",
+          "alt": "UB0120 product photo 4",
+          "zhAlt": "UB0120 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0120/gallery/u5.webp",
+          "thumb": "/assets/products/UB0120/gallery/u5-sm.webp",
+          "alt": "UB0120 product photo 5",
+          "zhAlt": "UB0120 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0120/gallery/u6.webp",
+          "thumb": "/assets/products/UB0120/gallery/u6-sm.webp",
+          "alt": "UB0120 product photo 6",
+          "zhAlt": "UB0120 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0120/gallery/u7.webp",
+          "thumb": "/assets/products/UB0120/gallery/u7-sm.webp",
+          "alt": "UB0120 product photo 7",
+          "zhAlt": "UB0120 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0120/gallery/m1.webp",
+          "thumb": "/assets/products/UB0120/thumbs/retained-m1.webp",
+          "alt": "UB0120 retained product photo",
+          "zhAlt": "UB0120 產品實測照片"
+        },
+        {
+          "src": "/assets/products/UB0120/gallery/m2.webp",
+          "thumb": "/assets/products/UB0120/thumbs/retained-m2.webp",
+          "alt": "UB0120 retained product photo",
+          "zhAlt": "UB0120 產品實測照片"
+        }
+      ]
+    },
+    "UB0121": {
+      "main": "/assets/products/UB0121/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0121/gallery/lead.webp",
+          "thumb": "/assets/products/UB0121/gallery/u0-sm.webp",
+          "alt": "UB0121 studio render",
+          "zhAlt": "UB0121 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0121/gallery/u1.webp",
+          "thumb": "/assets/products/UB0121/gallery/u1-sm.webp",
+          "alt": "UB0121 product photo 1",
+          "zhAlt": "UB0121 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0121/gallery/u2.webp",
+          "thumb": "/assets/products/UB0121/gallery/u2-sm.webp",
+          "alt": "UB0121 product photo 2",
+          "zhAlt": "UB0121 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0121/gallery/u3.webp",
+          "thumb": "/assets/products/UB0121/gallery/u3-sm.webp",
+          "alt": "UB0121 product photo 3",
+          "zhAlt": "UB0121 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0121/gallery/u4.webp",
+          "thumb": "/assets/products/UB0121/gallery/u4-sm.webp",
+          "alt": "UB0121 product photo 4",
+          "zhAlt": "UB0121 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0121/gallery/u5.webp",
+          "thumb": "/assets/products/UB0121/gallery/u5-sm.webp",
+          "alt": "UB0121 product photo 5",
+          "zhAlt": "UB0121 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0121/gallery/u6.webp",
+          "thumb": "/assets/products/UB0121/gallery/u6-sm.webp",
+          "alt": "UB0121 product photo 6",
+          "zhAlt": "UB0121 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0121/gallery/u7.webp",
+          "thumb": "/assets/products/UB0121/gallery/u7-sm.webp",
+          "alt": "UB0121 product photo 7",
+          "zhAlt": "UB0121 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0121/gallery/u8.webp",
+          "thumb": "/assets/products/UB0121/gallery/u8-sm.webp",
+          "alt": "UB0121 product photo 8",
+          "zhAlt": "UB0121 產品照片 8"
+        }
+      ]
+    },
+    "UB0121-D": {
+      "main": "/assets/products/UB0121-D/card.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0121-D/card.webp",
+          "thumb": "/assets/products/UB0121-D/gallery/u0-sm.webp",
+          "alt": "UB0121-D studio render",
+          "zhAlt": "UB0121-D 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0121-D/gallery/u1.webp",
+          "thumb": "/assets/products/UB0121-D/gallery/u1-sm.webp",
+          "alt": "UB0121-D product photo 1",
+          "zhAlt": "UB0121-D 產品照片 1"
+        }
+      ]
+    },
+    "UB0122": {
+      "main": "/assets/products/UB0122/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0122/gallery/lead.webp",
+          "thumb": "/assets/products/UB0122/gallery/u0-sm.webp",
+          "alt": "UB0122 studio render",
+          "zhAlt": "UB0122 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0122/gallery/u1.webp",
+          "thumb": "/assets/products/UB0122/gallery/u1-sm.webp",
+          "alt": "UB0122 product photo 1",
+          "zhAlt": "UB0122 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0122/gallery/u2.webp",
+          "thumb": "/assets/products/UB0122/gallery/u2-sm.webp",
+          "alt": "UB0122 product photo 2",
+          "zhAlt": "UB0122 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0122/gallery/u3.webp",
+          "thumb": "/assets/products/UB0122/gallery/u3-sm.webp",
+          "alt": "UB0122 product photo 3",
+          "zhAlt": "UB0122 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0122/gallery/u4.webp",
+          "thumb": "/assets/products/UB0122/gallery/u4-sm.webp",
+          "alt": "UB0122 product photo 4",
+          "zhAlt": "UB0122 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0122/gallery/u5.webp",
+          "thumb": "/assets/products/UB0122/gallery/u5-sm.webp",
+          "alt": "UB0122 product photo 5",
+          "zhAlt": "UB0122 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0122/gallery/u6.webp",
+          "thumb": "/assets/products/UB0122/gallery/u6-sm.webp",
+          "alt": "UB0122 product photo 6",
+          "zhAlt": "UB0122 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0122/gallery/u7.webp",
+          "thumb": "/assets/products/UB0122/gallery/u7-sm.webp",
+          "alt": "UB0122 product photo 7",
+          "zhAlt": "UB0122 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0122/gallery/m1.webp",
+          "thumb": "/assets/products/UB0122/thumbs/retained-m1.webp",
+          "alt": "UB0122 retained product photo",
+          "zhAlt": "UB0122 產品實測照片"
+        },
+        {
+          "src": "/assets/products/UB0122/gallery/m2.webp",
+          "thumb": "/assets/products/UB0122/thumbs/retained-m2.webp",
+          "alt": "UB0122 retained product photo",
+          "zhAlt": "UB0122 產品實測照片"
+        }
+      ]
+    },
+    "UB0124": {
+      "main": "/assets/products/UB0124/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0124/gallery/lead.webp",
+          "thumb": "/assets/products/UB0124/gallery/u0-sm.webp",
+          "alt": "UB0124 studio render",
+          "zhAlt": "UB0124 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0124/gallery/u1.webp",
+          "thumb": "/assets/products/UB0124/gallery/u1-sm.webp",
+          "alt": "UB0124 product photo 1",
+          "zhAlt": "UB0124 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0124/gallery/u2.webp",
+          "thumb": "/assets/products/UB0124/gallery/u2-sm.webp",
+          "alt": "UB0124 product photo 2",
+          "zhAlt": "UB0124 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0124/gallery/u3.webp",
+          "thumb": "/assets/products/UB0124/gallery/u3-sm.webp",
+          "alt": "UB0124 product photo 3",
+          "zhAlt": "UB0124 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0124/gallery/u4.webp",
+          "thumb": "/assets/products/UB0124/gallery/u4-sm.webp",
+          "alt": "UB0124 product photo 4",
+          "zhAlt": "UB0124 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0124/gallery/u5.webp",
+          "thumb": "/assets/products/UB0124/gallery/u5-sm.webp",
+          "alt": "UB0124 product photo 5",
+          "zhAlt": "UB0124 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0124/gallery/u6.webp",
+          "thumb": "/assets/products/UB0124/gallery/u6-sm.webp",
+          "alt": "UB0124 product photo 6",
+          "zhAlt": "UB0124 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0124/gallery/u7.webp",
+          "thumb": "/assets/products/UB0124/gallery/u7-sm.webp",
+          "alt": "UB0124 product photo 7",
+          "zhAlt": "UB0124 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0124/gallery/m1.webp",
+          "thumb": "/assets/products/UB0124/thumbs/retained-m1.webp",
+          "alt": "UB0124 retained product photo",
+          "zhAlt": "UB0124 產品實測照片"
+        },
+        {
+          "src": "/assets/products/UB0124/gallery/m2.webp",
+          "thumb": "/assets/products/UB0124/thumbs/retained-m2.webp",
+          "alt": "UB0124 retained product photo",
+          "zhAlt": "UB0124 產品實測照片"
+        },
+        {
+          "src": "/assets/products/UB0124/gallery/m3.webp",
+          "thumb": "/assets/products/UB0124/thumbs/retained-m3.webp",
+          "alt": "UB0124 retained product photo",
+          "zhAlt": "UB0124 產品實測照片"
+        }
+      ]
+    },
+    "UB0124-A": {
+      "main": "/assets/products/UB0124-A/card.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0124-A/card.webp",
+          "thumb": "/assets/products/UB0124-A/card.webp",
+          "alt": "UB0124-A product image",
+          "zhAlt": "UB0124-A 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0124-A/gallery/lead.webp",
+          "thumb": "/assets/products/UB0124-A/gallery/u0-sm.webp",
+          "alt": "UB0124-A studio render",
+          "zhAlt": "UB0124-A 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0124-A/gallery/u1.webp",
+          "thumb": "/assets/products/UB0124-A/gallery/u1-sm.webp",
+          "alt": "UB0124-A product photo 1",
+          "zhAlt": "UB0124-A 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0124-A/gallery/u2.webp",
+          "thumb": "/assets/products/UB0124-A/gallery/u2-sm.webp",
+          "alt": "UB0124-A product photo 2",
+          "zhAlt": "UB0124-A 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0124-A/gallery/u3.webp",
+          "thumb": "/assets/products/UB0124-A/gallery/u3-sm.webp",
+          "alt": "UB0124-A product photo 3",
+          "zhAlt": "UB0124-A 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0124-A/gallery/u4.webp",
+          "thumb": "/assets/products/UB0124-A/gallery/u4-sm.webp",
+          "alt": "UB0124-A product photo 4",
+          "zhAlt": "UB0124-A 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0124-A/gallery/u5.webp",
+          "thumb": "/assets/products/UB0124-A/gallery/u5-sm.webp",
+          "alt": "UB0124-A product photo 5",
+          "zhAlt": "UB0124-A 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0124-A/gallery/u6.webp",
+          "thumb": "/assets/products/UB0124-A/gallery/u6-sm.webp",
+          "alt": "UB0124-A product photo 6",
+          "zhAlt": "UB0124-A 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0124-A/gallery/u7.webp",
+          "thumb": "/assets/products/UB0124-A/gallery/u7-sm.webp",
+          "alt": "UB0124-A product photo 7",
+          "zhAlt": "UB0124-A 產品照片 7"
+        }
+      ]
+    },
+    "UB0124-D": {
+      "main": "/assets/products/UB0124-D/card.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0124-D/card.webp",
+          "thumb": "/assets/products/UB0124-D/gallery/u0-sm.webp",
+          "alt": "UB0124-D studio render",
+          "zhAlt": "UB0124-D 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0124-D/gallery/u1.webp",
+          "thumb": "/assets/products/UB0124-D/gallery/u1-sm.webp",
+          "alt": "UB0124-D product photo 1",
+          "zhAlt": "UB0124-D 產品照片 1"
+        }
+      ]
+    },
+    "UB0126": {
+      "main": "/assets/products/UB0126/card.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0126/card.webp",
+          "thumb": "/assets/products/UB0126/gallery/u0-sm.webp",
+          "alt": "UB0126 studio render",
+          "zhAlt": "UB0126 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0126/gallery/u1.webp",
+          "thumb": "/assets/products/UB0126/gallery/u1-sm.webp",
+          "alt": "UB0126 product photo 1",
+          "zhAlt": "UB0126 產品照片 1"
+        }
+      ]
+    },
+    "UB0218": {
+      "main": "/assets/products/UB0218/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0218/gallery/lead.webp",
+          "thumb": "/assets/products/UB0218/gallery/u0-sm.webp",
+          "alt": "UB0218 studio render",
+          "zhAlt": "UB0218 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0218/gallery/u1.webp",
+          "thumb": "/assets/products/UB0218/gallery/u1-sm.webp",
+          "alt": "UB0218 product photo 1",
+          "zhAlt": "UB0218 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0218/gallery/u2.webp",
+          "thumb": "/assets/products/UB0218/gallery/u2-sm.webp",
+          "alt": "UB0218 product photo 2",
+          "zhAlt": "UB0218 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0218/gallery/u3.webp",
+          "thumb": "/assets/products/UB0218/gallery/u3-sm.webp",
+          "alt": "UB0218 product photo 3",
+          "zhAlt": "UB0218 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0218/gallery/u4.webp",
+          "thumb": "/assets/products/UB0218/gallery/u4-sm.webp",
+          "alt": "UB0218 product photo 4",
+          "zhAlt": "UB0218 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0218/gallery/u5.webp",
+          "thumb": "/assets/products/UB0218/gallery/u5-sm.webp",
+          "alt": "UB0218 product photo 5",
+          "zhAlt": "UB0218 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0218/gallery/u6.webp",
+          "thumb": "/assets/products/UB0218/gallery/u6-sm.webp",
+          "alt": "UB0218 product photo 6",
+          "zhAlt": "UB0218 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0218/gallery/u7.webp",
+          "thumb": "/assets/products/UB0218/gallery/u7-sm.webp",
+          "alt": "UB0218 product photo 7",
+          "zhAlt": "UB0218 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0218/gallery/u8.webp",
+          "thumb": "/assets/products/UB0218/gallery/u8-sm.webp",
+          "alt": "UB0218 product photo 8",
+          "zhAlt": "UB0218 產品照片 8"
+        }
+      ]
+    },
+    "UB0219": {
+      "main": "/assets/products/UB0219/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0219/gallery/lead.webp",
+          "thumb": "/assets/products/UB0219/gallery/u0-sm.webp",
+          "alt": "UB0219 studio render",
+          "zhAlt": "UB0219 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0219/gallery/u1.webp",
+          "thumb": "/assets/products/UB0219/gallery/u1-sm.webp",
+          "alt": "UB0219 product photo 1",
+          "zhAlt": "UB0219 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0219/gallery/u2.webp",
+          "thumb": "/assets/products/UB0219/gallery/u2-sm.webp",
+          "alt": "UB0219 product photo 2",
+          "zhAlt": "UB0219 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0219/gallery/u3.webp",
+          "thumb": "/assets/products/UB0219/gallery/u3-sm.webp",
+          "alt": "UB0219 product photo 3",
+          "zhAlt": "UB0219 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0219/gallery/u4.webp",
+          "thumb": "/assets/products/UB0219/gallery/u4-sm.webp",
+          "alt": "UB0219 product photo 4",
+          "zhAlt": "UB0219 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0219/gallery/u5.webp",
+          "thumb": "/assets/products/UB0219/gallery/u5-sm.webp",
+          "alt": "UB0219 product photo 5",
+          "zhAlt": "UB0219 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0219/gallery/u6.webp",
+          "thumb": "/assets/products/UB0219/gallery/u6-sm.webp",
+          "alt": "UB0219 product photo 6",
+          "zhAlt": "UB0219 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0219/gallery/u7.webp",
+          "thumb": "/assets/products/UB0219/gallery/u7-sm.webp",
+          "alt": "UB0219 product photo 7",
+          "zhAlt": "UB0219 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0219/gallery/m1.webp",
+          "thumb": "/assets/products/UB0219/thumbs/retained-m1.webp",
+          "alt": "UB0219 retained product photo",
+          "zhAlt": "UB0219 產品實測照片"
+        },
+        {
+          "src": "/assets/products/UB0219/gallery/m2.webp",
+          "thumb": "/assets/products/UB0219/thumbs/retained-m2.webp",
+          "alt": "UB0219 retained product photo",
+          "zhAlt": "UB0219 產品實測照片"
+        }
+      ]
+    },
+    "UB0221": {
+      "main": "/assets/products/UB0221/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0221/gallery/lead.webp",
+          "thumb": "/assets/products/UB0221/gallery/u0-sm.webp",
+          "alt": "UB0221 studio render",
+          "zhAlt": "UB0221 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0221/gallery/u1.webp",
+          "thumb": "/assets/products/UB0221/gallery/u1-sm.webp",
+          "alt": "UB0221 product photo 1",
+          "zhAlt": "UB0221 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0221/gallery/u2.webp",
+          "thumb": "/assets/products/UB0221/gallery/u2-sm.webp",
+          "alt": "UB0221 product photo 2",
+          "zhAlt": "UB0221 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0221/gallery/u3.webp",
+          "thumb": "/assets/products/UB0221/gallery/u3-sm.webp",
+          "alt": "UB0221 product photo 3",
+          "zhAlt": "UB0221 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0221/gallery/u4.webp",
+          "thumb": "/assets/products/UB0221/gallery/u4-sm.webp",
+          "alt": "UB0221 product photo 4",
+          "zhAlt": "UB0221 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0221/gallery/u5.webp",
+          "thumb": "/assets/products/UB0221/gallery/u5-sm.webp",
+          "alt": "UB0221 product photo 5",
+          "zhAlt": "UB0221 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0221/gallery/u6.webp",
+          "thumb": "/assets/products/UB0221/gallery/u6-sm.webp",
+          "alt": "UB0221 product photo 6",
+          "zhAlt": "UB0221 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0221/gallery/u7.webp",
+          "thumb": "/assets/products/UB0221/gallery/u7-sm.webp",
+          "alt": "UB0221 product photo 7",
+          "zhAlt": "UB0221 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0221/gallery/u8.webp",
+          "thumb": "/assets/products/UB0221/gallery/u8-sm.webp",
+          "alt": "UB0221 product photo 8",
+          "zhAlt": "UB0221 產品照片 8"
+        }
+      ]
+    },
+    "UB0228": {
+      "main": "/assets/products/UB0228/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0228/gallery/lead.webp",
+          "thumb": "/assets/products/UB0228/gallery/u0-sm.webp",
+          "alt": "UB0228 studio render",
+          "zhAlt": "UB0228 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0228/gallery/u1.webp",
+          "thumb": "/assets/products/UB0228/gallery/u1-sm.webp",
+          "alt": "UB0228 product photo 1",
+          "zhAlt": "UB0228 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0228/gallery/u2.webp",
+          "thumb": "/assets/products/UB0228/gallery/u2-sm.webp",
+          "alt": "UB0228 product photo 2",
+          "zhAlt": "UB0228 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0228/gallery/u3.webp",
+          "thumb": "/assets/products/UB0228/gallery/u3-sm.webp",
+          "alt": "UB0228 product photo 3",
+          "zhAlt": "UB0228 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0228/gallery/u4.webp",
+          "thumb": "/assets/products/UB0228/gallery/u4-sm.webp",
+          "alt": "UB0228 product photo 4",
+          "zhAlt": "UB0228 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0228/gallery/u5.webp",
+          "thumb": "/assets/products/UB0228/gallery/u5-sm.webp",
+          "alt": "UB0228 product photo 5",
+          "zhAlt": "UB0228 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0228/gallery/u6.webp",
+          "thumb": "/assets/products/UB0228/gallery/u6-sm.webp",
+          "alt": "UB0228 product photo 6",
+          "zhAlt": "UB0228 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0228/gallery/u7.webp",
+          "thumb": "/assets/products/UB0228/gallery/u7-sm.webp",
+          "alt": "UB0228 product photo 7",
+          "zhAlt": "UB0228 產品照片 7"
+        }
+      ]
+    },
+    "UB0316": {
+      "main": "/assets/products/UB0316/card.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0316/card.webp",
+          "thumb": "/assets/products/UB0316/gallery/u0-sm.webp",
+          "alt": "UB0316 studio render",
+          "zhAlt": "UB0316 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0316/gallery/u1.webp",
+          "thumb": "/assets/products/UB0316/gallery/u1-sm.webp",
+          "alt": "UB0316 product photo 1",
+          "zhAlt": "UB0316 產品照片 1"
+        }
+      ]
+    },
+    "UB0318": {
+      "main": "/assets/products/UB0318/card.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0318/card.webp",
+          "thumb": "/assets/products/UB0318/gallery/u0-sm.webp",
+          "alt": "UB0318 studio render",
+          "zhAlt": "UB0318 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0318/gallery/u1.webp",
+          "thumb": "/assets/products/UB0318/gallery/u1-sm.webp",
+          "alt": "UB0318 product photo 1",
+          "zhAlt": "UB0318 產品照片 1"
+        }
+      ]
+    },
+    "UB0320": {
+      "main": "/assets/products/UB0320/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0320/gallery/lead.webp",
+          "thumb": "/assets/products/UB0320/gallery/u0-sm.webp",
+          "alt": "UB0320 studio render",
+          "zhAlt": "UB0320 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0320/gallery/u1.webp",
+          "thumb": "/assets/products/UB0320/gallery/u1-sm.webp",
+          "alt": "UB0320 product photo 1",
+          "zhAlt": "UB0320 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0320/gallery/u2.webp",
+          "thumb": "/assets/products/UB0320/gallery/u2-sm.webp",
+          "alt": "UB0320 product photo 2",
+          "zhAlt": "UB0320 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0320/gallery/u3.webp",
+          "thumb": "/assets/products/UB0320/gallery/u3-sm.webp",
+          "alt": "UB0320 product photo 3",
+          "zhAlt": "UB0320 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0320/gallery/u4.webp",
+          "thumb": "/assets/products/UB0320/gallery/u4-sm.webp",
+          "alt": "UB0320 product photo 4",
+          "zhAlt": "UB0320 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0320/gallery/u5.webp",
+          "thumb": "/assets/products/UB0320/gallery/u5-sm.webp",
+          "alt": "UB0320 product photo 5",
+          "zhAlt": "UB0320 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0320/gallery/u6.webp",
+          "thumb": "/assets/products/UB0320/gallery/u6-sm.webp",
+          "alt": "UB0320 product photo 6",
+          "zhAlt": "UB0320 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0320/gallery/u7.webp",
+          "thumb": "/assets/products/UB0320/gallery/u7-sm.webp",
+          "alt": "UB0320 product photo 7",
+          "zhAlt": "UB0320 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0320/gallery/u8.webp",
+          "thumb": "/assets/products/UB0320/gallery/u8-sm.webp",
+          "alt": "UB0320 product photo 8",
+          "zhAlt": "UB0320 產品照片 8"
+        }
+      ]
+    },
+    "UB0322": {
+      "main": "/assets/products/UB0322/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0322/gallery/lead.webp",
+          "thumb": "/assets/products/UB0322/gallery/u0-sm.webp",
+          "alt": "UB0322 studio render",
+          "zhAlt": "UB0322 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0322/gallery/u1.webp",
+          "thumb": "/assets/products/UB0322/gallery/u1-sm.webp",
+          "alt": "UB0322 product photo 1",
+          "zhAlt": "UB0322 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0322/gallery/u2.webp",
+          "thumb": "/assets/products/UB0322/gallery/u2-sm.webp",
+          "alt": "UB0322 product photo 2",
+          "zhAlt": "UB0322 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0322/gallery/u3.webp",
+          "thumb": "/assets/products/UB0322/gallery/u3-sm.webp",
+          "alt": "UB0322 product photo 3",
+          "zhAlt": "UB0322 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0322/gallery/u4.webp",
+          "thumb": "/assets/products/UB0322/gallery/u4-sm.webp",
+          "alt": "UB0322 product photo 4",
+          "zhAlt": "UB0322 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0322/gallery/u5.webp",
+          "thumb": "/assets/products/UB0322/gallery/u5-sm.webp",
+          "alt": "UB0322 product photo 5",
+          "zhAlt": "UB0322 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0322/gallery/u6.webp",
+          "thumb": "/assets/products/UB0322/gallery/u6-sm.webp",
+          "alt": "UB0322 product photo 6",
+          "zhAlt": "UB0322 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0322/gallery/u7.webp",
+          "thumb": "/assets/products/UB0322/gallery/u7-sm.webp",
+          "alt": "UB0322 product photo 7",
+          "zhAlt": "UB0322 產品照片 7"
+        }
+      ]
+    },
+    "UB0324": {
+      "main": "/assets/products/UB0324/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0324/gallery/lead.webp",
+          "thumb": "/assets/products/UB0324/gallery/u0-sm.webp",
+          "alt": "UB0324 studio render",
+          "zhAlt": "UB0324 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0324/gallery/u1.webp",
+          "thumb": "/assets/products/UB0324/gallery/u1-sm.webp",
+          "alt": "UB0324 product photo 1",
+          "zhAlt": "UB0324 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0324/gallery/u2.webp",
+          "thumb": "/assets/products/UB0324/gallery/u2-sm.webp",
+          "alt": "UB0324 product photo 2",
+          "zhAlt": "UB0324 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0324/gallery/u3.webp",
+          "thumb": "/assets/products/UB0324/gallery/u3-sm.webp",
+          "alt": "UB0324 product photo 3",
+          "zhAlt": "UB0324 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0324/gallery/u4.webp",
+          "thumb": "/assets/products/UB0324/gallery/u4-sm.webp",
+          "alt": "UB0324 product photo 4",
+          "zhAlt": "UB0324 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0324/gallery/u5.webp",
+          "thumb": "/assets/products/UB0324/gallery/u5-sm.webp",
+          "alt": "UB0324 product photo 5",
+          "zhAlt": "UB0324 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0324/gallery/u6.webp",
+          "thumb": "/assets/products/UB0324/gallery/u6-sm.webp",
+          "alt": "UB0324 product photo 6",
+          "zhAlt": "UB0324 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0324/gallery/u7.webp",
+          "thumb": "/assets/products/UB0324/gallery/u7-sm.webp",
+          "alt": "UB0324 product photo 7",
+          "zhAlt": "UB0324 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0324/gallery/u8.webp",
+          "thumb": "/assets/products/UB0324/gallery/u8-sm.webp",
+          "alt": "UB0324 product photo 8",
+          "zhAlt": "UB0324 產品照片 8"
+        }
+      ]
+    },
+    "UB0413": {
+      "main": "/assets/products/UB0413/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0413/gallery/lead.webp",
+          "thumb": "/assets/products/UB0413/gallery/u0-sm.webp",
+          "alt": "UB0413 studio render",
+          "zhAlt": "UB0413 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0413/gallery/u1.webp",
+          "thumb": "/assets/products/UB0413/gallery/u1-sm.webp",
+          "alt": "UB0413 product photo 1",
+          "zhAlt": "UB0413 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0413/gallery/u2.webp",
+          "thumb": "/assets/products/UB0413/gallery/u2-sm.webp",
+          "alt": "UB0413 product photo 2",
+          "zhAlt": "UB0413 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0413/gallery/u3.webp",
+          "thumb": "/assets/products/UB0413/gallery/u3-sm.webp",
+          "alt": "UB0413 product photo 3",
+          "zhAlt": "UB0413 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0413/gallery/u4.webp",
+          "thumb": "/assets/products/UB0413/gallery/u4-sm.webp",
+          "alt": "UB0413 product photo 4",
+          "zhAlt": "UB0413 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0413/gallery/u5.webp",
+          "thumb": "/assets/products/UB0413/gallery/u5-sm.webp",
+          "alt": "UB0413 product photo 5",
+          "zhAlt": "UB0413 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0413/gallery/u6.webp",
+          "thumb": "/assets/products/UB0413/gallery/u6-sm.webp",
+          "alt": "UB0413 product photo 6",
+          "zhAlt": "UB0413 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0413/gallery/u7.webp",
+          "thumb": "/assets/products/UB0413/gallery/u7-sm.webp",
+          "alt": "UB0413 product photo 7",
+          "zhAlt": "UB0413 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0413/gallery/u8.webp",
+          "thumb": "/assets/products/UB0413/gallery/u8-sm.webp",
+          "alt": "UB0413 product photo 8",
+          "zhAlt": "UB0413 產品照片 8"
+        },
+        {
+          "src": "/assets/products/UB0413/gallery/u9.webp",
+          "thumb": "/assets/products/UB0413/gallery/u9-sm.webp",
+          "alt": "UB0413 product photo 9",
+          "zhAlt": "UB0413 產品照片 9"
+        }
+      ]
+    },
+    "UB0414": {
+      "main": "/assets/products/UB0414/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0414/gallery/lead.webp",
+          "thumb": "/assets/products/UB0414/gallery/u0-sm.webp",
+          "alt": "UB0414 studio render",
+          "zhAlt": "UB0414 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0414/gallery/u1.webp",
+          "thumb": "/assets/products/UB0414/gallery/u1-sm.webp",
+          "alt": "UB0414 product photo 1",
+          "zhAlt": "UB0414 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0414/gallery/u2.webp",
+          "thumb": "/assets/products/UB0414/gallery/u2-sm.webp",
+          "alt": "UB0414 product photo 2",
+          "zhAlt": "UB0414 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0414/gallery/u3.webp",
+          "thumb": "/assets/products/UB0414/gallery/u3-sm.webp",
+          "alt": "UB0414 product photo 3",
+          "zhAlt": "UB0414 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0414/gallery/u4.webp",
+          "thumb": "/assets/products/UB0414/gallery/u4-sm.webp",
+          "alt": "UB0414 product photo 4",
+          "zhAlt": "UB0414 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0414/gallery/u5.webp",
+          "thumb": "/assets/products/UB0414/gallery/u5-sm.webp",
+          "alt": "UB0414 product photo 5",
+          "zhAlt": "UB0414 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0414/gallery/u6.webp",
+          "thumb": "/assets/products/UB0414/gallery/u6-sm.webp",
+          "alt": "UB0414 product photo 6",
+          "zhAlt": "UB0414 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0414/gallery/u7.webp",
+          "thumb": "/assets/products/UB0414/gallery/u7-sm.webp",
+          "alt": "UB0414 product photo 7",
+          "zhAlt": "UB0414 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0414/gallery/u8.webp",
+          "thumb": "/assets/products/UB0414/gallery/u8-sm.webp",
+          "alt": "UB0414 product photo 8",
+          "zhAlt": "UB0414 產品照片 8"
+        },
+        {
+          "src": "/assets/products/UB0414/gallery/u9.webp",
+          "thumb": "/assets/products/UB0414/gallery/u9-sm.webp",
+          "alt": "UB0414 product photo 9",
+          "zhAlt": "UB0414 產品照片 9"
+        }
+      ]
+    },
+    "UB0415": {
+      "main": "/assets/products/UB0415/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0415/gallery/lead.webp",
+          "thumb": "/assets/products/UB0415/gallery/u0-sm.webp",
+          "alt": "UB0415 studio render",
+          "zhAlt": "UB0415 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0415/gallery/u1.webp",
+          "thumb": "/assets/products/UB0415/gallery/u1-sm.webp",
+          "alt": "UB0415 product photo 1",
+          "zhAlt": "UB0415 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0415/gallery/u2.webp",
+          "thumb": "/assets/products/UB0415/gallery/u2-sm.webp",
+          "alt": "UB0415 product photo 2",
+          "zhAlt": "UB0415 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0415/gallery/u3.webp",
+          "thumb": "/assets/products/UB0415/gallery/u3-sm.webp",
+          "alt": "UB0415 product photo 3",
+          "zhAlt": "UB0415 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0415/gallery/u4.webp",
+          "thumb": "/assets/products/UB0415/gallery/u4-sm.webp",
+          "alt": "UB0415 product photo 4",
+          "zhAlt": "UB0415 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0415/gallery/u5.webp",
+          "thumb": "/assets/products/UB0415/gallery/u5-sm.webp",
+          "alt": "UB0415 product photo 5",
+          "zhAlt": "UB0415 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0415/gallery/u6.webp",
+          "thumb": "/assets/products/UB0415/gallery/u6-sm.webp",
+          "alt": "UB0415 product photo 6",
+          "zhAlt": "UB0415 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0415/gallery/u7.webp",
+          "thumb": "/assets/products/UB0415/gallery/u7-sm.webp",
+          "alt": "UB0415 product photo 7",
+          "zhAlt": "UB0415 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0415/gallery/u8.webp",
+          "thumb": "/assets/products/UB0415/gallery/u8-sm.webp",
+          "alt": "UB0415 product photo 8",
+          "zhAlt": "UB0415 產品照片 8"
+        },
+        {
+          "src": "/assets/products/UB0415/gallery/u9.webp",
+          "thumb": "/assets/products/UB0415/gallery/u9-sm.webp",
+          "alt": "UB0415 product photo 9",
+          "zhAlt": "UB0415 產品照片 9"
+        }
+      ]
+    },
+    "UB0416": {
+      "main": "/assets/products/UB0416/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0416/gallery/lead.webp",
+          "thumb": "/assets/products/UB0416/gallery/u0-sm.webp",
+          "alt": "UB0416 studio render",
+          "zhAlt": "UB0416 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0416/gallery/u1.webp",
+          "thumb": "/assets/products/UB0416/gallery/u1-sm.webp",
+          "alt": "UB0416 product photo 1",
+          "zhAlt": "UB0416 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0416/gallery/u2.webp",
+          "thumb": "/assets/products/UB0416/gallery/u2-sm.webp",
+          "alt": "UB0416 product photo 2",
+          "zhAlt": "UB0416 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0416/gallery/u3.webp",
+          "thumb": "/assets/products/UB0416/gallery/u3-sm.webp",
+          "alt": "UB0416 product photo 3",
+          "zhAlt": "UB0416 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0416/gallery/u4.webp",
+          "thumb": "/assets/products/UB0416/gallery/u4-sm.webp",
+          "alt": "UB0416 product photo 4",
+          "zhAlt": "UB0416 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0416/gallery/u5.webp",
+          "thumb": "/assets/products/UB0416/gallery/u5-sm.webp",
+          "alt": "UB0416 product photo 5",
+          "zhAlt": "UB0416 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0416/gallery/u6.webp",
+          "thumb": "/assets/products/UB0416/gallery/u6-sm.webp",
+          "alt": "UB0416 product photo 6",
+          "zhAlt": "UB0416 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0416/gallery/u7.webp",
+          "thumb": "/assets/products/UB0416/gallery/u7-sm.webp",
+          "alt": "UB0416 product photo 7",
+          "zhAlt": "UB0416 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0416/gallery/u8.webp",
+          "thumb": "/assets/products/UB0416/gallery/u8-sm.webp",
+          "alt": "UB0416 product photo 8",
+          "zhAlt": "UB0416 產品照片 8"
+        },
+        {
+          "src": "/assets/products/UB0416/gallery/u9.webp",
+          "thumb": "/assets/products/UB0416/gallery/u9-sm.webp",
+          "alt": "UB0416 product photo 9",
+          "zhAlt": "UB0416 產品照片 9"
+        }
+      ]
+    },
+    "UB0417": {
+      "main": "/assets/products/UB0417/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0417/gallery/lead.webp",
+          "thumb": "/assets/products/UB0417/gallery/u0-sm.webp",
+          "alt": "UB0417 studio render",
+          "zhAlt": "UB0417 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0417/gallery/u1.webp",
+          "thumb": "/assets/products/UB0417/gallery/u1-sm.webp",
+          "alt": "UB0417 product photo 1",
+          "zhAlt": "UB0417 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0417/gallery/u2.webp",
+          "thumb": "/assets/products/UB0417/gallery/u2-sm.webp",
+          "alt": "UB0417 product photo 2",
+          "zhAlt": "UB0417 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0417/gallery/u3.webp",
+          "thumb": "/assets/products/UB0417/gallery/u3-sm.webp",
+          "alt": "UB0417 product photo 3",
+          "zhAlt": "UB0417 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0417/gallery/u4.webp",
+          "thumb": "/assets/products/UB0417/gallery/u4-sm.webp",
+          "alt": "UB0417 product photo 4",
+          "zhAlt": "UB0417 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0417/gallery/u5.webp",
+          "thumb": "/assets/products/UB0417/gallery/u5-sm.webp",
+          "alt": "UB0417 product photo 5",
+          "zhAlt": "UB0417 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0417/gallery/u6.webp",
+          "thumb": "/assets/products/UB0417/gallery/u6-sm.webp",
+          "alt": "UB0417 product photo 6",
+          "zhAlt": "UB0417 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0417/gallery/u7.webp",
+          "thumb": "/assets/products/UB0417/gallery/u7-sm.webp",
+          "alt": "UB0417 product photo 7",
+          "zhAlt": "UB0417 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0417/gallery/u8.webp",
+          "thumb": "/assets/products/UB0417/gallery/u8-sm.webp",
+          "alt": "UB0417 product photo 8",
+          "zhAlt": "UB0417 產品照片 8"
+        },
+        {
+          "src": "/assets/products/UB0417/gallery/u9.webp",
+          "thumb": "/assets/products/UB0417/gallery/u9-sm.webp",
+          "alt": "UB0417 product photo 9",
+          "zhAlt": "UB0417 產品照片 9"
+        }
+      ]
+    },
+    "UB0418": {
+      "main": "/assets/products/UB0418/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0418/gallery/lead.webp",
+          "thumb": "/assets/products/UB0418/gallery/u0-sm.webp",
+          "alt": "UB0418 studio render",
+          "zhAlt": "UB0418 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0418/gallery/u1.webp",
+          "thumb": "/assets/products/UB0418/gallery/u1-sm.webp",
+          "alt": "UB0418 product photo 1",
+          "zhAlt": "UB0418 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0418/gallery/u2.webp",
+          "thumb": "/assets/products/UB0418/gallery/u2-sm.webp",
+          "alt": "UB0418 product photo 2",
+          "zhAlt": "UB0418 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0418/gallery/u3.webp",
+          "thumb": "/assets/products/UB0418/gallery/u3-sm.webp",
+          "alt": "UB0418 product photo 3",
+          "zhAlt": "UB0418 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0418/gallery/u4.webp",
+          "thumb": "/assets/products/UB0418/gallery/u4-sm.webp",
+          "alt": "UB0418 product photo 4",
+          "zhAlt": "UB0418 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0418/gallery/u5.webp",
+          "thumb": "/assets/products/UB0418/gallery/u5-sm.webp",
+          "alt": "UB0418 product photo 5",
+          "zhAlt": "UB0418 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0418/gallery/u6.webp",
+          "thumb": "/assets/products/UB0418/gallery/u6-sm.webp",
+          "alt": "UB0418 product photo 6",
+          "zhAlt": "UB0418 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0418/gallery/u7.webp",
+          "thumb": "/assets/products/UB0418/gallery/u7-sm.webp",
+          "alt": "UB0418 product photo 7",
+          "zhAlt": "UB0418 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0418/gallery/u8.webp",
+          "thumb": "/assets/products/UB0418/gallery/u8-sm.webp",
+          "alt": "UB0418 product photo 8",
+          "zhAlt": "UB0418 產品照片 8"
+        },
+        {
+          "src": "/assets/products/UB0418/gallery/u9.webp",
+          "thumb": "/assets/products/UB0418/gallery/u9-sm.webp",
+          "alt": "UB0418 product photo 9",
+          "zhAlt": "UB0418 產品照片 9"
+        }
+      ]
+    },
+    "UB0418-1": {
+      "main": "/assets/products/UB0418-1/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0418-1/gallery/lead.webp",
+          "thumb": "/assets/products/UB0418-1/gallery/u0-sm.webp",
+          "alt": "UB0418-1 studio render",
+          "zhAlt": "UB0418-1 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0418-1/gallery/u1.webp",
+          "thumb": "/assets/products/UB0418-1/gallery/u1-sm.webp",
+          "alt": "UB0418-1 product photo 1",
+          "zhAlt": "UB0418-1 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0418-1/gallery/u2.webp",
+          "thumb": "/assets/products/UB0418-1/gallery/u2-sm.webp",
+          "alt": "UB0418-1 product photo 2",
+          "zhAlt": "UB0418-1 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0418-1/gallery/u3.webp",
+          "thumb": "/assets/products/UB0418-1/gallery/u3-sm.webp",
+          "alt": "UB0418-1 product photo 3",
+          "zhAlt": "UB0418-1 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0418-1/gallery/u4.webp",
+          "thumb": "/assets/products/UB0418-1/gallery/u4-sm.webp",
+          "alt": "UB0418-1 product photo 4",
+          "zhAlt": "UB0418-1 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0418-1/gallery/u5.webp",
+          "thumb": "/assets/products/UB0418-1/gallery/u5-sm.webp",
+          "alt": "UB0418-1 product photo 5",
+          "zhAlt": "UB0418-1 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0418-1/gallery/u6.webp",
+          "thumb": "/assets/products/UB0418-1/gallery/u6-sm.webp",
+          "alt": "UB0418-1 product photo 6",
+          "zhAlt": "UB0418-1 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0418-1/gallery/u7.webp",
+          "thumb": "/assets/products/UB0418-1/gallery/u7-sm.webp",
+          "alt": "UB0418-1 product photo 7",
+          "zhAlt": "UB0418-1 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0418-1/gallery/u8.webp",
+          "thumb": "/assets/products/UB0418-1/gallery/u8-sm.webp",
+          "alt": "UB0418-1 product photo 8",
+          "zhAlt": "UB0418-1 產品照片 8"
+        }
+      ]
+    },
+    "UB0420": {
+      "main": "/assets/products/UB0420/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0420/gallery/lead.webp",
+          "thumb": "/assets/products/UB0420/gallery/u0-sm.webp",
+          "alt": "UB0420 studio render",
+          "zhAlt": "UB0420 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0420/gallery/u1.webp",
+          "thumb": "/assets/products/UB0420/gallery/u1-sm.webp",
+          "alt": "UB0420 product photo 1",
+          "zhAlt": "UB0420 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0420/gallery/u2.webp",
+          "thumb": "/assets/products/UB0420/gallery/u2-sm.webp",
+          "alt": "UB0420 product photo 2",
+          "zhAlt": "UB0420 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0420/gallery/u3.webp",
+          "thumb": "/assets/products/UB0420/gallery/u3-sm.webp",
+          "alt": "UB0420 product photo 3",
+          "zhAlt": "UB0420 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0420/gallery/u4.webp",
+          "thumb": "/assets/products/UB0420/gallery/u4-sm.webp",
+          "alt": "UB0420 product photo 4",
+          "zhAlt": "UB0420 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0420/gallery/u5.webp",
+          "thumb": "/assets/products/UB0420/gallery/u5-sm.webp",
+          "alt": "UB0420 product photo 5",
+          "zhAlt": "UB0420 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0420/gallery/u6.webp",
+          "thumb": "/assets/products/UB0420/gallery/u6-sm.webp",
+          "alt": "UB0420 product photo 6",
+          "zhAlt": "UB0420 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0420/gallery/u7.webp",
+          "thumb": "/assets/products/UB0420/gallery/u7-sm.webp",
+          "alt": "UB0420 product photo 7",
+          "zhAlt": "UB0420 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0420/gallery/u8.webp",
+          "thumb": "/assets/products/UB0420/gallery/u8-sm.webp",
+          "alt": "UB0420 product photo 8",
+          "zhAlt": "UB0420 產品照片 8"
+        },
+        {
+          "src": "/assets/products/UB0420/gallery/u9.webp",
+          "thumb": "/assets/products/UB0420/gallery/u9-sm.webp",
+          "alt": "UB0420 product photo 9",
+          "zhAlt": "UB0420 產品照片 9"
+        }
+      ]
+    },
+    "UB0420-1": {
+      "main": "/assets/products/UB0420-1/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0420-1/gallery/lead.webp",
+          "thumb": "/assets/products/UB0420-1/gallery/u0-sm.webp",
+          "alt": "UB0420-1 studio render",
+          "zhAlt": "UB0420-1 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0420-1/gallery/u1.webp",
+          "thumb": "/assets/products/UB0420-1/gallery/u1-sm.webp",
+          "alt": "UB0420-1 product photo 1",
+          "zhAlt": "UB0420-1 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0420-1/gallery/u2.webp",
+          "thumb": "/assets/products/UB0420-1/gallery/u2-sm.webp",
+          "alt": "UB0420-1 product photo 2",
+          "zhAlt": "UB0420-1 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0420-1/gallery/u3.webp",
+          "thumb": "/assets/products/UB0420-1/gallery/u3-sm.webp",
+          "alt": "UB0420-1 product photo 3",
+          "zhAlt": "UB0420-1 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0420-1/gallery/u4.webp",
+          "thumb": "/assets/products/UB0420-1/gallery/u4-sm.webp",
+          "alt": "UB0420-1 product photo 4",
+          "zhAlt": "UB0420-1 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0420-1/gallery/u5.webp",
+          "thumb": "/assets/products/UB0420-1/gallery/u5-sm.webp",
+          "alt": "UB0420-1 product photo 5",
+          "zhAlt": "UB0420-1 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0420-1/gallery/u6.webp",
+          "thumb": "/assets/products/UB0420-1/gallery/u6-sm.webp",
+          "alt": "UB0420-1 product photo 6",
+          "zhAlt": "UB0420-1 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0420-1/gallery/u7.webp",
+          "thumb": "/assets/products/UB0420-1/gallery/u7-sm.webp",
+          "alt": "UB0420-1 product photo 7",
+          "zhAlt": "UB0420-1 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0420-1/gallery/u8.webp",
+          "thumb": "/assets/products/UB0420-1/gallery/u8-sm.webp",
+          "alt": "UB0420-1 product photo 8",
+          "zhAlt": "UB0420-1 產品照片 8"
+        },
+        {
+          "src": "/assets/products/UB0420-1/gallery/u9.webp",
+          "thumb": "/assets/products/UB0420-1/gallery/u9-sm.webp",
+          "alt": "UB0420-1 product photo 9",
+          "zhAlt": "UB0420-1 產品照片 9"
+        }
+      ]
+    },
+    "UB0422": {
+      "main": "/assets/products/UB0422/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0422/gallery/lead.webp",
+          "thumb": "/assets/products/UB0422/gallery/u0-sm.webp",
+          "alt": "UB0422 studio render",
+          "zhAlt": "UB0422 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0422/gallery/u1.webp",
+          "thumb": "/assets/products/UB0422/gallery/u1-sm.webp",
+          "alt": "UB0422 product photo 1",
+          "zhAlt": "UB0422 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0422/gallery/u2.webp",
+          "thumb": "/assets/products/UB0422/gallery/u2-sm.webp",
+          "alt": "UB0422 product photo 2",
+          "zhAlt": "UB0422 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0422/gallery/u3.webp",
+          "thumb": "/assets/products/UB0422/gallery/u3-sm.webp",
+          "alt": "UB0422 product photo 3",
+          "zhAlt": "UB0422 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0422/gallery/u4.webp",
+          "thumb": "/assets/products/UB0422/gallery/u4-sm.webp",
+          "alt": "UB0422 product photo 4",
+          "zhAlt": "UB0422 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0422/gallery/u5.webp",
+          "thumb": "/assets/products/UB0422/gallery/u5-sm.webp",
+          "alt": "UB0422 product photo 5",
+          "zhAlt": "UB0422 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0422/gallery/u6.webp",
+          "thumb": "/assets/products/UB0422/gallery/u6-sm.webp",
+          "alt": "UB0422 product photo 6",
+          "zhAlt": "UB0422 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0422/gallery/u7.webp",
+          "thumb": "/assets/products/UB0422/gallery/u7-sm.webp",
+          "alt": "UB0422 product photo 7",
+          "zhAlt": "UB0422 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0422/gallery/u8.webp",
+          "thumb": "/assets/products/UB0422/gallery/u8-sm.webp",
+          "alt": "UB0422 product photo 8",
+          "zhAlt": "UB0422 產品照片 8"
+        },
+        {
+          "src": "/assets/products/UB0422/gallery/u9.webp",
+          "thumb": "/assets/products/UB0422/gallery/u9-sm.webp",
+          "alt": "UB0422 product photo 9",
+          "zhAlt": "UB0422 產品照片 9"
+        }
+      ]
+    },
+    "UB0424": {
+      "main": "/assets/products/UB0424/card.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0424/card.webp",
+          "thumb": "/assets/products/UB0424/gallery/u0-sm.webp",
+          "alt": "UB0424 studio render",
+          "zhAlt": "UB0424 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0424/gallery/u1.webp",
+          "thumb": "/assets/products/UB0424/gallery/u1-sm.webp",
+          "alt": "UB0424 product photo 1",
+          "zhAlt": "UB0424 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0424/gallery/u2.webp",
+          "thumb": "/assets/products/UB0424/gallery/u2-sm.webp",
+          "alt": "UB0424 product photo 2",
+          "zhAlt": "UB0424 產品照片 2"
+        }
+      ]
+    },
+    "UB0512": {
+      "main": "/assets/products/UB0512/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0512/gallery/lead.webp",
+          "thumb": "/assets/products/UB0512/gallery/u0-sm.webp",
+          "alt": "UB0512 studio render",
+          "zhAlt": "UB0512 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0512/gallery/u1.webp",
+          "thumb": "/assets/products/UB0512/gallery/u1-sm.webp",
+          "alt": "UB0512 product photo 1",
+          "zhAlt": "UB0512 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0512/gallery/u2.webp",
+          "thumb": "/assets/products/UB0512/gallery/u2-sm.webp",
+          "alt": "UB0512 product photo 2",
+          "zhAlt": "UB0512 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0512/gallery/u3.webp",
+          "thumb": "/assets/products/UB0512/gallery/u3-sm.webp",
+          "alt": "UB0512 product photo 3",
+          "zhAlt": "UB0512 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0512/gallery/u4.webp",
+          "thumb": "/assets/products/UB0512/gallery/u4-sm.webp",
+          "alt": "UB0512 product photo 4",
+          "zhAlt": "UB0512 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0512/gallery/u5.webp",
+          "thumb": "/assets/products/UB0512/gallery/u5-sm.webp",
+          "alt": "UB0512 product photo 5",
+          "zhAlt": "UB0512 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0512/gallery/u6.webp",
+          "thumb": "/assets/products/UB0512/gallery/u6-sm.webp",
+          "alt": "UB0512 product photo 6",
+          "zhAlt": "UB0512 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0512/gallery/u7.webp",
+          "thumb": "/assets/products/UB0512/gallery/u7-sm.webp",
+          "alt": "UB0512 product photo 7",
+          "zhAlt": "UB0512 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0512/gallery/u8.webp",
+          "thumb": "/assets/products/UB0512/gallery/u8-sm.webp",
+          "alt": "UB0512 product photo 8",
+          "zhAlt": "UB0512 產品照片 8"
+        },
+        {
+          "src": "/assets/products/UB0512/gallery/u9.webp",
+          "thumb": "/assets/products/UB0512/gallery/u9-sm.webp",
+          "alt": "UB0512 product photo 9",
+          "zhAlt": "UB0512 產品照片 9"
+        }
+      ]
+    },
+    "UB0514": {
+      "main": "/assets/products/UB0514/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0514/gallery/lead.webp",
+          "thumb": "/assets/products/UB0514/gallery/u0-sm.webp",
+          "alt": "UB0514 studio render",
+          "zhAlt": "UB0514 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0514/gallery/u1.webp",
+          "thumb": "/assets/products/UB0514/gallery/u1-sm.webp",
+          "alt": "UB0514 product photo 1",
+          "zhAlt": "UB0514 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0514/gallery/u2.webp",
+          "thumb": "/assets/products/UB0514/gallery/u2-sm.webp",
+          "alt": "UB0514 product photo 2",
+          "zhAlt": "UB0514 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0514/gallery/u3.webp",
+          "thumb": "/assets/products/UB0514/gallery/u3-sm.webp",
+          "alt": "UB0514 product photo 3",
+          "zhAlt": "UB0514 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0514/gallery/u4.webp",
+          "thumb": "/assets/products/UB0514/gallery/u4-sm.webp",
+          "alt": "UB0514 product photo 4",
+          "zhAlt": "UB0514 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0514/gallery/u5.webp",
+          "thumb": "/assets/products/UB0514/gallery/u5-sm.webp",
+          "alt": "UB0514 product photo 5",
+          "zhAlt": "UB0514 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0514/gallery/u6.webp",
+          "thumb": "/assets/products/UB0514/gallery/u6-sm.webp",
+          "alt": "UB0514 product photo 6",
+          "zhAlt": "UB0514 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0514/gallery/u7.webp",
+          "thumb": "/assets/products/UB0514/gallery/u7-sm.webp",
+          "alt": "UB0514 product photo 7",
+          "zhAlt": "UB0514 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0514/gallery/u8.webp",
+          "thumb": "/assets/products/UB0514/gallery/u8-sm.webp",
+          "alt": "UB0514 product photo 8",
+          "zhAlt": "UB0514 產品照片 8"
+        },
+        {
+          "src": "/assets/products/UB0514/gallery/u9.webp",
+          "thumb": "/assets/products/UB0514/gallery/u9-sm.webp",
+          "alt": "UB0514 product photo 9",
+          "zhAlt": "UB0514 產品照片 9"
+        }
+      ]
+    },
+    "UB0516": {
+      "main": "/assets/products/UB0516/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0516/gallery/lead.webp",
+          "thumb": "/assets/products/UB0516/gallery/u0-sm.webp",
+          "alt": "UB0516 studio render",
+          "zhAlt": "UB0516 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0516/gallery/u1.webp",
+          "thumb": "/assets/products/UB0516/gallery/u1-sm.webp",
+          "alt": "UB0516 product photo 1",
+          "zhAlt": "UB0516 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0516/gallery/u2.webp",
+          "thumb": "/assets/products/UB0516/gallery/u2-sm.webp",
+          "alt": "UB0516 product photo 2",
+          "zhAlt": "UB0516 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0516/gallery/u3.webp",
+          "thumb": "/assets/products/UB0516/gallery/u3-sm.webp",
+          "alt": "UB0516 product photo 3",
+          "zhAlt": "UB0516 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0516/gallery/u4.webp",
+          "thumb": "/assets/products/UB0516/gallery/u4-sm.webp",
+          "alt": "UB0516 product photo 4",
+          "zhAlt": "UB0516 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0516/gallery/u5.webp",
+          "thumb": "/assets/products/UB0516/gallery/u5-sm.webp",
+          "alt": "UB0516 product photo 5",
+          "zhAlt": "UB0516 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0516/gallery/u6.webp",
+          "thumb": "/assets/products/UB0516/gallery/u6-sm.webp",
+          "alt": "UB0516 product photo 6",
+          "zhAlt": "UB0516 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0516/gallery/u7.webp",
+          "thumb": "/assets/products/UB0516/gallery/u7-sm.webp",
+          "alt": "UB0516 product photo 7",
+          "zhAlt": "UB0516 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0516/gallery/u8.webp",
+          "thumb": "/assets/products/UB0516/gallery/u8-sm.webp",
+          "alt": "UB0516 product photo 8",
+          "zhAlt": "UB0516 產品照片 8"
+        },
+        {
+          "src": "/assets/products/UB0516/gallery/u9.webp",
+          "thumb": "/assets/products/UB0516/gallery/u9-sm.webp",
+          "alt": "UB0516 product photo 9",
+          "zhAlt": "UB0516 產品照片 9"
+        },
+        {
+          "src": "/assets/products/UB0516/gallery/u10.webp",
+          "thumb": "/assets/products/UB0516/gallery/u10-sm.webp",
+          "alt": "UB0516 product photo 10",
+          "zhAlt": "UB0516 產品照片 10"
+        }
+      ]
+    },
+    "UB0518": {
+      "main": "/assets/products/UB0518/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0518/gallery/lead.webp",
+          "thumb": "/assets/products/UB0518/gallery/u0-sm.webp",
+          "alt": "UB0518 studio render",
+          "zhAlt": "UB0518 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0518/gallery/u1.webp",
+          "thumb": "/assets/products/UB0518/gallery/u1-sm.webp",
+          "alt": "UB0518 product photo 1",
+          "zhAlt": "UB0518 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0518/gallery/u2.webp",
+          "thumb": "/assets/products/UB0518/gallery/u2-sm.webp",
+          "alt": "UB0518 product photo 2",
+          "zhAlt": "UB0518 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0518/gallery/u3.webp",
+          "thumb": "/assets/products/UB0518/gallery/u3-sm.webp",
+          "alt": "UB0518 product photo 3",
+          "zhAlt": "UB0518 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0518/gallery/u4.webp",
+          "thumb": "/assets/products/UB0518/gallery/u4-sm.webp",
+          "alt": "UB0518 product photo 4",
+          "zhAlt": "UB0518 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0518/gallery/u5.webp",
+          "thumb": "/assets/products/UB0518/gallery/u5-sm.webp",
+          "alt": "UB0518 product photo 5",
+          "zhAlt": "UB0518 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0518/gallery/u6.webp",
+          "thumb": "/assets/products/UB0518/gallery/u6-sm.webp",
+          "alt": "UB0518 product photo 6",
+          "zhAlt": "UB0518 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0518/gallery/u7.webp",
+          "thumb": "/assets/products/UB0518/gallery/u7-sm.webp",
+          "alt": "UB0518 product photo 7",
+          "zhAlt": "UB0518 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0518/gallery/u8.webp",
+          "thumb": "/assets/products/UB0518/gallery/u8-sm.webp",
+          "alt": "UB0518 product photo 8",
+          "zhAlt": "UB0518 產品照片 8"
+        },
+        {
+          "src": "/assets/products/UB0518/gallery/u9.webp",
+          "thumb": "/assets/products/UB0518/gallery/u9-sm.webp",
+          "alt": "UB0518 product photo 9",
+          "zhAlt": "UB0518 產品照片 9"
+        },
+        {
+          "src": "/assets/products/UB0518/gallery/u10.webp",
+          "thumb": "/assets/products/UB0518/gallery/u10-sm.webp",
+          "alt": "UB0518 product photo 10",
+          "zhAlt": "UB0518 產品照片 10"
+        }
+      ]
+    },
+    "UB0522": {
+      "main": "/assets/products/UB0522/card.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0522/card.webp",
+          "thumb": "/assets/products/UB0522/gallery/u0-sm.webp",
+          "alt": "UB0522 studio render",
+          "zhAlt": "UB0522 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0522/gallery/u1.webp",
+          "thumb": "/assets/products/UB0522/gallery/u1-sm.webp",
+          "alt": "UB0522 product photo 1",
+          "zhAlt": "UB0522 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0522/gallery/u2.webp",
+          "thumb": "/assets/products/UB0522/gallery/u2-sm.webp",
+          "alt": "UB0522 product photo 2",
+          "zhAlt": "UB0522 產品照片 2"
+        }
+      ]
+    },
+    "UB0523": {
+      "main": "/assets/products/UB0523/card.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0523/card.webp",
+          "thumb": "/assets/products/UB0523/gallery/u0-sm.webp",
+          "alt": "UB0523 studio render",
+          "zhAlt": "UB0523 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0523/gallery/u1.webp",
+          "thumb": "/assets/products/UB0523/gallery/u1-sm.webp",
+          "alt": "UB0523 product photo 1",
+          "zhAlt": "UB0523 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0523/gallery/u2.webp",
+          "thumb": "/assets/products/UB0523/gallery/u2-sm.webp",
+          "alt": "UB0523 product photo 2",
+          "zhAlt": "UB0523 產品照片 2"
+        }
+      ]
+    },
+    "UB0610-1": {
+      "main": "/assets/products/UB0610-1/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0610-1/gallery/lead.webp",
+          "thumb": "/assets/products/UB0610-1/gallery/u0-sm.webp",
+          "alt": "UB0610-1 studio render",
+          "zhAlt": "UB0610-1 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0610-1/gallery/u1.webp",
+          "thumb": "/assets/products/UB0610-1/gallery/u1-sm.webp",
+          "alt": "UB0610-1 product photo 1",
+          "zhAlt": "UB0610-1 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0610-1/gallery/u2.webp",
+          "thumb": "/assets/products/UB0610-1/gallery/u2-sm.webp",
+          "alt": "UB0610-1 product photo 2",
+          "zhAlt": "UB0610-1 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0610-1/gallery/u3.webp",
+          "thumb": "/assets/products/UB0610-1/gallery/u3-sm.webp",
+          "alt": "UB0610-1 product photo 3",
+          "zhAlt": "UB0610-1 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0610-1/gallery/u4.webp",
+          "thumb": "/assets/products/UB0610-1/gallery/u4-sm.webp",
+          "alt": "UB0610-1 product photo 4",
+          "zhAlt": "UB0610-1 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0610-1/gallery/u5.webp",
+          "thumb": "/assets/products/UB0610-1/gallery/u5-sm.webp",
+          "alt": "UB0610-1 product photo 5",
+          "zhAlt": "UB0610-1 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0610-1/gallery/u6.webp",
+          "thumb": "/assets/products/UB0610-1/gallery/u6-sm.webp",
+          "alt": "UB0610-1 product photo 6",
+          "zhAlt": "UB0610-1 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0610-1/gallery/u7.webp",
+          "thumb": "/assets/products/UB0610-1/gallery/u7-sm.webp",
+          "alt": "UB0610-1 product photo 7",
+          "zhAlt": "UB0610-1 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0610-1/gallery/u8.webp",
+          "thumb": "/assets/products/UB0610-1/gallery/u8-sm.webp",
+          "alt": "UB0610-1 product photo 8",
+          "zhAlt": "UB0610-1 產品照片 8"
+        },
+        {
+          "src": "/assets/products/UB0610-1/gallery/u9.webp",
+          "thumb": "/assets/products/UB0610-1/gallery/u9-sm.webp",
+          "alt": "UB0610-1 product photo 9",
+          "zhAlt": "UB0610-1 產品照片 9"
+        },
+        {
+          "src": "/assets/products/UB0610-1/gallery/u10.webp",
+          "thumb": "/assets/products/UB0610-1/gallery/u10-sm.webp",
+          "alt": "UB0610-1 product photo 10",
+          "zhAlt": "UB0610-1 產品照片 10"
+        },
+        {
+          "src": "/assets/products/UB0610-1/gallery/u11.webp",
+          "thumb": "/assets/products/UB0610-1/gallery/u11-sm.webp",
+          "alt": "UB0610-1 product photo 11",
+          "zhAlt": "UB0610-1 產品照片 11"
+        }
+      ]
+    },
+    "UB0612": {
+      "main": "/assets/products/UB0612/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0612/gallery/lead.webp",
+          "thumb": "/assets/products/UB0612/gallery/u0-sm.webp",
+          "alt": "UB0612 studio render",
+          "zhAlt": "UB0612 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0612/gallery/u1.webp",
+          "thumb": "/assets/products/UB0612/gallery/u1-sm.webp",
+          "alt": "UB0612 product photo 1",
+          "zhAlt": "UB0612 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0612/gallery/u2.webp",
+          "thumb": "/assets/products/UB0612/gallery/u2-sm.webp",
+          "alt": "UB0612 product photo 2",
+          "zhAlt": "UB0612 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0612/gallery/u3.webp",
+          "thumb": "/assets/products/UB0612/gallery/u3-sm.webp",
+          "alt": "UB0612 product photo 3",
+          "zhAlt": "UB0612 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0612/gallery/u4.webp",
+          "thumb": "/assets/products/UB0612/gallery/u4-sm.webp",
+          "alt": "UB0612 product photo 4",
+          "zhAlt": "UB0612 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0612/gallery/u5.webp",
+          "thumb": "/assets/products/UB0612/gallery/u5-sm.webp",
+          "alt": "UB0612 product photo 5",
+          "zhAlt": "UB0612 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0612/gallery/u6.webp",
+          "thumb": "/assets/products/UB0612/gallery/u6-sm.webp",
+          "alt": "UB0612 product photo 6",
+          "zhAlt": "UB0612 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0612/gallery/u7.webp",
+          "thumb": "/assets/products/UB0612/gallery/u7-sm.webp",
+          "alt": "UB0612 product photo 7",
+          "zhAlt": "UB0612 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0612/gallery/u8.webp",
+          "thumb": "/assets/products/UB0612/gallery/u8-sm.webp",
+          "alt": "UB0612 product photo 8",
+          "zhAlt": "UB0612 產品照片 8"
+        },
+        {
+          "src": "/assets/products/UB0612/gallery/u9.webp",
+          "thumb": "/assets/products/UB0612/gallery/u9-sm.webp",
+          "alt": "UB0612 product photo 9",
+          "zhAlt": "UB0612 產品照片 9"
+        },
+        {
+          "src": "/assets/products/UB0612/gallery/u10.webp",
+          "thumb": "/assets/products/UB0612/gallery/u10-sm.webp",
+          "alt": "UB0612 product photo 10",
+          "zhAlt": "UB0612 產品照片 10"
+        }
+      ]
+    },
+    "UB0614": {
+      "main": "/assets/products/UB0614/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0614/gallery/lead.webp",
+          "thumb": "/assets/products/UB0614/gallery/u0-sm.webp",
+          "alt": "UB0614 studio render",
+          "zhAlt": "UB0614 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0614/gallery/u1.webp",
+          "thumb": "/assets/products/UB0614/gallery/u1-sm.webp",
+          "alt": "UB0614 product photo 1",
+          "zhAlt": "UB0614 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0614/gallery/u2.webp",
+          "thumb": "/assets/products/UB0614/gallery/u2-sm.webp",
+          "alt": "UB0614 product photo 2",
+          "zhAlt": "UB0614 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0614/gallery/u3.webp",
+          "thumb": "/assets/products/UB0614/gallery/u3-sm.webp",
+          "alt": "UB0614 product photo 3",
+          "zhAlt": "UB0614 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0614/gallery/u4.webp",
+          "thumb": "/assets/products/UB0614/gallery/u4-sm.webp",
+          "alt": "UB0614 product photo 4",
+          "zhAlt": "UB0614 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0614/gallery/u5.webp",
+          "thumb": "/assets/products/UB0614/gallery/u5-sm.webp",
+          "alt": "UB0614 product photo 5",
+          "zhAlt": "UB0614 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0614/gallery/u6.webp",
+          "thumb": "/assets/products/UB0614/gallery/u6-sm.webp",
+          "alt": "UB0614 product photo 6",
+          "zhAlt": "UB0614 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0614/gallery/u7.webp",
+          "thumb": "/assets/products/UB0614/gallery/u7-sm.webp",
+          "alt": "UB0614 product photo 7",
+          "zhAlt": "UB0614 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0614/gallery/u8.webp",
+          "thumb": "/assets/products/UB0614/gallery/u8-sm.webp",
+          "alt": "UB0614 product photo 8",
+          "zhAlt": "UB0614 產品照片 8"
+        },
+        {
+          "src": "/assets/products/UB0614/gallery/u9.webp",
+          "thumb": "/assets/products/UB0614/gallery/u9-sm.webp",
+          "alt": "UB0614 product photo 9",
+          "zhAlt": "UB0614 產品照片 9"
+        },
+        {
+          "src": "/assets/products/UB0614/gallery/u10.webp",
+          "thumb": "/assets/products/UB0614/gallery/u10-sm.webp",
+          "alt": "UB0614 product photo 10",
+          "zhAlt": "UB0614 產品照片 10"
+        }
+      ]
+    },
+    "UB0616": {
+      "main": "/assets/products/UB0616/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0616/gallery/lead.webp",
+          "thumb": "/assets/products/UB0616/gallery/u0-sm.webp",
+          "alt": "UB0616 studio render",
+          "zhAlt": "UB0616 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0616/gallery/u1.webp",
+          "thumb": "/assets/products/UB0616/gallery/u1-sm.webp",
+          "alt": "UB0616 product photo 1",
+          "zhAlt": "UB0616 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0616/gallery/u2.webp",
+          "thumb": "/assets/products/UB0616/gallery/u2-sm.webp",
+          "alt": "UB0616 product photo 2",
+          "zhAlt": "UB0616 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0616/gallery/u3.webp",
+          "thumb": "/assets/products/UB0616/gallery/u3-sm.webp",
+          "alt": "UB0616 product photo 3",
+          "zhAlt": "UB0616 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0616/gallery/u4.webp",
+          "thumb": "/assets/products/UB0616/gallery/u4-sm.webp",
+          "alt": "UB0616 product photo 4",
+          "zhAlt": "UB0616 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0616/gallery/u5.webp",
+          "thumb": "/assets/products/UB0616/gallery/u5-sm.webp",
+          "alt": "UB0616 product photo 5",
+          "zhAlt": "UB0616 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0616/gallery/u6.webp",
+          "thumb": "/assets/products/UB0616/gallery/u6-sm.webp",
+          "alt": "UB0616 product photo 6",
+          "zhAlt": "UB0616 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0616/gallery/u7.webp",
+          "thumb": "/assets/products/UB0616/gallery/u7-sm.webp",
+          "alt": "UB0616 product photo 7",
+          "zhAlt": "UB0616 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0616/gallery/u8.webp",
+          "thumb": "/assets/products/UB0616/gallery/u8-sm.webp",
+          "alt": "UB0616 product photo 8",
+          "zhAlt": "UB0616 產品照片 8"
+        },
+        {
+          "src": "/assets/products/UB0616/gallery/u9.webp",
+          "thumb": "/assets/products/UB0616/gallery/u9-sm.webp",
+          "alt": "UB0616 product photo 9",
+          "zhAlt": "UB0616 產品照片 9"
+        },
+        {
+          "src": "/assets/products/UB0616/gallery/u10.webp",
+          "thumb": "/assets/products/UB0616/gallery/u10-sm.webp",
+          "alt": "UB0616 product photo 10",
+          "zhAlt": "UB0616 產品照片 10"
+        }
+      ]
+    },
+    "UB0618": {
+      "main": "/assets/products/UB0618/gallery/lead.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0618/gallery/lead.webp",
+          "thumb": "/assets/products/UB0618/gallery/u0-sm.webp",
+          "alt": "UB0618 studio render",
+          "zhAlt": "UB0618 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0618/gallery/u1.webp",
+          "thumb": "/assets/products/UB0618/gallery/u1-sm.webp",
+          "alt": "UB0618 product photo 1",
+          "zhAlt": "UB0618 產品照片 1"
+        },
+        {
+          "src": "/assets/products/UB0618/gallery/u2.webp",
+          "thumb": "/assets/products/UB0618/gallery/u2-sm.webp",
+          "alt": "UB0618 product photo 2",
+          "zhAlt": "UB0618 產品照片 2"
+        },
+        {
+          "src": "/assets/products/UB0618/gallery/u3.webp",
+          "thumb": "/assets/products/UB0618/gallery/u3-sm.webp",
+          "alt": "UB0618 product photo 3",
+          "zhAlt": "UB0618 產品照片 3"
+        },
+        {
+          "src": "/assets/products/UB0618/gallery/u4.webp",
+          "thumb": "/assets/products/UB0618/gallery/u4-sm.webp",
+          "alt": "UB0618 product photo 4",
+          "zhAlt": "UB0618 產品照片 4"
+        },
+        {
+          "src": "/assets/products/UB0618/gallery/u5.webp",
+          "thumb": "/assets/products/UB0618/gallery/u5-sm.webp",
+          "alt": "UB0618 product photo 5",
+          "zhAlt": "UB0618 產品照片 5"
+        },
+        {
+          "src": "/assets/products/UB0618/gallery/u6.webp",
+          "thumb": "/assets/products/UB0618/gallery/u6-sm.webp",
+          "alt": "UB0618 product photo 6",
+          "zhAlt": "UB0618 產品照片 6"
+        },
+        {
+          "src": "/assets/products/UB0618/gallery/u7.webp",
+          "thumb": "/assets/products/UB0618/gallery/u7-sm.webp",
+          "alt": "UB0618 product photo 7",
+          "zhAlt": "UB0618 產品照片 7"
+        },
+        {
+          "src": "/assets/products/UB0618/gallery/u8.webp",
+          "thumb": "/assets/products/UB0618/gallery/u8-sm.webp",
+          "alt": "UB0618 product photo 8",
+          "zhAlt": "UB0618 產品照片 8"
+        },
+        {
+          "src": "/assets/products/UB0618/gallery/u9.webp",
+          "thumb": "/assets/products/UB0618/gallery/u9-sm.webp",
+          "alt": "UB0618 product photo 9",
+          "zhAlt": "UB0618 產品照片 9"
+        },
+        {
+          "src": "/assets/products/UB0618/gallery/u10.webp",
+          "thumb": "/assets/products/UB0618/gallery/u10-sm.webp",
+          "alt": "UB0618 product photo 10",
+          "zhAlt": "UB0618 產品照片 10"
+        }
+      ]
+    }
+  }
+}

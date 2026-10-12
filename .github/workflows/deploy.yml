@@ -37,6 +37,10 @@ jobs:
         run: |
           node tools/migrate-product-galleries.cjs --check
           node --test tools/product-gallery.test.cjs
+      - name: Guard bilingual product media and metadata
+        run: |
+          python3 tools/product_media.py
+          python3 tools/product_media_test.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
