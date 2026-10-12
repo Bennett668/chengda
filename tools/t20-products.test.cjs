@@ -47,7 +47,7 @@ for (const p of products) for (const lang of ['', 'zh/']) {
       assert.doesNotMatch(video, /muted/);
       assert.ok(html.indexOf('class="pd-tech') < html.indexOf('id="product-video"'));
       assert.ok(html.indexOf('id="product-video"') < html.indexOf('class="pd-cols"'));
-      assert.ok(html.includes('/assets/product-video-section.js?v=5'));
+      assert.ok(html.includes('/assets/product-video-section.js?v=' + require('./shared-assets.json')['/assets/product-video-section.js']));
       assert.doesNotMatch(html, /class="pd-film-meta"/);
     } else assert.match(video, /muted/);
     assert.doesNotMatch(video, /\sautoplay|\ssrc=/);
@@ -82,7 +82,7 @@ test('Gallery loads video on demand and pauses it on photo navigation', () => {
   Object.defineProperty(video, 'src', {set(value) { this.attrs.src = value; }});
   const thumbs = [element({src:'card.webp',alt:'T201'}), element({media:'video'}), element({src:'hero.webp'})];
   const prev = element(), next = element(), docEvents = {}, windowEvents = {};
-  const document = {hidden: false,
+  const document = {hidden: false, documentElement:{lang:'en'},
     getElementById: id => ({'pd-main': main, 'pd-video':video,'pd-video-error':error})[id],
     querySelectorAll: () => thumbs,
     querySelector: selector => selector.includes('prev') ? prev : next,
@@ -125,12 +125,13 @@ test('Standalone video starts unmuted on click and remains independent of photos
   Object.defineProperty(video, 'src', {set(value) { this.attrs.src = value; }});
   const thumbs = [element({src:'card.webp',alt:'T203'}), element({src:'hero.webp'})];
   const prev = element(), next = element(), docEvents = {}, windowEvents = {};
-  const document = {hidden: false,
+  const document = {hidden: false, documentElement:{lang:'en'},
     getElementById: id => ({'pd-main': main, 'pd-video':video,'pd-video-error':error})[id],
     querySelectorAll: () => thumbs,
     querySelector: selector => ({'.pd-arrow.prev':prev,'.pd-arrow.next':next,'.pd-film-start':start})[selector],
     addEventListener: (name, fn) => {docEvents[name] = fn;},
   };
+  vm.runInNewContext(fs.readFileSync(path.join(root,'assets/product-gallery.js'),'utf8'), {document});
   vm.runInNewContext(fs.readFileSync(path.join(root,'assets/product-video-section.js'),'utf8'), {document, window:{addEventListener:(name,fn)=>{windowEvents[name]=fn;}}});
   assert.equal(video.getAttribute('src'), undefined);
   assert.equal(video.paused, true);

@@ -417,30 +417,11 @@ gtag('config', 'G-J7PPP48QXC');
 <div id="shell-footer"></div>
 
 <script src="/assets/icons.js?v=6" defer></script>
-<script src="/assets/site-shell.js?v=14" defer></script>
+<script src="/assets/product-gallery.js?v=1" defer></script>
+<script src="/assets/site-shell.js?v=15" defer></script>
 <script>document.addEventListener('DOMContentLoaded',()=>renderShell('products'));</script>
 <script>
 (() => {
-  const thumbs = Array.from(document.querySelectorAll('.pd-thumb'));
-  const main = document.getElementById('pd-main');
-  const prev = document.querySelector('.pd-arrow.prev');
-  const next = document.querySelector('.pd-arrow.next');
-  let idx = 0;
-  function set(i) {
-    idx = (i + thumbs.length) % thumbs.length;
-    const t = thumbs[idx];
-    main.src = t.dataset.src;
-    main.alt = t.dataset.alt || main.alt;
-    thumbs.forEach((tt, j) => {
-      const a = j === idx;
-      tt.classList.toggle('is-active', a);
-      tt.setAttribute('aria-selected', a ? 'true' : 'false');
-    });
-  }
-  thumbs.forEach((t, i) => t.addEventListener('click', () => set(i)));
-  prev && prev.addEventListener('click', () => set(idx - 1));
-  next && next.addEventListener('click', () => set(idx + 1));
-
   const addBtn = document.getElementById('addInquiry');
   if (addBtn) {
     addBtn.addEventListener('click', () => {

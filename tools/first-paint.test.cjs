@@ -78,7 +78,10 @@ test('hero decode failure and reduced motion need neither storage nor animation'
 test('language switch preserves query, model and dynamic selection', () => {
   for (const [source, expected] of [
     ['/products/?cat=standard&sub=wall','/zh/products/?cat=standard&sub=wall'],
-    ['/products/?cat=washbasin&sub=A20','/zh/products/?cat=art&sub=A20'],
+    ['/products/?cat=washbasin&sub=A20','/zh/products/?cat=washbasin&sub=A20'],
+    ['/products/?cat=washbasin&sub=all','/zh/products/?cat=washbasin&sub=all'],
+    ['/zh/products/?cat=washbasin&sub=all','/products/?cat=washbasin&sub=all'],
+    ['/products/?cat=art','/zh/products/?cat=washbasin&sub=g_above'],
     ['/zh/products/?cat=art&sub=A20','/products/?cat=washbasin&sub=A20'],
     ['/zh/products/?cat=art','/products/?cat=washbasin&sub=g_above'],
     ['/contact/?model=T201#inquiry','/zh/contact/?model=T201#inquiry']

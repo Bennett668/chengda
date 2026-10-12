@@ -117,10 +117,7 @@
     if (/^\/(zh\/)?products\/$/.test(current.pathname)) {
       const cat = current.searchParams.get('cat');
       const sub = current.searchParams.get('sub');
-      if (!ZH && ((cat === 'washbasin' && /^(A10|A20|A30|g_above)$/.test(sub)) || cat === 'art')) {
-        target.searchParams.set('cat', 'art');
-        if (sub === 'g_above') target.searchParams.set('sub', 'all');
-      } else if (ZH && cat === 'art') {
+      if (cat === 'art') {
         target.searchParams.set('cat', 'washbasin');
         target.searchParams.set('sub', !sub || sub === 'all' ? 'g_above' : sub);
       }

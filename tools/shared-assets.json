@@ -1,7 +1,9 @@
 {
   "/assets/porcelain.css": "21",
-  "/assets/site-shell.js": "14",
+  "/assets/site-shell.js": "15",
   "/assets/catalog-request.css": "3",
   "/assets/catalog-request.js": "4",
-  "/assets/inquiry-form.js": "2"
+  "/assets/inquiry-form.js": "2",
+  "/assets/product-gallery.js": "1",
+  "/assets/product-video-section.js": "6"
 }

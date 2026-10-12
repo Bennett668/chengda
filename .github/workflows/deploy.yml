@@ -33,6 +33,10 @@ jobs:
           node tools/sync-shared-assets.cjs --write
           node tools/sync-shared-assets.cjs --check
           node --test tools/shared-assets.test.cjs
+      - name: Guard manual, accessible product galleries
+        run: |
+          node tools/migrate-product-galleries.cjs --check
+          node --test tools/product-gallery.test.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
