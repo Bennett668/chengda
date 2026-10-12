@@ -177,7 +177,7 @@
       style.href = '/assets/catalog-request.css?v=3';
       const script = document.createElement('script');
       script.id = 'catalog-request-script';
-      script.src = '/assets/catalog-request.js?v=3';
+      script.src = '/assets/catalog-request.js?v=4';
       script.onload = () => {
         const init = () => { if (window.initCatalogRequest) window.initCatalogRequest(); };
         if (style.sheet) init();

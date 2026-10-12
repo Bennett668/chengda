@@ -264,29 +264,40 @@
         updates: updates.checked, language, url: location.href, timestamp: new Date().toISOString(), requestId
       });
       const submittedMethod = method;
+      const initiatingFocus = document.activeElement;
+      let keepSubmissionFocus = panel.contains(initiatingFocus);
       pending = true;
       fields.disabled = true;
+      // Disabling the focused field can move focus to body without user intent.
+      // Track subsequent interaction so a slow response cannot steal it back.
+      const movedOutside = event => { if (!panel.contains(event.target)) keepSubmissionFocus = false; };
+      document.addEventListener('focusin', movedOutside);
+      document.addEventListener('pointerdown', movedOutside, true);
       form.setAttribute('aria-busy', 'true');
       submit.querySelector('span').textContent = text.sending;
       error.hidden = true;
       validation.hidden = true;
       try {
         await sendRequest(payload, window.fetch.bind(window));
-        const hadFocus = panel.contains(document.activeElement);
         form.reset();
         form.hidden = true;
         title.hidden = true;
         success.querySelector('p').textContent = submittedMethod === 'email' ? text.successEmail : text.successPhone;
         success.hidden = false;
         rememberShown();
-        if (!panel.hidden && hadFocus) success.focus();
+        if (!panel.hidden && keepSubmissionFocus) success.focus({preventScroll:true});
       } catch (_) {
         error.hidden = false;
       } finally {
         pending = false;
         fields.disabled = false;
+        document.removeEventListener('focusin', movedOutside);
+        document.removeEventListener('pointerdown', movedOutside, true);
         form.setAttribute('aria-busy', 'false');
         submit.querySelector('span').textContent = text.submit;
+        if (!error.hidden && !panel.hidden && keepSubmissionFocus && document.activeElement === document.body) {
+          initiatingFocus.focus({preventScroll:true});
+        }
       }
     });
 
