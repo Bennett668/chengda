@@ -19,6 +19,12 @@
 .pd-film-start svg { width: 25px; height: 25px; margin-left: 3px; }
 .pd-film-start:hover span { background: #076b4c; transform: scale(1.06); }
 .pd-film-start:focus-visible { outline: 3px solid #076b4c; outline-offset: -5px; }
+.pd-film-start.is-loading { cursor: wait; }
+.pd-film-start.is-loading span { transform: none; }
+.pd-film-start.is-loading svg { display: none; }
+.pd-film-start.is-loading span::after { content: ''; width: 24px; height: 24px; border: 2px solid #ffffff55; border-top-color: white; border-radius: 50%; animation: pd-film-loading .8s linear infinite; }
+.pd-film-status { position: absolute; bottom: 56px; left: 50%; transform: translateX(-50%); max-width: calc(100% - 32px); padding: 6px 12px; border-radius: 4px; background: #17191c; color: white; font-size: 13px; line-height: 1.5; text-align: center; pointer-events: none; }
+@keyframes pd-film-loading { to { transform: rotate(360deg); } }
 .pd-film-player .pd-video-error { position: absolute; inset: auto 16px 56px; margin: 0; padding: 12px; background: white; border: 1px solid var(--line); font-size: 14px; text-align: center; z-index: 2; }
 .pd-film-player .pd-video-error a { text-decoration: underline; }
 @media (min-width: 1101px) {
@@ -44,4 +50,4 @@
   .pd-film-header { gap: 12px; }
   .pd-film-start span { width: 58px; height: 58px; }
 }
-@media (prefers-reduced-motion: reduce) { .pd-film-start span { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .pd-film-start span { transition: none; } .pd-film-start.is-loading span::after { animation: none; } }

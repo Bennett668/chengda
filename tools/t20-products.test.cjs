@@ -118,21 +118,23 @@ test('Standalone video starts unmuted on click and remains independent of photos
   });
   const main = element(), error = element(), start = element();
   const video = element({src: '/assets/products/T203/video-with-audio.mp4'});
+  video.parentElement = {...element(), append() {}};
   video.paused = true;
   video.muted = true;
   video.pause = () => { video.paused = true; };
-  video.play = () => { video.paused = false; return Promise.resolve(); };
+  video.play = () => { video.paused = false; video.events.playing(); return Promise.resolve(); };
   Object.defineProperty(video, 'src', {set(value) { this.attrs.src = value; }});
   const thumbs = [element({src:'card.webp',alt:'T203'}), element({src:'hero.webp'})];
   const prev = element(), next = element(), docEvents = {}, windowEvents = {};
   const document = {hidden: false, documentElement:{lang:'en'},
+    createElement: () => element(),
     getElementById: id => ({'pd-main': main, 'pd-video':video,'pd-video-error':error})[id],
     querySelectorAll: () => thumbs,
     querySelector: selector => ({'.pd-arrow.prev':prev,'.pd-arrow.next':next,'.pd-film-start':start})[selector],
     addEventListener: (name, fn) => {docEvents[name] = fn;},
   };
   vm.runInNewContext(fs.readFileSync(path.join(root,'assets/product-gallery.js'),'utf8'), {document});
-  vm.runInNewContext(fs.readFileSync(path.join(root,'assets/product-video-section.js'),'utf8'), {document, window:{addEventListener:(name,fn)=>{windowEvents[name]=fn;}}});
+  vm.runInNewContext(fs.readFileSync(path.join(root,'assets/product-video-section.js'),'utf8'), {document, navigator:{}, window:{addEventListener:(name,fn)=>{windowEvents[name]=fn;}}});
   assert.equal(video.getAttribute('src'), undefined);
   assert.equal(video.paused, true);
   await start.events.click();

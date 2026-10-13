@@ -47,6 +47,8 @@ jobs:
           node --test tools/product-inquiry.test.cjs
       - name: Guard approved product previews
         run: node --test tools/product-previews.test.cjs
+      - name: Guard lazy product video startup and recovery
+        run: node --test tools/product-video-start.test.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

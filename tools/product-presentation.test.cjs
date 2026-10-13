@@ -34,7 +34,7 @@ for (const lang of ['', 'zh/']) {
       assert.equal((html.match(/class="pd-col"/g) || []).length, 2);
       assert.doesNotMatch(html, /<table class="pd-loadtable">|<div class="pd-pack-img">|data-media="video"|\/assets\/product-media.js|const thumbs = Array.from/);
       assert.equal((html.match(/product-video-section.js/g) || []).length, 1);
-      assert.match(html, /product-video-section.css\?v=9/);
+      assert.ok(html.includes('/assets/product-video-section.css?v=' + require('./shared-assets.json')['/assets/product-video-section.css']));
       const videos = [...html.matchAll(/<video\b[^>]*>/g)];
       assert.equal(videos.length, videoSkus.has(sku) ? 1 : 0);
       if (videoSkus.has(sku)) {
