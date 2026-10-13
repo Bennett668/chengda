@@ -134,7 +134,7 @@ test('Standalone video starts unmuted on click and remains independent of photos
     addEventListener: (name, fn) => {docEvents[name] = fn;},
   };
   vm.runInNewContext(fs.readFileSync(path.join(root,'assets/product-gallery.js'),'utf8'), {document});
-  vm.runInNewContext(fs.readFileSync(path.join(root,'assets/product-video-section.js'),'utf8'), {document, navigator:{}, window:{addEventListener:(name,fn)=>{windowEvents[name]=fn;}}});
+  vm.runInNewContext(fs.readFileSync(path.join(root,'assets/product-video-section.js'),'utf8'), {document, navigator:{}, setTimeout:()=>0, clearTimeout() {}, window:{addEventListener:(name,fn)=>{windowEvents[name]=fn;}}});
   assert.equal(video.getAttribute('src'), undefined);
   assert.equal(video.paused, true);
   await start.events.click();

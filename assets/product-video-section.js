@@ -5,7 +5,11 @@
   if (!video || !start || !error) return;
   const player = video.parentElement;
   const label = start.getAttribute('aria-label');
-  const loadingLabel = document.documentElement.lang === 'zh-Hant' ? '\u8f09\u5165\u5f71\u7247\u4e2d...' : 'Loading video...';
+  const title = start.title || label;
+  const chinese = document.documentElement.lang === 'zh-Hant';
+  const loadingLabel = chinese ? '\u8f09\u5165\u5f71\u7247\u4e2d...' : 'Loading video...';
+  const retryLabel = chinese ? '\u91cd\u8a66\u5f71\u7247' : 'Retry video';
+  const slowLabel = chinese ? '\u8f09\u5165\u6642\u9593\u8f03\u9577...' : 'Taking longer than usual...';
   const status = document.createElement('span');
   status.className = 'pd-film-status';
   status.setAttribute('role', 'status');
@@ -14,13 +18,32 @@
   player.append(status);
   let requested = false;
   let attempt = 0;
+  let pendingTimer;
+  let retryPending = false;
 
   function loading(active) {
+    clearTimeout(pendingTimer);
     player.setAttribute('aria-busy', String(active));
     start.classList.toggle('is-loading', active);
     start.disabled = active;
     start.setAttribute('aria-label', active ? loadingLabel : label);
+    start.title = active ? loadingLabel : title;
+    status.textContent = loadingLabel;
     status.hidden = !active;
+    if (active && !start.hidden) {
+      pendingTimer = setTimeout(() => {
+        video.pause();
+        reset();
+        video.preload = 'none';
+        retryPending = true;
+        start.disabled = false;
+        start.classList.toggle('is-loading', false);
+        start.setAttribute('aria-label', retryLabel);
+        start.title = retryLabel;
+        status.textContent = slowLabel;
+        status.hidden = false;
+      }, 15000);
+    }
   }
 
   function prepare() {
@@ -49,6 +72,7 @@
 
   function reset() {
     requested = false;
+    retryPending = false;
     attempt++;
     loading(false);
     start.hidden = false;
@@ -60,13 +84,15 @@
 
   start.addEventListener('click', async () => {
     observer?.disconnect();
+    const restart = retryPending;
+    retryPending = false;
     requested = true;
     const current = ++attempt;
     loading(true);
     error.hidden = true;
     video.preload = 'auto';
     if (!video.getAttribute('src')) video.src = video.dataset.src;
-    else if (video.error) video.load();
+    else if (video.error || restart) video.load();
     video.muted = false;
     video.controls = true;
     try {
@@ -78,12 +104,14 @@
     }
   });
   video.addEventListener('playing', () => {
+    if (!requested || document.hidden) { video.pause(); return; }
     loading(false);
     start.hidden = true;
     error.hidden = true;
   });
   video.addEventListener('waiting', () => { if (requested && !video.paused) loading(true); });
   video.addEventListener('pause', () => {
+    if (!requested && retryPending) return;
     loading(false);
     if (requested && !start.hidden) reset();
   });

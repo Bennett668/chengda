@@ -25,7 +25,8 @@ function setup({connection = {}, lang = 'en', intersection = true} = {}) {
     play() { this.plays++; this.paused = false; return new Promise((resolve, reject) => { this.resolve = resolve; this.reject = reject; }); },
   });
   Object.defineProperty(video, 'src', {set(value) { this.attrs.src = value; }});
-  const docEvents = {}, windowEvents = {}, observers = [];
+  const docEvents = {}, windowEvents = {}, observers = [], timers = new Map();
+  let timerId = 0;
   const document = {hidden: false, documentElement: {lang}, createElement: () => status,
     getElementById: id => ({'pd-video': video, 'pd-video-error': error})[id],
     querySelector: () => start, addEventListener: (name, fn) => { docEvents[name] = fn; },
@@ -37,8 +38,10 @@ function setup({connection = {}, lang = 'en', intersection = true} = {}) {
     disconnect() { this.connected = false; }
   };
   if (intersection) window.IntersectionObserver = IntersectionObserver;
-  vm.runInNewContext(source, {document, window, navigator: {connection}, IntersectionObserver});
-  return {video, start, status, error, player, observers, document, docEvents, windowEvents};
+  vm.runInNewContext(source, {document, window, navigator: {connection}, IntersectionObserver,
+    setTimeout(fn, delay) { timers.set(++timerId, {fn, delay}); return timerId; }, clearTimeout(id) { timers.delete(id); },
+  });
+  return {video, start, status, error, player, observers, document, docEvents, windowEvents, timers};
 }
 
 test('Distant video stays unloaded; approaching it prepares metadata without playback', () => {
@@ -146,4 +149,29 @@ test('Hidden pages never warm metadata; observer fallback still supports focus p
   fallback.start.events.focus();
   assert.equal(fallback.video.preload, 'metadata');
   assert.equal(fallback.video.plays, 0);
+});
+
+test('A prolonged request stops the pending attempt and reloads only on explicit retry', async () => {
+  const s = setup();
+  const queuedPauses = [];
+  s.video.pause = () => { s.video.paused = true; queuedPauses.push(s.video.events.pause); };
+  const first = s.start.events.click(), reject = s.video.reject;
+  const timer = [...s.timers.values()][0]; assert.equal(timer.delay, 15000); timer.fn();
+  queuedPauses.splice(0).forEach(fn => fn());
+  assert.equal(s.start.disabled, false);
+  assert.equal(s.start.attrs['aria-label'], 'Retry video');
+  assert.equal(s.status.textContent, 'Taking longer than usual...');
+  assert.equal(s.video.paused, true);
+  s.video.events.playing();
+  queuedPauses.splice(0).forEach(fn => fn());
+  assert.equal(s.video.paused, true);
+  assert.equal(s.start.hidden, false);
+  const retry = s.start.events.click();
+  assert.equal(s.video.loads, 1);
+  assert.equal(s.start.disabled, true);
+  reject(new Error('AbortError')); await first;
+  assert.equal(s.error.hidden, true);
+  s.video.events.playing(); s.video.resolve(); await retry;
+  assert.equal(s.start.hidden, true);
+  assert.equal(s.timers.size, 0);
 });
