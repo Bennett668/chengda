@@ -153,6 +153,7 @@
     background: var(--bg-2); border: 1px solid var(--line);
     border-radius: var(--r-lg); padding: 26px 28px; margin: 36px 0 8px;
   }
+  .compare[tabindex="0"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   .compare h3 {
     margin: 0 0 16px; font-size: 17px; font-weight: 600; letter-spacing: -0.01em;
   }
@@ -331,8 +332,10 @@
   }
   @media (max-width: 560px) {
     .compare { padding: 20px 16px; overflow-x: auto; }
-    .compare table { font-size: 12.5px; }
-    .compare th, .compare td { padding: 10px 6px; }
+    .compare[role="region"] { overscroll-behavior-x: contain; }
+    .compare table { min-width: 640px; table-layout: fixed; font-size: 13.5px; line-height: 1.6; }
+    .compare th, .compare td { padding: 10px 12px; overflow-wrap: break-word; }
+    .compare th:first-child, .compare td:first-child { width: 160px; white-space: normal; }
     .takeaways { padding: 22px 20px; }
   }
   @media (prefers-reduced-motion: reduce) {
@@ -470,7 +473,7 @@ gtag('config', 'G-J7PPP48QXC');
         <h2>The difference in one line</h2>
         <p class="closer">A vessel exposes the bowl above the worktop; a drop-in overlaps the opening with its rim; an undermount fixes the rim underneath; a specified flushmount finishes the rim level. Check both bowl exposure and rim position, not the name alone.</p>
 
-        <div class="compare">
+        <div class="compare" tabindex="0" role="region" aria-label="Four mounting profiles at a glance">
           <h3>Four mounting profiles at a glance</h3>
           <table>
             <thead>

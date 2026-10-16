@@ -66,4 +66,20 @@ for (const prefix of ['', 'zh/']) {
   test(prefix+'video close returns focus to the actual play button', () => {
     assert.ok(read(prefix+'videos/index.html').includes("trigger = frame.querySelector('.v-play') || frame;"));
   });
+  for (const slug of ['sink-types', 'ceramic-vs-porcelain-basin', 'standard-toilet-dimensions-clearance-guide']) {
+    test(prefix+slug+' keeps comparison columns readable inside an accessible mobile scroller', () => {
+      const html = read(prefix+'blog/'+slug+'/index.html');
+      const region = html.match(/<div class="compare" tabindex="0" role="region" aria-label="([^"]+)">\s*<h3>([^<]+)<\/h3>\s*<table>/);
+      assert.ok(region, 'Only the table panel should be a named keyboard-focusable region');
+      assert.equal(region[1], region[2]);
+      assert.equal((html.match(/class="compare" tabindex="0"/g) || []).length, 1);
+      const mobile = html.match(/@media \(max-width: 560px\) \{([\s\S]*?)\n  \}/)[1];
+      assert.match(mobile, /overflow-x: auto/);
+      assert.match(mobile, /min-width: 640px; table-layout: fixed; font-size: 13\.5px; line-height: 1\.6/);
+      assert.match(mobile, /overflow-wrap: break-word/);
+      const firstColumn = slug === 'standard-toilet-dimensions-clearance-guide' ? 80 : 160;
+      assert.ok(mobile.includes('width: '+firstColumn+'px; white-space: normal;'));
+      assert.ok(html.includes('.compare[tabindex="0"]:focus-visible { outline: 2px solid var(--accent);'));
+    });
+  }
 }
