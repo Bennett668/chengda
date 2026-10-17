@@ -30,20 +30,28 @@
     return active === session && session.attempt === attempt && attempt.allowed && lb.open;
   }
 
-  // Invalidate before pause/load so late media events cannot revive an old request.
-  function stop(attempt, remove = false) {
+  function cancelPlayback(attempt) {
     if (!attempt) return;
     attempt.allowed = false;
+    attempt.playId++;
     clearTimeout(attempt.timer);
     attempt.video.pause();
+  }
+
+  // Closing or a media error discards the resource; slow startup keeps its buffer.
+  function stop(attempt, remove = false) {
+    if (!attempt) return;
+    cancelPlayback(attempt);
     attempt.video.removeAttribute('src');
     attempt.video.load();
     if (remove) attempt.video.remove();
   }
 
-  function fail(session, attempt, message) {
+  function fail(session, attempt, message, keepBuffer = false) {
     if (!current(session, attempt)) return;
-    stop(attempt);
+    if (keepBuffer) cancelPlayback(attempt);
+    else stop(attempt);
+    attempt.retryBuffered = keepBuffer;
     session.resumePending = false;
     session.player.setAttribute('aria-busy', 'false');
     session.status.textContent = message;
@@ -61,14 +69,15 @@
     session.retry.hidden = true;
     session.retry.textContent = labels.retry;
     clearTimeout(attempt.timer);
-    attempt.timer = setTimeout(() => fail(session, attempt, labels.slow), 15000);
+    attempt.timer = setTimeout(() => fail(session, attempt, labels.slow, true), 15000);
   }
 
   function requestPlay(session, attempt) {
+    const playId = ++attempt.playId;
     try {
       const request = attempt.video.play();
       if (request && request.catch) request.catch(() => {
-        if (!attempt.suspended) fail(session, attempt, labels.failed);
+        if (playId === attempt.playId && !attempt.suspended) fail(session, attempt, labels.failed);
       });
     } catch (_) { fail(session, attempt, labels.failed); }
   }
@@ -95,7 +104,7 @@
     video.setAttribute('playsinline', '');
     video.setAttribute('controlsList', 'nofullscreen');
     video.setAttribute('aria-label', session.title);
-    const attempt = {video, allowed: true, state: 'idle', started: false, suspended: false, timer: null};
+    const attempt = {video, allowed: true, playId: 0, state: 'idle', started: false, suspended: false, timer: null};
     session.attempt = attempt;
     session.player.prepend(video);
     loading(session, attempt);
@@ -199,6 +208,13 @@
           const attempt = session.attempt;
           attempt.suspended = false;
           session.resumePending = false;
+          loading(session, attempt);
+          requestPlay(session, attempt);
+        } else if (session.attempt.retryBuffered && !session.attempt.video.error) {
+          const attempt = session.attempt;
+          attempt.allowed = true;
+          attempt.retryBuffered = false;
+          attempt.state = 'idle';
           loading(session, attempt);
           requestPlay(session, attempt);
         } else start(session);

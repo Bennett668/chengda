@@ -68,13 +68,14 @@ test('Error gives an explicit localized retry and no automatic request', () => {
 });
 
 test('Timeout aborts old playback; stale events and rejections cannot undo a fresh retry', async () => {
-  const s = setup(), old = s.open(); [...s.timers.values()][0].fn();
-  assert.equal(s.retry.hidden, false); assert.equal(old.paused, true); assert.equal(old.attrs.src, undefined);
+  const s = setup(), old = s.open(), rejectOld = old.reject; [...s.timers.values()][0].fn();
+  assert.equal(s.retry.hidden, false); assert.equal(old.paused, true); assert.equal(old.attrs.src, '/assets/videos/example.mp4');
   old.emit('playing'); assert.equal(old.paused, true); assert.equal(s.requests, 1);
   s.retry.emit('click'); const fresh = s.videos.at(-1);
-  old.reject(new Error('Late AbortError')); await Promise.resolve(); await Promise.resolve();
+  assert.equal(fresh, old); assert.equal(fresh.loads, 0);
+  rejectOld(new Error('Late AbortError')); await Promise.resolve(); await Promise.resolve();
   assert.equal(s.message.children[0].textContent, 'Loading video...'); assert.equal(s.retry.hidden, true);
-  fresh.emit('playing'); assert.equal(s.message.hidden, true); assert.equal(s.requests, 2);
+  fresh.emit('playing'); assert.equal(s.message.hidden, true); assert.equal(s.requests, 1);
 });
 
 test('Close, Escape cancellation, backdrop and pagehide all cancel and restore the real trigger', () => {

@@ -64,7 +64,7 @@ for (const prefix of ['', 'zh/']) {
     }
   });
   test(prefix+'video close returns focus to the actual play button', () => {
-    assert.match(read(prefix+'videos/index.html'), /src="\/assets\/video-wall\.js\?v=1"/);
+    assert.match(read(prefix+'videos/index.html'), /src="\/assets\/video-wall\.js\?v=2"/);
     assert.ok(read('assets/video-wall.js').includes("trigger = frame.querySelector('.v-play') || frame;"));
   });
   for (const slug of ['sink-types', 'ceramic-vs-porcelain-basin', 'standard-toilet-dimensions-clearance-guide']) {
