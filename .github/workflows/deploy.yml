@@ -49,6 +49,8 @@ jobs:
         run: node --test tools/product-previews.test.cjs
       - name: Guard lazy product video startup and recovery
         run: node --test tools/product-video-start.test.cjs
+      - name: Guard video overview recovery and footer copy
+        run: node --test tools/video-wall.test.cjs tools/footer-wechat.test.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

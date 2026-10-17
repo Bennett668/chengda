@@ -95,7 +95,9 @@
         <a class="cd-email-footer" data-u="sales" data-d="gdchengda" data-t="hk" href="#">[ email ]</a>
         <a href="tel:+8613829094740">+86 138 2909 4740</a>
         <a href="https://wa.me/12132160960" target="_blank" rel="noopener">WhatsApp: +1 (213) 216-0960</a>
-        <a href="#">WeChat: Chengda_koi888</a>
+        <button class="footer-wechat" type="button" aria-describedby="footer-wechat-status" aria-controls="footer-wechat-fallback" title="${ZH ? '複製微信號' : 'Copy WeChat ID'}" aria-label="${ZH ? '複製微信號' : 'Copy WeChat ID'} Chengda_koi888"><span>${ZH ? '微信' : 'WeChat'}: Chengda_koi888</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+        <p id="footer-wechat-status" class="footer-wechat-status" role="status" aria-live="polite" aria-atomic="true" hidden></p>
+        <div id="footer-wechat-fallback" class="footer-wechat-fallback" hidden><input id="footer-wechat-id" aria-label="${ZH ? '微信號' : 'WeChat ID'}" value="Chengda_koi888" readonly><button class="footer-wechat-select" type="button">${ZH ? '選取微信號' : 'Select ID'}</button></div>
       </div>
     </div>
     ${SOCIAL_ROW}
@@ -105,6 +107,34 @@
     </div>
   </div>
 </footer>`;
+
+  function bindWechatCopy() {
+    const button = document.querySelector('.footer-wechat');
+    const status = document.getElementById('footer-wechat-status');
+    const fallback = document.getElementById('footer-wechat-fallback');
+    const input = document.getElementById('footer-wechat-id');
+    if (!button || !status || !fallback || !input) return;
+    function select() { input.focus({preventScroll: true}); input.select(); }
+    fallback.querySelector('button').addEventListener('click', select);
+    button.addEventListener('click', async () => {
+      if (button.disabled) return;
+      button.disabled = true;
+      status.hidden = true;
+      try {
+        if (!navigator.clipboard || !navigator.clipboard.writeText) throw new Error('Clipboard unavailable');
+        await navigator.clipboard.writeText('Chengda_koi888');
+        status.textContent = ZH ? '微信號已複製。' : 'WeChat ID copied.';
+        fallback.hidden = true;
+      } catch (_) {
+        status.textContent = ZH ? '無法自動複製，請手動複製下方微信號。' : 'Copy unavailable. Please copy the ID below.';
+        fallback.hidden = false;
+        select();
+      } finally {
+        button.disabled = false;
+        status.hidden = false;
+      }
+    });
+  }
 
   function languageTarget() {
     const current = new URL(location.href);
@@ -143,6 +173,7 @@
     const f = document.getElementById('shell-footer');
     if (n) n.outerHTML = NAV(active);
     if (f) f.outerHTML = FOOTER;
+    bindWechatCopy();
     window.updateLanguageLinks();
     document.querySelectorAll('a.lang-switch').forEach((link) => {
       link.addEventListener('click', window.updateLanguageLinks);

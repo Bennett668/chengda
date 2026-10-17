@@ -1,0 +1,33 @@
+.v-lightbox {
+  position: fixed; inset: 0; z-index: 200; display: none;
+  align-items: center; justify-content: center;
+  background: rgba(8, 9, 12, .94); padding: 60px 12px;
+}
+.v-lightbox.open { display: flex; }
+dialog.v-lightbox { margin: 0; width: 100%; height: 100%; max-width: none; max-height: none; border: 0; }
+.v-lightbox-player {
+  position: relative; aspect-ratio: 9 / 16;
+  width: min(94vw, calc((100vh - 120px) * 9 / 16), 540px);
+  width: min(94vw, calc((100dvh - 120px) * 9 / 16), 540px);
+  background: #14171b; border-radius: 8px;
+}
+.v-lightbox video { width: 100%; height: 100%; display: block; object-fit: contain; border-radius: 8px; }
+.v-lightbox-close {
+  position: absolute; top: 12px; right: 12px; width: 44px; height: 44px;
+  border: 0; border-radius: 50%; background: rgba(255, 255, 255, .16);
+  color: #fff; cursor: pointer; display: grid; place-items: center;
+}
+.v-lightbox-close svg { width: 22px; height: 22px; }
+.v-lightbox-close:hover { background: rgba(255, 255, 255, .28); }
+.v-lightbox-message {
+  position: absolute; left: 12px; right: 12px; bottom: 64px;
+  padding: 14px; border-radius: 8px; background: rgba(255, 255, 255, .97); color: #14171b;
+}
+.v-lightbox-status { margin: 0; font-size: 14px; line-height: 1.5; letter-spacing: 0; overflow-wrap: anywhere; }
+.v-lightbox-retry {
+  display: block; width: 100%; min-height: 44px; margin-top: 12px; padding: 10px 12px;
+  border: 0; border-radius: 4px; background: #14171b; color: #fff;
+  font: inherit; font-size: 14px; letter-spacing: 0; cursor: pointer;
+}
+.v-lightbox-message[hidden], .v-lightbox-retry[hidden] { display: none; }
+.v-lightbox button:focus-visible { outline: 2px solid #337ad1; outline-offset: 3px; }
