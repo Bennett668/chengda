@@ -1,0 +1,16 @@
+{
+  "basin-life-story-01-raw-materials": {
+    "source": "/assets/videos/basin-life-story-01-raw-materials.mp4",
+    "sourceSha256": "cb30c86b942d5c59bbbe8aa914e56129d94eae4d9c756f496c0dc6ed8a16823e",
+    "sourceBytes": 48046263,
+    "playback": "/assets/videos/playback/basin-life-story-01-raw-materials-540.mp4",
+    "sha256": "eb647c1b5f451d2af84877d7b0b96345429b6a0ef6eab267d8261eeaad57d0ca",
+    "bytes": 4843375,
+    "width": 540,
+    "height": 960,
+    "duration": 41.16,
+    "fps": 25,
+    "frames": 1029,
+    "audioPayloadSha256": "5fc5243ef4f3c05956636c8f987ea50c690d67723831d3bfc222a03a8e4d1835"
+  }
+}
