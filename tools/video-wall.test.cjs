@@ -5,7 +5,7 @@ const path = require('node:path');
 const vm = require('node:vm');
 const source = fs.readFileSync(path.join(__dirname, '../assets/video-wall.js'), 'utf8');
 
-function setup(lang = 'en', originalSource = null) {
+function setup(lang = 'en', originalSource = null, options = {}) {
   class Element {
     constructor(tag) { this.tag = tag; this.attrs = {}; this.events = {}; this.children = []; this.hidden = false; this.isConnected = true; this.classes = new Set(); this.classList = {add: x => this.classes.add(x), remove: x => this.classes.delete(x)}; }
     setAttribute(k, v) { this.attrs[k] = v; }
@@ -20,9 +20,12 @@ function setup(lang = 'en', originalSource = null) {
     focus(options) { this.focused = (this.focused || 0) + 1; this.focusOptions = options; }
     showModal() { this.open = true; }
     close() { this.open = false; this.emit('close'); }
+    getBoundingClientRect() { return {width: options.playerWidth || 400}; }
   }
   const body = new Element('body'), frame = new Element('div'), trigger = new Element('button');
   const image = new Element('img'); image.attrs.src = '/assets/videos/example-poster.webp'; image.alt = 'Actual poster';
+  image.currentSrc = options.currentSrc || '';
+  if (options.posterSources) image.attrs['data-poster-sources'] = options.posterSources;
   frame.querySelector = s => s === 'img' ? image : trigger;
   const card = new Element('figure'); card.attrs['data-src'] = '/assets/videos/example.mp4';
   if (originalSource) card.attrs['data-original-src'] = originalSource;
@@ -41,7 +44,7 @@ function setup(lang = 'en', originalSource = null) {
     }
     return el;
   }};
-  vm.runInNewContext(source, {document, window: {addEventListener: (k, fn) => { winEvents[k] = fn; }}, setTimeout(fn, delay) { timers.set(++clock, {fn, delay}); return clock; }, clearTimeout(id) { timers.delete(id); }});
+  vm.runInNewContext(source, {document, window: {devicePixelRatio: options.dpr || 1, addEventListener: (k, fn) => { winEvents[k] = fn; }}, setTimeout(fn, delay) { timers.set(++clock, {fn, delay}); return clock; }, clearTimeout(id) { timers.delete(id); }});
   const dialog = body.children[0];
   return {document, frame, trigger, videos, dialog, timers, docEvents, winEvents, get requests() { return requests; }, open() { frame.emit('click'); return videos.at(-1); }, get player() { return dialog.children.find(x => x.className === 'v-lightbox-player'); }, get message() { return this.player.children.find(x => x.className === 'v-lightbox-message'); }, get retry() { return this.message.children[1]; }};
 }
@@ -136,4 +139,22 @@ test('Hiding during buffering after real playback preserves the existing positio
   assert.equal(video.attrs.src,'/assets/videos/example.mp4');assert.equal(video.currentTime,3.5);assert.equal(video.paused,true);
   s.document.hidden=false;s.docEvents.visibilitychange();assert.equal(video.plays,1);
   s.retry.emit('click');assert.equal(video.plays,2);assert.equal(video.currentTime,3.5);assert.equal(s.videos.length,1);
+});
+
+test('The modal chooses a full-frame poster sufficient for its physical display size', () => {
+  const posterSources = JSON.stringify([360, 540, 864, 1080].map(width => ({src: '/assets/videos/poster-' + width + '.webp', width})));
+  for (const [playerWidth, dpr, expected] of [[439, 1, 540], [376, 2, 864], [407.25, 2, 864], [500, 2, 1080], [540, 3, 1080]]) {
+    const s = setup('en', null, {posterSources, playerWidth, dpr, currentSrc: '/assets/videos/poster-360.webp'});
+    assert.equal(s.requests, 0);
+    const video = s.open();
+    assert.equal(video.attrs.poster, '/assets/videos/poster-' + expected + '.webp');
+    assert.equal(video.muted, false); assert.equal(s.requests, 1);
+  }
+});
+
+test('Other cards and malformed optional poster data keep the actual selected image', () => {
+  for (const posterSources of [undefined, 'invalid', '{}', '[]', '[{"width":0}]']) {
+    const s = setup('en', null, {posterSources, currentSrc: '/assets/videos/selected.webp'});
+    assert.equal(s.open().attrs.poster, '/assets/videos/selected.webp');
+  }
 });

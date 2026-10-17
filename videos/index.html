@@ -77,7 +77,11 @@ gtag('config', 'G-J7PPP48QXC');
     <div class="video-grid">
       <figure class="v-card" data-src="/assets/videos/playback/basin-life-story-01-raw-materials-540.mp4" data-original-src="/assets/videos/basin-life-story-01-raw-materials.mp4">
         <div class="v-frame">
-          <img src="/assets/videos/basin-life-story-01-raw-materials-poster.webp" alt="Xiao Yang introduces the raw materials behind Chengda ceramic basins" loading="lazy" decoding="async" width="1080" height="1920" />
+          <img src="/assets/videos/posters/basin-life-story-01-raw-materials-540.webp"
+            srcset="/assets/videos/posters/basin-life-story-01-raw-materials-360.webp 360w, /assets/videos/posters/basin-life-story-01-raw-materials-540.webp 540w, /assets/videos/posters/basin-life-story-01-raw-materials-864.webp 864w, /assets/videos/basin-life-story-01-raw-materials-poster.webp 1080w"
+            sizes="auto, (min-width: 1280px) 280px, (min-width: 1024px) 320px, (min-width: 768px) 360px, (min-width: 560px) 50vw, calc(100vw - 40px)"
+            data-poster-sources='[{"src":"/assets/videos/posters/basin-life-story-01-raw-materials-360.webp","width":360},{"src":"/assets/videos/posters/basin-life-story-01-raw-materials-540.webp","width":540},{"src":"/assets/videos/posters/basin-life-story-01-raw-materials-864.webp","width":864},{"src":"/assets/videos/basin-life-story-01-raw-materials-poster.webp","width":1080}]'
+            alt="Xiao Yang introduces the raw materials behind Chengda ceramic basins" loading="lazy" decoding="async" width="1080" height="1920" />
           <button class="v-play" type="button" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
         </div>
         <figcaption class="v-cap">
@@ -234,7 +238,7 @@ gtag('config', 'G-J7PPP48QXC');
 </script>
 
 <script src="/assets/site-shell.js?v=16" defer></script>
-<script src="/assets/video-wall.js?v=4" defer></script>
+<script src="/assets/video-wall.js?v=5" defer></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     renderShell('videos');

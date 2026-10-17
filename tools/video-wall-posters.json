@@ -1,0 +1,36 @@
+{
+  "basin-life-story-01-raw-materials": {
+    "source": "/assets/videos/basin-life-story-01-raw-materials-poster.webp",
+    "sourceSha256": "9e1cef76c15d8e63e137c802295560f5f46687ca2b4cdf43cb7c135c1cd984d8",
+    "sourceBytes": 767642,
+    "width": 1080,
+    "height": 1920,
+    "encoding": "lossless WebP after full-frame LANCZOS resizing; no crop, overlays or generative edits",
+    "variants": [
+      {
+        "src": "/assets/videos/posters/basin-life-story-01-raw-materials-360.webp",
+        "width": 360,
+        "height": 640,
+        "bytes": 130084,
+        "sha256": "8868021dcee53cf286f578f88ae4a1a99a3b7d26cd6951ac5005d7fcd4b85145",
+        "decodedSha256": "621062f579670869215fbd63d9b2bb9b0cf7705a65d031b100c0e53b4d6aeb69"
+      },
+      {
+        "src": "/assets/videos/posters/basin-life-story-01-raw-materials-540.webp",
+        "width": 540,
+        "height": 960,
+        "bytes": 263236,
+        "sha256": "4e1ce5082487700a85526669c02cd9a2e8d75eb4f7d0fc8498586f200d69faa9",
+        "decodedSha256": "ac9fcb1ac15d279d9fb1a5191b4fadfa2b3430c008f9cbfe018a8f13eba20949"
+      },
+      {
+        "src": "/assets/videos/posters/basin-life-story-01-raw-materials-864.webp",
+        "width": 864,
+        "height": 1536,
+        "bytes": 582102,
+        "sha256": "fee0fa4ce72d054e02cd9d10ccb077ec6ff6ea81ed4c905fc93446d128f531fc",
+        "decodedSha256": "502db25387a823d99bb2da78be6a4c465abf204dedd9353285f0763cb0bfcf69"
+      }
+    ]
+  }
+}

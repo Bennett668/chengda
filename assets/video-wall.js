@@ -91,6 +91,19 @@
     session.retry.hidden = false;
   }
 
+  function posterFor(session) {
+    const image = session.image;
+    const fallback = image.currentSrc || image.getAttribute('src');
+    try {
+      const sources = JSON.parse(image.getAttribute('data-poster-sources'));
+      if (!Array.isArray(sources) || !sources.length) return fallback;
+      const width = Math.ceil(session.player.getBoundingClientRect().width * (window.devicePixelRatio || 1));
+      const candidates = sources.filter(source => typeof source.src === 'string' && Number.isFinite(source.width) && source.width > 0)
+        .sort((a, b) => a.width - b.width);
+      return (candidates.find(source => source.width >= width) || candidates[candidates.length - 1])?.src || fallback;
+    } catch (_) { return fallback; }
+  }
+
   function start(session) {
     if (active !== session || !lb.open || document.hidden) return;
     stop(session.attempt, true);
@@ -100,7 +113,7 @@
     video.playsInline = true;
     video.muted = false;
     video.preload = 'auto';
-    video.poster = session.poster;
+    video.poster = posterFor(session);
     video.setAttribute('playsinline', '');
     video.setAttribute('controlsList', 'nofullscreen');
     video.setAttribute('aria-label', session.title);
@@ -213,7 +226,7 @@
         originalLink.innerHTML = '<span>' + labels.original + '</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6m0-6L10 14M9 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4"/></svg>';
         lb.appendChild(originalLink);
       }
-      const session = {src, poster: image.getAttribute('src'), title: card.querySelector('.v-title')?.textContent || image.alt || labels.video, player, message, status, retry, originalLink, attempt: null};
+      const session = {src, image, title: card.querySelector('.v-title')?.textContent || image.alt || labels.video, player, message, status, retry, originalLink, attempt: null};
       retry.addEventListener('click', () => {
         if (active !== session || document.hidden || retry.hidden) return;
         if (session.resumePending && session.attempt.allowed) {
