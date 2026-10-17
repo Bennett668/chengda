@@ -5,11 +5,11 @@
   const labels = chinese ? {
     video: '影片', close: '關閉', loading: '影片載入中...', retry: '重試影片',
     failed: '影片未能載入，請重試。', slow: '影片載入時間較長，請重試。',
-    paused: '影片已暫停。', resume: '繼續播放'
+    paused: '影片已暫停。', resume: '繼續播放', original: '原畫質影片'
   } : {
     video: 'Video', close: 'Close', loading: 'Loading video...', retry: 'Retry video',
     failed: "Video couldn't load. Please try again.", slow: 'Video is taking too long to load. Please try again.',
-    paused: 'Playback paused.', resume: 'Resume video'
+    paused: 'Playback paused.', resume: 'Resume video', original: 'Original video'
   };
   const lb = document.createElement('dialog');
   lb.className = 'v-lightbox';
@@ -155,6 +155,7 @@
     active = null;
     stop(session.attempt, true);
     session.player.remove();
+    session.originalLink?.remove();
     lb.classList.remove('open');
     if (lb.open) lb.close();
     document.documentElement.style.overflow = previousOverflow;
@@ -201,7 +202,18 @@
       retry.hidden = true;
       message.append(status, retry);
       player.appendChild(message);
-      const session = {src, poster: image.getAttribute('src'), title: card.querySelector('.v-title')?.textContent || image.alt || labels.video, player, message, status, retry, attempt: null};
+      const original = card.getAttribute('data-original-src');
+      let originalLink;
+      if (original && original !== src) {
+        originalLink = document.createElement('a');
+        originalLink.className = 'v-lightbox-original';
+        originalLink.href = original;
+        originalLink.target = '_blank';
+        originalLink.rel = 'noopener';
+        originalLink.innerHTML = '<span>' + labels.original + '</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6m0-6L10 14M9 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4"/></svg>';
+        lb.appendChild(originalLink);
+      }
+      const session = {src, poster: image.getAttribute('src'), title: card.querySelector('.v-title')?.textContent || image.alt || labels.video, player, message, status, retry, originalLink, attempt: null};
       retry.addEventListener('click', () => {
         if (active !== session || document.hidden || retry.hidden) return;
         if (session.resumePending && session.attempt.allowed) {

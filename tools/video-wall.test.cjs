@@ -5,7 +5,7 @@ const path = require('node:path');
 const vm = require('node:vm');
 const source = fs.readFileSync(path.join(__dirname, '../assets/video-wall.js'), 'utf8');
 
-function setup(lang = 'en') {
+function setup(lang = 'en', originalSource = null) {
   class Element {
     constructor(tag) { this.tag = tag; this.attrs = {}; this.events = {}; this.children = []; this.hidden = false; this.isConnected = true; this.classes = new Set(); this.classList = {add: x => this.classes.add(x), remove: x => this.classes.delete(x)}; }
     setAttribute(k, v) { this.attrs[k] = v; }
@@ -25,6 +25,7 @@ function setup(lang = 'en') {
   const image = new Element('img'); image.attrs.src = '/assets/videos/example-poster.webp'; image.alt = 'Actual poster';
   frame.querySelector = s => s === 'img' ? image : trigger;
   const card = new Element('figure'); card.attrs['data-src'] = '/assets/videos/example.mp4';
+  if (originalSource) card.attrs['data-original-src'] = originalSource;
   card.querySelector = s => s === '.v-frame' ? frame : {textContent: 'Example clip'};
   const videos = [], docEvents = {}, winEvents = {}, timers = new Map(); let clock = 0, requests = 0;
   const document = {body, hidden: false, documentElement: {lang, style: {overflow: 'clip'}}, querySelectorAll: () => [card], addEventListener: (k, fn) => { docEvents[k] = fn; }, createElement(tag) {
@@ -120,4 +121,11 @@ test('Hiding an already-playing clip preserves its source and position until exp
   video.emit('playing'); assert.equal(video.paused, true); assert.equal(video.plays, 1);
   s.retry.emit('click'); assert.equal(video.plays, 2); assert.equal(s.videos.length, 1); assert.equal(video.currentTime, 8.5);
   assert.equal(s.requests, 1); video.emit('playing'); assert.equal(s.message.hidden, true);
+});
+
+test('An optional original-quality link points to the untouched source and is removed on close', () => {
+  const s = setup('en', '/assets/videos/original.mp4');s.open();
+  const link = s.dialog.children.find(x => x.className === 'v-lightbox-original');
+  assert.equal(link.href, '/assets/videos/original.mp4');assert.equal(link.target, '_blank');assert.equal(link.rel, 'noopener');
+  s.dialog.children[0].emit('click');assert.equal(link.isConnected, false);assert.equal(s.dialog.children.length, 1);
 });

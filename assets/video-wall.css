@@ -18,6 +18,9 @@ dialog.v-lightbox { margin: 0; width: 100%; height: 100%; max-width: none; max-h
   color: #fff; cursor: pointer; display: grid; place-items: center;
 }
 .v-lightbox-close svg { width: 22px; height: 22px; }
+.v-lightbox-original { position: absolute; top: 12px; left: 12px; display: inline-flex; align-items: center; gap: 7px; max-width: calc(100% - 80px); min-height: 44px; padding: 8px 6px; color: #fff; font-size: 14px; letter-spacing: 0; }
+.v-lightbox-original svg { width: 16px; height: 16px; flex: 0 0 16px; }
+.v-lightbox-original:focus-visible { outline: 2px solid #337ad1; outline-offset: 3px; }
 .v-lightbox-close:hover { background: rgba(255, 255, 255, .28); }
 .v-lightbox-message {
   position: absolute; left: 12px; right: 12px; bottom: 64px;
