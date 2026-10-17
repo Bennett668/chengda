@@ -129,3 +129,11 @@ test('An optional original-quality link points to the untouched source and is re
   assert.equal(link.href, '/assets/videos/original.mp4');assert.equal(link.target, '_blank');assert.equal(link.rel, 'noopener');
   s.dialog.children[0].emit('click');assert.equal(link.isConnected, false);assert.equal(s.dialog.children.length, 1);
 });
+
+test('Hiding during buffering after real playback preserves the existing position too', () => {
+  const s=setup(),video=s.open();video.emit('playing');video.currentTime=3.5;video.emit('waiting');
+  s.document.hidden=true;s.docEvents.visibilitychange();
+  assert.equal(video.attrs.src,'/assets/videos/example.mp4');assert.equal(video.currentTime,3.5);assert.equal(video.paused,true);
+  s.document.hidden=false;s.docEvents.visibilitychange();assert.equal(video.plays,1);
+  s.retry.emit('click');assert.equal(video.plays,2);assert.equal(video.currentTime,3.5);assert.equal(s.videos.length,1);
+});

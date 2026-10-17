@@ -170,7 +170,7 @@
     if (!document.hidden || !active) return;
     const attempt = active.attempt;
     if (!attempt || !attempt.allowed) return;
-    if (attempt.started && attempt.state !== 'loading') {
+    if (attempt.started) {
       attempt.suspended = true;
       clearTimeout(attempt.timer);
       attempt.video.pause();
