@@ -761,11 +761,11 @@
       ]
     },
     "A206": {
-      "main": "/assets/products/A206/gallery/lead.webp",
+      "main": "/assets/products/A206/gallery/lead.webp?v=20261022b",
       "gallery": [
         {
-          "src": "/assets/products/A206/gallery/lead.webp",
-          "thumb": "/assets/products/A206/gallery/u0-sm.webp",
+          "src": "/assets/products/A206/gallery/lead.webp?v=20261022b",
+          "thumb": "/assets/products/A206/gallery/u0-sm.webp?v=20261022b",
           "alt": "A206 studio render",
           "zhAlt": "A206 產品主圖"
         },
