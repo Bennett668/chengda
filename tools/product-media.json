@@ -635,11 +635,11 @@
       ]
     },
     "A204": {
-      "main": "/assets/products/A204/gallery/lead.webp",
+      "main": "/assets/products/A204/gallery/lead.webp?v=20261022",
       "gallery": [
         {
-          "src": "/assets/products/A204/gallery/lead.webp",
-          "thumb": "/assets/products/A204/gallery/u0-sm.webp",
+          "src": "/assets/products/A204/gallery/lead.webp?v=20261022",
+          "thumb": "/assets/products/A204/gallery/u0-sm.webp?v=20261022",
           "alt": "A204 studio render",
           "zhAlt": "A204 產品主圖"
         },
