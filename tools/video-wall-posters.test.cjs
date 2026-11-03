@@ -28,15 +28,17 @@ test('Only the first poster has lossless full-frame display variants and an unch
   }
 });
 
-for (const prefix of ['', 'zh/']) test(prefix + 'first card has matching responsive and modal sources, preserving original metadata', () => {
+for (const prefix of ['', 'zh/']) test(prefix + 'reviewed raw-materials card retains matching responsive and modal sources and original metadata', () => {
   const html = fs.readFileSync(path.join(root, prefix + 'videos/index.html'), 'utf8');
-  const tag = html.match(/<img[^>]*data-poster-sources='([^']+)'[^>]*>/)[0];
+  const tag = [...html.matchAll(/<img[^>]*data-poster-sources='([^']+)'[^>]*>/g)].map(m => m[0]).find(m => m.includes(entry.source));
+  assert.ok(tag);
   const sources = [...entry.variants.map(({src, width}) => ({src, width})), {src: entry.source, width: entry.width}];
   assert.deepEqual(JSON.parse(tag.match(/data-poster-sources='([^']+)'/)[1]), sources);
   assert.equal(tag.match(/\ssrcset="([^"]+)"/)[1], sources.map(v => v.src + ' ' + v.width + 'w').join(', '));
   assert.equal(tag.match(/\ssrc="([^"]+)"/)[1], entry.variants[1].src);
   assert.ok(tag.includes('sizes="auto, ')); assert.ok(tag.includes('loading="lazy"'));
-  assert.equal((html.match(/data-poster-sources=/g) || []).length, 1);
+  assert.equal([...html.matchAll(/data-poster-sources='([^']+)'/g)].filter(m => m[1].includes(entry.source)).length, 1);
   const schema = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
-  assert.equal(schema['@graph'][0].thumbnailUrl, 'https://www.gdchengda.hk' + entry.source);
+  const clip = schema['@graph'].find(item => item.thumbnailUrl === 'https://www.gdchengda.hk' + entry.source);
+  assert.ok(clip);
 });

@@ -1,0 +1,183 @@
+[
+  {
+    "archiveNumber": 11,
+    "slug": "high-pressure-casting",
+    "video": "/assets/videos/high-pressure-casting.mp4",
+    "poster": "/assets/videos/high-pressure-casting-poster.webp",
+    "preview": "/assets/videos/posters/high-pressure-casting-540.webp",
+    "title": {
+      "en": "The life of a basin: high-pressure casting",
+      "zh-Hant": "面盆的前世今生：高壓注漿成型"
+    },
+    "tag": {
+      "en": "Production process",
+      "zh-Hant": "生產工序"
+    },
+    "description": {
+      "en": "A closer look at high-pressure casting in Chengda's ceramic washbasin production.",
+      "zh-Hant": "走進程達陶瓷面盆生產現場，近距離了解高壓注漿成型工序。"
+    },
+    "uploadDate": "2026-11-03",
+    "duration": 42.33,
+    "width": 1080,
+    "height": 1920,
+    "sourceSha256": "3e4de629b6c202250708449dc92452baea200eb9a22efbee9d13ae59f49b8f44",
+    "videoSha256": "eefe604c4e667aecedfb6781a85f81b02027677ff5b00b66d9462c52d688fa90",
+    "posterSha256": "1115486323ee9675e4322daf884f42b44b83149dd78d8ae6a7e04082a361f7e9",
+    "previewSha256": "aec8641f994e6a52743244dd8966d0d9d0c82bcf57ab2c5b2a76bee1cb91c17b",
+    "audioPayloadSha256": "SHA256=522ebdae352c23313ecbdbcb902cbd79363df5a895aaf7dbc99cb13d6403f892",
+    "bytes": 37615044
+  },
+  {
+    "archiveNumber": 10,
+    "slug": "ceramic-workshop-daily",
+    "video": "/assets/videos/ceramic-workshop-daily.mp4",
+    "poster": "/assets/videos/ceramic-workshop-daily-poster.webp",
+    "preview": "/assets/videos/posters/ceramic-workshop-daily-540.webp",
+    "title": {
+      "en": "Inside a Chinese ceramics factory",
+      "zh-Hant": "陶瓷車間日常實拍"
+    },
+    "tag": {
+      "en": "Factory floor",
+      "zh-Hant": "工廠實拍"
+    },
+    "description": {
+      "en": "Everyday workshop footage from Chengda's ceramic sanitaryware factory in Chaozhou.",
+      "zh-Hant": "程達潮州陶瓷衛浴工廠的車間日常與生產現場實拍。"
+    },
+    "uploadDate": "2026-11-03",
+    "duration": 23.53,
+    "width": 1080,
+    "height": 1920,
+    "sourceSha256": "60b949703e27f352778d27a87116ea5e44035d9059ef52b796bbce735cdcc726",
+    "videoSha256": "b7809b2222d590c5eee4d279b83d521dfda00be08a940ce7029233f586f7dc0b",
+    "posterSha256": "fef774b2c37209946a877b6a64f23b50c83a14ed2d74f683c920b8d46f4485ba",
+    "previewSha256": "622a6809aacae02ba34b3d12ecae3b3d59087c3225e35e6986142c1fa3a0a5c9",
+    "audioPayloadSha256": "SHA256=fadb00c1f1a1cf4dca397666b1f34c6c09a6617ee0a508bf22344ea81f9dd8cc",
+    "bytes": 16757933
+  },
+  {
+    "archiveNumber": 9,
+    "slug": "gen-z-factory-boss",
+    "video": "/assets/videos/gen-z-factory-boss.mp4",
+    "poster": "/assets/videos/gen-z-factory-boss-poster.webp",
+    "preview": "/assets/videos/posters/gen-z-factory-boss-540.webp",
+    "title": {
+      "en": "Gen Z vs the factory boss",
+      "zh-Hant": "00 後與工廠老闆"
+    },
+    "tag": {
+      "en": "Factory life",
+      "zh-Hant": "工廠日常"
+    },
+    "description": {
+      "en": "A lighthearted look at the people behind Chengda's ceramic sanitaryware factory.",
+      "zh-Hant": "以輕鬆的方式，看看程達陶瓷衛浴工廠裡的人與日常。"
+    },
+    "uploadDate": "2026-11-03",
+    "duration": 21.83,
+    "width": 1080,
+    "height": 1920,
+    "sourceSha256": "431df69ff869793d205189e77e384d51d738df6936d6380b4f8cd217e6606848",
+    "videoSha256": "65acf5caa72733506ac00cdff11e35ab728653e5cef5396d49d286064857cdfb",
+    "posterSha256": "55b6cd7624244e3bd9a9776887072d61d984dd41a79167575721aae0a917f111",
+    "previewSha256": "e5c4f32b4b3abc2f6784cc0c41443fd95dbeed8d39e4c2374cb2d34ce689ea0f",
+    "audioPayloadSha256": "SHA256=4e5265d7ef5186414597b7df4ad32a7c08b5db4447a923d828b56561c75e551d",
+    "bytes": 14799368
+  },
+  {
+    "archiveNumber": 8,
+    "slug": "basin-life-story-02-slurry",
+    "video": "/assets/videos/basin-life-story-02-slurry.mp4",
+    "poster": "/assets/videos/basin-life-story-02-slurry-poster.webp",
+    "preview": "/assets/videos/posters/basin-life-story-02-slurry-540.webp",
+    "title": {
+      "en": "The life of a basin: slurry preparation",
+      "zh-Hant": "面盆的前世今生：泥漿篇"
+    },
+    "tag": {
+      "en": "Production process",
+      "zh-Hant": "生產工序"
+    },
+    "description": {
+      "en": "The next stage in a basin's life story: preparing ceramic slurry at the Chengda factory.",
+      "zh-Hant": "面盆的前世今生下一站：走進程達工廠，了解陶瓷泥漿製備。"
+    },
+    "uploadDate": "2026-11-03",
+    "duration": 41.8,
+    "width": 1080,
+    "height": 1920,
+    "sourceSha256": "f04d06e182c31ce360127ef79eb9702e563ad69e3464ad74ea22f9f3647d23fb",
+    "videoSha256": "4f2f5741ddf91f0c5975cf5dcaac9a5be1339dc4dcc366c8421abaeddf9388ef",
+    "posterSha256": "c3dc0265df9814f66922c8c208bf3f071437e3b94ca8e0e05fede544eadfbc48",
+    "previewSha256": "56f9b6d6d5cf3669cc78b5644b7b1570408c204578d4288d5c101818099ba369",
+    "audioPayloadSha256": "SHA256=c2e994b3bebf7b9d37822fa3a517e611681032241970b230cd56e660ea412dec",
+    "bytes": 34259212
+  },
+  {
+    "archiveNumber": 7,
+    "slug": "factory-direct-quality-assured",
+    "video": "/assets/videos/factory-direct-quality-assured.mp4",
+    "poster": "/assets/videos/factory-direct-quality-assured-poster.webp",
+    "preview": "/assets/videos/posters/factory-direct-quality-assured-540.webp",
+    "title": {
+      "en": "Factory direct, quality assured",
+      "zh-Hant": "工廠直供，品質把關"
+    },
+    "tag": {
+      "en": "Quality assurance",
+      "zh-Hant": "品質管理"
+    },
+    "description": {
+      "en": "An introduction to factory-direct ceramic sanitaryware and quality assurance at Chengda.",
+      "zh-Hant": "介紹程達工廠直供陶瓷衛浴產品與品質把關。"
+    },
+    "uploadDate": "2026-11-03",
+    "duration": 15.37,
+    "width": 1080,
+    "height": 1920,
+    "sourceSha256": "4a9172e58b8515494d3e80572bfce1a970111f3968e693ab4306fb2c8ed5fd7d",
+    "videoSha256": "92aaf33a4d9dc42b24318fe72a2459de6cf0c64ed1edf92bc8d1d5ccf5c279ae",
+    "posterSha256": "76ae068f27f2598909bbc2e3e8b417c8d5da881f6f7d14c4af64d26d72444e49",
+    "previewSha256": "2eaf49660ff42b5f2c4962ed5ab2ca5b1afd15f93a7a55658cbfebf97b18b8ef",
+    "audioPayloadSha256": "SHA256=cb6826acb8b0e38d304bed04b14d0d83d2d381f6d6b7ecd9da7063adae0b7c4a",
+    "bytes": 11796249
+  },
+  {
+    "archiveNumber": 6,
+    "video": "/assets/videos/playback/basin-life-story-01-raw-materials-540.mp4",
+    "poster": "/assets/videos/basin-life-story-01-raw-materials-poster.webp",
+    "legacy": true
+  },
+  {
+    "archiveNumber": 5,
+    "video": "/assets/videos/sanitaryware-factory-stock.mp4",
+    "poster": "/assets/videos/sanitaryware-factory-stock-poster.webp",
+    "legacy": true
+  },
+  {
+    "archiveNumber": 4,
+    "video": "/assets/videos/chaozhou-sanitaryware-factory.mp4",
+    "poster": "/assets/videos/chaozhou-sanitaryware-factory-poster.webp",
+    "legacy": true
+  },
+  {
+    "archiveNumber": 1,
+    "video": "/assets/videos/chengda-company-profile.mp4",
+    "poster": "/assets/videos/chengda-company-profile-poster.webp",
+    "legacy": true
+  },
+  {
+    "archiveNumber": 2,
+    "video": "/assets/videos/rebirth.mp4",
+    "poster": "/assets/videos/rebirth-poster.webp",
+    "legacy": true
+  },
+  {
+    "archiveNumber": 3,
+    "video": "/assets/videos/undermount-basin-showcase.mp4",
+    "poster": "/assets/videos/undermount-basin-showcase-poster.webp",
+    "legacy": true
+  }
+]
