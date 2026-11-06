@@ -7,7 +7,7 @@
 <meta name="description" content="程達 — 玻化瓷衛浴。潮州精製,自 1999 年起。CUPC、ISO 9001。OEM/ODM,出口 50+ 國家。" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="程達 · 衛浴瓷器,以瓷塑形" />
-<meta property="og:description" content="玻化瓷衛浴 OEM/ODM。潮州單一工廠,1,250°C 燒製。CUPC、ISO 9001。50+ 國家。" />
+<meta property="og:description" content="玻化瓷衛浴 OEM/ODM。潮州單一工廠,1,280°C 燒製。CUPC、ISO 9001。50+ 國家。" />
 <meta property="og:image" content="https://www.gdchengda.hk/assets/og-home.webp" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -94,12 +94,140 @@
     .hero .porcelain-frame { max-width: 560px; justify-self: center; }
   }
   .stats-section { padding-bottom: clamp(40px, 6vh, 72px); }
+  .home-certifications { margin-bottom: 32px; scroll-margin-top: 88px; }
+  .home-certifications-inner {
+    min-width: 0; padding: 20px 0;
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .home-certifications h2 {
+    margin: 0 0 12px; font-size: 16px; font-weight: 600;
+    line-height: 1.4; letter-spacing: 0;
+  }
+  .home-certifications-scroll {
+    width: 100%; overflow-x: auto; overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+  }
+  .home-certifications-scroll:focus-visible {
+    outline: 2px solid var(--ink); outline-offset: 4px;
+  }
+  .home-certifications-scroll img {
+    display: block; width: 100%; min-width: 1320px; max-width: none; height: auto;
+  }
+  .home-certifications-note {
+    margin: 12px 0 0; font-size: 12px; line-height: 1.6;
+    letter-spacing: 0; color: var(--muted);
+  }
   .hero-meta .r { display: flex; gap: 8px; align-items: center; }
   .cert-chip { display: inline-flex; align-items: center; background: transparent; color: var(--ink); padding: 4px 10px; border-radius: 2px; border: 1px solid var(--ink); font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; }
   /* zh-specific tweak — Noto Sans TC works best for body */
   body { font-family: 'Inter', 'Noto Sans TC', -apple-system, system-ui, sans-serif; }
+
+  /* Homepage stats and transparent certification marks. */
+  .stats-section { padding-bottom: 0; }
+  .stats-section .stats .cell {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-width: 0; padding: 32px 24px; text-align: center;
+  }
+  .stats-section .stats .k { width: 100%; min-height: 16px; text-align: center; line-height: 1.4; letter-spacing: 0; }
+  .stats-section .stats .v {
+    display: inline-flex; align-items: baseline; justify-content: center; white-space: nowrap;
+    font-size: 56px; font-weight: 600; font-variant-numeric: tabular-nums; letter-spacing: 0;
+  }
+  .stats-section .stats .v sup { align-self: center; line-height: 1; }
+  .home-stat-number { display: inline-block; min-width: var(--home-stat-digits); text-align: center; }
+  .home-stat-value-sr {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0;
+  }
+  .home-certifications { margin: 0; padding: 20px 0 0; }
+  .home-certifications.reveal { opacity: 1; transform: none; transition: none; }
+  .home-certifications-inner { padding: 0; border: 0; }
+  .home-certifications-note { margin-top: 10px; }
+  .home-certification-list {
+    display: grid; grid-template-columns: repeat(11, minmax(104px, 1fr)); gap: 12px;
+    margin: 0; padding: 0; list-style: none;
+  }
+  .home-certification-list li { min-width: 0; text-align: center; }
+  .home-certification-list li.home-cert-pending .home-cert-mark img,
+  .home-certification-list li.home-cert-pending .home-cert-name,
+  .home-certification-list li.home-cert-pending .home-cert-detail { opacity: 0; }
+  .home-certification-list li.home-cert-entering .home-cert-mark img {
+    animation: cert-mark-focus 1000ms cubic-bezier(.16, 1, .3, 1) both;
+    animation-delay: var(--cert-delay, 0ms);
+  }
+  .home-certification-list li.home-cert-entering .home-cert-name,
+  .home-certification-list li.home-cert-entering .home-cert-detail {
+    animation: cert-copy-rise 650ms cubic-bezier(.16, 1, .3, 1) both;
+    animation-delay: calc(var(--cert-delay, 0ms) + 200ms);
+  }
+  .home-certification-list li.home-cert-entering .home-cert-detail {
+    animation-delay: calc(var(--cert-delay, 0ms) + 280ms);
+  }
+  @keyframes cert-mark-focus {
+    0% { opacity: 0; filter: blur(7px); transform: translateY(24px) scale(.76); }
+    30% { opacity: 1; }
+    70% { opacity: 1; filter: blur(0); transform: translateY(-1px) scale(1.035); }
+    100% { opacity: 1; filter: blur(0); transform: none; }
+  }
+  @keyframes cert-copy-rise {
+    from { opacity: 0; transform: translateY(10px); filter: blur(2px); }
+    to { opacity: 1; transform: none; filter: blur(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .home-certification-list li.home-cert-pending .home-cert-mark img,
+    .home-certification-list li.home-cert-pending .home-cert-name,
+    .home-certification-list li.home-cert-pending .home-cert-detail,
+    .home-certification-list li.home-cert-entering .home-cert-mark img,
+    .home-certification-list li.home-cert-entering .home-cert-name,
+    .home-certification-list li.home-cert-entering .home-cert-detail {
+      opacity: 1; transform: none; filter: none; animation: none;
+    }
+  }
+  .home-cert-mark { display: flex; align-items: center; justify-content: center; height: 64px; overflow: hidden; }
+  .home-certifications-scroll .home-cert-mark img {
+    width: auto; min-width: 0; max-width: 104px; max-height: 52px; height: auto;
+  }
+  .home-certifications-scroll .home-cert-mark img[src$="/sgs.png"] { max-width: 68px; }
+  .home-cert-name { display: block; margin-top: 4px; color: var(--ink); font-size: 11px; font-weight: 600; line-height: 14px; letter-spacing: 0; }
+  .home-cert-detail { display: block; color: var(--muted); font-size: 10px; line-height: 13px; letter-spacing: 0; }
+  .hero { padding: 104px 0 40px; }
+  .hero-meta { margin-bottom: 24px; }
+  .hero-grid { min-height: 420px; }
+  .hero .porcelain-frame { max-width: 420px; }
+  .hero h1 { font-size: 80px; letter-spacing: 0; }
+  .hero-sub { margin-top: 28px; gap: 24px; }
+  @media (max-width: 1100px) { .hero h1 { font-size: 64px; } }
+  @media (max-width: 900px) {
+    .hero-grid { min-height: 0; gap: 32px; }
+    .hero h1 { font-size: 56px; }
+    .hero .porcelain-frame { max-width: 340px; }
+  }
+  @media (max-width: 600px) {
+    .hero { padding: 96px 0 40px; }
+    .hero h1 { font-size: 44px; }
+    .hero .porcelain-frame { max-width: 300px; }
+  }
+  @media (max-width: 760px) {
+    .stats-section .stats .cell { padding: 28px 16px; }
+    .stats-section .stats .v { font-size: 36px; }
+  }
+  @media (max-width: 380px) {
+    .stats-section .stats .cell { padding-right: 8px; padding-left: 8px; }
+    .stats-section .stats .v { font-size: 32px; }
+  }
 </style>
 <!-- Google tag (gtag.js) -->
+<script>
+// Start homepage refreshes at the top, without the old certification preview anchor.
+try {
+  history.scrollRestoration = 'manual';
+  if (location.hash === '#certifications') {
+    const homepageUrl = new URL(location.href);
+    homepageUrl.hash = '';
+    history.replaceState(history.state, '', homepageUrl);
+  }
+} catch (_) {}
+</script>
 <!-- Chengda browser analytics preference -->
 <script>
 (function () {
@@ -141,7 +269,7 @@ gtag('config', 'G-J7PPP48QXC');
       <div>
         <h1>衛浴瓷器,<br/><span class="soft">以瓷塑形。</span></h1>
         <div class="hero-sub">
-          <p>玻化瓷面盆、馬桶、壁掛馬桶 — 潮州單一工廠,1,250&nbsp;°C 高溫燒製。OEM/ODM 服務 50+ 國家合作夥伴。</p>
+          <p>玻化瓷面盆、馬桶、壁掛馬桶 — 潮州單一工廠,1,280&nbsp;°C 高溫燒製。OEM/ODM 服務 50+ 國家合作夥伴。</p>
           <div class="actions">
             <a href="/zh/products/" class="btn primary"><span>看產品</span> <span class="arr"></span></a>
             <a href="/zh/contact/" class="btn">索取報價</a>
@@ -155,23 +283,92 @@ gtag('config', 'G-J7PPP48QXC');
   </div>
 </section>
 
+
+
 <section class="wrap stats-section">
   <div class="stats">
     <div class="cell">
       <div class="k">成立年份</div>
-      <div class="v">1999</div>
+      <div class="v"><span class="home-stat-value-sr">1999</span><span class="home-stat-number" data-count="1999" aria-hidden="true" style="--home-stat-digits:4ch">1999</span></div>
     </div>
     <div class="cell">
       <div class="k">型號數</div>
-      <div class="v">200<sup>+</sup></div>
+      <div class="v"><span class="home-stat-value-sr">200+</span><span class="home-stat-number" data-count="200" aria-hidden="true" style="--home-stat-digits:3ch">200</span><sup aria-hidden="true">+</sup></div>
     </div>
     <div class="cell">
       <div class="k">外銷市場</div>
-      <div class="v">50<sup>+</sup></div>
+      <div class="v"><span class="home-stat-value-sr">50+</span><span class="home-stat-number" data-count="50" aria-hidden="true" style="--home-stat-digits:2ch">50</span><sup aria-hidden="true">+</sup></div>
     </div>
     <div class="cell">
       <div class="k">燒結溫度</div>
-      <div class="v">1,250<sup>°C</sup></div>
+      <div class="v"><span class="home-stat-value-sr">1,280°C</span><span class="home-stat-number" data-count="1280" data-group="1" aria-hidden="true" style="--home-stat-digits:5ch">1,280</span><sup aria-hidden="true">°C</sup></div>
+    </div>
+  </div>
+</section>
+
+<section class="home-certifications" id="certifications" aria-label="認證與合規">
+  <div class="wrap">
+    <div class="home-certifications-inner">
+      <div class="home-certifications-scroll" role="region" tabindex="0" aria-label="認證與合規" aria-describedby="home-certifications-note">
+        <ul class="home-certification-list">
+          <li>
+            <div class="home-cert-mark"><img src="/assets/certification-marks/ce.png" alt="" loading="lazy" decoding="async" width="240" height="172" /></div>
+            <span class="home-cert-name">CE</span>
+            <span class="home-cert-detail">認證</span>
+          </li>
+          <li>
+            <div class="home-cert-mark"><img src="/assets/certification-marks/cupc.png" alt="" loading="lazy" decoding="async" width="192" height="204" /></div>
+            <span class="home-cert-name">cUPC</span>
+            <span class="home-cert-detail">認證</span>
+          </li>
+          <li>
+            <div class="home-cert-mark"><img src="/assets/certification-marks/iso-9001.png" alt="" loading="lazy" decoding="async" width="240" height="232" /></div>
+            <span class="home-cert-name">ISO 9001</span>
+            <span class="home-cert-detail">認證</span>
+          </li>
+          <li>
+            <div class="home-cert-mark"><img src="/assets/certification-marks/iso-14001.png" alt="" loading="lazy" decoding="async" width="176" height="204" /></div>
+            <span class="home-cert-name">ISO 14001</span>
+            <span class="home-cert-detail">認證</span>
+          </li>
+          <li>
+            <div class="home-cert-mark"><img src="/assets/certification-marks/water-efficiency.png" alt="" loading="lazy" decoding="async" width="168" height="212" /></div>
+            <span class="home-cert-name">節水</span>
+            <span class="home-cert-detail">認證</span>
+          </li>
+          <li>
+            <div class="home-cert-mark"><img src="/assets/certification-marks/nsf.png" alt="" loading="lazy" decoding="async" width="228" height="216" /></div>
+            <span class="home-cert-name">NSF/ANSI 61</span>
+            <span class="home-cert-detail">認證</span>
+          </li>
+          <li>
+            <div class="home-cert-mark"><img src="/assets/certification-marks/wras.png" alt="" loading="lazy" decoding="async" width="400" height="92" /></div>
+            <span class="home-cert-name">WRAS</span>
+            <span class="home-cert-detail">認可產品</span>
+          </li>
+          <li>
+            <div class="home-cert-mark"><img src="/assets/certification-marks/saso.png" alt="" loading="lazy" decoding="async" width="212" height="200" /></div>
+            <span class="home-cert-name">SASO</span>
+            <span class="home-cert-detail">認證</span>
+          </li>
+          <li>
+            <div class="home-cert-mark"><img src="/assets/certification-marks/watermark.png" alt="" loading="lazy" decoding="async" width="256" height="160" /></div>
+            <span class="home-cert-name">WaterMark</span>
+            <span class="home-cert-detail">認證</span>
+          </li>
+          <li>
+            <div class="home-cert-mark"><img src="/assets/certification-marks/bsci.png" alt="" loading="lazy" decoding="async" width="316" height="92" /></div>
+            <span class="home-cert-name">BSCI</span>
+            <span class="home-cert-detail">認證</span>
+          </li>
+          <li>
+            <div class="home-cert-mark"><img src="/assets/certification-marks/sgs.png" alt="" loading="lazy" decoding="async" width="188" height="104" /></div>
+            <span class="home-cert-name">SGS</span>
+            <span class="home-cert-detail">認證</span>
+          </li>
+        </ul>
+      </div>
+      <p class="home-certifications-note" id="home-certifications-note">認證適用範圍與文件按具體型號及目標市場確認。</p>
     </div>
   </div>
 </section>
@@ -377,6 +574,110 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ]
 }
+</script>
+<script>
+(() => {
+  const counters = [...document.querySelectorAll('.home-stat-number')];
+  const marks = [...document.querySelectorAll('.home-certification-list li')];
+  if (!counters.length) return;
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const frames = new Map();
+  let counterObserver;
+  let markObserver;
+  const markTimers = new Map();
+  const format = (element, value) => element.dataset.group === '1'
+    ? Math.round(value).toLocaleString('en-US') : String(Math.round(value));
+
+  function finishCounter(element) {
+    const frame = frames.get(element);
+    if (frame !== undefined) cancelAnimationFrame(frame);
+    frames.delete(element);
+    element.textContent = format(element, Number(element.dataset.count));
+    element.dataset.countupState = 'complete';
+  }
+
+  function finishAll() {
+    counterObserver?.disconnect();
+    markObserver?.disconnect();
+    counters.forEach(finishCounter);
+    marks.forEach(finishMark);
+  }
+
+  function finishMark(element) {
+    clearTimeout(markTimers.get(element));
+    markTimers.delete(element);
+    element.classList.remove('home-cert-pending', 'home-cert-entering');
+    element.classList.add('home-cert-visible');
+    element.dataset.certState = 'complete';
+  }
+
+  function revealMark(element, delay) {
+    element.style.setProperty('--cert-delay', `${delay}ms`);
+    element.classList.remove('home-cert-pending');
+    element.classList.add('home-cert-entering');
+    element.dataset.certState = 'running';
+    const image = element.querySelector('img');
+    image.addEventListener('animationend', () => finishMark(element), {once: true});
+    markTimers.set(element, setTimeout(() => finishMark(element), delay + 1200));
+  }
+
+  // Match the About stat wall: 1500 ms, cubic ease-out, once on entering view.
+  function countUp(element) {
+    const target = Number(element.dataset.count);
+    let start = null;
+    element.dataset.countupState = 'running';
+    function step(timestamp) {
+      if (start === null) start = timestamp;
+      const progress = Math.min((timestamp - start) / 1500, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      element.textContent = format(element, target * eased);
+      if (progress < 1) frames.set(element, requestAnimationFrame(step));
+      else finishCounter(element);
+    }
+    frames.set(element, requestAnimationFrame(step));
+  }
+
+  function init() {
+    if (motion.matches || !('IntersectionObserver' in window)) {
+      finishAll();
+      return;
+    }
+    try {
+      counterObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          counterObserver.unobserve(entry.target);
+          countUp(entry.target);
+        });
+      }, {threshold: 0.5});
+      markObserver = new IntersectionObserver(entries => {
+        entries.filter(entry => entry.isIntersecting && entry.intersectionRatio >= 0.65).forEach((entry, index) => {
+          markObserver.unobserve(entry.target);
+          revealMark(entry.target, index * 100);
+        });
+      }, {threshold: 0.65, rootMargin: '-72px 0px -32px 0px'});
+      counters.forEach(element => {
+        element.textContent = '0';
+        element.dataset.countupState = 'pending';
+        counterObserver.observe(element);
+      });
+      marks.forEach(element => {
+        element.classList.add('home-cert-pending');
+        element.dataset.certState = 'pending';
+        markObserver.observe(element);
+      });
+    } catch (_) {
+      finishAll();
+    }
+    motion.addEventListener?.('change', event => {
+      if (event.matches) finishAll();
+    });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+
 </script>
 </body>
 </html>
