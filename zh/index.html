@@ -94,6 +94,29 @@
     .hero .porcelain-frame { max-width: 560px; justify-self: center; }
   }
   .stats-section { padding-bottom: clamp(40px, 6vh, 72px); }
+  .home-certifications { margin-bottom: 32px; scroll-margin-top: 88px; }
+  .home-certifications-inner {
+    min-width: 0; padding: 20px 0;
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .home-certifications h2 {
+    margin: 0 0 12px; font-size: 16px; font-weight: 600;
+    line-height: 1.4; letter-spacing: 0;
+  }
+  .home-certifications-scroll {
+    width: 100%; overflow-x: auto; overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+  }
+  .home-certifications-scroll:focus-visible {
+    outline: 2px solid var(--ink); outline-offset: 4px;
+  }
+  .home-certifications-scroll img {
+    display: block; width: 100%; min-width: 1320px; max-width: none; height: auto;
+  }
+  .home-certifications-note {
+    margin: 12px 0 0; font-size: 12px; line-height: 1.6;
+    letter-spacing: 0; color: var(--muted);
+  }
   .hero-meta .r { display: flex; gap: 8px; align-items: center; }
   .cert-chip { display: inline-flex; align-items: center; background: transparent; color: var(--ink); padding: 4px 10px; border-radius: 2px; border: 1px solid var(--ink); font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; }
   /* zh-specific tweak — Noto Sans TC works best for body */
@@ -151,6 +174,18 @@ gtag('config', 'G-J7PPP48QXC');
       <div class="porcelain-frame" aria-label="由碎片拼合而成的程達陶瓷面盆">
         <img id="hero-basin" src="/assets/products/A107/gallery/lead.webp" alt="程達 A107 陶瓷藝術盆" fetchpriority="high" decoding="async" />
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-certifications" id="certifications" aria-labelledby="home-certifications-title">
+  <div class="wrap">
+    <div class="home-certifications-inner">
+      <h2 id="home-certifications-title">認證與合規</h2>
+      <div class="home-certifications-scroll" role="region" tabindex="0" aria-label="認證標誌" aria-describedby="home-certifications-note">
+        <img src="/assets/factory/cert-logos.webp" alt="認證與合規標誌：CE、cUPC、ISO 9001、ISO 14001、節水認證、NSF/ANSI 61、WRAS、SASO、WaterMark、BSCI、SGS" loading="lazy" decoding="async" width="1463" height="160" />
+      </div>
+      <p class="home-certifications-note" id="home-certifications-note">認證適用範圍與文件按具體型號及目標市場確認。</p>
     </div>
   </div>
 </section>

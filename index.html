@@ -136,6 +136,30 @@
   /* Stats sit just under hero */
   .stats-section { padding-bottom: clamp(40px, 6vh, 72px); }
 
+  .home-certifications { margin-bottom: 32px; scroll-margin-top: 88px; }
+  .home-certifications-inner {
+    min-width: 0; padding: 20px 0;
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .home-certifications h2 {
+    margin: 0 0 12px; font-size: 16px; font-weight: 600;
+    line-height: 1.4; letter-spacing: 0;
+  }
+  .home-certifications-scroll {
+    width: 100%; overflow-x: auto; overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+  }
+  .home-certifications-scroll:focus-visible {
+    outline: 2px solid var(--ink); outline-offset: 4px;
+  }
+  .home-certifications-scroll img {
+    display: block; width: 100%; min-width: 1320px; max-width: none; height: auto;
+  }
+  .home-certifications-note {
+    margin: 12px 0 0; font-size: 12px; line-height: 1.6;
+    letter-spacing: 0; color: var(--muted);
+  }
+
   /* Hero meta certs — outlined chips, restrained */
   .hero-meta .r { display: flex; gap: 8px; align-items: center; }
   .cert-chip {
@@ -240,6 +264,18 @@ gtag('config', 'G-J7PPP48QXC');
       <div class="porcelain-frame" aria-label="A Chengda ceramic basin assembling from fragments">
         <img id="hero-basin" src="/assets/products/A107/gallery/lead.webp" alt="Chengda A107 ceramic art basin" fetchpriority="high" decoding="async" />
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-certifications" id="certifications" aria-labelledby="home-certifications-title">
+  <div class="wrap">
+    <div class="home-certifications-inner">
+      <h2 id="home-certifications-title">Certifications &amp; compliance</h2>
+      <div class="home-certifications-scroll" role="region" tabindex="0" aria-label="Certification logos" aria-describedby="home-certifications-note">
+        <img src="/assets/factory/cert-logos.webp" alt="Certification and compliance marks: CE, cUPC, ISO 9001, ISO 14001, Water Efficiency, NSF/ANSI 61, WRAS, SASO, WaterMark, BSCI, SGS" loading="lazy" decoding="async" width="1463" height="160" />
+      </div>
+      <p class="home-certifications-note" id="home-certifications-note">Certification scope and documents are confirmed by model and destination market.</p>
     </div>
   </div>
 </section>
