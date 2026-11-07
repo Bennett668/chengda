@@ -18,7 +18,8 @@ Four product categories in production with rendered photography and direct catal
 ### 1. Ceramic Washbasins (台盆) — 38 models published
 
 **Semi-recessed counter-top (台中盆 · CB series) — 6 models**
-- CB01 sub-series — slanted round, no overflow: CB0116, CB0118, CB0120
+- CB01 sub-series — slanted round: CB0116, CB0120 (confirm each model's overflow configuration on its product page).
+- CB0118 (CB01) — with overflow; no faucet hole: https://www.gdchengda.hk/products/CB0118/
 - CB02 sub-series — slanted round, with overflow: CB0218, CB0220, CB0222
 
 **Undercounter (台下盆 · UB series) — 32 models across 5 sub-series**
@@ -76,10 +77,10 @@ MOQ: flexible · Stock can ship immediately · Standard production about 15 days
 - **Products:** https://www.gdchengda.hk/products/
 - **OEM / ODM:** https://www.gdchengda.hk/oem/
 - **Contact:** https://www.gdchengda.hk/contact/
-- **Blog:** https://www.gdchengda.hk/blog/ (EN landing) · https://www.gdchengda.hk/zh/blog/ (full articles, 简体中文)
+- **Blog:** https://www.gdchengda.hk/blog/ (EN landing) · https://www.gdchengda.hk/zh/blog/ (full articles, 繁體中文（zh-Hant）)
 - **Videos:** https://www.gdchengda.hk/videos/ (factory & product video clips, self-hosted; also on TikTok)
 
-## Knowledge Articles (Blog · 简体中文)
+## Knowledge Articles (Blog · 繁體中文（zh-Hant）)
 
 Factory-team articles published 2026-05-11 — primary-source material for buyers researching ceramic sanitaryware, OEM/ODM sourcing, or installation choices.
 
