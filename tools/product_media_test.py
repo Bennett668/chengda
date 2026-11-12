@@ -44,6 +44,33 @@ class ProductMediaTests(unittest.TestCase):
     def test_sync_is_reproducible(self):
         self.assertEqual(run(False), [])
 
+    def test_cb0118_series_and_hole_configuration_survive_media_sync(self):
+        entry = json.loads((ROOT / 'tools/product-media.json').read_text())['products'].get('CB0118')
+
+        def fields(source, section):
+            doc = Document(source)
+            nodes = doc.inside(doc.find(cls=section)[0])
+            labels = [n for n in nodes if n['attrs'].get('class') == 'k']
+            values = [n for n in nodes if n['attrs'].get('class') == 'v']
+            self.assertEqual(len(labels), len(values))
+            text = lambda n: source[n['open_end']:n['close_start']].strip()
+            return {text(label): text(value) for label, value in zip(labels, values)}
+
+        for chinese in (False, True):
+            with self.subTest(chinese=chinese):
+                source = (ROOT / ('zh/products' if chinese else 'products') / 'CB0118/index.html').read_text()
+                for version in (source, synchronize(source, 'CB0118', entry, chinese)):
+                    specs = fields(version, 'pd-specs')
+                    tech = fields(version, 'pd-tech-specs')
+                    if chinese:
+                        self.assertEqual(specs['系列'], '內斜圓形檯面盆 · 無龍頭孔')
+                        self.assertEqual(tech['溢水孔'], '有')
+                        self.assertEqual(tech['龍頭孔'], '無')
+                    else:
+                        self.assertEqual(specs['Series'], 'Slanted round counter-top basin, no tap hole')
+                        self.assertEqual(tech['Overflow'], 'Yes')
+                        self.assertEqual(tech['Faucet Hole'], 'None')
+
     def test_incorrect_art_basin_descriptions_cannot_return(self):
         for file in (ROOT / 'products').glob('A*/index.html'):
             source = file.read_text()
