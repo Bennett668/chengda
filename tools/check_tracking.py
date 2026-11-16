@@ -40,6 +40,8 @@ REQUIRED = {
         'https://*.google-analytics.com',
         'https://*.analytics.google.com',
         'https://www.googletagmanager.com',
+        # Required even without Ads: https://developers.google.com/tag-platform/security/guides/csp
+        'https://*.google.com',
     ],
 }
 

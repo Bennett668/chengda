@@ -27,7 +27,9 @@ jobs:
       - name: Generate static product cards and first-paint filters
         run: node tools/build-catalog-first-paint.cjs
       - name: Ensure GA4 tracking is present and permitted
-        run: python3 tools/check_tracking.py --fix
+        run: |
+          python3 -B tools/check_tracking_test.py
+          python3 tools/check_tracking.py --fix
       - name: Normalize shared assets and verify release references
         run: |
           node tools/sync-shared-assets.cjs --write
