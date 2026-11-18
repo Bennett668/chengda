@@ -26,7 +26,7 @@
 |-------|-------------------|-------------------|
 | UB0116 | 410x290x180 | 370x220 |
 | UB0118 | 445x340x200 | 420x270 |
-| UB0118-A | 455x345x200 | 420x270 |
+| UB0118-A | 465x340x200 | 420x290x155 |
 | UB0120 | 525x385x190 | 470x310 |
 | UB0121 | 540x370x190 | 485x230 |
 | UB0122 | 545x375x195 | 500x310 |
@@ -247,19 +247,19 @@ Listing page: https://www.gdchengda.hk/products/?cat=wallhung
 
 ## Additional Published Models (not in detail tables above)
 
-These codes are live on the site but per-model dimensions are not in the tables above. They are either: (a) finish/colour variants of a base code (use the base code's external dimensions, contact for finish-specific notes), or (b) sizes covered by the series description.
+These additional codes are live on the site. Use the per-model measured dimensions where listed; do not assume that base-code dimensions also apply to a suffixed model. Confirm any unlisted specification with Chengda.
 
 | Model | Notes | Detail URL |
 |-------|-------|------------|
-| UB0121-D | Dark finish variant of UB0121 | https://www.gdchengda.hk/products/UB0121-D/ |
+| UB0121-A | Outer 530 x 370 x 190 mm; inner 480 x 315 x 140 mm; net weight 7.9 kg | https://www.gdchengda.hk/products/UB0121-A/ |
 | UB0124 | Standard UB01 series 24-inch | https://www.gdchengda.hk/products/UB0124/ |
-| UB0124-D | Dark finish variant of UB0124 | https://www.gdchengda.hk/products/UB0124-D/ |
-| UB0126 | Standard UB01 series 26-inch | https://www.gdchengda.hk/products/UB0126/ |
-| UB0316 | UB03 flat-base 16-inch | https://www.gdchengda.hk/products/UB0316/ |
-| UB0318 | UB03 flat-base 18-inch | https://www.gdchengda.hk/products/UB0318/ |
+| UB0124-D | Outer 600 x 410 x 205 mm; inner 535 x 345 x 150 mm; net weight 10.8 kg | https://www.gdchengda.hk/products/UB0124-D/ |
+| UB0126 | Outer 695 x 430 x 220 mm; inner 630 x 390 x 165 mm; net weight 13 kg | https://www.gdchengda.hk/products/UB0126/ |
+| UB0316 | Outer 400 x 295 x 180 mm; inner 350 x 245 x 135 mm; net weight 5.4 kg | https://www.gdchengda.hk/products/UB0316/ |
+| UB0318 | Outer 470 x 355 x 180 mm; inner 440 x 340 x 130 mm; net weight 7.7 kg | https://www.gdchengda.hk/products/UB0318/ |
 | UB0418-1 | UB0418 variant 1 (see also UB0418-T) | https://www.gdchengda.hk/products/UB0418-1/ |
 | UB0420-1 | UB0420 variant 1 (see also UB0420-T) | https://www.gdchengda.hk/products/UB0420-1/ |
-| UB0424 | UB04 slanted oval 24-inch | https://www.gdchengda.hk/products/UB0424/ |
+| UB0424 | Outer 610 x 420 x 210 mm; inner 550 x 370 x 165 mm; net weight 8.2 kg | https://www.gdchengda.hk/products/UB0424/ |
 | UB0522 | UB05 boat-base 22-inch | https://www.gdchengda.hk/products/UB0522/ |
 | UB0523 | UB05 boat-base 23-inch | https://www.gdchengda.hk/products/UB0523/ |
 

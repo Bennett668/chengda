@@ -179,10 +179,15 @@ def synchronize(source, code, entry, chinese):
     return replace(source, edits)
 
 
+def product_files():
+    aliases = json.loads((ROOT / 'tools/product-aliases.json').read_text())
+    return [file for file in sorted((ROOT / 'products').glob('*/index.html')) if file.parent.name not in aliases]
+
+
 def run(write=False):
     manifest = json.loads((ROOT / 'tools/product-media.json').read_text())['products']
     changed = []
-    for file in sorted((ROOT / 'products').glob('*/index.html')):
+    for file in product_files():
         code = file.parent.name
         for chinese in (False, True):
             target = ROOT / ('zh/products' if chinese else 'products') / code / 'index.html'

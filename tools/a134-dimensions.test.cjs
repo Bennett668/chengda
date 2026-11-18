@@ -9,8 +9,8 @@ const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 // User-confirmed correction, 2026-10-10: A10/A134/A134尺寸图.png and the
 // existing A134 dim-1/dim-2 assets supersede the old 400 x 350 x 130 sheet row.
 // This is specific to A134; do not swap its identity with the old A135 row.
-const mm = '360 × 360 × 120 mm';
-const inches = [360, 360, 120].map((value) => `${(value / 25.4).toFixed(1)}″`).join(' × ');
+const mm = '365 × 365 × 130 mm';
+const inches = [365, 365, 130].map((value) => `${(value / 25.4).toFixed(1)}″`).join(' × ');
 
 for (const prefix of ['', 'zh/']) {
   test(`${prefix}A134 dimensions agree in visible specs and structured data`, () => {
@@ -44,7 +44,7 @@ for (const prefix of ['', 'zh/']) {
 
   test(`${prefix}A134 size-guide reference no longer quotes the old footprint`, () => {
     const html = read(`${prefix}blog/vessel-sink-sizes-dimensions-guide/index.html`);
-    assert.match(html, /A134[^<]*360 × 360/);
+    assert.match(html, /A134[^<]*365 × 365/);
     assert.doesNotMatch(html, /A134[^<]*400 × 350/);
   });
 }

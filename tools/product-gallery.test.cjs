@@ -1,3 +1,4 @@
+const {productFiles} = require('./product-page-files.cjs');
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -8,7 +9,7 @@ const {migrate} = require('./migrate-product-galleries.cjs');
 const root = path.resolve(__dirname,'..');
 const source = fs.readFileSync(path.join(root,'assets/product-gallery.js'),'utf8');
 test('all retained product templates use the same manual gallery without bulk preload',()=>{
-  const files = execFileSync('git',['ls-files','-z','products/*/index.html','zh/products/*/index.html'],{cwd:root,encoding:'utf8'}).split('\0').filter(Boolean);
+  const files = productFiles();
   assert.equal(files.length,538);
   for(const file of files){
     const html=fs.readFileSync(path.join(root,file),'utf8');

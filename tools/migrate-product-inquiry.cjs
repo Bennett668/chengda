@@ -1,3 +1,4 @@
+const {productFiles} = require('./product-page-files.cjs');
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
@@ -20,7 +21,7 @@ function migrate(html, model) {
 }
 if (require.main === module) {
   const write = process.argv.includes('--write');
-  const files = execFileSync('git', ['ls-files', '-z', 'products/*/index.html', 'zh/products/*/index.html'], {cwd:root, encoding:'utf8'}).split('\0').filter(Boolean);
+  const files = productFiles();
   let changed = 0;
   for (const name of files) {
     const file = path.join(root, name), before = fs.readFileSync(file, 'utf8');

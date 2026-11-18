@@ -1,3 +1,4 @@
+const {productFiles} = require('./product-page-files.cjs');
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -29,7 +30,7 @@ test('product inquiry never reports storage failure or ignored writes as success
 });
 test('all product pages use the shared inquiry lifecycle and no legacy inline writer', () => {
   const root=path.resolve(__dirname,'..');
-  const files=execFileSync('git',['ls-files','products/*/index.html','zh/products/*/index.html'],{cwd:root,encoding:'utf8'}).trim().split('\n');
+  const files=productFiles();
   assert.equal(files.length,538);
   for(const file of files){
     const html=fs.readFileSync(path.join(root,file),'utf8');

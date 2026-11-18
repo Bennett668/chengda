@@ -1,3 +1,4 @@
+const {productFiles} = require('./product-page-files.cjs');
 // Static product HTML is the retained template source. Reject unknown legacy blocks.
 const fs = require('node:fs');
 const path = require('node:path');
@@ -25,7 +26,7 @@ function migrate(html) {
 }
 if (require.main === module) {
   const write = process.argv.includes('--write');
-  const files = execFileSync('git',['ls-files','-z','products/*/index.html','zh/products/*/index.html'],{cwd:root,encoding:'utf8'}).split('\0').filter(Boolean);
+  const files = productFiles();
   const changed=[];
   for(const name of files){
     const file=path.join(root,name), before=fs.readFileSync(file,'utf8'), after=migrate(before);

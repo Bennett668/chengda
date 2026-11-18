@@ -1,0 +1,344 @@
+{
+  "version": 1,
+  "products": {
+    "A132": {
+      "outerMm": [
+        300.0,
+        300.0,
+        120.0
+      ],
+      "innerMm": [
+        285.0,
+        285.0,
+        95.0
+      ],
+      "netWeightKg": 6.2,
+      "drawings": [
+        "/assets/products/A132/dim-1.webp?v=measured-20261118",
+        "/assets/products/A132/dim-2.webp?v=measured-20261118"
+      ]
+    },
+    "A133": {
+      "outerMm": [
+        375.0,
+        375.0,
+        130.0
+      ],
+      "innerMm": [
+        355.0,
+        355.0,
+        100.0
+      ],
+      "netWeightKg": 9.4,
+      "drawings": [
+        "/assets/products/A133/dim-1.webp?v=measured-20261118",
+        "/assets/products/A133/dim-2.webp?v=measured-20261118"
+      ]
+    },
+    "A134": {
+      "outerMm": [
+        365.0,
+        365.0,
+        130.0
+      ],
+      "innerMm": [
+        345.0,
+        345.0,
+        105.0
+      ],
+      "netWeightKg": 7.6,
+      "drawings": [
+        "/assets/products/A134/dim-1.webp?v=measured-20261118",
+        "/assets/products/A134/dim-2.webp?v=measured-20261118"
+      ]
+    },
+    "A205": {
+      "outerMm": [
+        365.0,
+        365.0,
+        120.0
+      ],
+      "innerMm": [
+        345.0,
+        345.0,
+        95.0
+      ],
+      "netWeightKg": 7,
+      "drawings": [
+        "/assets/products/A205/dim-1.webp?v=measured-20261118",
+        "/assets/products/A205/dim-2.webp?v=measured-20261118"
+      ]
+    },
+    "A209": {
+      "outerMm": [
+        480.0,
+        350.0,
+        135.0
+      ],
+      "innerMm": [
+        455.0,
+        325.0,
+        110.0
+      ],
+      "netWeightKg": 8.2,
+      "drawings": [
+        "/assets/products/A209/dim-1.webp?v=measured-20261118",
+        "/assets/products/A209/dim-2.webp?v=measured-20261118"
+      ]
+    },
+    "A215": {
+      "outerMm": [
+        380.0,
+        380.0,
+        150.0
+      ],
+      "innerMm": [
+        355.0,
+        355.0,
+        95.0
+      ],
+      "netWeightKg": 5.9,
+      "drawings": [
+        "/assets/products/A215/dim-1.webp",
+        "/assets/products/A215/dim-2.webp"
+      ]
+    },
+    "A225": {
+      "outerMm": [
+        285.0,
+        285.0,
+        130.0
+      ],
+      "innerMm": [
+        280.0,
+        280.0,
+        110.0
+      ],
+      "netWeightKg": 2.7,
+      "drawings": [
+        "/assets/products/A225/dim-1.webp?v=measured-20261118",
+        "/assets/products/A225/dim-2.webp?v=measured-20261118"
+      ]
+    },
+    "A230": {
+      "outerMm": [
+        480.0,
+        340.0,
+        145.0
+      ],
+      "innerMm": [
+        465.0,
+        310.0,
+        115.0
+      ],
+      "netWeightKg": 8.2,
+      "drawings": [
+        "/assets/products/A230/dim-1.webp",
+        "/assets/products/A230/dim-2.webp"
+      ]
+    },
+    "A231": {
+      "outerMm": [
+        600.0,
+        400.0,
+        155.0
+      ],
+      "innerMm": [
+        545.0,
+        355.0,
+        130.0
+      ],
+      "netWeightKg": 10.3,
+      "drawings": [
+        "/assets/products/A231/dim-1.webp",
+        "/assets/products/A231/dim-2.webp"
+      ]
+    },
+    "A311": {
+      "outerMm": [
+        335.0,
+        295.0,
+        120.0
+      ],
+      "innerMm": [
+        315.0,
+        200.0,
+        95.0
+      ],
+      "netWeightKg": 7.1,
+      "drawings": [
+        "/assets/products/A311/dim-1.webp?v=measured-20261118",
+        "/assets/products/A311/dim-2.webp?v=measured-20261118"
+      ]
+    },
+    "A313": {
+      "outerMm": [
+        450.0,
+        315.0,
+        130.0
+      ],
+      "innerMm": [
+        425.0,
+        190.0,
+        85.0
+      ],
+      "netWeightKg": 10,
+      "drawings": [
+        "/assets/products/A313/dim-1.webp?v=measured-20261118",
+        "/assets/products/A313/dim-2.webp?v=measured-20261118"
+      ]
+    },
+    "A316": {
+      "outerMm": [
+        410.0,
+        410.0,
+        155.0
+      ],
+      "innerMm": [
+        385.0,
+        270.0,
+        115.0
+      ],
+      "netWeightKg": 12.4,
+      "drawings": [
+        "/assets/products/A316/dim-1.webp?v=measured-20261118",
+        "/assets/products/A316/dim-2.webp?v=measured-20261118"
+      ]
+    },
+    "A317": {
+      "outerMm": [
+        285.0,
+        295.0,
+        105.0
+      ],
+      "innerMm": [
+        260.0,
+        185.0,
+        75.0
+      ],
+      "netWeightKg": 5.9,
+      "drawings": [
+        "/assets/products/A317/dim-1.webp",
+        "/assets/products/A317/dim-2.webp"
+      ]
+    },
+    "UB0118-A": {
+      "outerMm": [
+        465.0,
+        340.0,
+        200.0
+      ],
+      "innerMm": [
+        420.0,
+        290.0,
+        155.0
+      ],
+      "netWeightKg": 6,
+      "drawings": [
+        "/assets/products/UB0118-A/dim-1.webp?v=measured-20261118",
+        "/assets/products/UB0118-A/dim-2.webp?v=measured-20261118"
+      ]
+    },
+    "UB0121-A": {
+      "outerMm": [
+        530.0,
+        370.0,
+        190.0
+      ],
+      "innerMm": [
+        480.0,
+        315.0,
+        140.0
+      ],
+      "netWeightKg": 7.9,
+      "drawings": [
+        "/assets/products/UB0121-A/dim-1.webp?v=measured-20261118",
+        "/assets/products/UB0121-A/dim-2.webp?v=measured-20261118"
+      ]
+    },
+    "UB0124-D": {
+      "outerMm": [
+        600.0,
+        410.0,
+        205.0
+      ],
+      "innerMm": [
+        535.0,
+        345.0,
+        150.0
+      ],
+      "netWeightKg": 10.8,
+      "drawings": [
+        "/assets/products/UB0124-D/dimensions-measured-20261118.webp?v=measured-20261118"
+      ]
+    },
+    "UB0126": {
+      "outerMm": [
+        695.0,
+        430.0,
+        220.0
+      ],
+      "innerMm": [
+        630.0,
+        390.0,
+        165.0
+      ],
+      "netWeightKg": 13,
+      "drawings": [
+        "/assets/products/UB0126/dim-1.webp?v=measured-20261118",
+        "/assets/products/UB0126/dim-2.webp?v=measured-20261118"
+      ]
+    },
+    "UB0316": {
+      "outerMm": [
+        400.0,
+        295.0,
+        180.0
+      ],
+      "innerMm": [
+        350.0,
+        245.0,
+        135.0
+      ],
+      "netWeightKg": 5.4,
+      "drawings": [
+        "/assets/products/UB0316/dim-1.webp?v=measured-20261118",
+        "/assets/products/UB0316/dim-2.webp?v=measured-20261118"
+      ]
+    },
+    "UB0318": {
+      "outerMm": [
+        470.0,
+        355.0,
+        180.0
+      ],
+      "innerMm": [
+        440.0,
+        340.0,
+        130.0
+      ],
+      "netWeightKg": 7.7,
+      "drawings": [
+        "/assets/products/UB0318/dim-1.webp?v=measured-20261118",
+        "/assets/products/UB0318/dim-2.webp?v=measured-20261118"
+      ]
+    },
+    "UB0424": {
+      "outerMm": [
+        610.0,
+        420.0,
+        210.0
+      ],
+      "innerMm": [
+        550.0,
+        370.0,
+        165.0
+      ],
+      "netWeightKg": 8.2,
+      "drawings": [
+        "/assets/products/UB0424/dim-1.webp?v=measured-20261118",
+        "/assets/products/UB0424/dim-2.webp?v=measured-20261118"
+      ]
+    }
+  }
+}

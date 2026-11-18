@@ -41,8 +41,10 @@ jobs:
           node --test tools/product-gallery.test.cjs
       - name: Guard bilingual product media and metadata
         run: |
+          python3 -B tools/measured_basins.py
           python3 tools/product_media.py
           python3 tools/product_media_test.py
+          node --test tools/measured-basins.test.cjs
       - name: Guard product inquiry state
         run: |
           node tools/migrate-product-inquiry.cjs --check

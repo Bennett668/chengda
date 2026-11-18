@@ -2,12 +2,12 @@ import json
 import unittest
 from urllib.parse import urlparse
 
-from product_media import Document, ROOT, media, products_in_schema, replace, run, synchronize
+from product_media import Document, ROOT, media, products_in_schema, replace, run, synchronize, product_files
 
 
 class ProductMediaTests(unittest.TestCase):
     def test_all_product_pairs_are_real_and_consistent(self):
-        files = sorted((ROOT / 'products').glob('*/index.html'))
+        files = product_files()
         self.assertEqual(len(files), 269)
         for en in files:
             code = en.parent.name
@@ -40,6 +40,10 @@ class ProductMediaTests(unittest.TestCase):
                     asset = urlparse(url).path
                     self.assertTrue(asset.startswith(f'/assets/products/{code}/'), (code, asset))
                     self.assertTrue((ROOT / asset.lstrip('/')).is_file(), asset)
+
+    def test_measured_specs_are_reproducible(self):
+        from measured_basins import run as measured_run
+        self.assertEqual(measured_run(False), [])
 
     def test_sync_is_reproducible(self):
         self.assertEqual(run(False), [])

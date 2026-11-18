@@ -756,8 +756,8 @@
         }
       ],
       "drawings": [
-        "/assets/products/A205/dim-1.webp",
-        "/assets/products/A205/dim-2.webp"
+        "/assets/products/A205/dim-1.webp?v=measured-20261118",
+        "/assets/products/A205/dim-2.webp?v=measured-20261118"
       ]
     },
     "A206": {
@@ -2243,23 +2243,6 @@
           "thumb": "/assets/products/UB0121/gallery/u8-sm.webp",
           "alt": "UB0121 product photo 8",
           "zhAlt": "UB0121 產品照片 8"
-        }
-      ]
-    },
-    "UB0121-D": {
-      "main": "/assets/products/UB0121-D/card.webp",
-      "gallery": [
-        {
-          "src": "/assets/products/UB0121-D/card.webp",
-          "thumb": "/assets/products/UB0121-D/gallery/u0-sm.webp",
-          "alt": "UB0121-D studio render",
-          "zhAlt": "UB0121-D 產品主圖"
-        },
-        {
-          "src": "/assets/products/UB0121-D/gallery/u1.webp",
-          "thumb": "/assets/products/UB0121-D/gallery/u1-sm.webp",
-          "alt": "UB0121-D product photo 1",
-          "zhAlt": "UB0121-D 產品照片 1"
         }
       ]
     },
@@ -4276,6 +4259,23 @@
           "thumb": "/assets/products/UB0618/gallery/u10-sm.webp",
           "alt": "UB0618 product photo 10",
           "zhAlt": "UB0618 產品照片 10"
+        }
+      ]
+    },
+    "UB0121-A": {
+      "main": "/assets/products/UB0121-A/card.webp",
+      "gallery": [
+        {
+          "src": "/assets/products/UB0121-A/card.webp",
+          "thumb": "/assets/products/UB0121-A/gallery/u0-sm.webp",
+          "alt": "UB0121-A studio render",
+          "zhAlt": "UB0121-A 產品主圖"
+        },
+        {
+          "src": "/assets/products/UB0121-A/gallery/u1.webp",
+          "thumb": "/assets/products/UB0121-A/gallery/u1-sm.webp",
+          "alt": "UB0121-A product photo 1",
+          "zhAlt": "UB0121-A 產品照片 1"
         }
       ]
     }

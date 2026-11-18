@@ -15,7 +15,7 @@ for (const lang of ['', 'zh/']) {
       assert.ok(html.includes(p.mm));
       assert.ok(html.includes(p.inch));
       assert.match(html, /single-image/);
-      assert.doesNotMatch(html, /A229|Net Weight|淨重|待補充|維達|维达|成本/);
+      assert.doesNotMatch(html, /A229|待補充|維達|维达|成本/);
       assert.match(html, lang ? />橢圓形</ : />Oval</);
       for (const [i, container] of ['20GP', '40GP', '40HQ'].entries()) {
         assert.ok(html.includes(`<tr><td>${container}</td><td>${p.loads[i]} ${lang ? '件' : 'pcs'}</td></tr>`));

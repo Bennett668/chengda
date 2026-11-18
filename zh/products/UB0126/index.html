@@ -115,6 +115,9 @@
   .pd-tech-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 32px; align-items: start; }
   @media (max-width: 880px) { .pd-tech-grid { grid-template-columns: 1fr; } }
   .pd-tech-draws { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .pd-tech-draws.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pd-tech-draws.two .pd-tech-draw { aspect-ratio: auto; padding: 14px; min-height: 268px; display: flex; align-items: center; justify-content: center; }
+  .pd-tech-draws.two .pd-tech-draw img { max-width: 100%; height: auto; max-height: 240px; object-fit: contain; }
   .pd-tech-draw { background: #fff; border-radius: var(--r-md); padding: 16px; }
   .pd-tech-draw svg { width: 100%; height: auto; display: block; }
 
@@ -188,6 +191,9 @@
   /* Section spacing in main */
   .pd-section { margin-top: 56px; }
   @media (max-width: 880px) { .pd-section { margin-top: 36px; } }
+  @media (max-width: 560px) {
+    .pd-tech-draws.two { grid-template-columns: minmax(0, 1fr); }
+  }
 </style>
 <!-- Google tag (gtag.js) -->
 <!-- Chengda browser analytics preference -->
@@ -278,7 +284,8 @@ gtag('config', 'G-J7PPP48QXC');
 
         <div class="pd-specs">
           <div class="k">系列</div><div class="v">內斜矩形下嵌盆</div>
-          <div class="k">尺寸</div><div class="v">690 × 420 × 220 mm<span class="small">27.2″ × 16.5″ × 8.7″</span></div>
+          <div class="k">尺寸</div><div class="v">695 × 430 × 220 mm<span class="small">27.4″ × 16.9″ × 8.7″</span></div>
+          <div class="k">內徑尺寸</div><div class="v">630 × 390 × 165 mm<span class="small">24.8″ × 15.4″ × 6.5″</span></div>
           <div class="k">淨重</div><div class="v">13 公斤</div>
           <div class="k">成型工藝</div><div class="v">高壓注漿成型</div>
           <div class="k">材質</div><div class="v">高溫燒製陶瓷<span class="small">玻化瓷 · 1,250 °C 燒製</span></div>
@@ -299,8 +306,8 @@ gtag('config', 'G-J7PPP48QXC');
         <h2 class="section-title">技術圖（mm）</h2>
         <div class="pd-tech-grid">
                     <div class="pd-tech-draws two">
-            <div class="pd-tech-draw"><img src="/assets/products/UB0126/dim-1.webp" alt="UB0126 俯視圖尺寸(毫米／英吋)" loading="lazy" /></div>
-            <div class="pd-tech-draw"><img src="/assets/products/UB0126/dim-2.webp" alt="UB0126 剖面圖深度(毫米／英吋)" loading="lazy" /></div>
+            <div class="pd-tech-draw"><img src="/assets/products/UB0126/dim-1.webp?v=measured-20261118" alt="UB0126 俯視圖尺寸(毫米／英吋)" loading="lazy" /></div>
+            <div class="pd-tech-draw"><img src="/assets/products/UB0126/dim-2.webp?v=measured-20261118" alt="UB0126 剖面圖深度(毫米／英吋)" loading="lazy" /></div>
           </div>
 
           <div class="pd-tech-specs">
@@ -457,7 +464,7 @@ gtag('config', 'G-J7PPP48QXC');
     {
       "@type": "PropertyValue",
       "name": "淨重",
-      "value": "5 公斤"
+      "value": "13 公斤"
     },
     {
       "@type": "PropertyValue",
@@ -478,6 +485,16 @@ gtag('config', 'G-J7PPP48QXC');
       "@type": "PropertyValue",
       "name": "交期",
       "value": "現貨可即發；生產約 15 日；新開模約 45 日"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "尺寸",
+      "value": "695 × 430 × 220 mm"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "內徑尺寸",
+      "value": "630 × 390 × 165 mm"
     }
   ],
   "offers": {
