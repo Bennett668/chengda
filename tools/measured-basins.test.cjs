@@ -2,7 +2,6 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const vm = require('node:vm');
 const {catalogData} = require('./build-catalog-first-paint.cjs');
 const {productFiles} = require('./product-page-files.cjs');
 const root = path.resolve(__dirname, '..');
@@ -76,20 +75,29 @@ for (const prefix of ['', 'zh/']) {
       assert.ok(html.includes(`rel="canonical" href="https://www.gdchengda.hk/${prefix}products/${code}/"`));
     });
   }
-  test(`${prefix}legacy D links redirect to A without relabelling the unsuffixed model`, () => {
-    const html = fs.readFileSync(path.join(root, prefix, 'products/UB0121-D/index.html'), 'utf8');
-    const target = `/${prefix}products/UB0121-A/`;
-    assert.ok(html.includes(`<meta http-equiv="refresh" content="0;url=${target}" />`));
-    assert.ok(html.includes(`<link rel="canonical" href="https://www.gdchengda.hk${target}" />`));
-    let redirected;
-    const script = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)][0][1];
-    vm.runInNewContext(script, {location: {search: '?ref=legacy', hash: '#specs', replace(value) {redirected = value;}}});
-    assert.equal(redirected, target + '?ref=legacy#specs');
+  test(`${prefix}only A is published and related cards use its photo without relabelling the unsuffixed model`, () => {
+    assert.ok(!fs.existsSync(path.join(root, prefix, 'products/UB0121-D/index.html')));
+    assert.ok(!fs.existsSync(path.join(root, 'assets/products/UB0121-D')));
     assert.equal(cards.filter(item => item.code === 'UB0121-A').length, 1);
     assert.equal(cards.filter(item => item.code === 'UB0121').length, 1);
     assert.equal(cards.filter(item => item.code === 'UB0121-D').length, 0);
     const primary = productFiles();
     assert.ok(primary.includes(`${prefix}products/UB0121-A/index.html`));
     assert.ok(!primary.includes(`${prefix}products/UB0121-D/index.html`));
+    let relatedCards = 0;
+    for (const name of primary.filter(name => name.startsWith(`${prefix}products/`))) {
+      const html = fs.readFileSync(path.join(root, name), 'utf8');
+      assert.ok(!html.includes('UB0121-D'), name);
+      for (const match of html.matchAll(/<a class="rel-card"[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)) {
+        if (match[1] !== `/${prefix}products/UB0121-A/`) continue;
+        assert.ok(match[2].includes('src="/assets/products/UB0121-A/card.webp"'), name);
+        assert.ok(match[2].includes('<div class="rel-code">UB0121-A</div>'), name);
+        relatedCards += 1;
+      }
+    }
+    assert.ok(relatedCards >= 8);
+    const html = fs.readFileSync(path.join(root, prefix, 'products/UB0121/index.html'), 'utf8');
+    assert.ok(html.includes('<h1>UB0121</h1>'));
+    assert.ok(html.includes('id="pd-main" src="/assets/products/UB0121/gallery/lead.webp"'));
   });
 }
